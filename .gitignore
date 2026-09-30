@@ -1,4 +1,5 @@
 # Sách/pdf bản quyền - KHÔNG push lên repo
+books/
 *.pdf
 *.PDF
 

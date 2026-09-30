@@ -77,13 +77,13 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px
 
   <h2>📚 Danh sách unit</h2>
   <div class="grid">
-    <a class="unit" href="unit1.html">
+    <a class="unit" href="units/unit1.html">
       <span class="num">UNIT 1</span>
       <h3>Present continuous (I am doing)</h3>
       <p>Thì hiện tại tiếp diễn: công thức, dấu hiệu, stative verbs, so sánh với hiện tại đơn.</p>
       <div class="meta"><b>55 câu</b><b>59 điểm</b><b>Bài 1.1–1.4 trong sách</b></div>
     </a>
-    <a class="unit" href="unit2.html">
+    <a class="unit" href="units/unit2.html">
       <span class="num">UNIT 2</span>
       <h3>Present simple (I do)</h3>
       <p>Thì hiện tại đơn: -s/-es, do/does, trạng từ tần suất, <i>I promise / I suggest</i>…</p>
@@ -135,8 +135,10 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px
       </tr>
       <tr>
         <td><b>Cấu trúc file</b></td>
-        <td><code>index.html</code> (trang này) · <code>unit1.html</code>, <code>unit2.html</code>… ·
-            <code>.gitignore</code> (đã loại PDF sách để không đẩy lên repo)</td>
+        <td><code>index.html</code> (trang tổng) · <code>units/unit1.html</code>,
+            <code>units/unit2.html</code>, … (mỗi unit 1 file tự chứa) ·
+            <code>books/</code> (sách PDF — chỉ có ở máy bạn, <b>không</b> push lên repo nhờ
+            <code>.gitignore</code>)</td>
       </tr>
     </table></div>
   </div>
