@@ -1,0 +1,15 @@
+{
+  "name": "english-grammar-study",
+  "version": "1.0.0",
+  "private": true,
+  "description": "English Grammar in Use (Murphy 4e) - trang tự học offline theo unit",
+  "scripts": {
+    "check": "node tools/check.js",
+    "test": "node tools/test.js",
+    "build": "node tools/build.js",
+    "extract": "node tools/extract.js"
+  },
+  "devDependencies": {
+    "jsdom": "^29.1.1"
+  }
+}
