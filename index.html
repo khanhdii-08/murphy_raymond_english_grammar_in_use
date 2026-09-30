@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Grammar in Use – Trung tâm học ngữ pháp (Murphy 4e)</title>
+<style>
+:root{
+  --bg:#f4f6fb; --card:#fff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5; --line:#e5e7eb; --r:16px;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65}
+.wrap{max-width:1000px;margin:0 auto;padding:16px}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Header */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:26px 24px;margin-bottom:18px;box-shadow:0 10px 30px rgba(79,70,229,.28)}
+.hero .kicker{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.7rem;margin:.25em 0 .15em}
+.hero p{margin:.4em 0 0;opacity:.92;font-size:.98rem;max-width:62ch}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.badges span{background:rgba(255,255,255,.16);padding:4px 12px;border-radius:999px;font-size:.85rem}
+
+/* Cards */
+h2{font-size:1.15rem;color:var(--primary-2);margin:26px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.unit{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;
+  color:inherit;transition:.15s;position:relative}
+.unit:hover{border-color:var(--primary);transform:translateY(-3px);text-decoration:none;
+  box-shadow:0 10px 24px rgba(79,70,229,.16)}
+.unit .num{display:inline-block;background:var(--primary);color:#fff;font-weight:700;font-size:.78rem;
+  padding:3px 10px;border-radius:999px}
+.unit h3{margin:10px 0 6px;font-size:1.05rem;line-height:1.35}
+.unit p{margin:0;color:var(--muted);font-size:.88rem}
+.unit .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.unit .meta b{background:#eef2ff;color:var(--primary-2);font-weight:600;font-size:.75rem;
+  padding:3px 9px;border-radius:999px}
+.unit.soon{opacity:.62;pointer-events:none}
+.unit.soon .num{background:#94a3b8}
+
+/* Guide */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;margin-bottom:14px}
+.card h2:first-child{margin-top:0}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s;position:relative;padding:8px 0 8px 42px;border-bottom:1px dashed var(--line)}
+.steps li:last-child{border-bottom:0}
+.steps li::before{content:counter(s);position:absolute;left:0;top:8px;width:28px;height:28px;border-radius:50%;
+  background:var(--primary);color:#fff;font-weight:700;font-size:.85rem;display:flex;align-items:center;justify-content:center}
+table{width:100%;border-collapse:collapse;font-size:.92rem;margin-top:6px}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb}
+.scroll{overflow-x:auto}
+code{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-size:.88em}
+.ok{background:var(--ok-bg);color:#14532d;border-left:4px solid var(--ok);padding:10px 14px;
+  border-radius:0 10px 10px 0;margin:12px 0;font-size:.93rem}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px}
+@media print{.hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>📘 Trung tâm học ngữ pháp</h1>
+    <p>Học theo unit: lý thuyết cô đọng → ví dụ đời sống → mẹo &amp; lỗi người Việt → bài tập đa dạng
+       → kiểm tra nhiều lần. Hoàn toàn offline, tiến độ lưu ngay trên máy bạn.</p>
+    <div class="badges">
+      <span>2 / 145 unit</span><span>120 câu hỏi có giải thích</span><span>2 chế độ: Học · Kiểm tra</span><span>Trả lời offline</span>
+    </div>
+  </header>
+
+  <h2>📚 Danh sách unit</h2>
+  <div class="grid">
+    <a class="unit" href="unit1.html">
+      <span class="num">UNIT 1</span>
+      <h3>Present continuous (I am doing)</h3>
+      <p>Thì hiện tại tiếp diễn: công thức, dấu hiệu, stative verbs, so sánh với hiện tại đơn.</p>
+      <div class="meta"><b>55 câu</b><b>59 điểm</b><b>Bài 1.1–1.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="unit2.html">
+      <span class="num">UNIT 2</span>
+      <h3>Present simple (I do)</h3>
+      <p>Thì hiện tại đơn: -s/-es, do/does, trạng từ tần suất, <i>I promise / I suggest</i>…</p>
+      <div class="meta"><b>65 câu</b><b>62 điểm</b><b>Bài 2.1–2.5 trong sách</b></div>
+    </a>
+    <div class="unit soon">
+      <span class="num">UNIT 3</span>
+      <h3>Present continuous and present simple 1</h3>
+      <p>Phân biệt hai thì — sẽ có sau khi bạn hoàn thành Units 1–2.</p>
+      <div class="meta"><b>Sắp ra mắt</b></div>
+    </div>
+    <div class="unit soon">
+      <span class="num">UNIT 4</span>
+      <h3>Present continuous and present simple 2</h3>
+      <p>Thay đổi ý định, trạng từ tần suất với hai thì.</p>
+      <div class="meta"><b>Sắp ra mắt</b></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🧭 Cách học hiệu quả nhất</h2>
+    <ol class="steps">
+      <li><b>Đọc tab "Lý thuyết"</b> — nắm công thức + dấu hiệu nhận biết (5 phút).</li>
+      <li><b>Đọc tab "Ví dụ &amp; Mẹo"</b> — ví dụ đời sống, mẹo nhớ, bảng ❌/✅ lỗi người Việt (5 phút).</li>
+      <li><b>Làm tab "Bài tập" ở Chế độ HỌC</b> — đáp án &amp; giải thích hiện ngay sau mỗi câu, bấm "Soát câu này".</li>
+      <li><b>Chuyển Chế độ KIỂM TRA</b> — ẩn đáp án, bấm "Nộp bài": hiện điểm %, số đúng/sai, thời gian.</li>
+      <li><b>Bấm "Làm lại câu sai"</b> — luyện riêng phần bạn yếu cho đến khi đạt 100%.</li>
+      <li><b>Cuối tuần</b> quay lại ôn cách quãng: làm lại unit cũ 1 lần để không quên.</li>
+    </ol>
+    <div class="ok">💡 <b>Mẹo:</b> mỗi unit có nút <b>🖨️ In / PDF</b> để in ra giấy, và nút
+      <b>💾 Tải unitX.html</b> để lưu bản sao. Tiến độ (điểm cao nhất, câu sai) lưu bằng localStorage
+      theo từng file — mở lại là còn nguyên.</div>
+  </div>
+
+  <div class="card">
+    <h2>🚀 Deploy lên GitHub Pages / Vercel</h2>
+    <div class="scroll"><table>
+      <tr><th>Nền tảng</th><th>Các bước</th></tr>
+      <tr>
+        <td><b>GitHub Pages</b></td>
+        <td>Push repo lên GitHub → <code>Settings → Pages → Source: Deploy from a branch</code> →
+            chọn <code>main</code> / <code>/(root)</code> → Save. Sau ~1 phút truy cập
+            <code>https://&lt;tên-user&gt;.github.io/&lt;tên-repo&gt;/</code></td>
+      </tr>
+      <tr>
+        <td><b>Vercel</b></td>
+        <td>vercel.com → <code>Add New → Project</code> → Import repo → Framework:
+            <code>Other</code>, Output Directory: <code>.</code> → Deploy. Không cần cấu hình gì thêm.</td>
+      </tr>
+      <tr>
+        <td><b>Cấu trúc file</b></td>
+        <td><code>index.html</code> (trang này) · <code>unit1.html</code>, <code>unit2.html</code>… ·
+            <code>.gitignore</code> (đã loại PDF sách để không đẩy lên repo)</td>
+      </tr>
+    </table></div>
+  </div>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Trang tổng · Hoạt động offline,
+    không cần internet
+  </footer>
+</div>
+</body>
+</html>

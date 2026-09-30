@@ -1,0 +1,20 @@
+# Sách/pdf bản quyền - KHÔNG push lên repo
+*.pdf
+*.PDF
+
+# Hệ thống & trình duyệt
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Node / tooling (nếu có sau này)
+node_modules/
+package-lock.json
+.vercel
+.next
+dist/
+
+# Editor
+.vscode/
+.idea/
+*.swp
