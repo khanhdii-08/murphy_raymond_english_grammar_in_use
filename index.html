@@ -153,31 +153,6 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px
       theo từng file — mở lại là còn nguyên.</div>
   </div>
 
-  <div class="card">
-    <h2>🚀 Deploy lên GitHub Pages / Vercel</h2>
-    <div class="scroll"><table>
-      <tr><th>Nền tảng</th><th>Các bước</th></tr>
-      <tr>
-        <td><b>GitHub Pages</b></td>
-        <td>Push repo lên GitHub → <code>Settings → Pages → Source: Deploy from a branch</code> →
-            chọn <code>main</code> / <code>/(root)</code> → Save. Sau ~1 phút truy cập
-            <code>https://&lt;tên-user&gt;.github.io/&lt;tên-repo&gt;/</code></td>
-      </tr>
-      <tr>
-        <td><b>Vercel</b></td>
-        <td>vercel.com → <code>Add New → Project</code> → Import repo → Framework:
-            <code>Other</code>, Output Directory: <code>.</code> → Deploy. Không cần cấu hình gì thêm.</td>
-      </tr>
-      <tr>
-        <td><b>Cấu trúc file</b></td>
-        <td><code>index.html</code> (trang tổng) · <code>units/unit1.html</code>,
-            <code>units/unit2.html</code>, … (mỗi unit 1 file tự chứa) ·
-            <code>books/</code> (sách PDF — chỉ có ở máy bạn, <b>không</b> push lên repo nhờ
-            <code>.gitignore</code>)</td>
-      </tr>
-    </table></div>
-  </div>
-
   <footer>
     English Grammar in Use – Raymond Murphy, 4th Edition · Trang tổng · Hoạt động offline,
     không cần internet
