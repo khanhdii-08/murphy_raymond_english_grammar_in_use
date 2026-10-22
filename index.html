@@ -60,7 +60,42 @@ code{background:#f1f5f9;padding:2px 6px;border-radius:6px;font-size:.88em}
   border-radius:0 10px 10px 0;margin:12px 0;font-size:.93rem}
 footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px}
 @media print{.hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+[data-theme="dark"] code{background:#0b1120}
+[data-theme="dark"] .unit:hover{box-shadow:0 10px 24px rgba(0,0,0,.45)}
+}
 </style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
 </head>
 <body>
 <div class="wrap">
