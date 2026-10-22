@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 104 – Quite, pretty, rather and fairly | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 104 – Quite, pretty, rather and fairly</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">56 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p><b>Quite, pretty, rather, fairly</b> đều có nghĩa "khá": <b>mạnh hơn "a little"</b> nhưng <b>yếu hơn "very"</b>. Unit này giúp bạn phân biệt sắc thái (tích cực/tiêu cực, trang trọng/thân mật), <b>vị trí với a/an</b>, và nghĩa thứ hai rất dễ nhầm của <b>quite = completely</b>.</p>
+      <div class="ex"><b class="en">It's <mark>quite</mark> cold. · It's <mark>pretty</mark> cold. · It's <mark>rather</mark> cold. · It's <mark>fairly</mark> cold.</b><br>Cả bốn câu đều đúng, nghĩa "khá lạnh" — khác nhau ở sắc thái.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">quite / pretty / rather / fairly + adjective / adverb    quite famous, pretty often
+
+quite a/an + (adj) + noun        quite an old house    (quite đứng TRƯỚC a)
+a pretty / rather / fairly + adj + noun   a pretty good job  (đứng SAU a)
+
+quite a + noun                   quite a surprise
+quite a lot (of)                 quite a lot of people
+quite + verb                     I quite like tennis.</div>
+      <div class="scroll"><table>
+        <tr><th>Từ</th><th>Sắc thái</th><th>Ví dụ</th></tr>
+        <tr><td><b>quite</b></td><td>khá (trung tính); có thể = completely</td><td>She's quite famous.</td></tr>
+        <tr><td><b>pretty</b></td><td>như quite, thân mật, dùng chủ yếu khi nói</td><td>We see each other pretty often.</td></tr>
+        <tr><td><b>rather</b></td><td>thường cho ý tiêu cực; với ý tích cực = bất ngờ</td><td>It's rather cloudy. · These are rather good!</td></tr>
+        <tr><td><b>fairly</b></td><td>yếu nhất: tạm được, có thể tốt hơn</td><td>My room is fairly big.</td></tr>
+      </table></div>
+
+      <h2>1.3 · A–B. Quite và pretty</h2>
+      <ul>
+        <li>Gần nghĩa nhau: <i>Anna lives <b>quite</b> near me, so we see each other <b>pretty</b> often.</i></li>
+        <li><b>pretty</b> là từ thân mật (informal), hay dùng khi nói.</li>
+        <li>Vị trí với a/an: <i><b>quite a</b> good job</i> nhưng <i><b>a pretty</b> good job</i>.</li>
+      </ul>
+
+      <h2>1.4 · C. Những cách chỉ quite dùng được (pretty thì không)</h2>
+      <ul>
+        <li><b>quite a/an + noun</b> (không tính từ): <i>It was <b>quite a surprise</b>.</i></li>
+        <li><b>quite a lot (of)</b>: <i>There were <b>quite a lot of</b> people.</i></li>
+        <li><b>quite + verb</b> (nhất là like, enjoy): <i>I <b>quite like</b> tennis.</i></li>
+      </ul>
+
+      <h2>1.5 · D. Rather và fairly</h2>
+      <ul>
+        <li><b>rather</b> + ý tiêu cực: <i>Paul is <b>rather shy</b>.</i></li>
+        <li><b>rather</b> + ý tích cực = surprisingly: <i>These oranges are <b>rather good</b>. Where did you get them?</i></li>
+        <li><b>fairly</b> yếu hơn: <i>My room is <b>fairly big</b>, but I'd prefer a bigger one.</i></li>
+      </ul>
+
+      <h2>1.6 · E. Quite = completely</h2>
+      <p>Với các tính từ "tuyệt đối", <b>quite</b> mang nghĩa <b>hoàn toàn</b>:</p>
+      <p><span class="chip">sure</span><span class="chip">certain</span><span class="chip">right</span><span class="chip">wrong</span><span class="chip">true</span><span class="chip">safe</span><span class="chip">clear</span><span class="chip">obvious</span><span class="chip">different</span><span class="chip">unnecessary</span><span class="chip">impossible</span><span class="chip">incredible</span><span class="chip">amazing</span><span class="chip">extraordinary</span></p>
+      <div class="formula">'Are you sure?' 'Yes, quite sure.'      (= completely sure)
+I quite agree with you.                 (= completely agree)
+not quite = not completely:
+I don't quite understand.   'Are you ready?' 'Not quite.'</div>
+
+      <h2>1.7 · Dấu hiệu nhận biết nghĩa của quite</h2>
+      <div class="scroll"><table>
+        <tr><th>Đi với</th><th>quite nghĩa là</th><th>Ví dụ</th></tr>
+        <tr><td>tính từ "thường" (cold, good, big, tired)</td><td>khá</td><td>It's quite cold.</td></tr>
+        <tr><td>tính từ tuyệt đối (sure, true, impossible…)</td><td>hoàn toàn</td><td>It's quite impossible.</td></tr>
+        <tr><td>agree / not quite + V</td><td>hoàn toàn / chưa hẳn</td><td>I quite agree. · I don't quite know.</td></tr>
+      </table></div>
+
+      <h2>1.8 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>quite</th><th>very</th><th>a bit / a little</th></tr>
+        <tr><td>Mức độ</td><td>khá</td><td>rất</td><td>hơi</td></tr>
+        <tr><td>Ví dụ</td><td>quite expensive</td><td>very expensive</td><td>a bit expensive</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">We live in a quite old house.</td><td class="yes">We live in <b>quite an</b> old house.</td></tr>
+        <tr><td class="no">She has pretty a good job.</td><td class="yes">She has <b>a pretty</b> good job.</td></tr>
+        <tr><td class="no">It was pretty a surprise.</td><td class="yes">It was <b>quite a</b> surprise.</td></tr>
+        <tr><td class="no">I pretty like it.</td><td class="yes">I <b>quite</b> like it.</td></tr>
+        <tr><td class="no">These are fairly good! (ý: ngon bất ngờ)</td><td class="yes">These are <b>rather</b> good!</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 102</b> (so/such) · <b>Unit 103</b> (enough/too) · <b>Unit 106</b> (a bit / much + so sánh hơn).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🎬 <b class="en">The film was <mark>pretty</mark> good, actually.</b> <span class="note">(giao tiếp — nhận xét thân mật)</span></div>
+      <div class="ex">🏠 <b class="en">We rent <mark>quite a</mark> small flat in the city centre.</b> <span class="note">(đời sống — nói về nhà ở)</span></div>
+      <div class="ex">🌧️ <b class="en">It's <mark>rather</mark> cold and windy today.</b> <span class="note">(thời tiết — ý không tốt)</span></div>
+      <div class="ex">📊 <b class="en">Sales were <mark>fairly</mark> good this month, but we can do better.</b> <span class="note">(công việc — báo cáo)</span></div>
+      <div class="ex">🎉 <b class="en">There were <mark>quite a lot of</mark> people at the opening.</b> <span class="note">(sự kiện)</span></div>
+      <div class="ex">🤝 <b class="en">I <mark>quite</mark> agree with your proposal.</b> <span class="note">(công việc — họp, = hoàn toàn đồng ý)</span></div>
+      <div class="ex">🤔 <b class="en">Sorry, I don't <mark>quite</mark> understand the question.</b> <span class="note">(IELTS Speaking — xin nhắc lại)</span></div>
+      <div class="ex">✅ <b class="en">You're <mark>quite</mark> right. I made a mistake.</b> <span class="note">(giao tiếp — thừa nhận)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>Thang mức độ:</b> a little &lt; <b>fairly</b> &lt; <b>quite / pretty / rather</b> &lt; very.</li>
+        <li><b>"Quite chen lên trước a"</b>: quite a / quite an — các từ còn lại ngoan ngoãn đứng sau a.</li>
+        <li><b>Rather = "hơi … (tiếc là)"</b>: rather expensive, rather boring. Gặp ý tốt → "tốt bất ngờ".</li>
+        <li><b>Pretty = quite khi nói chuyện</b> — tránh dùng trong bài viết học thuật.</li>
+        <li><b>Quite + tính từ tuyệt đối = 100%</b>: quite sure, quite right, quite impossible.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Chỗ trống trước <b>a/an</b> → chỉ có thể là <b>quite</b>.</li>
+        <li>Chỗ trống sau <b>a</b> và trước tính từ → pretty / rather / fairly (không phải quite).</li>
+        <li>Câu hỏi nghĩa "quite = ?" → nhìn tính từ: thuộc nhóm sure/true/right/different/impossible… → completely.</li>
+        <li><b>Not quite</b> ≠ "không khá" mà = chưa hoàn toàn.</li>
+        <li>Trước động từ (like/enjoy/agree) → <b>quite</b>, không phải pretty.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">It's a quite big city.</td><td class="yes">It's <b>quite a</b> big city.</td><td class="why">quite đứng trước a</td></tr>
+        <tr><td class="no">He is quite a tall.</td><td class="yes">He is <b>quite tall</b>.</td><td class="why">không có danh từ → không có a</td></tr>
+        <tr><td class="no">I pretty enjoy it.</td><td class="yes">I <b>quite</b> enjoy it.</td><td class="why">chỉ quite đứng trước động từ</td></tr>
+        <tr><td class="no">There were pretty a lot of people.</td><td class="yes">There were <b>quite a lot of</b> people.</td><td class="why">quite a lot of</td></tr>
+        <tr><td class="no">It was a quite surprise.</td><td class="yes">It was <b>quite a</b> surprise.</td><td class="why">quite a + noun</td></tr>
+        <tr><td class="no">The film was very quite good.</td><td class="yes">The film was <b>quite</b> good.</td><td class="why">không ghép very với quite</td></tr>
+        <tr><td class="no">We had a quite lot of rain.</td><td class="yes">We had <b>quite a lot of</b> rain.</td><td class="why">quite đứng trước a</td></tr>
+        <tr><td class="no">She speaks English fairly well. (ý khen nhiều)</td><td class="yes">She speaks English <b>very / really</b> well.</td><td class="why">fairly chỉ là "tạm"</td></tr>
+        <tr><td class="no">I don't pretty understand.</td><td class="yes">I don't <b>quite</b> understand.</td><td class="why">not quite = chưa hẳn</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói (2 phút/ngày):</b> nhận xét 3 thứ trong ngày với mức độ khác nhau: <i>"Lunch was pretty good. The meeting was rather long. The weather was fairly nice."</i></li>
+        <li><b>Viết (5 câu/ngày):</b> review một quán ăn/khách sạn dùng quite, rather, fairly.</li>
+        <li><b>At work:</b> dùng <i>"I quite agree"</i> hoặc <i>"I don't quite follow"</i> trong cuộc họp.</li>
+        <li><b>IELTS Speaking:</b> <i>"It's quite a popular place among young people."</i></li>
+        <li><b>Quy tắc vàng:</b> văn viết trang trọng → quite/rather/fairly; nói chuyện → pretty.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần Bài tập sau 3 ngày, 7 ngày và 14 ngày; đặc biệt các câu về vị trí quite a. Liên quan: <b>Unit 102</b> (so/such), <b>Unit 103</b> (enough/too), <b>Unit 106</b> (a bit, much + so sánh hơn).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit104.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 104 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 104 – Quite, pretty, rather and fairly | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit104.html';
+  var KEY = 'egu4_unit104_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất: quite, pretty, rather hay fairly?' },
+    { id:'B', title:'B. Điền từ',                   desc:'Điền quite / pretty / rather / fairly vào chỗ trống.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 104.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 104 Exercises)', desc:'Bài 104.1 → 104.5 theo đúng dạng bài của sách Murphy, câu đã viết lại, kèm giải thích.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'We live in ______ old house.',
+      opts:['a quite','quite an','quite a','an quite'], a:1,
+      exp:'quite đứng TRƯỚC a/an: quite an old house (không nói a quite old house). old bắt đầu bằng nguyên âm → an.' },
+    { id:'a2', sec:'A', type:'mcq', q:'Sarah has ______ good job.',
+      opts:['a pretty','pretty a','quite good a','a quite'], a:0,
+      exp:'pretty (và rather, fairly) đứng SAU a: a pretty good job. Chỉ quite mới đứng trước a.' },
+    { id:'a3', sec:'A', type:'mcq', q:'I didn\'t expect to see them. It was ______ surprise.',
+      opts:['a pretty','pretty a','quite a','a fairly'], a:2,
+      exp:'quite a + danh từ (không có tính từ) = khá là một ... Chỉ dùng quite, không dùng pretty theo cách này.' },
+    { id:'a4', sec:'A', type:'mcq', q:'The weather isn\'t so good today. It\'s ______ cloudy.',
+      opts:['rather','fairly a','quite a','a rather'], a:0,
+      exp:'rather thường dùng cho ý TIÊU CỰC (điều ta thấy không tốt): rather cloudy, rather shy.' },
+    { id:'a5', sec:'A', type:'mcq', q:'"Are you sure?" "Yes, ______ sure." (= hoàn toàn chắc chắn)',
+      opts:['fairly','pretty','quite','rather'], a:2,
+      exp:'quite + sure/right/true/different… mang nghĩa completely (hoàn toàn).' },
+    { id:'a6', sec:'A', type:'mcq', q:'I ______ like jazz, but it\'s not my favourite music.',
+      opts:['pretty','quite','fairly','rather a'], a:1,
+      exp:'quite + động từ (đặc biệt like, enjoy) = khá thích. Không dùng pretty trước động từ.' },
+    { id:'a7', sec:'A', type:'mcq', q:'My flat is ______ big, but I\'d prefer a bigger one. (mức yếu nhất)',
+      opts:['rather','quite','pretty','fairly'], a:3,
+      exp:'fairly yếu hơn quite/rather/pretty: "tạm được, có thể tốt hơn".' },
+    { id:'a8', sec:'A', type:'mcq', q:'I don\'t ______ understand what you mean.',
+      opts:['pretty','fairly','quite','rather'], a:2,
+      exp:'not quite = not completely (chưa hoàn toàn): I don\'t quite understand.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'There were ______ a lot of people at the party. (quite / pretty)',
+      acc:['quite'], ans:'quite',
+      exp:'quite a lot (of) — chỉ dùng quite, không dùng pretty.' },
+    { id:'b2', sec:'B', type:'fill', q:'It was ______ an interesting talk. (quite / pretty)',
+      acc:['quite'], ans:'quite',
+      exp:'Từ đứng ngay trước "an" phải là quite: quite an interesting talk. Nếu dùng pretty thì phải viết a pretty interesting talk.' },
+    { id:'b3', sec:'B', type:'fill', q:'These strawberries are ______ good! Where did you buy them? (= ngon bất ngờ — dùng rather)',
+      acc:['rather'], ans:'rather',
+      exp:'rather + ý tích cực = surprisingly/unusually good (ngon bất ngờ).' },
+    { id:'b4', sec:'B', type:'fill', q:'She was ______ different from what I expected. (= hoàn toàn khác)',
+      acc:['quite'], ans:'quite',
+      exp:'quite different = completely different.' },
+    { id:'b5', sec:'B', type:'fill', q:'"Have you finished?" "Not ______." (= chưa hẳn)',
+      acc:['quite'], ans:'quite',
+      exp:'Not quite = not completely.' },
+    { id:'b6', sec:'B', type:'fill', q:'I ______ agree with you. You\'re absolutely right. (= hoàn toàn đồng ý)',
+      acc:['quite'], ans:'quite',
+      exp:'quite + agree = completely agree.' },
+    { id:'b7', sec:'B', type:'fill', q:'We had ______ busy day at work. (dùng pretty, nhớ mạo từ)',
+      acc:['a pretty'], ans:'a pretty',
+      exp:'a + pretty + adj + noun: a pretty busy day.' },
+    { id:'b8', sec:'B', type:'fill', q:'Ben is ______ shy. He doesn\'t talk very much. (dùng rather)',
+      acc:['rather'], ans:'rather',
+      exp:'rather cho đặc điểm không tốt lắm: rather shy.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (it / was / quite / a / nice / day)',
+      tokens:['It','was','quite','a','nice','day'],
+      acc:['it was quite a nice day'], ans:'It was quite a nice day.',
+      exp:'quite a + adj + noun.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (we / had / a / pretty / long / wait)',
+      tokens:['We','had','a','pretty','long','wait'],
+      acc:['we had a pretty long wait'], ans:'We had a pretty long wait.',
+      exp:'a pretty + adj + noun (pretty đứng sau a).' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (there / was / quite / a / lot / of / noise)',
+      tokens:['There','was','quite','a','lot','of','noise'],
+      acc:['there was quite a lot of noise'], ans:'There was quite a lot of noise.',
+      exp:'quite a lot of + noun.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (I / don\'t / quite / understand / the / question)',
+      tokens:['I',"don't",'quite','understand','the','question'],
+      acc:["i don't quite understand the question"], ans:'I don\'t quite understand the question.',
+      exp:'not quite + V = chưa hoàn toàn.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (she / lives / quite / near / me)',
+      tokens:['She','lives','quite','near','me'],
+      acc:['she lives quite near me'], ans:'She lives quite near me.',
+      exp:'quite + adverb/adjective: quite near.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Is it OK to swim here?  B: Yes, it\'s quite ______. (= hoàn toàn an toàn)',
+      acc:['safe'], ans:'safe',
+      exp:'quite safe = completely safe (safe thuộc nhóm tính từ mà quite = completely).' },
+    { id:'d2', sec:'D', type:'fill', q:'A: How was the film?  B: It was ______ good. Better than I expected. (dùng pretty)',
+      acc:['pretty'], ans:'pretty',
+      exp:'pretty = quite, dùng nhiều trong văn nói (informal).' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Are you ready?  B: Not ______. Give me five minutes.',
+      acc:['quite'], ans:'quite',
+      exp:'Not quite = chưa hẳn.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Do you like football?  B: I ______ like it, but I prefer tennis.',
+      acc:['quite'], ans:'quite',
+      exp:'quite like = khá thích (không đến mức yêu thích).' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 2 câu: 1 câu "quite a/an + adj + noun", 1 câu "a pretty + adj + noun".',
+      sample:'We stayed in quite an old hotel. It had a pretty nice garden.',
+      exp:'quite đứng trước a/an; pretty/rather/fairly đứng sau a.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 1 câu dùng rather cho một điều KHÔNG tốt và 1 câu dùng fairly cho điều "tạm được".',
+      sample:'The hotel room was rather small. The food was fairly good, but not great.',
+      exp:'rather thường cho ý tiêu cực; fairly yếu hơn, nghĩa "tạm".' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu dùng quite = completely (với sure / right / different / impossible...).',
+      sample:'I\'m quite sure I locked the door. You\'re quite right about that.',
+      exp:'quite + sure/right/true/different/impossible… = hoàn toàn.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['It was a quite good film.','It was quite a good film.','It was quite good a film.'], a:1,
+      exp:'quite a + adj + noun.' },
+    { id:'f2', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['It was pretty a surprise.','It was a pretty surprise.','It was quite a surprise.'], a:2,
+      exp:'quite a + noun (không tính từ) — pretty không dùng được cách này.' },
+    { id:'f3', sec:'F', type:'fill', q:'Everything she told us was ______ true. (= hoàn toàn đúng)',
+      acc:['quite'], ans:'quite',
+      exp:'quite true = completely true.' },
+    { id:'f4', sec:'F', type:'mcq', q:'Từ nào YẾU nhất (ít mạnh nhất)?',
+      opts:['quite','pretty','rather','fairly'], a:3,
+      exp:'fairly yếu hơn quite/pretty/rather.' },
+    { id:'f5', sec:'F', type:'fill', q:'There was ______ a lot of traffic this morning.',
+      acc:['quite'], ans:'quite',
+      exp:'quite a lot of + noun.' },
+    { id:'f6', sec:'F', type:'mcq', q:'"It\'s quite cold. Wear a coat." — quite ở đây nghĩa là:',
+      opts:['hoàn toàn','hơi / khá (ít hơn very)'], a:1,
+      exp:'cold không thuộc nhóm tính từ "tuyệt đối" → quite = khá (more than a little, less than very).' },
+    { id:'f7', sec:'F', type:'mcq', q:'"It was quite impossible." — quite ở đây nghĩa là:',
+      opts:['hoàn toàn','hơi / khá (ít hơn very)'], a:0,
+      exp:'impossible là tính từ tuyệt đối → quite = completely.' },
+    { id:'f8', sec:'F', type:'fill', q:'They haven\'t ______ finished their meal yet. (= chưa hoàn toàn)',
+      acc:['quite'], ans:'quite',
+      exp:'not quite + V = chưa hoàn toàn.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 104.1 – Complete with quite + word',
+      q:'1. I haven\'t eaten since breakfast. I\'m ______ (hungry).', acc:['quite hungry'], ans:'quite hungry',
+      exp:'quite + adj = khá đói.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 104.1 – Complete with quite + word',
+      q:'2. "Did your presentation go well?" "______ (good). Better than last time."', acc:['quite good'], ans:'Quite good',
+      exp:'Trả lời ngắn: Quite good = khá tốt.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 104.1 – Complete with quite + word',
+      q:'3. I visit my grandparents ______ (often) — about twice a month.', acc:['quite often'], ans:'quite often',
+      exp:'quite + adverb: quite often.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 104.1 – Complete with quite + word',
+      q:'4. Our flat is next to a school, so it\'s ______ (noisy) during the day.', acc:['quite noisy'], ans:'quite noisy',
+      exp:'quite noisy = khá ồn.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 104.1 – Complete with quite + word',
+      q:'5. I didn\'t think Tom would remember my birthday. I was ______ (surprised) when he called.', acc:['quite surprised'], ans:'quite surprised',
+      exp:'quite surprised = khá ngạc nhiên.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 104.1 – Complete with quite + word',
+      q:'6. I got home ______ (late) yesterday, so I\'m sleepy today.', acc:['quite late'], ans:'quite late',
+      exp:'quite late = khá muộn.' },
+
+    { id:'h7', sec:'G', type:'order', sub:'Bài 104.2 – Put the words in the right order',
+      q:'Mia sings well. She has (voice / quite / good / a).',
+      tokens:['quite','a','good','voice'],
+      acc:['quite a good voice'], ans:'quite a good voice',
+      exp:'quite a + adj + noun.' },
+    { id:'h8', sec:'G', type:'order', sub:'Bài 104.2 – Put the words in the right order',
+      q:'The beach wasn\'t close to our hotel. We had to walk (quite / way / a / long).',
+      tokens:['quite','a','long','way'],
+      acc:['quite a long way'], ans:'quite a long way',
+      exp:'quite a long way.' },
+    { id:'h9', sec:'G', type:'order', sub:'Bài 104.2 – Put the words in the right order',
+      q:'Take a scarf. There\'s (a / wind / cold / pretty).',
+      tokens:['a','pretty','cold','wind'],
+      acc:['a pretty cold wind'], ans:'a pretty cold wind',
+      exp:'a + pretty + adj + noun (pretty đứng sau a).' },
+    { id:'h10', sec:'G', type:'order', sub:'Bài 104.2 – Put the words in the right order',
+      q:'We were late because there was (lot / traffic / a / of / quite).',
+      tokens:['quite','a','lot','of','traffic'],
+      acc:['quite a lot of traffic'], ans:'quite a lot of traffic',
+      exp:'quite a lot of + noun.' },
+    { id:'h11', sec:'G', type:'order', sub:'Bài 104.2 – Put the words in the right order',
+      q:'I\'m exhausted. I\'ve had (pretty / day / a / busy).',
+      tokens:['a','pretty','busy','day'],
+      acc:['a pretty busy day'], ans:'a pretty busy day',
+      exp:'a pretty busy day.' },
+
+    { id:'h12', sec:'G', type:'mcq', sub:'Bài 104.3 – Use rather + adjective',
+      q:'I liked the book, but it was rather ______.',
+      opts:['wonderful','long','excellent'], a:1,
+      exp:'rather thường đi với ý tiêu cực/không như mong muốn: rather long. (Key gợi ý: rather long.)' },
+    { id:'h13', sec:'G', type:'mcq', sub:'Bài 104.3 – Use rather + adjective',
+      q:'The restaurant wasn\'t very good. I was rather ______.',
+      opts:['delighted','disappointed','thrilled'], a:1,
+      exp:'Ngữ cảnh tiêu cực → rather disappointed.' },
+    { id:'h14', sec:'G', type:'mcq', sub:'Bài 104.3 – Use rather + adjective',
+      q:'I think it\'s rather ______ that Kim left without saying goodbye.',
+      opts:['strange','lovely','perfect'], a:0,
+      exp:'rather strange = hơi lạ (ý không tốt).' },
+
+    { id:'h15', sec:'G', type:'mcq', sub:'Bài 104.4 – What does quite mean?',
+      q:'"Her English is quite good." — quite = ?',
+      opts:['more than a little, less than very','completely'], a:0,
+      exp:'good là tính từ thường → quite = khá.' },
+    { id:'h16', sec:'G', type:'mcq', sub:'Bài 104.4 – What does quite mean?',
+      q:'"I couldn\'t believe it. It was quite amazing." — quite = ?',
+      opts:['more than a little, less than very','completely'], a:1,
+      exp:'amazing thuộc nhóm tính từ tuyệt đối → quite = completely.' },
+    { id:'h17', sec:'G', type:'mcq', sub:'Bài 104.4 – What does quite mean?',
+      q:'"I\'m quite tired. I\'ll go to bed." — quite = ?',
+      opts:['completely','more than a little, less than very'], a:1,
+      exp:'tired là tính từ thường → quite = khá.' },
+    { id:'h18', sec:'G', type:'mcq', sub:'Bài 104.4 – What does quite mean?',
+      q:'"I quite agree with you." — quite = ?',
+      opts:['completely','more than a little, less than very'], a:0,
+      exp:'quite agree = completely agree.' },
+
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 104.5 – Complete with quite + adjective',
+      q:'1. Don\'t worry about the dog. It\'s ______ (safe) to touch it.', acc:['quite safe'], ans:'quite safe',
+      exp:'quite safe = hoàn toàn an toàn.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 104.5 – Complete with quite + adjective',
+      q:'2. Sorry, I can\'t finish all this by tomorrow. It\'s ______ (impossible).', acc:['quite impossible'], ans:'quite impossible',
+      exp:'quite impossible = hoàn toàn không thể.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 104.5 – Complete with quite + adjective',
+      q:'3. The two jobs can\'t be compared. They are ______ (different).', acc:['quite different'], ans:'quite different',
+      exp:'quite different = completely different.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 104.5 – Complete with quite + adjective',
+      q:'4. You didn\'t need to buy a gift. It was ______ (unnecessary).', acc:['quite unnecessary'], ans:'quite unnecessary',
+      exp:'quite unnecessary = hoàn toàn không cần thiết.' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 104.5 – Complete with quite + adjective',
+      q:'5. I think the shop closes at 6, but I\'m not ______ (sure).', acc:['quite sure'], ans:'quite sure',
+      exp:'not quite sure = không hoàn toàn chắc.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

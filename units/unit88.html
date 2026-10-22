@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 88 – All / all of, most / most of, no / none of etc. | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 88 – All / all of · most / most of · no / none of etc.</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">59 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Các từ <b>all, some, any, most, much/many, little/few, half, no/none</b> đều chỉ "bao nhiêu phần". Điểm mấu chốt của unit: khi nói <b>chung chung</b> (mọi chiếc xe trên đời) thì dùng thẳng <b>từ + danh từ</b>; khi nói về <b>một nhóm cụ thể</b> (những chiếc xe <i>của tôi</i>, những cuốn sách <i>này</i>) thì phải có <b>of + the/my/this/these...</b>. Người Việt hay nói <s>most of people</s> hoặc <s>the most people</s> — cả hai đều sai.</p>
+      <div class="ex"><b class="en"><mark>Most</mark> people like music. (con người nói chung)<br><mark>Most of the</mark> people I work with are friendly. (nhóm cụ thể)</b></div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">(1) Chung chung:   all / some / most / many / few / no + danh từ
+                   All cars have wheels.   Most tourists don't come here.
+
+(2) Nhóm cụ thể:   some of / most of / none of / many of ... + the / my / this / these / those + N
+                   Some of the films I've seen were violent.   Most of my time ...
+
+(3) Với đại từ:    all of / some of / none of / half of + it / us / you / them
+                   All of us were late.   I've read half of it.</div>
+      <div class="scroll"><table>
+        <tr><th>❌ Không nói</th><th>✅ Nói</th></tr>
+        <tr><td>some of people</td><td>some people / some of the people</td></tr>
+        <tr><td>most of time</td><td>most of the time</td></tr>
+        <tr><td>the most tourists</td><td>most tourists</td></tr>
+        <tr><td>all us / half it</td><td>all of us / half of it</td></tr>
+        <tr><td>the half</td><td>half (of it)</td></tr>
+      </table></div>
+
+      <h2>1.3 · A. Từ + danh từ (nghĩa chung)</h2>
+      <ul>
+        <li><i><b>All</b> cars have wheels. · <b>Some</b> cars are faster than others. · <b>Many</b> people drive too fast.</i></li>
+        <li>Biển báo: <i><b>NO</b> CARS.</i> · <i>I'm at home <b>most</b> days.</i></li>
+        <li>Nói <b>most</b>, không nói <s>the most</s> khi nghĩa là "phần lớn": <i>Most tourists don't visit this area.</i></li>
+      </ul>
+
+      <h2>1.4 · B. Từ + of + the/my/this... (nhóm cụ thể)</h2>
+      <ul>
+        <li><i><b>Some of the</b> people I work with are not very friendly.</i></li>
+        <li><i><b>None of this</b> money is mine. · Have you read <b>any of these</b> books?</i></li>
+        <li><i>I was ill. I spent <b>most of the</b> day in bed.</i></li>
+        <li><b>all</b> và <b>half</b> không bắt buộc có of: <i>All (of) my friends ... · Half (of) this money ...</i></li>
+      </ul>
+      <div class="formula">All flowers are beautiful.                    (hoa nói chung)
+All (of) the flowers in this garden are beautiful.  (nhóm hoa cụ thể)
+Most problems have a solution.                 (chung)
+We solved most of the problems we had.         (cụ thể)</div>
+
+      <h2>1.5 · C. + it / us / you / them</h2>
+      <ul>
+        <li><i>'How many of these people do you know?' '<b>None of them</b>. / <b>A few of them</b>.'</i></li>
+        <li><i>Do <b>any of you</b> want to come? · 'Do you like this music?' '<b>Some of it</b>. Not <b>all of it</b>.'</i></li>
+        <li>Trước đại từ <b>bắt buộc có of</b>, kể cả all/half: <i><b>All of us</b> were late</i> (không <s>all us</s>), <i>I've read <b>half of it</b></i>.</li>
+      </ul>
+
+      <h2>1.6 · D. Dùng một mình (không có danh từ)</h2>
+      <ul>
+        <li><i>Some cars have four doors and <b>some</b> have two.</i></li>
+        <li><i>A few of the shops were open, but <b>most</b> (of them) were closed.</i></li>
+        <li><i>Half this money is mine, and <b>half</b> (of it) is yours.</i> (không nói <s>the half</s>)</li>
+      </ul>
+
+      <h2>1.7 · Lỗi hay gặp</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">Most of people like music.</td><td class="yes"><b>Most people</b> like music.</td></tr>
+        <tr><td class="no">The most students passed.</td><td class="yes"><b>Most students</b> / <b>Most of the students</b> passed.</td></tr>
+        <tr><td class="no">I spend most of my free time to read.</td><td class="yes">I spend <b>most of my</b> free time reading.</td></tr>
+        <tr><td class="no">All us agreed.</td><td class="yes"><b>All of us</b> agreed. / We all agreed.</td></tr>
+        <tr><td class="no">None of student came.</td><td class="yes"><b>None of the students</b> came.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Units 75B, 90, 100D</b> (all) · <b>Unit 85</b> (some/any) · <b>Unit 86</b> (no/none) · <b>Unit 87</b> (much/many/little/few) · <b>Unit 96B</b> (all of whom / most of which).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🌏 <b class="en"><mark>Most</mark> people in my city ride motorbikes.</b> <span class="note">(đời sống — nói chung, không of)</span></div>
+      <div class="ex">📚 <b class="en">I've read <mark>most of the</mark> books on this list.</b> <span class="note">(học tập — nhóm cụ thể)</span></div>
+      <div class="ex">👥 <b class="en"><mark>None of my</mark> colleagues speak French.</b> <span class="note">(công việc)</span></div>
+      <div class="ex">🍕 <b class="en">I was full, so I only ate <mark>half of</mark> it.</b> <span class="note">(đời sống — half of + it)</span></div>
+      <div class="ex">🙋 <b class="en">Do <mark>any of you</mark> have a question?</b> <span class="note">(lớp học — any of + you)</span></div>
+      <div class="ex">🗓️ <b class="en">We get on well <mark>most of the time</mark>.</b> <span class="note">(giao tiếp — cụm cố định)</span></div>
+      <div class="ex">📈 <b class="en"><mark>Some of the</mark> participants did not complete the survey.</b> <span class="note">(IELTS Writing — mô tả dữ liệu)</span></div>
+      <div class="ex">🚫 <b class="en"><mark>All of us</mark> were surprised by the news.</b> <span class="note">(kể chuyện — all of + us)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Of cần người dẫn đường":</b> sau of phải có <i>the / my / this / these / those / it / us / them</i>. Không có → bỏ of.</li>
+        <li><b>Most không có "the"</b> khi nghĩa là "phần lớn".</li>
+        <li><b>all &amp; half "dễ tính":</b> có of hay không đều được trước danh từ; nhưng trước đại từ thì <b>bắt buộc</b> of.</li>
+        <li><b>Chung hay riêng?</b> Chung (mọi người, mọi chiếc xe) → không of. Riêng (những người tôi biết) → of the.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Dạng "Put in of where necessary": nhìn từ ngay sau chỗ trống — là <i>the/my/these/her/it/them</i> → cần of (trừ all/half thì tùy chọn); là danh từ trần → để trống.</li>
+        <li>Bẫy <i>most of the time</i> (cụ thể) vs <i>most days</i> (chung) — đều đúng.</li>
+        <li>Bẫy <i>all his life</i> — đúng (all không cần of).</li>
+        <li>Câu có <i>All us / Half it</i> → sai, thiếu of.</li>
+        <li>Dịch "hầu hết mọi người" → <i>most people</i>, không phải <i>most of people</i>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">Most of Vietnamese people ...</td><td class="yes"><b>Most</b> Vietnamese people ...</td><td class="why">nói chung → không of</td></tr>
+        <tr><td class="no">The most people think ...</td><td class="yes"><b>Most</b> people think ...</td><td class="why">"phần lớn" không có the</td></tr>
+        <tr><td class="no">Some of students failed.</td><td class="yes">Some of <b>the</b> students failed.</td><td class="why">of + the + N</td></tr>
+        <tr><td class="no">All them came.</td><td class="yes">All <b>of</b> them came.</td><td class="why">trước đại từ cần of</td></tr>
+        <tr><td class="no">I ate the half of the cake.</td><td class="yes">I ate <b>half (of)</b> the cake.</td><td class="why">không dùng the half</td></tr>
+        <tr><td class="no">None of them don't know.</td><td class="yes">None of them <b>know(s)</b>.</td><td class="why">none đã phủ định</td></tr>
+        <tr><td class="no">Most of time I study at night.</td><td class="yes">Most of <b>the</b> time ...</td><td class="why">cụm cố định most of the time</td></tr>
+        <tr><td class="no">Many of my friend live abroad.</td><td class="yes">Many of my <b>friends</b> live abroad.</td><td class="why">many of + N số nhiều</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> mô tả lớp học/công ty: <i>"Most of my classmates are from Hanoi. Some of them work part-time. None of us like Monday mornings."</i></li>
+        <li><b>Viết IELTS Task 1:</b> <i>"Most of the respondents ..., while only a few of them ..."</i></li>
+        <li><b>Viết IELTS Task 2:</b> khi khái quát → <i>"Most people believe ..."</i> (không of).</li>
+        <li><b>Tự kiểm tra:</b> mỗi lần viết "of", nhìn từ tiếp theo — có the/my/these/them không?</li>
+        <li><b>Quy tắc vàng:</b> chung → không of; cụ thể → of the/my...; đại từ → luôn of.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3 ngày, 7 ngày và 14 ngày; ưu tiên nút "Làm lại câu sai". Liên quan: <b>Unit 86</b> (none), <b>Unit 89</b> (both/neither/either of), <b>Unit 90</b> (all/every/whole), <b>Unit 96</b> (most of which).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit88.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 88 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 88 – All of / most of / none of etc. | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit88.html';
+  var KEY = 'egu4_unit88_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn có of hay không, most hay the most, all of us hay all us…' },
+    { id:'B', title:'B. Điền từ',                   desc:'Điền of (hoặc - nếu không cần) / all of, none of, half of… vào chỗ trống.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền cụm còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 88.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 88 Exercises)', desc:'Bài 88.1 → 88.4 theo đúng dạng bài của sách Murphy, câu đã viết lại, kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'______ like chocolate.',
+      opts:['Most children','Most of children','The most children','Most the children'], a:0,
+      exp:'Nói chung về trẻ em → most + danh từ (không of, không the).' },
+    { id:'a2', sec:'A', type:'mcq', q:'I spent ______ the weekend cleaning the house.',
+      opts:['most','most of','the most','most the'], a:1,
+      exp:'Có "the weekend" (cụ thể) phía sau → most of.' },
+    { id:'a3', sec:'A', type:'mcq', q:'______ were late because of the rain.',
+      opts:['All us','Us all of','All of us','All of we'], a:2,
+      exp:'Trước đại từ (us) bắt buộc có of: All of us.' },
+    { id:'a4', sec:'A', type:'mcq', q:'Have you seen ______ these films?',
+      opts:['any','some','none','any of'], a:3,
+      exp:'Sau là "these films" (cụ thể) → any of.' },
+    { id:'a5', sec:'A', type:'mcq', q:'______ this pizza is yours, and the rest is mine.',
+      opts:['Half','The half','Half to','A half of'], a:0,
+      exp:'half + this/my/the... (of tùy chọn): Half (of) this pizza. Không nói "the half".' },
+    { id:'a6', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['Some of people are very rude.','Some the people are very rude.','Some people are very rude.'], a:2,
+      exp:'Nói chung → some people. "some of people" sai vì sau of phải có the/my/these...' },
+    { id:'a7', sec:'A', type:'mcq', q:'I\'ve only read ______ the book, but I like it so far.',
+      opts:['the half of','half to','half','a half'], a:2,
+      exp:'half (of) the book. Không dùng "the half of".' },
+    { id:'a8', sec:'A', type:'mcq', q:'\'Do you like this album?\' \'______. Not all of it.\'',
+      opts:['Some it','Some of them','Any of it','Some of it'], a:3,
+      exp:'album là một thứ (số ít) → it; trước it bắt buộc có of: Some of it.' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'Most ______ my friends live near me. (of hoặc -)',
+      acc:['of'], ans:'of',
+      exp:'Sau là "my friends" (cụ thể) → most of.' },
+    { id:'b2', sec:'B', type:'fill', q:'Most ______ teenagers use social media. (of hoặc -)',
+      acc:['-'], ans:'- (không cần of)',
+      exp:'teenagers nói chung, không có the/my → không cần of.' },
+    { id:'b3', sec:'B', type:'fill', q:'None ______ the shops were open on Sunday. (of hoặc -)',
+      acc:['of'], ans:'of',
+      exp:'none of + the shops.' },
+    { id:'b4', sec:'B', type:'fill', q:'I\'ve lived in this town all ______ my life. (of hoặc -)',
+      acc:['-','of'], ans:'- (of cũng được)',
+      exp:'all + my life: of không bắt buộc (all my life / all of my life).' },
+    { id:'b5', sec:'B', type:'fill', q:'I\'ve read the report, but only half ______. (half of + đại từ)',
+      acc:['of it'], ans:'of it',
+      exp:'Trước đại từ cần of: half of it (không nói half it).' },
+    { id:'b6', sec:'B', type:'fill', q:'We invited our neighbours, but ______ came. (none of + đại từ)',
+      acc:['none of them'], ans:'none of them',
+      exp:'none of them = không ai trong số họ.' },
+    { id:'b7', sec:'B', type:'fill', q:'Some ______ the questions in the test were very easy. (of hoặc -)',
+      acc:['of'], ans:'of',
+      exp:'some of + the questions.' },
+    { id:'b8', sec:'B', type:'fill', q:'Many ______ people think the city is too crowded. (of hoặc -)',
+      acc:['-'], ans:'- (không cần of)',
+      exp:'people nói chung → many people.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (most / the / time / of / we / get on well)',
+      tokens:['We','get','on','well','most','of','the','time'],
+      acc:['we get on well most of the time'], ans:'We get on well most of the time.',
+      exp:'Cụm cố định: most of the time.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (none / money / this / of / is / mine)',
+      tokens:['None','of','this','money','is','mine'],
+      acc:['none of this money is mine'], ans:'None of this money is mine.',
+      exp:'none of + this + danh từ không đếm được → động từ số ít (is).' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (do / of / any / you / want / coffee)',
+      tokens:['Do','any','of','you','want','coffee'],
+      acc:['do any of you want coffee'], ans:'Do any of you want coffee?',
+      exp:'any of + you.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (all / my / friends / near / live / the sea)',
+      tokens:['All','my','friends','live','near','the','sea'],
+      acc:['all my friends live near the sea'], ans:'All my friends live near the sea.',
+      exp:'all + my friends: không bắt buộc có of (All my friends = All of my friends).' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (most / tourists / visit / don\'t / this area)',
+      tokens:['Most','tourists',"don't",'visit','this','area'],
+      acc:["most tourists don't visit this area"], ans:'Most tourists don\'t visit this area.',
+      exp:'Nói chung → most + danh từ, không có the.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: How many of these people do you know?  B: ______. I\'ve never met them. (none of + đại từ)',
+      acc:['none of them'], ans:'None of them',
+      exp:'None of them = không ai trong số họ.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Did you eat all the cake?  B: No, only ______. The rest is in the fridge. (half of + đại từ)',
+      acc:['half of it','half'], ans:'half of it',
+      exp:'cake số ít → it; half of it (hoặc chỉ "half").' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Were the students happy with the results?  B: Yes, ______ were. Everyone passed. (all of + đại từ)',
+      acc:['all of them'], ans:'all of them',
+      exp:'all of them = tất cả bọn họ.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Do you work at weekends?  B: Not usually. I\'m free ______ weekends. (most hoặc most of)',
+      acc:['most'], ans:'most',
+      exp:'weekends nói chung (không có the/my) → most weekends.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 2 câu: 1 câu với "Most + danh từ" (chung), 1 câu với "Most of the/my + danh từ" (cụ thể).',
+      sample:'Most people enjoy holidays. Most of my colleagues take their holidays in summer.',
+      exp:'Chung → most people; cụ thể → most of my colleagues.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 3 câu về gia đình/lớp của bạn dùng all of us, some of us, none of us.',
+      sample:'All of us love Vietnamese food. Some of us can cook well. None of us like getting up early.',
+      exp:'Trước us/them/you/it luôn cần of.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 1 câu với half (of) và 1 câu với most of the time.',
+      sample:'Half of my salary goes on rent. I work from home most of the time.',
+      exp:'half (of) + the/my...; không dùng "the half". most of the time là cụm cố định.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['The most people want a good job.','Most of people want a good job.','Most people want a good job.'], a:2,
+      exp:'Nói chung → Most people.' },
+    { id:'f2', sec:'F', type:'fill', q:'I\'ve visited many ______ the museums in this city. (of hoặc -)',
+      acc:['of'], ans:'of',
+      exp:'many of + the museums (cụ thể).' },
+    { id:'f3', sec:'F', type:'mcq', q:'______ were surprised when she resigned.',
+      opts:['All of us','All us','The all of us'], a:0,
+      exp:'All of us — trước đại từ cần of.' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch: "Hầu hết bạn bè của tôi sống ở Hà Nội."',
+      acc:['most of my friends live in hanoi','most of my friends live in ha noi'],
+      ans:'Most of my friends live in Hanoi.',
+      exp:'Bạn bè của tôi (cụ thể) → most of my friends. (Lưu ý: most phải có of trước my.)' },
+    { id:'f5', sec:'F', type:'mcq', q:'I don\'t like ______ his songs.',
+      opts:['any','any of','none of'], a:1,
+      exp:'his songs (cụ thể) → any of; câu đã phủ định (don\'t) nên không dùng none.' },
+    { id:'f6', sec:'F', type:'fill', q:'Not ______ birds can fly — penguins can\'t. (1 từ)',
+      acc:['all'], ans:'all',
+      exp:'Not all birds = không phải mọi loài chim (nói chung, không of).' },
+    { id:'f7', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I spent the half of my money.','I spent half my of money.','I spent half of my money.'], a:2,
+      exp:'half (of) my money; không dùng "the half".' },
+    { id:'f8', sec:'F', type:'fill', q:'This music is OK, but I don\'t like ______. (all of + đại từ)',
+      acc:['all of it'], ans:'all of it',
+      exp:'music không đếm được → it; not ... all of it = không thích hết.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 88.1 – Điền of nếu cần (không cần thì ghi -)',
+      q:'Some ______ songs are about love.', acc:['-'], ans:'-',
+      exp:'songs nói chung → some songs.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 88.1 – Điền of nếu cần (không cần thì ghi -)',
+      q:'Some ______ the songs on this album are about love.', acc:['of'], ans:'of',
+      exp:'the songs (cụ thể) → some of.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 88.1 – Điền of nếu cần (không cần thì ghi -)',
+      q:'My uncle hates shopping. He says all ______ shops are the same.', acc:['-'], ans:'-',
+      exp:'shops nói chung → all shops.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 88.1 – Điền of nếu cần (không cần thì ghi -)',
+      q:'Would you like any ______ these biscuits?', acc:['of'], ans:'of',
+      exp:'these biscuits → any of.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 88.1 – Điền of nếu cần (không cần thì ghi -)',
+      q:'Linh has worked in Saigon most ______ her career.', acc:['of'], ans:'of',
+      exp:'her career → most of.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 88.1 – Điền of nếu cần (không cần thì ghi -)',
+      q:'Grandpa has lived in this village all ______ his life.', acc:['-','of'], ans:'- (of cũng đúng)',
+      exp:'all + his life: of không bắt buộc.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 88.1 – Điền of nếu cần (không cần thì ghi -)',
+      q:'Most ______ mornings I go for a run before breakfast.', acc:['-'], ans:'-',
+      exp:'mornings nói chung → most mornings.' },
+
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 88.2 – Hoàn thành câu (dùng of khi cần)',
+      q:'I spend much ______ (my free time) reading. → much ______', acc:['of my free time'], ans:'of my free time',
+      exp:'my free time cụ thể → much of my free time.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 88.2 – Hoàn thành câu (dùng of khi cần)',
+      q:'Many ______ (fires) are caused by carelessness. → Many ______', acc:['fires'], ans:'fires',
+      exp:'Nói chung → many fires (không of).' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 88.2 – Hoàn thành câu (dùng of khi cần)',
+      q:'It\'s an old city. Many ______ (the houses) are 300 years old. → Many ______', acc:['of the houses'], ans:'of the houses',
+      exp:'the houses (của thành phố này) → many of the houses.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 88.2 – Hoàn thành câu (dùng of khi cần)',
+      q:'He got engaged secretly. He didn\'t tell any ______ (his friends). → any ______', acc:['of his friends'], ans:'of his friends',
+      exp:'his friends → any of his friends.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 88.2 – Hoàn thành câu (dùng of khi cần)',
+      q:'Not all ______ (fish) live in the sea. Some live in rivers. → Not all ______', acc:['fish'], ans:'fish',
+      exp:'fish nói chung → all fish.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 88.2 – Hoàn thành câu (dùng of khi cần)',
+      q:'We lost 3–0. None ______ (the players) played well. → None ______', acc:['of the players'], ans:'of the players',
+      exp:'none of + the players.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 88.2 – Hoàn thành câu (dùng of khi cần)',
+      q:'She has travelled widely. She has been to most ______ (Asian countries). → most ______', acc:['asian countries'], ans:'Asian countries',
+      exp:'Asian countries không có the/my → most Asian countries.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 88.2 – Hoàn thành câu (dùng of khi cần)',
+      q:'I wasn\'t hungry. I could only eat half ______ (my lunch). → half ______', acc:['my lunch','of my lunch'], ans:'(of) my lunch',
+      exp:'half + my lunch: of tùy chọn.' },
+
+    { id:'h16', sec:'G', type:'mcq', sub:'Bài 88.3 – Hoàn thành theo ý bạn (chọn cách viết đúng)',
+      q:'We disagree sometimes, but we get on well most ______.',
+      opts:['of the time','of time','the time'], a:0,
+      exp:'most of the time.' },
+    { id:'h17', sec:'G', type:'mcq', sub:'Bài 88.3 – Hoàn thành theo ý bạn (chọn cách viết đúng)',
+      q:'I went to the concert alone. None of ______ wanted to come.',
+      opts:['friends','my friends','my friend'], a:1,
+      exp:'none of + my + danh từ số nhiều → my friends.' },
+    { id:'h18', sec:'G', type:'mcq', sub:'Bài 88.3 – Hoàn thành theo ý bạn (chọn cách viết đúng)',
+      q:'Some of ______ you sent me were really funny.',
+      opts:['photos','photo','the photos'], a:2,
+      exp:'some of + the photos (cụ thể: ảnh bạn gửi).' },
+    { id:'h19', sec:'G', type:'mcq', sub:'Bài 88.3 – Hoàn thành theo ý bạn (chọn cách viết đúng)',
+      q:'The exam was hard. I could only answer half ______.',
+      opts:['the questions','questions','of questions'], a:0,
+      exp:'half (of) the questions — cần the vì là câu hỏi cụ thể của đề thi.' },
+
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 88.4 – all of / some of / none of + it / them / us',
+      q:'\'How many of these songs do you know?\' \'______. Every single one.\'', acc:['all of them'], ans:'All of them',
+      exp:'Every single one → All of them.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 88.4 – all of / some of / none of + it / them / us',
+      q:'We all got sunburnt because ______ had brought sun cream.', acc:['none of us'], ans:'none of us',
+      exp:'Chúng tôi đều bị cháy nắng → không ai trong chúng tôi mang kem → none of us.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 88.4 – all of / some of / none of + it / them / us',
+      q:'Some of this food is for you and ______ is for your brother.', acc:['some of it'], ans:'some of it',
+      exp:'food không đếm được → it: some of it.' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 88.4 – all of / some of / none of + it / them / us',
+      q:'I asked several shop assistants, but ______ could help me.', acc:['none of them'], ans:'none of them',
+      exp:'none of them = không ai trong số họ.' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 88.4 – all of / some of / none of + it / them / us',
+      q:'His excuse was completely made up. ______ was true.', acc:['none of it'], ans:'None of it',
+      exp:'excuse (số ít) → it; None of it was true.' },
+    { id:'h25', sec:'G', type:'fill', sub:'Bài 88.4 – all of / some of / none of + it / them / us',
+      q:'Not all the guests were Vietnamese. ______ were Korean.', acc:['some of them'], ans:'Some of them',
+      exp:'Không phải tất cả → một số trong họ: Some of them.' },
+    { id:'h26', sec:'G', type:'fill', sub:'Bài 88.4 – all of / some of / none of + it / them / us',
+      q:'I read most of the article, but not ______.', acc:['all of it'], ans:'all of it',
+      exp:'article số ít → it; not all of it.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

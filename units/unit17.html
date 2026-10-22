@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 17 – Have and have got | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 17 – Have and have got</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">61 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Động từ <b>have</b> có hai "vai": (1) <b>sở hữu / quan hệ / bệnh tật</b> — lúc này dùng được <b>have</b> hoặc <b>have got</b>, không dùng tiếp diễn; (2) <b>hành động / trải nghiệm</b> (have breakfast, have a shower, have a good time) — chỉ dùng <b>have</b>, được dùng tiếp diễn.</p>
+      <div class="ex"><b class="en">We<mark>'ve got</mark> a nice room. (sở hữu) ↔ We<mark>'re having</mark> a great time. (trải nghiệm)</b><br>Cùng là "have", nhưng nghĩa khác → quy tắc khác.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">SỞ HỮU (hiện tại):  have = have got
+  (+)  They have a car.            = They've got a car.
+  (-)  I don't have any money.     = I haven't got any money.
+  (?)  Do you have a pen?          = Have you got a pen?
+       Does she have a car?        = Has she got a car?
+
+QUÁ KHỨ: had (không dùng had got)
+  (-)  I didn't have my phone.     (?)  Did you have a car?
+
+HÀNH ĐỘNG: chỉ have (không có got), dùng do/does/did, được dùng -ing
+  I'm having a shower.  What time does Chris have lunch?</div>
+      <div class="scroll"><table>
+        <tr><th>Câu hỏi</th><th>Phủ định</th><th>Ghi chú</th></tr>
+        <tr><td>Do you have any questions?</td><td>I don't have any questions.</td><td>phổ biến nhất</td></tr>
+        <tr><td>Have you got any questions?</td><td>I haven't got any questions.</td><td>phổ biến (Anh–Anh)</td></tr>
+        <tr><td>Have you any questions?</td><td>I haven't any questions.</td><td>ít dùng</td></tr>
+      </table></div>
+
+      <h2>1.3 · A. Have / have got — sở hữu, quan hệ, bệnh</h2>
+      <ul>
+        <li><i>Lisa <b>has</b> two brothers. = Lisa<b>'s got</b> two brothers.</i></li>
+        <li><i>I <b>have</b> a headache. = I<b>'ve got</b> a headache.</i></li>
+        <li><b>Không</b> dùng tiếp diễn: <i>We <b>have</b> a nice room.</i> (không nói <s>We're having a nice room</s>)</li>
+        <li>Quá khứ: <i>Lisa <b>had</b> long hair as a child.</i> (không nói <s>had got</s>)</li>
+      </ul>
+
+      <h2>1.4 · B. Have + hành động / trải nghiệm</h2>
+      <div class="scroll"><table>
+        <tr><th>Nhóm</th><th>Cụm với have</th></tr>
+        <tr><td>Ăn uống</td><td>have breakfast / lunch / dinner / a coffee / something to eat</td></tr>
+        <tr><td>Nghỉ ngơi</td><td>have a bath / a shower / a swim / a break / a rest / a holiday / a party</td></tr>
+        <tr><td>Sự việc</td><td>have an accident / an experience / a dream</td></tr>
+        <tr><td>Giao tiếp</td><td>have a look (at) / a chat / a conversation / a discussion</td></tr>
+        <tr><td>Cảm nhận</td><td>have trouble / difficulty / fun / a good time</td></tr>
+        <tr><td>Sinh con</td><td>have a baby</td></tr>
+      </table></div>
+      <ul>
+        <li><b>Không</b> dùng have got: <i>I sometimes <b>have</b> a sandwich for lunch.</i> (không nói <s>I've got</s>)</li>
+        <li><b>Được</b> dùng tiếp diễn: <i>Mark <b>is having</b> a shower at the moment. He <b>has</b> a shower every day.</i></li>
+        <li>Câu hỏi/phủ định dùng do/does/did: <i>I <b>don't</b> usually <b>have</b> a big breakfast.</i> / <i>What time <b>does</b> Chris <b>have</b> lunch?</i></li>
+      </ul>
+
+      <h2>1.5 · So sánh &amp; lỗi sai</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>have = sở hữu</th><th>have = hành động</th></tr>
+        <tr><td>have got?</td><td>✅ I've got a car.</td><td>❌ (I've got lunch ✗)</td></tr>
+        <tr><td>tiếp diễn?</td><td>❌ (I'm having a car ✗)</td><td>✅ I'm having lunch.</td></tr>
+        <tr><td>quá khứ</td><td>had / didn't have</td><td>had / didn't have</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I'm having a headache.</td><td class="yes">I <b>have</b> / I<b>'ve got</b> a headache.</td></tr>
+        <tr><td class="no">She had got long hair as a child.</td><td class="yes">She <b>had</b> long hair as a child.</td></tr>
+        <tr><td class="no">I hadn't an umbrella.</td><td class="yes">I <b>didn't have</b> an umbrella.</td></tr>
+        <tr><td class="no">What time has Chris lunch?</td><td class="yes">What time <b>does</b> Chris <b>have</b> lunch?</td></tr>
+        <tr><td class="no">I usually haven't breakfast.</td><td class="yes">I <b>don't</b> usually <b>have</b> breakfast.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 4</b> (động từ không dùng tiếp diễn) · <b>Unit 31</b> (have (got) to ...) · <b>Appendix 7</b> (tiếng Anh Mỹ: thường dùng do you have).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">👨‍👩‍👧 <b class="en">I<mark>'ve got</mark> two sisters and a brother.</b> <span class="note">(giới thiệu gia đình)</span></div>
+      <div class="ex">🤒 <b class="en">I can't come today. I<mark>'ve got</mark> a fever.</b> <span class="note">(xin nghỉ)</span></div>
+      <div class="ex">❓ <b class="en"><mark>Do</mark> you <mark>have</mark> any questions?</b> <span class="note">(cuối buổi thuyết trình)</span></div>
+      <div class="ex">☕ <b class="en">Let's <mark>have</mark> a break and <mark>have</mark> a coffee.</b> <span class="note">(công việc)</span></div>
+      <div class="ex">🎉 <b class="en">We<mark>'re having</mark> a great time in Da Nang!</b> <span class="note">(nhắn tin khi đi du lịch)</span></div>
+      <div class="ex">🚿 <b class="en">Sorry, I missed your call. I <mark>was having</mark> a shower.</b> <span class="note">(giải thích)</span></div>
+      <div class="ex">🗺️ <b class="en"><mark>Did</mark> you <mark>have</mark> trouble finding the hotel?</b> <span class="note">(đón khách)</span></div>
+      <div class="ex">📱 <b class="en">I <mark>didn't have</mark> my phone, so I couldn't call you.</b> <span class="note">(quá khứ — không dùng hadn't)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"got" = "cầm trong tay"</b>: chỉ dùng have got cho thứ bạn <u>sở hữu / mắc phải</u> (xe, anh chị em, bệnh), không dùng cho việc bạn <u>làm</u> (ăn, tắm, nghỉ).</li>
+        <li><b>Có thể "đang" làm không?</b> Đang ăn, đang tắm → được -ing. Đang "có xe" → vô lý → không -ing.</li>
+        <li><b>Quá khứ chỉ có một dạng:</b> had / didn't have / did ... have? Quên "had got" và "hadn't" đi.</li>
+        <li><b>have got</b> đi với <b>have/has</b>: has she got? / hasn't got — <b>have</b> thường đi với <b>do/does</b>: does she have? / doesn't have.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Dạng "chọn tất cả đáp án đúng": với sở hữu ở hiện tại, thường <b>cả "Do you have" và "Have you got"</b> đều đúng.</li>
+        <li>Câu có mốc quá khứ (yesterday, when you were a child) → chỉ <b>Did you have</b>.</li>
+        <li>Bẫy "Are you having a car?" → loại (sở hữu không dùng tiếp diễn).</li>
+        <li>Cụm hành động (a good time, a shower, trouble) → không bao giờ có "got".</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I'm having a headache.</td><td class="yes">I<b>'ve got</b> / I <b>have</b> a headache.</td><td class="why">bệnh → không tiếp diễn</td></tr>
+        <tr><td class="no">She has got breakfast at 7.</td><td class="yes">She <b>has</b> breakfast at 7.</td><td class="why">hành động → không got</td></tr>
+        <tr><td class="no">Have you a pen?</td><td class="yes"><b>Do you have</b> / <b>Have you got</b> a pen?</td><td class="why">dạng "Have you...?" rất ít dùng</td></tr>
+        <tr><td class="no">I hadn't money yesterday.</td><td class="yes">I <b>didn't have</b> any money yesterday.</td><td class="why">quá khứ → didn't have</td></tr>
+        <tr><td class="no">Does she has a car?</td><td class="yes">Does she <b>have</b> a car?</td><td class="why">sau does → V nguyên dạng</td></tr>
+        <tr><td class="no">He doesn't have got a job.</td><td class="yes">He <b>hasn't got</b> / <b>doesn't have</b> a job.</td><td class="why">không trộn hai dạng</td></tr>
+        <tr><td class="no">We have a good time now.</td><td class="yes">We<b>'re having</b> a good time.</td><td class="why">trải nghiệm đang diễn ra</td></tr>
+        <tr><td class="no">My sister has had got a baby.</td><td class="yes">My sister <b>has had</b> / <b>had</b> a baby.</td><td class="why">have a baby = sinh con, không got</td></tr>
+        <tr><td class="no">I have 25 years old.</td><td class="yes">I <b>am</b> 25 (years old).</td><td class="why">tuổi dùng be (dịch từ "có")</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Giới thiệu bản thân:</b> <i>"I've got one brother. I don't have any pets."</i></li>
+        <li><b>Nơi làm việc:</b> <i>"Let's have a quick chat." / "Can I have a look at the report?" / "Do you have a minute?"</i></li>
+        <li><b>Nhắn tin du lịch:</b> <i>"We're having a great time. We've got a lovely room."</i></li>
+        <li><b>Hỏi thăm:</b> <i>"Did you have a good weekend?" / "Did you have any trouble?"</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại bài sau 3, 7 và 14 ngày; ưu tiên "Làm lại câu sai". Liên quan: <b>Unit 4</b> (động từ trạng thái), <b>Unit 31</b> (have to / have got to).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit17.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 17 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 17 – Have and have got | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit17.html';
+  var KEY = 'egu4_unit17_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền have / have got',      desc:'Điền dạng đúng của have / have got (hiện tại, quá khứ, phủ định, câu hỏi).' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 17.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 17 Exercises)', desc:'Bài 17.1 → 17.4 theo dạng bài của sách Murphy (câu đã viết lại), kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I can\'t come to work today. I ______ a bad cold.',
+      opts:['\'m having','\'ve got','have got had','\'m got'], a:1,
+      exp:'Bệnh tật = "sở hữu" → have / have got, không dùng tiếp diễn → I\'ve got a bad cold.' },
+    { id:'a2', sec:'A', type:'mcq', q:'Lisa ______ long hair when she was a child.',
+      opts:['had got','has','had','was having'], a:2,
+      exp:'Quá khứ của have (sở hữu) là had — không dùng had got.' },
+    { id:'a3', sec:'A', type:'mcq', q:'Mark can\'t come to the phone. He ______ a shower.',
+      opts:['has got','is having','have','has had got'], a:1,
+      exp:'have a shower = hành động → dùng được tiếp diễn: He is having a shower (đang tắm).' },
+    { id:'a4', sec:'A', type:'mcq', q:'What time ______ lunch?',
+      opts:['has Chris','does Chris have','has Chris got','is Chris have'], a:1,
+      exp:'have lunch = hành động → câu hỏi dùng does: What time does Chris have lunch?' },
+    { id:'a5', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I hadn\'t my phone, so I couldn\'t call you.','I didn\'t have my phone, so I couldn\'t call you.','I hadn\'t got my phone, so I couldn\'t call you.'], a:1,
+      exp:'Phủ định quá khứ của have → didn\'t have.' },
+    { id:'a6', sec:'A', type:'mcq', q:'We\'re enjoying our trip. We ______ a lovely room with a sea view.',
+      opts:['\'re having','\'ve got','\'re getting had','had got'], a:1,
+      exp:'Phòng = sở hữu → have / have got, không dùng tiếp diễn → We\'ve got (hoặc We have).' },
+    { id:'a7', sec:'A', type:'mcq', q:'Sometimes I ______ noodles for breakfast.',
+      opts:['have','\'ve got','am having got','has'], a:0,
+      exp:'have noodles = ăn (hành động) → không dùng have got. Chủ ngữ I → have.' },
+    { id:'a8', sec:'A', type:'mcq', q:'______ any brothers or sisters?',
+      opts:['Are you having','Have you got','Do you got','Had you got'], a:1,
+      exp:'Quan hệ gia đình → Have you got...? hoặc Do you have...?' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'My sister ______ (have got) three children.',
+      acc:['has got',"'s got"], ans:'has got',
+      exp:'Chủ ngữ she → has got.' },
+    { id:'b2', sec:'B', type:'fill', q:'I ______ (not / have) any money with me. Can you pay? (dùng do)',
+      acc:["don't have",'do not have'], ans:"don't have",
+      exp:'Hiện tại, phủ định với do → I don\'t have.' },
+    { id:'b3', sec:'B', type:'fill', q:'He ______ (not / have got) a car, so he cycles to work.',
+      acc:["hasn't got",'has not got'], ans:"hasn't got",
+      exp:'have got → phủ định: hasn\'t got (he).' },
+    { id:'b4', sec:'B', type:'fill', q:'______ (you / have) a car when you lived in Hanoi?',
+      acc:['did you have'], ans:'Did you have',
+      exp:'Câu hỏi quá khứ → Did you have...? (không dùng Had you got).' },
+    { id:'b5', sec:'B', type:'fill', q:'We ______ (have) a party last weekend. It was great.',
+      acc:['had'], ans:'had',
+      exp:'have a party (hành động), quá khứ → had.' },
+    { id:'b6', sec:'B', type:'fill', q:'I don\'t usually ______ (have) a big breakfast.',
+      acc:['have'], ans:'have',
+      exp:'don\'t + V nguyên dạng: have. (Không nói I usually haven\'t breakfast.)' },
+    { id:'b7', sec:'B', type:'fill', q:'Look! The children ______ (have) fun in the pool.',
+      acc:['are having',"'re having"], ans:'are having',
+      exp:'have fun = trải nghiệm đang diễn ra → are having.' },
+    { id:'b8', sec:'B', type:'fill', q:'______ (she / have got) a laptop? (câu hỏi với got)',
+      acc:['has she got'], ans:'Has she got',
+      exp:'Câu hỏi với have got: Has + she + got...?' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (got / I\'ve / headache / a)',
+      tokens:["I've",'got','a','headache'],
+      acc:["i've got a headache"], ans:'I\'ve got a headache.',
+      exp:'Bệnh → have got.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (you / do / any / have / questions)',
+      tokens:['Do','you','have','any','questions'],
+      acc:['do you have any questions'], ans:'Do you have any questions?',
+      exp:'Do + S + have...?' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (having / we\'re / time / great / a)',
+      tokens:["We're",'having','a','great','time'],
+      acc:["we're having a great time"], ans:'We\'re having a great time.',
+      exp:'have a great time = trải nghiệm → được dùng tiếp diễn.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (did / trouble / have / you / finding / it)',
+      tokens:['Did','you','have','trouble','finding','it'],
+      acc:['did you have trouble finding it'], ans:'Did you have trouble finding it?',
+      exp:'have trouble + V-ing; câu hỏi quá khứ với did.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (doesn\'t / a / she / have / licence / driving)',
+      tokens:['She',"doesn't",'have','a','driving','licence'],
+      acc:["she doesn't have a driving licence"], ans:'She doesn\'t have a driving licence.',
+      exp:'doesn\'t + have (nguyên dạng).' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Can I borrow a pen?  B: Sorry, I ______ one. (not / have got)',
+      acc:["haven't got",'have not got'], ans:"haven't got",
+      exp:'Phủ định của have got với I → haven\'t got.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Why didn\'t you answer the phone?  B: I ______ (have) dinner.',
+      acc:['was having'], ans:'was having',
+      exp:'Đang ăn tối lúc điện thoại reo → was having (hành động, được dùng tiếp diễn).' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Hi Linh! ______ (you / have) a good holiday?  B: Yes, thanks. It was lovely.',
+      acc:['did you have'], ans:'Did you have',
+      exp:'Kỳ nghỉ đã qua → Did you have...?' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Can I ______ (have) a look at your notes?  B: Sure, here you are.',
+      acc:['have'], ans:'have',
+      exp:'have a look (at) = xem qua; sau can → V nguyên dạng.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu về những gì bạn có / không có (gia đình, đồ vật) — dùng cả have got và do/don\'t have.',
+      sample:'I\'ve got two younger brothers. I don\'t have a car, but I\'ve got a motorbike. Do you have any pets?',
+      exp:'Sở hữu/quan hệ → have hoặc have got; không dùng tiếp diễn.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 3 câu mô tả một ngày của bạn dùng have + hành động (breakfast, a break, a shower, a chat...).',
+      sample:'I have breakfast at 6.30. I usually have a short break at 10. In the evening I have a chat with my mum.',
+      exp:'Các cụm hành động chỉ dùng have (không got), câu phủ định/hỏi dùng do/does.' },
+    { id:'e3', sec:'E', type:'self', q:'Bạn đang đi du lịch. Viết tin nhắn 2 câu: 1 câu "đang có thời gian vui vẻ", 1 câu về phòng khách sạn.',
+      sample:'We\'re having a wonderful time in Hoi An! We\'ve got a beautiful room near the river.',
+      exp:'having a good time (tiếp diễn, trải nghiệm) ↔ have got a room (sở hữu, không tiếp diễn).' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'I couldn\'t take any photos because I ______ (not / have) a camera.',
+      acc:["didn't have",'did not have'], ans:"didn't have",
+      exp:'Quá khứ phủ định → didn\'t have.' },
+    { id:'f2', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I\'m having a toothache.','I\'ve got a toothache.'], a:1,
+      exp:'Bệnh → have/have got, không tiếp diễn.' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu SAI:',
+      opts:['Does he have a job?','Has he got a job?','Is he having a job?'], a:2,
+      exp:'Có việc làm = sở hữu → không dùng tiếp diễn "Is he having a job?".' },
+    { id:'f4', sec:'F', type:'fill', q:'My cousin ______ (have) a baby last month. It\'s a girl.',
+      acc:['had'], ans:'had',
+      exp:'have a baby = sinh con; last month → had.' },
+    { id:'f5', sec:'F', type:'fill', q:'Let\'s stop and ______ (have) a break.',
+      acc:['have'], ans:'have',
+      exp:'Let\'s + V nguyên dạng: have a break.' },
+    { id:'f6', sec:'F', type:'mcq', q:'______ a lot of friends when you were at school?',
+      opts:['Had you','Did you have','Were you having','Had you got'], a:1,
+      exp:'Quá khứ → Did you have...? (Had you / Had you got không dùng).' },
+    { id:'f7', sec:'F', type:'fill', q:'Our house ______ (have got) a small garden.',
+      acc:['has got',"'s got"], ans:'has got',
+      exp:'Our house = it → has got.' },
+    { id:'f8', sec:'F', type:'fill', q:'Dịch: "Bạn có thời gian không?" (dùng do)',
+      acc:['do you have time','do you have any time','do you have a minute'], ans:'Do you have (any) time?',
+      exp:'Hỏi sở hữu với do: Do you have (any) time?' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 17.1 – Write negative sentences with have',
+      q:'I can\'t fix my bike. (any tools)',
+      acc:["i don't have any tools","i haven't got any tools","i do not have any tools","i have not got any tools"], ans:'I don\'t have any tools. / I haven\'t got any tools.',
+      exp:'Hiện tại (can\'t) → don\'t have hoặc haven\'t got.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 17.1 – Write negative sentences with have',
+      q:'We couldn\'t finish the test. (enough time)',
+      acc:["we didn't have enough time","we did not have enough time"], ans:'We didn\'t have enough time.',
+      exp:'Quá khứ (couldn\'t) → didn\'t have.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 17.1 – Write negative sentences with have',
+      q:'She couldn\'t call a taxi. (her phone)',
+      acc:["she didn't have her phone","she did not have her phone"], ans:'She didn\'t have her phone.',
+      exp:'Quá khứ → didn\'t have.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 17.1 – Write negative sentences with have',
+      q:'He can\'t buy a ticket. (any cash)',
+      acc:["he doesn't have any cash","he hasn't got any cash","he does not have any cash","he has not got any cash"], ans:'He doesn\'t have any cash. / He hasn\'t got any cash.',
+      exp:'Hiện tại, he → doesn\'t have / hasn\'t got.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 17.1 – Write negative sentences with have',
+      q:'I can\'t make a cake today. (any eggs)',
+      acc:["i don't have any eggs","i haven't got any eggs","i do not have any eggs","i have not got any eggs"], ans:'I don\'t have any eggs.',
+      exp:'Hiện tại → don\'t have / haven\'t got.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 17.1 – Write negative sentences with have',
+      q:'They couldn\'t watch the match. (a TV)',
+      acc:["they didn't have a tv","they did not have a tv"], ans:'They didn\'t have a TV.',
+      exp:'Quá khứ → didn\'t have.' },
+
+    { id:'h7', sec:'G', type:'mcq', sub:'Bài 17.2 – Which alternatives are correct?',
+      q:'Excuse me, ______ a charger I could borrow?  (A) have you got  (B) are you having  (C) do you have',
+      opts:['Chỉ A','Chỉ B','Chỉ C','Cả A và C'], a:3,
+      exp:'Sở hữu ở hiện tại → Have you got hoặc Do you have. "are you having" sai (sở hữu không tiếp diễn).' },
+    { id:'h8', sec:'G', type:'mcq', sub:'Bài 17.2 – Which alternatives are correct?',
+      q:'______ time to go to the post office yesterday?  (A) Had you got  (B) Did you have  (C) Had you',
+      opts:['Chỉ A','Chỉ B','Cả A và B','Cả B và C'], a:1,
+      exp:'Quá khứ → chỉ Did you have.' },
+    { id:'h9', sec:'G', type:'mcq', sub:'Bài 17.2 – Which alternatives are correct?',
+      q:'I need some glue. ______ any?  (A) Do you have  (B) Are you having  (C) Have you got',
+      opts:['Cả A và C','Chỉ A','Chỉ B','Chỉ C'], a:0,
+      exp:'Hiện tại, sở hữu → Do you have / Have you got.' },
+    { id:'h10', sec:'G', type:'mcq', sub:'Bài 17.2 – Which alternatives are correct?',
+      q:'Is your brother working now? ______ a job?  (A) Does he have  (B) Is he having  (C) Has he got',
+      opts:['Chỉ A','Chỉ C','Cả A và C','Cả B và C'], a:2,
+      exp:'Có việc làm = sở hữu → Does he have / Has he got.' },
+    { id:'h11', sec:'G', type:'mcq', sub:'Bài 17.2 – Which alternatives are correct?',
+      q:'When you worked in Singapore, ______ your own flat?  (A) had you  (B) have you got  (C) did you have',
+      opts:['Chỉ A','Chỉ B','Chỉ C','Cả A và C'], a:2,
+      exp:'Quá khứ → chỉ did you have.' },
+
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 17.3 – Are the verbs in [ ] OK? (đúng → gõ OK, sai → gõ phần sửa)',
+      q:'Are we ready for the meeting? [Have we got] enough chairs?',
+      acc:['ok'], ans:'OK',
+      exp:'Sở hữu ở hiện tại → Have we got đúng.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 17.3 – Are the verbs in [ ] OK? (đúng → gõ OK, sai → gõ phần sửa)',
+      q:'Nam [had got] a beard when he was at university.',
+      acc:['had','nam had'], ans:'had',
+      exp:'Quá khứ → had (không có had got).' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 17.3 – Are the verbs in [ ] OK? (đúng → gõ OK, sai → gõ phần sửa)',
+      q:'I couldn\'t send the email because I [hadn\'t] an internet connection.',
+      acc:["didn't have",'did not have',"i didn't have"], ans:'didn\'t have',
+      exp:'Phủ định quá khứ → didn\'t have.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 17.3 – Are the verbs in [ ] OK? (đúng → gõ OK, sai → gõ phần sửa)',
+      q:'\'Are you OK?\' \'No, [I\'m having] a terrible headache.\'',
+      acc:["i have","i've got",'i have got'], ans:'I have / I\'ve got',
+      exp:'Bệnh → không tiếp diễn: I have / I\'ve got.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 17.3 – Are the verbs in [ ] OK? (đúng → gõ OK, sai → gõ phần sửa)',
+      q:'You look happy. [Are you having] a good time?',
+      acc:['ok'], ans:'OK',
+      exp:'have a good time = trải nghiệm → tiếp diễn đúng.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 17.3 – Are the verbs in [ ] OK? (đúng → gõ OK, sai → gõ phần sửa)',
+      q:'Hoa can\'t drive. She [doesn\'t have] a driving licence.',
+      acc:['ok'], ans:'OK',
+      exp:'doesn\'t have (= hasn\'t got) đúng.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 17.3 – Are the verbs in [ ] OK? (đúng → gõ OK, sai → gõ phần sửa)',
+      q:'Was your trip OK? [Had you] any problems?',
+      acc:['did you have'], ans:'Did you have',
+      exp:'Câu hỏi quá khứ → Did you have.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 17.3 – Are the verbs in [ ] OK? (đúng → gõ OK, sai → gõ phần sửa)',
+      q:'My mum called me when I [was having] lunch.',
+      acc:['ok'], ans:'OK',
+      exp:'have lunch = hành động → was having đúng.' },
+
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'Mai starts work at 7 o\'clock and ______ at 9.30. (a break)',
+      acc:['has a break'], ans:'has a break',
+      exp:'Thói quen → hiện tại đơn, she → has a break.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'We ______ last Saturday for my birthday. Lots of friends came. (a party)',
+      acc:['had a party'], ans:'had a party',
+      exp:'last Saturday → had a party.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'Can I ______ at your holiday photos, please? (a look)',
+      acc:['have a look'], ans:'have a look',
+      exp:'Can + V nguyên dạng: have a look at.' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'My parents are on holiday in Da Lat. I hope they ______. (a nice time)',
+      acc:["'re having a nice time",'are having a nice time','have a nice time'], ans:'are having a nice time',
+      exp:'Đang trong kỳ nghỉ → are having a nice time.' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'I met Linh in the park yesterday. We stopped and ______. (a chat)',
+      acc:['had a chat'], ans:'had a chat',
+      exp:'yesterday → had a chat.' },
+    { id:'h25', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'A: ______ finding our house?  B: No, it was easy. (trouble)',
+      acc:['did you have trouble','did you have any trouble'], ans:'Did you have trouble',
+      exp:'Hỏi về quá khứ → Did you have trouble + V-ing?' },
+    { id:'h26', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'My sister ______ a few weeks ago. It\'s her first child. (a baby)',
+      acc:['had a baby'], ans:'had a baby',
+      exp:'a few weeks ago → had a baby.' },
+    { id:'h27', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'A: Why didn\'t you open the door?  B: I ______. (a shower)',
+      acc:['was having a shower'], ans:'was having a shower',
+      exp:'Đang tắm đúng lúc đó → was having a shower.' },
+    { id:'h28', sec:'G', type:'fill', sub:'Bài 17.4 – Complete with an expression with have',
+      q:'Your friend has just landed at the airport. You say: Hi! ______? (a good flight)',
+      acc:['did you have a good flight'], ans:'Did you have a good flight?',
+      exp:'Chuyến bay vừa kết thúc → Did you have a good flight?' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

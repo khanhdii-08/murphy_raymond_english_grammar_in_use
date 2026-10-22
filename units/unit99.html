@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 99 – Adjectives: a nice new house, you look tired | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 99 – Adjectives: a nice new house, you look tired</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">54 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+<h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Tiếng Việt đặt tính từ <b>sau</b> danh từ (<i>ngôi nhà mới đẹp</i>), còn tiếng Anh đặt <b>trước</b> danh từ và khi có nhiều tính từ thì phải theo <b>một trật tự</b> khá cố định: <i>a <b>nice new</b> house</i>. Unit này cũng dạy cách dùng tính từ sau <b>be / look / feel / sound / taste / smell</b> và cụm <b>the first two days</b>.</p>
+      <div class="ex"><b class="en">In the kitchen there was a <mark>beautiful large round wooden</mark> table.</b><br>ý kiến (beautiful) → kích thước (large) → hình dạng (round) → chất liệu (wooden) → danh từ.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">OPINION (ý kiến)  →  FACT (sự thật)  →  NOUN
+nice / beautiful / delicious / interesting   +   new / large / round / wooden   +  danh từ
+
+Thứ tự tính từ "fact":
+  1 kích thước  →  2 tuổi/cũ mới  →  3 màu sắc  →  4 nguồn gốc  →  5 chất liệu  →  DANH TỪ
+  (size)            (age)               (colour)        (origin)        (material)</div>
+      <div class="scroll"><table>
+        <tr><th>Ví dụ</th><th>Thứ tự</th></tr>
+        <tr><td>a <b>tall young</b> man</td><td>1 → 2</td></tr>
+        <tr><td><b>big blue</b> eyes</td><td>1 → 3</td></tr>
+        <tr><td>an <b>old Vietnamese</b> song</td><td>2 → 4</td></tr>
+        <tr><td>a <b>small black plastic</b> bag</td><td>1 → 3 → 5</td></tr>
+        <tr><td>a <b>lovely old white cotton</b> shirt</td><td>ý kiến → 2 → 3 → 5</td></tr>
+      </table></div>
+      <p class="note">📏 Tính từ <b>kích thước/chiều dài</b> (big, small, long, tall) thường đứng trước tính từ <b>hình dạng/độ rộng</b> (round, thin, fat, wide): <i>a large round table, a tall thin girl, a long narrow street</i>.</p>
+
+      <h2>1.3 · A–B. Ý kiến trước, sự thật sau</h2>
+      <ul>
+        <li><b>Opinion</b> (ai đó nghĩ gì): <i>nice, beautiful, lovely, delicious, interesting, ugly</i>.</li>
+        <li><b>Fact</b> (thông tin khách quan): <i>new, old, large, round, red, French, wooden</i>.</li>
+        <li><i>a <b>delicious hot</b> vegetable soup</i> · <i>an <b>interesting young</b> man</i>.</li>
+      </ul>
+
+      <h2>1.4 · C. Màu sắc dùng "and"</h2>
+      <ul>
+        <li>Hai màu trở lên → nối bằng <b>and</b>: <i>a black <b>and</b> white dress</i>, <i>a red, white <b>and</b> blue flag</i>.</li>
+        <li>Các tính từ khác thì <b>không</b> dùng and trước danh từ: <i>a long black dress</i> (không phải <s>a long and black dress</s>).</li>
+      </ul>
+
+      <h2>1.5 · D–E. Tính từ sau be / get / become / seem và look / feel / sound / taste / smell</h2>
+      <div class="formula">be / get / become / seem   + ADJ      I'm getting hungry.   Your friend seems nice.
+look / feel / sound / taste / smell + ADJ      You look tired.   This soup tastes good.
+
+NHƯNG: làm việc gì ĐÓ thế nào → ADVERB     Drive carefully!   She sings well.</div>
+      <div class="scroll"><table>
+        <tr><th>Tính từ (mô tả chủ ngữ)</th><th>Trạng từ (mô tả hành động)</th></tr>
+        <tr><td>You <b>look</b> happy. (trông bạn vui)</td><td>The kids were playing <b>happily</b>.</td></tr>
+        <tr><td>The soup tastes <b>good</b>.</td><td>She cooks <b>well</b>.</td></tr>
+        <tr><td>He became <b>violent</b>.</td><td>He shouted <b>violently</b>.</td></tr>
+      </table></div>
+
+      <h2>1.6 · F. the first two / the next few / the last ten</h2>
+      <div class="formula">the first two days     (không phải the two first days)
+the next few weeks     (không phải the few next weeks)
+the last ten minutes</div>
+
+      <h2>1.7 · Lỗi hay gặp</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">a house new beautiful</td><td class="yes">a <b>beautiful new house</b></td></tr>
+        <tr><td class="no">a wooden old table</td><td class="yes">an <b>old wooden</b> table</td></tr>
+        <tr><td class="no">You look tiredly.</td><td class="yes">You look <b>tired</b>.</td></tr>
+        <tr><td class="no">Drive careful!</td><td class="yes">Drive <b>carefully</b>!</td></tr>
+        <tr><td class="no">the two first weeks</td><td class="yes">the <b>first two</b> weeks</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Units 100–101</b> (tính từ và trạng từ) · <b>Units 105–107</b> (so sánh) · <b>Unit 108</b> (so sánh nhất) · <b>Unit 98</b> (-ing/-ed).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+<h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🏠 <b class="en">My sister has just bought a <mark>lovely little</mark> flat.</b> <span class="note">(đời sống — ý kiến + kích thước)</span></div>
+      <div class="ex">👜 <b class="en">I've lost a <mark>small black leather</mark> bag.</b> <span class="note">(đồ thất lạc — mô tả chính xác)</span></div>
+      <div class="ex">🍜 <b class="en">This pho <mark>smells</mark> really <mark>good</mark>!</b> <span class="note">(ăn uống — smell + tính từ)</span></div>
+      <div class="ex">😟 <b class="en">You <mark>look</mark> a bit <mark>pale</mark>. Are you OK?</b> <span class="note">(giao tiếp — hỏi thăm)</span></div>
+      <div class="ex">📞 <b class="en">Your idea <mark>sounds interesting</mark>. Tell me more.</b> <span class="note">(công việc — phản hồi ý tưởng)</span></div>
+      <div class="ex">🗓️ <b class="en">I'll be very busy for <mark>the next few weeks</mark>.</b> <span class="note">(email công việc)</span></div>
+      <div class="ex">🇻🇳 <b class="en">She was wearing a <mark>beautiful red silk</mark> áo dài.</b> <span class="note">(mô tả trang phục)</span></div>
+      <div class="ex">📝 <b class="en"><mark>The first three</mark> questions in the test were easy.</b> <span class="note">(thi cử)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Ý kiến trước – sự thật sau":</b> cái gì người ta có thể tranh cãi (nice, ugly) đứng xa danh từ nhất.</li>
+        <li><b>Câu thần chú thứ tự fact:</b> <i>"<b>S</b>ize – <b>A</b>ge – <b>C</b>olour – <b>O</b>rigin – <b>M</b>aterial"</i> → <b>"SACOM"</b> (giống tên một công ty!).</li>
+        <li><b>Chất liệu luôn sát danh từ nhất</b> — nó gần như là một phần của danh từ: <i>a leather bag, a wooden table</i>.</li>
+        <li><b>Giác quan + tính từ:</b> look / feel / sound / taste / smell giống như "be" — sau chúng là <b>tính từ</b>.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Câu sắp xếp tính từ: tìm <b>chất liệu</b> trước (để cuối), rồi <b>ý kiến</b> (để đầu), sau đó xếp phần giữa theo SACOM.</li>
+        <li><i>look / taste / sound ___</i>: nếu động từ mô tả <b>trạng thái của chủ ngữ</b> → tính từ. Nếu mô tả <b>cách làm</b> → trạng từ.</li>
+        <li>Bẫy <i>good / well</i>: <i>tastes good</i> (tính từ) nhưng <i>cooks well</i> (trạng từ). Riêng <i>I feel well</i> = tôi khỏe (well là tính từ chỉ sức khoẻ).</li>
+        <li>Thấy <i>the ___ two days</i> → <b>first/next/last</b> luôn đứng trước số.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">a dress red</td><td class="yes">a <b>red</b> dress</td><td class="why">tính từ đứng trước danh từ</td></tr>
+        <tr><td class="no">a wooden big table</td><td class="yes">a <b>big wooden</b> table</td><td class="why">chất liệu sát danh từ</td></tr>
+        <tr><td class="no">a Japanese old car</td><td class="yes">an <b>old Japanese</b> car</td><td class="why">tuổi → nguồn gốc</td></tr>
+        <tr><td class="no">a black and long dress</td><td class="yes">a <b>long black</b> dress</td><td class="why">chỉ dùng and giữa các màu</td></tr>
+        <tr><td class="no">You look beautifully.</td><td class="yes">You look <b>beautiful</b>.</td><td class="why">look + tính từ</td></tr>
+        <tr><td class="no">The food tastes deliciously.</td><td class="yes">The food tastes <b>delicious</b>.</td><td class="why">taste + tính từ</td></tr>
+        <tr><td class="no">She speaks English very good.</td><td class="yes">She speaks English very <b>well</b>.</td><td class="why">cách làm → trạng từ</td></tr>
+        <tr><td class="no">the two last days</td><td class="yes">the <b>last two</b> days</td><td class="why">first/next/last + số</td></tr>
+        <tr><td class="no">I feel badly today.</td><td class="yes">I feel <b>bad</b> today.</td><td class="why">feel + tính từ</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói (2 phút/ngày):</b> mô tả 3 đồ vật quanh bạn với 2–3 tính từ: <i>"a comfortable old blue sofa"</i>.</li>
+        <li><b>Viết (5 câu/ngày):</b> tả một món ăn bằng <i>look / smell / taste</i>: <i>"Bun cha smells amazing and tastes slightly sweet."</i></li>
+        <li><b>At work:</b> <i>"That sounds great." / "The plan seems reasonable." / "Over the next two weeks..."</i></li>
+        <li><b>IELTS Speaking Part 2:</b> mô tả đồ vật/người với chuỗi tính từ đúng trật tự để ghi điểm "lexical resource".</li>
+        <li><b>Quy tắc vàng:</b> mô tả <b>chủ ngữ là gì/trông thế nào</b> → tính từ; mô tả <b>làm thế nào</b> → trạng từ.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3, 7 và 14 ngày; mỗi lần tự đặt 5 cụm theo thứ tự SACOM. Liên quan: <b>Unit 98</b> (-ing/-ed), <b>Units 100–101</b> (tính từ và trạng từ).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit99.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 99 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 99 – Adjectives: order, look/feel + adjective | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit99.html';
+  var KEY = 'egu4_unit99_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền tính từ / động từ cảm giác', desc:'Điền từ đúng: tính từ, trạng từ hoặc cụm the first/next/last.' },
+    { id:'C', title:'C. Sắp xếp tính từ đúng trật tự', desc:'Bấm các từ để xếp thành cụm danh từ / câu đúng.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 99.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 99 Exercises)', desc:'Bài 99.1 → 99.4 theo dạng bài của sách Murphy (câu viết lại), kèm giải thích.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'She lives in a ______ house.',
+      opts:['new nice','nice new','house new nice'], a:1,
+      exp:'Ý kiến (nice) đứng trước sự thật (new).' },
+    { id:'a2', sec:'A', type:'mcq', q:'He gave me a ______ box.',
+      opts:['small black metal','metal small black','black small metal'], a:0,
+      exp:'Kích thước (small) → màu (black) → chất liệu (metal).' },
+    { id:'a3', sec:'A', type:'mcq', q:'They sang an ______ song.',
+      opts:['Vietnamese old','old Vietnamese'], a:1,
+      exp:'Tuổi (old) → nguồn gốc (Vietnamese).' },
+    { id:'a4', sec:'A', type:'mcq', q:'This milk smells ______. Don\'t drink it.',
+      opts:['badly','bad','worse'], a:1,
+      exp:'smell + tính từ (mô tả sữa): smells bad.' },
+    { id:'a5', sec:'A', type:'mcq', q:'Chọn cụm ĐÚNG:',
+      opts:['a long black dress','a long and black dress','a black long dress'], a:0,
+      exp:'Kích thước/chiều dài → màu; không dùng "and" giữa tính từ không phải màu.' },
+    { id:'a6', sec:'A', type:'mcq', q:'Please drive ______. The road is icy.',
+      opts:['carefully','careful'], a:0,
+      exp:'Mô tả CÁCH lái → trạng từ: carefully.' },
+    { id:'a7', sec:'A', type:'mcq', q:'I didn\'t enjoy ______ of the holiday — it rained.',
+      opts:['the two first days','the days first two','the first two days'], a:2,
+      exp:'the first/next/last + số + danh từ: the first two days.' },
+    { id:'a8', sec:'A', type:'mcq', q:'Your plan ______ good. Let\'s try it.',
+      opts:['sounds','sounds well','is sounding well'], a:0,
+      exp:'sound + tính từ: sounds good.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'You look ______ (tired / tiredly). Did you sleep badly?',
+      acc:['tired'], ans:'tired',
+      exp:'look + tính từ mô tả chủ ngữ.' },
+    { id:'b2', sec:'B', type:'fill', q:'This coffee tastes a bit ______ (strange / strangely).',
+      acc:['strange'], ans:'strange',
+      exp:'taste + tính từ.' },
+    { id:'b3', sec:'B', type:'fill', q:'The kids were laughing ______ (happy / happily) in the garden.',
+      acc:['happily'], ans:'happily',
+      exp:'Mô tả cách cười (hành động) → trạng từ happily.' },
+    { id:'b4', sec:'B', type:'fill', q:'As the night went on, it became very ______ (cold / coldly).',
+      acc:['cold'], ans:'cold',
+      exp:'become + tính từ.' },
+    { id:'b5', sec:'B', type:'fill', q:'She was wearing a red ______ white T-shirt. (từ nối 2 màu)',
+      acc:['and'], ans:'and',
+      exp:'Hai màu → nối bằng "and": a red and white T-shirt.' },
+    { id:'b6', sec:'B', type:'fill', q:'I\'ll be away for the ______ few days. (tiếp theo)',
+      acc:['next'], ans:'next',
+      exp:'the next few days (không nói the few next days).' },
+    { id:'b7', sec:'B', type:'fill', q:'Your new neighbours seem very ______ (nice / nicely).',
+      acc:['nice'], ans:'nice',
+      exp:'seem + tính từ.' },
+    { id:'b8', sec:'B', type:'fill', q:'I feel ______ (terrible / terribly) — I think I\'ve got flu.',
+      acc:['terrible'], ans:'terrible',
+      exp:'feel + tính từ.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp cụm: (a / wooden / beautiful / round / table)',
+      tokens:['a','wooden','beautiful','round','table'],
+      acc:['a beautiful round wooden table'], ans:'a beautiful round wooden table',
+      exp:'Ý kiến → hình dạng → chất liệu → danh từ.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp cụm: (an / Italian / old / interesting / painting)',
+      tokens:['an','Italian','old','interesting','painting'],
+      acc:['an interesting old italian painting'], ans:'an interesting old Italian painting',
+      exp:'Ý kiến → tuổi → nguồn gốc.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp cụm: (cotton / white / an / old / shirt)',
+      tokens:['cotton','white','an','old','shirt'],
+      acc:['an old white cotton shirt'], ans:'an old white cotton shirt',
+      exp:'Tuổi → màu → chất liệu.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp câu: (the / soup / smells / really / good)',
+      tokens:['The','soup','smells','really','good'],
+      acc:['the soup smells really good'], ans:'The soup smells really good.',
+      exp:'smell + tính từ (good).' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp cụm: (a / red / old / big / Chinese / lantern)',
+      tokens:['a','red','old','big','Chinese','lantern'],
+      acc:['a big old red chinese lantern'], ans:'a big old red Chinese lantern',
+      exp:'Kích thước (big) → tuổi (old) → màu (red) → nguồn gốc (Chinese) → danh từ.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: I\'m going to Da Lat for the weekend. B: That ______ lovely! (sound)',
+      acc:['sounds'], ans:'sounds',
+      exp:'sound + tính từ: That sounds lovely.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: How\'s your grandmother? B: She was ill last week, but she ______ fine now. (feel)',
+      acc:['feels',"'s feeling",'is feeling'], ans:'feels',
+      exp:'feel + tính từ: she feels fine.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Is the exam long? B: No, but the ______ two questions are very difficult. (cuối cùng)',
+      acc:['last'], ans:'last',
+      exp:'the last two questions.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: You\'re soaking ______! B: Yes, I forgot my umbrella. (ướt)',
+      acc:['wet'], ans:'wet',
+      exp:'be + tính từ: soaking wet = ướt sũng.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Mô tả 3 đồ vật bạn sở hữu, mỗi đồ vật dùng ít nhất 2 tính từ đúng trật tự.',
+      sample:'I have a comfortable old leather sofa. My favourite mug is a big white ceramic one. I ride a small red Japanese motorbike.',
+      exp:'Ý kiến → kích thước → tuổi → màu → nguồn gốc → chất liệu → danh từ.' },
+    { id:'e2', sec:'E', type:'self', q:'Mô tả một món ăn Việt Nam bằng look / smell / taste + tính từ (2–3 câu).',
+      sample:'Banh xeo looks crispy and golden. It smells wonderful and tastes slightly sweet.',
+      exp:'Động từ giác quan + TÍNH TỪ (không dùng trạng từ).' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu về kế hoạch của bạn dùng "the next ... / the first ... / the last ...".',
+      sample:'I\'m going to work hard for the next three months. The first two weeks of my new job were difficult.',
+      exp:'the first/next/last + số + danh từ.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'She has ______ hair.',
+      opts:['black long beautiful','beautiful long black','long beautiful black'], a:1,
+      exp:'Ý kiến (beautiful) → độ dài (long) → màu (black).' },
+    { id:'f2', sec:'F', type:'fill', q:'The flowers look ______ (beautiful / beautifully).',
+      acc:['beautiful'], ans:'beautiful',
+      exp:'look + tính từ.' },
+    { id:'f3', sec:'F', type:'mcq', q:'She plays the guitar very ______.',
+      opts:['well','good'], a:0,
+      exp:'Cách chơi → trạng từ well.' },
+    { id:'f4', sec:'F', type:'fill', q:'Viết lại: "tuần này và tuần sau nữa" (next week and the week after) → the ______ two weeks',
+      acc:['next'], ans:'next',
+      exp:'the next two weeks.' },
+    { id:'f5', sec:'F', type:'mcq', q:'Chọn cụm ĐÚNG:',
+      opts:['a big plastic bag','a plastic big bag'], a:0,
+      exp:'Kích thước → chất liệu.' },
+    { id:'f6', sec:'F', type:'fill', q:'Hurry up! You\'re always so ______ (slow / slowly).',
+      acc:['slow'], ans:'slow',
+      exp:'be + tính từ: You\'re slow.' },
+    { id:'f7', sec:'F', type:'mcq', q:'The man became ______ when they told him to leave.',
+      opts:['angrily','angry'], a:1,
+      exp:'become + tính từ.' },
+    { id:'f8', sec:'F', type:'fill', q:'Dịch: "một con mèo đen to béo" (big / fat / black)',
+      acc:['a big fat black cat'], ans:'a big fat black cat',
+      exp:'Kích thước → hình dáng → màu.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'an unusual necklace (silver) → ______',
+      acc:['an unusual silver necklace'], ans:'an unusual silver necklace',
+      exp:'Ý kiến (unusual) → chất liệu (silver).' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'an old temple (beautiful) → ______',
+      acc:['a beautiful old temple'], ans:'a beautiful old temple',
+      exp:'Ý kiến → tuổi. Chú ý mạo từ đổi thành "a" vì beautiful bắt đầu bằng phụ âm.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'brown boots (leather) → ______',
+      acc:['brown leather boots'], ans:'brown leather boots',
+      exp:'Màu → chất liệu.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'a Korean drama (old) → ______',
+      acc:['an old korean drama'], ans:'an old Korean drama',
+      exp:'Tuổi → nguồn gốc; "an" trước old.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'a sandy beach (lovely) → ______',
+      acc:['a lovely sandy beach'], ans:'a lovely sandy beach',
+      exp:'Ý kiến (lovely) đứng trước tính từ mô tả sự thật (sandy).' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'a narrow street (long) → ______',
+      acc:['a long narrow street'], ans:'a long narrow street',
+      exp:'Chiều dài (long) đứng trước độ rộng (narrow).' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'a blue bike (old / little) → ______',
+      acc:['a little old blue bike'], ans:'a little old blue bike',
+      exp:'Kích thước (little) → tuổi (old) → màu (blue).' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'a new jacket (grey / nice) → ______',
+      acc:['a nice new grey jacket'], ans:'a nice new grey jacket',
+      exp:'Ý kiến → tuổi → màu.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 99.1 – Put the adjectives in the correct position',
+      q:'a huge flag (red / yellow) → ______',
+      acc:['a huge red and yellow flag','a huge yellow and red flag'], ans:'a huge red and yellow flag',
+      exp:'Hai màu nối bằng "and"; kích thước đứng trước màu.' },
+
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 99.2 – Verb + adjective (feel/look/seem/smell/sound/taste)',
+      q:'I can\'t drink this juice. I\'ve just tried it and it ______. (verb + adjective: taste/awful)',
+      acc:['tastes awful','tasted awful'], ans:'tastes awful',
+      exp:'taste + tính từ: tastes/tasted awful.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 99.2 – Verb + adjective (feel/look/seem/smell/sound/taste)',
+      q:'I had a headache this morning, but I ______ now. (feel/fine)',
+      acc:['feel fine',"'m feeling fine",'am feeling fine'], ans:'feel fine',
+      exp:'feel + tính từ: feel fine.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 99.2 – Verb + adjective (feel/look/seem/smell/sound/taste)',
+      q:'What lovely roses! They ______ too. (smell/nice)',
+      acc:['smell nice'], ans:'smell nice',
+      exp:'smell + tính từ.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 99.2 – Verb + adjective (feel/look/seem/smell/sound/taste)',
+      q:'Lan told me about her trip to Peru. It ______. (sound/interesting)',
+      acc:['sounds interesting','sounded interesting'], ans:'sounds interesting',
+      exp:'sound + tính từ.' },
+
+    { id:'h14', sec:'G', type:'mcq', sub:'Bài 99.3 – Adjective or adverb?',
+      q:'I always feel ______ when I\'m on holiday.',
+      opts:['happily','happy'], a:1,
+      exp:'feel + tính từ.' },
+    { id:'h15', sec:'G', type:'mcq', sub:'Bài 99.3 – Adjective or adverb?',
+      q:'There\'s no point doing a job if you don\'t do it ______.',
+      opts:['properly','proper'], a:0,
+      exp:'Mô tả cách làm việc → trạng từ properly.' },
+    { id:'h16', sec:'G', type:'mcq', sub:'Bài 99.3 – Adjective or adverb?',
+      q:'This curry tastes ______.',
+      opts:['good','well'], a:0,
+      exp:'taste + tính từ good.' },
+    { id:'h17', sec:'G', type:'mcq', sub:'Bài 99.3 – Adjective or adverb?',
+      q:'You look ______! Have you been ill?',
+      opts:['terrible','terribly'], a:0,
+      exp:'look + tính từ.' },
+
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 99.4 – the first ... / the next ... / the last ...',
+      q:'yesterday and the day before yesterday → the ______',
+      acc:['last two days'], ans:'last two days',
+      exp:'Hai ngày vừa qua → the last two days.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 99.4 – the first ... / the next ... / the last ...',
+      q:'the first, second and third lessons of the course → the ______ of the course',
+      acc:['first three lessons'], ans:'first three lessons',
+      exp:'the first three lessons (first đứng trước số).' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 99.4 – the first ... / the next ... / the last ...',
+      q:'next month and the month after → the ______',
+      acc:['next two months'], ans:'next two months',
+      exp:'the next two months.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 99.4 – the first ... / the next ... / the last ...',
+      q:'today and a few days after that → the ______',
+      acc:['next few days'], ans:'next few days',
+      exp:'the next few days (không nói the few next days).' }
+  ];
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

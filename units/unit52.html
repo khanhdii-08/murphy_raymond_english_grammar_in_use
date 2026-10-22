@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 52 – Question tags (do you? isn't it? etc.) | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 52 – Question tags (do you? isn't it? etc.)</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">57 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p><b>Câu hỏi đuôi</b> (question tags) là "câu hỏi mini" gắn vào cuối câu, giống "... phải không?", "... nhỉ?", "... đúng không?" trong tiếng Việt. Khác với tiếng Việt (chỉ một chữ "nhỉ" cho mọi câu), tiếng Anh phải <b>chọn đúng trợ động từ</b> và <b>đảo khẳng/phủ định</b>.</p>
+      <div class="ex"><b class="en">It was a good film, <mark>wasn't it</mark>? — Yes, it was great.<br>You haven't seen Lisa today, <mark>have you</mark>? — No, I haven't.</b><br>Câu khẳng định → đuôi phủ định; câu phủ định → đuôi khẳng định.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">Câu KHẲNG ĐỊNH , trợ ĐT + n't + đại từ ?     Kate will be here soon, won't she?
+Câu PHỦ ĐỊNH   , trợ ĐT + đại từ ?          Kate won't be late, will she?
+
+Không có trợ ĐT (hiện tại / quá khứ đơn) → do / does / did:
+   Karen plays the piano, doesn't she?     You didn't lock the door, did you?
+
+Đặc biệt:  Let's ...      → shall we?        Let's go out, shall we?
+           Don't ...      → will you?        Don't be late, will you?
+           I'm ...        → aren't I?        I'm right, aren't I?
+           There is/are   → isn't/aren't there?</div>
+      <div class="scroll"><table>
+        <tr><th>Câu</th><th>Trợ ĐT</th><th>Đuôi</th></tr>
+        <tr><td>There was a lot of traffic,</td><td>was (+)</td><td><b>wasn't there?</b></td></tr>
+        <tr><td>Joe should pass the exam,</td><td>should (+)</td><td><b>shouldn't he?</b></td></tr>
+        <tr><td>They don't like us,</td><td>do (−)</td><td><b>do they?</b></td></tr>
+        <tr><td>You haven't eaten yet,</td><td>have (−)</td><td><b>have you?</b></td></tr>
+        <tr><td>Lisa's got a great sense of humour,</td><td>has (+)</td><td><b>hasn't she?</b></td></tr>
+      </table></div>
+
+      <h2>1.3 · A. Cách chọn đuôi</h2>
+      <ul>
+        <li>Lấy <b>trợ động từ đầu tiên</b> của câu (be, have, will, can, should...). Không có → dùng <b>do/does/did</b> theo thì.</li>
+        <li>Đảo dấu: khẳng định ↔ phủ định. Chủ ngữ đổi thành <b>đại từ</b>: <i>Kate → she, the film → it, my parents → they</i>.</li>
+        <li>Câu có từ phủ định ngầm <i>never, no, nobody, hardly</i> → coi là câu phủ định → đuôi khẳng định: <i>He'd never met her, <b>had he</b>?</i></li>
+        <li>Chú ý <b>'s</b> = is hay has; <b>'d</b> = had hay would: <i>Kate's been to China (= has) → hasn't she? / You'd tell me (= would) → wouldn't you?</i></li>
+      </ul>
+
+      <h2>1.4 · B. Ngữ điệu quyết định ý nghĩa</h2>
+      <div class="scroll"><table>
+        <tr><th>Giọng</th><th>Ý nghĩa</th><th>Ví dụ</th></tr>
+        <tr><td>↘ xuống</td><td>không thật sự hỏi — mời người nghe <b>đồng ý</b></td><td>It's a nice day, isn't it? — Yes, beautiful.</td></tr>
+        <tr><td>↗ lên</td><td><b>hỏi thật</b>, chưa chắc câu trả lời</td><td>You haven't seen Lisa today, have you? — No, I haven't.</td></tr>
+      </table></div>
+      <p class="note">Trả lời câu phủ định: Yes/No theo <b>sự thật</b>. <i>You're not going out today, are you?</i> — <b>Yes</b> (= tôi có đi) / <b>No</b> (= tôi không đi).</p>
+
+      <h2>1.5 · C. Câu phủ định + đuôi khẳng định để nhờ vả / hỏi thông tin</h2>
+      <p>Một cách hỏi rất lịch sự, khiêm tốn (giọng lên ở đuôi):</p>
+      <div class="formula">You haven't got a pen, have you?             — Yes, here you are.
+You couldn't do me a favour, could you?      — It depends what it is.
+You don't know where Karen is, do you?       — Sorry, I have no idea.</div>
+
+      <h2>1.6 · D. Các trường hợp đặc biệt</h2>
+      <ul>
+        <li><b>Let's ...</b> → <b>shall we?</b> <i>Let's go for a walk, shall we?</i></li>
+        <li><b>Don't ...</b> (mệnh lệnh phủ định) → <b>will you?</b> <i>Don't be late, will you?</i></li>
+        <li><b>I'm ...</b> → <b>aren't I?</b> (không nói <s>amn't I</s>) <i>I'm right, aren't I?</i></li>
+        <li><b>There is/are/was...</b> → đuôi dùng <b>there</b>: <i>There are a lot of people here, aren't there?</i></li>
+      </ul>
+
+      <h2>1.7 · Dấu hiệu nhận biết &amp; so sánh</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>Câu hỏi đuôi (Unit 52)</th><th>Câu đáp quan tâm (Unit 51)</th></tr>
+        <tr><td>Ai nói?</td><td>chính người nói gắn vào câu mình</td><td>người nghe đáp lại câu người khác</td></tr>
+        <tr><td>Dấu</td><td><b>ngược</b> dấu câu chính</td><td><b>giữ nguyên</b> dấu câu người kia</td></tr>
+        <tr><td>Ví dụ</td><td>You're tired, <b>aren't you?</b></td><td>"I'm tired." — "<b>Are you?</b>"</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">You like coffee, isn't it?</td><td class="yes">You like coffee, <b>don't you</b>?</td></tr>
+        <tr><td class="no">She went home, wasn't she?</td><td class="yes">She went home, <b>didn't she</b>?</td></tr>
+        <tr><td class="no">I'm late, amn't I?</td><td class="yes">I'm late, <b>aren't I</b>?</td></tr>
+        <tr><td class="no">Let's start, don't we?</td><td class="yes">Let's start, <b>shall we</b>?</td></tr>
+        <tr><td class="no">He never calls, doesn't he?</td><td class="yes">He never calls, <b>does he</b>?</td></tr>
+        <tr><td class="no">Your mother is a nurse, isn't your mother?</td><td class="yes">..., <b>isn't she</b>?</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 51</b> (trợ động từ, Have you? / Isn't she?) · <b>Unit 49</b> (câu hỏi phủ định).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">☀️ <b class="en">It's a lovely day, <mark>isn't it</mark>?</b> <span class="note">(small talk — giọng xuống)</span></div>
+      <div class="ex">🍜 <b class="en">This place is a bit expensive, <mark>isn't it</mark>?</b> <span class="note">(đi ăn — tìm đồng tình)</span></div>
+      <div class="ex">💼 <b class="en">You sent the report yesterday, <mark>didn't you</mark>?</b> <span class="note">(công việc — xác nhận)</span></div>
+      <div class="ex">✏️ <b class="en">You haven't got a pen, <mark>have you</mark>?</b> <span class="note">(lớp học — nhờ vả lịch sự)</span></div>
+      <div class="ex">🔑 <b class="en">You don't know where my keys are, <mark>do you</mark>?</b> <span class="note">(gia đình — hỏi thông tin)</span></div>
+      <div class="ex">🎉 <b class="en">Let's order pizza tonight, <mark>shall we</mark>?</b> <span class="note">(bạn bè — gợi ý)</span></div>
+      <div class="ex">⏰ <b class="en">Don't forget the meeting, <mark>will you</mark>?</b> <span class="note">(đồng nghiệp — nhắc nhở)</span></div>
+      <div class="ex">🤓 <b class="en">I'm in the right room, <mark>aren't I</mark>?</b> <span class="note">(thi cử — aren't I)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Ngược dấu – cùng trợ ĐT – đổi đại từ":</b> ba bước tạo mọi câu hỏi đuôi.</li>
+        <li><b>Không thấy trợ ĐT?</b> Động từ thường hiện tại → do/does; quá khứ → did.</li>
+        <li><b>Từ phủ định "tàng hình":</b> <i>never, nobody, nothing, hardly, seldom</i> → đuôi khẳng định.</li>
+        <li><b>3 đuôi đặc biệt cần thuộc lòng:</b> Let's → shall we; Don't → will you; I'm → aren't I.</li>
+        <li><b>Nhờ vả lịch sự:</b> câu phủ định + đuôi khẳng định: <i>You couldn't..., could you?</i></li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Gặp <b>'s</b>: xem từ sau — V3 (been, gone) → has; tính từ/V-ing/danh từ → is.</li>
+        <li>Gặp <b>'d</b>: sau là V3 → had; sau là V nguyên mẫu → would.</li>
+        <li>Câu có <i>everyone / somebody / nobody</i> → đại từ trong đuôi là <b>they</b>: <i>Nobody came, did they?</i></li>
+        <li><i>This/That</i> → <b>it</b>; <i>These/Those</i> → <b>they</b>.</li>
+        <li>Câu mệnh lệnh khẳng định thường dùng <b>will you?</b> / <b>can you?</b>: <i>Open the window, will you?</i></li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">You're from Hanoi, right isn't it?</td><td class="yes">You're from Hanoi, <b>aren't you</b>?</td><td class="why">đuôi theo trợ ĐT are</td></tr>
+        <tr><td class="no">He works here, isn't he?</td><td class="yes">He works here, <b>doesn't he</b>?</td><td class="why">hiện tại đơn → does</td></tr>
+        <tr><td class="no">They went to Hue, weren't they?</td><td class="yes">They went to Hue, <b>didn't they</b>?</td><td class="why">quá khứ đơn → did</td></tr>
+        <tr><td class="no">She can swim, can she?</td><td class="yes">She can swim, <b>can't she</b>?</td><td class="why">phải ngược dấu</td></tr>
+        <tr><td class="no">You don't like it, don't you?</td><td class="yes">You don't like it, <b>do you</b>?</td><td class="why">câu phủ định → đuôi khẳng định</td></tr>
+        <tr><td class="no">Nobody called, didn't they?</td><td class="yes">Nobody called, <b>did they</b>?</td><td class="why">nobody = phủ định</td></tr>
+        <tr><td class="no">I'm right, am not I?</td><td class="yes">I'm right, <b>aren't I</b>?</td><td class="why">dạng đặc biệt</td></tr>
+        <tr><td class="no">Let's go, will we?</td><td class="yes">Let's go, <b>shall we</b>?</td><td class="why">Let's → shall we</td></tr>
+        <tr><td class="no">She's been there, isn't she?</td><td class="yes">She's been there, <b>hasn't she</b>?</td><td class="why">'s + been = has</td></tr>
+        <tr><td class="no">This is yours, isn't this?</td><td class="yes">This is yours, <b>isn't it</b>?</td><td class="why">this → it</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Small talk:</b> mở đầu bằng câu nhận xét + đuôi giọng xuống: <i>"Busy day, isn't it?" / "The traffic was terrible, wasn't it?"</i></li>
+        <li><b>Nhờ vả:</b> thay "Can you...?" bằng <i>"You couldn't help me with this, could you?"</i> — lịch sự, khiêm tốn hơn.</li>
+        <li><b>Công việc:</b> xác nhận thông tin: <i>"The deadline is Friday, isn't it?"</i></li>
+        <li><b>Quy tắc vàng:</b> chưa chắc đuôi? Nói "..., right?" cho an toàn khi nói chuyện thân mật — nhưng trong bài thi luôn phải dùng đuôi chuẩn.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần Bài 52.1 sau 3, 7 và 14 ngày để phản xạ chọn trợ ĐT. Liên quan: <b>Unit 51</b> (trợ động từ), <b>Unit 49</b> (câu hỏi phủ định).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit52.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 52 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 52 – Question tags | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit52.html';
+  var KEY = 'egu4_unit52_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn câu hỏi đuôi đúng nhất.' },
+    { id:'B', title:'B. Điền câu hỏi đuôi',         desc:'Viết câu hỏi đuôi (trợ ĐT + đại từ) cho mỗi câu.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu có câu hỏi đuôi rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền câu hỏi đuôi hoặc câu trả lời.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 52.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 52 Exercises)', desc:'Bài 52.1 → 52.3 theo đúng dạng bài của sách Murphy, kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'Your brother works in a bank, ______?',
+      opts:['isn\'t he','doesn\'t he','does he','didn\'t he'], a:1,
+      exp:'Hiện tại đơn khẳng định (works) → đuôi phủ định doesn\'t he?' },
+    { id:'a2', sec:'A', type:'mcq', q:'You didn\'t forget my birthday, ______?',
+      opts:['did you','didn\'t you','do you','were you'], a:0,
+      exp:'Câu phủ định quá khứ đơn → đuôi khẳng định did you?' },
+    { id:'a3', sec:'A', type:'mcq', q:'Let\'s have a break, ______?',
+      opts:['will we','don\'t we','shall we','let we'], a:2,
+      exp:'Let\'s ... → shall we?' },
+    { id:'a4', sec:'A', type:'mcq', q:'I\'m in your team, ______?',
+      opts:['amn\'t I','am I not','aren\'t I','isn\'t I'], a:2,
+      exp:'I\'m ... → đuôi phủ định đặc biệt là aren\'t I?' },
+    { id:'a5', sec:'A', type:'mcq', q:'There\'s a pharmacy near here, ______?',
+      opts:['isn\'t there','isn\'t it','is there','doesn\'t it'], a:0,
+      exp:'There is → đuôi dùng there: isn\'t there?' },
+    { id:'a6', sec:'A', type:'mcq', q:'Don\'t tell anyone, ______?',
+      opts:['do you','will you','don\'t you','shall we'], a:1,
+      exp:'Mệnh lệnh phủ định Don\'t ... → will you?' },
+    { id:'a7', sec:'A', type:'mcq', q:'Huong has never been to Hanoi, ______?',
+      opts:['hasn\'t she','has she','is she','did she'], a:1,
+      exp:'never = phủ định → đuôi khẳng định has she?' },
+    { id:'a8', sec:'A', type:'mcq', q:'Nobody phoned while I was out, ______?',
+      opts:['didn\'t they','did he','did they','didn\'t he'], a:2,
+      exp:'Nobody là phủ định → đuôi khẳng định; đại từ thay nobody/somebody là they → did they?' },
+
+    /* ===== B. Điền câu hỏi đuôi ===== */
+    { id:'b1', sec:'B', type:'fill', q:'The film was really boring, ______?',
+      acc:["wasn't it",'was it not'], ans:"wasn't it",
+      exp:'was (+) → wasn\'t it?' },
+    { id:'b2', sec:'B', type:'fill', q:'You can drive, ______?',
+      acc:["can't you",'can you not'], ans:"can't you",
+      exp:'can (+) → can\'t you?' },
+    { id:'b3', sec:'B', type:'fill', q:'Your parents don\'t live in Saigon, ______?',
+      acc:['do they'], ans:'do they',
+      exp:'don\'t (−) → do they? (your parents → they).' },
+    { id:'b4', sec:'B', type:'fill', q:'Minh will be at the party, ______?',
+      acc:["won't he",'will he not'], ans:"won't he",
+      exp:'will (+) → won\'t he?' },
+    { id:'b5', sec:'B', type:'fill', q:'We should leave now, ______?',
+      acc:["shouldn't we",'should we not'], ans:"shouldn't we",
+      exp:'should (+) → shouldn\'t we?' },
+    { id:'b6', sec:'B', type:'fill', q:'Lan bought a new phone last week, ______?',
+      acc:["didn't she",'did she not'], ans:"didn't she",
+      exp:'Quá khứ đơn khẳng định → didn\'t she?' },
+    { id:'b7', sec:'B', type:'fill', q:'These shoes aren\'t very comfortable, ______?',
+      acc:['are they'], ans:'are they',
+      exp:'aren\'t (−) → are they? (these shoes → they).' },
+    { id:'b8', sec:'B', type:'fill', q:'You\'ve met my sister before, ______?',
+      acc:["haven't you",'have you not'], ans:"haven't you",
+      exp:'You\'ve = You have (+) → haven\'t you?' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (isn\'t / a nice day / it / it\'s)',
+      tokens:["It's",'a','nice','day',"isn't",'it'],
+      acc:["it's a nice day isn't it"], ans:'It\'s a nice day, isn\'t it?',
+      exp:'Câu khẳng định + đuôi phủ định isn\'t it.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (you / do / don\'t / where / know / Nam is / you)',
+      tokens:['You',"don't",'know','where','Nam','is','do','you'],
+      acc:["you don't know where nam is do you"], ans:'You don\'t know where Nam is, do you?',
+      exp:'Hỏi thông tin lịch sự: câu phủ định + đuôi khẳng định do you?' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (couldn\'t / me / you / could / a lift / give / you)',
+      tokens:['You',"couldn't",'give','me','a','lift','could','you'],
+      acc:["you couldn't give me a lift could you"], ans:'You couldn\'t give me a lift, could you?',
+      exp:'Nhờ vả lịch sự: You couldn\'t ..., could you?' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (go / shall / let\'s / for a coffee / we)',
+      tokens:["Let's",'go','for','a','coffee','shall','we'],
+      acc:["let's go for a coffee shall we"], ans:'Let\'s go for a coffee, shall we?',
+      exp:'Let\'s → shall we?' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (Tuan / to the meeting / didn\'t / come / did / he)',
+      tokens:['Tuan',"didn't",'come','to','the','meeting','did','he'],
+      acc:["tuan didn't come to the meeting did he"], ans:'Tuan didn\'t come to the meeting, did he?',
+      exp:'didn\'t (−) → did he?' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: You\'re not going out tonight, ______?  B: No, I\'m staying in.',
+      acc:['are you'], ans:'are you',
+      exp:'You\'re not (−) → are you?' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Hoa looks tired today, ______?  B: Yes, she worked late last night.',
+      acc:["doesn't she",'does she not'], ans:"doesn't she",
+      exp:'looks = hiện tại đơn (+) → doesn\'t she?' },
+    { id:'d3', sec:'D', type:'fill', q:'A: You haven\'t got any change, ______?  B: Sorry, I haven\'t.',
+      acc:['have you'], ans:'have you',
+      exp:'haven\'t got (−) → have you?' },
+    { id:'d4', sec:'D', type:'fill', q:'A: You\'re not angry with me, are you?  B: ______. (Bạn KHÔNG giận — trả lời 1 từ)',
+      acc:['no'], ans:'No',
+      exp:'Trả lời theo sự thật: không giận → No (= No, I\'m not angry).' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu small talk (nhận xét về thời tiết, đồ ăn, giao thông) có câu hỏi đuôi để tìm sự đồng tình.',
+      sample:'It\'s really hot today, isn\'t it? This soup is delicious, isn\'t it? The traffic was awful this morning, wasn\'t it?',
+      exp:'Câu khẳng định + đuôi phủ định, giọng xuống ở cuối.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 2 câu nhờ vả / hỏi thông tin lịch sự theo mẫu "You haven\'t..., have you?" / "You couldn\'t..., could you?".',
+      sample:'You haven\'t seen my charger, have you? You couldn\'t lend me your notes, could you?',
+      exp:'Câu phủ định + đuôi khẳng định, giọng lên ở cuối.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 3 câu dùng 3 đuôi đặc biệt: Let\'s..., Don\'t..., I\'m....',
+      sample:'Let\'s start the meeting, shall we? Don\'t be late tomorrow, will you? I\'m on the list, aren\'t I?',
+      exp:'Let\'s → shall we; Don\'t → will you; I\'m → aren\'t I.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'Your sister\'s been to Japan, ______? (\'s = has)',
+      acc:["hasn't she",'has she not'], ans:"hasn't she",
+      exp:'\'s + been → has → hasn\'t she?' },
+    { id:'f2', sec:'F', type:'mcq', q:'You\'d help me if I asked, ______?',
+      opts:['hadn\'t you','wouldn\'t you','didn\'t you','won\'t you'], a:1,
+      exp:'\'d + V nguyên mẫu (help) → would → wouldn\'t you?' },
+    { id:'f3', sec:'F', type:'fill', q:'This isn\'t your umbrella, ______?',
+      acc:['is it'], ans:'is it',
+      exp:'This → it; isn\'t (−) → is it?' },
+    { id:'f4', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['She went to Hue, wasn\'t she?','She went to Hue, didn\'t she?','She went to Hue, did she?','She went to Hue, doesn\'t she?'], a:1,
+      exp:'Quá khứ đơn (+) → didn\'t she?' },
+    { id:'f5', sec:'F', type:'fill', q:'Dịch: "Chúng ta đi bơi nhé?" (Let\'s ...)',
+      acc:["let's go swimming shall we",'let us go swimming shall we',"let's go for a swim shall we"],
+      ans:'Let\'s go swimming, shall we?',
+      exp:'Let\'s + V ..., shall we?' },
+    { id:'f6', sec:'F', type:'mcq', q:'Chọn câu SAI:',
+      opts:['I\'m late, aren\'t I?','Don\'t touch it, will you?','He never smiles, doesn\'t he?','Let\'s eat, shall we?'], a:2,
+      exp:'never = phủ định → đuôi khẳng định: He never smiles, does he?' },
+    { id:'f7', sec:'F', type:'fill', q:'Everyone enjoyed the trip, ______?',
+      acc:["didn't they",'did they not'], ans:"didn't they",
+      exp:'Everyone → they; quá khứ đơn (+) → didn\'t they?' },
+    { id:'f8', sec:'F', type:'fill', q:'There aren\'t any tickets left, ______?',
+      acc:['are there'], ans:'are there',
+      exp:'There aren\'t (−) → are there?' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'You go to the gym a lot, ______? — Yes, four times a week.',
+      acc:["don't you",'do you not'], ans:"don't you",
+      exp:'Hiện tại đơn (+) → don\'t you?' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'You weren\'t paying attention, ______? — Yes, I was!',
+      acc:['were you'], ans:'were you',
+      exp:'weren\'t (−) → were you?' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'Ngoc doesn\'t know my brother, ______? — No, they\'ve never met.',
+      acc:['does she'], ans:'does she',
+      exp:'doesn\'t (−) → does she?' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'Phong\'s on a business trip, ______? — Yes, he\'s in Singapore.',
+      acc:["isn't he",'is he not'], ans:"isn't he",
+      exp:'Phong\'s on = Phong is → isn\'t he?' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'Linh\'s been to Korea before, ______? — Yes, twice.',
+      acc:["hasn't she",'has she not'], ans:"hasn't she",
+      exp:'\'s been = has been → hasn\'t she?' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'They won\'t mind if I sit here, ______? — No, of course not.',
+      acc:['will they'], ans:'will they',
+      exp:'won\'t (−) → will they?' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'There are a lot of tourists here, ______? — Yes, more than last year.',
+      acc:["aren't there",'are there not'], ans:"aren't there",
+      exp:'There are (+) → aren\'t there?' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'Let\'s eat out tonight, ______? — Yes, good idea.',
+      acc:['shall we'], ans:'shall we',
+      exp:'Let\'s → shall we?' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'This soup isn\'t very hot, ______? — No, it\'s a bit cold.',
+      acc:['is it'], ans:'is it',
+      exp:'This → it; isn\'t → is it?' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'I\'m a bit too strict, ______? — Yes, sometimes.',
+      acc:["aren't i"], ans:"aren't I",
+      exp:'I\'m → aren\'t I?' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'You wouldn\'t tell my boss, ______? — No, never.',
+      acc:['would you'], ans:'would you',
+      exp:'wouldn\'t (−) → would you?' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'I shouldn\'t have shouted, ______? — No, but it\'s OK.',
+      acc:['should i'], ans:'should I',
+      exp:'shouldn\'t (−) → should I?' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'She\'d never driven a car before, ______? — No, it was her first time.',
+      acc:['had she'], ans:'had she',
+      exp:'\'d + driven (V3) = had; never = phủ định → had she?' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 52.1 – Put a question tag on the end',
+      q:'Don\'t lose the keys, ______? — Don\'t worry, I won\'t.',
+      acc:['will you'], ans:'will you',
+      exp:'Don\'t ... → will you?' },
+
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 52.2 – Ask your friend to agree',
+      q:'Bạn và bạn đứng trước một khách sạn, giá phòng rất cao. (expensive) It\'s ______',
+      acc:["very expensive isn't it","expensive isn't it","really expensive isn't it"], ans:"(very) expensive, isn't it?",
+      exp:'It\'s ... (+) → isn\'t it?' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 52.2 – Ask your friend to agree',
+      q:'Bạn và đồng nghiệp vừa dự một hội thảo rất hay. (great) The workshop ______',
+      acc:["was great wasn't it","was really great wasn't it"], ans:"was great, wasn't it?",
+      exp:'was (+) → wasn\'t it?' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 52.2 – Ask your friend to agree',
+      q:'Tóc bạn của bạn ngắn hơn hẳn lần trước. (have / your hair / cut) You\'ve ______',
+      acc:["had your hair cut haven't you"], ans:"had your hair cut, haven't you?",
+      exp:'You\'ve had... (+) → haven\'t you?' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 52.2 – Ask your friend to agree',
+      q:'Bạn thử một chiếc áo, soi gương thấy không đẹp. (not / look / very good) It ______',
+      acc:["doesn't look very good does it",'does not look very good does it'], ans:"doesn't look very good, does it?",
+      exp:'doesn\'t (−) → does it?' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 52.2 – Ask your friend to agree',
+      q:'Bạn và bạn đi qua cây cầu tre cũ, nhiều chỗ gãy. (not / very safe) This bridge ______',
+      acc:["isn't very safe is it",'is not very safe is it',"doesn't look very safe does it"], ans:"isn't very safe, is it?",
+      exp:'isn\'t (−) → is it?' },
+
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 52.3 – Asking for things / information',
+      q:'Bạn cần dời cái tủ nặng và muốn Duc giúp. → Duc, you ______',
+      acc:["couldn't give me a hand could you","couldn't help me could you","couldn't give me a hand with this cupboard could you","couldn't help me move this cupboard could you"],
+      ans:"couldn't give me a hand, could you?",
+      exp:'Nhờ vả: You couldn\'t ..., could you?' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 52.3 – Asking for things / information',
+      q:'Bạn đang tìm Thao. Có lẽ Vy biết Thao ở đâu. → Vy, you ______',
+      acc:["don't know where thao is do you","haven't seen thao have you"], ans:"don't know where Thao is, do you?",
+      exp:'Hỏi thông tin: You don\'t know where ... is, do you? (hoặc You haven\'t seen Thao, have you?).' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 52.3 – Asking for things / information',
+      q:'Bạn cần một cây dù. Có lẽ Khanh có. → Khanh, you ______',
+      acc:["haven't got an umbrella have you","don't have an umbrella do you"], ans:"haven't got an umbrella, have you?",
+      exp:'You haven\'t got ..., have you? / You don\'t have ..., do you?' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 52.3 – Asking for things / information',
+      q:'Hà có xe máy, bạn cần đi nhờ ra bến xe. → Ha, you ______',
+      acc:["couldn't take me to the bus station could you","couldn't give me a lift to the bus station could you"],
+      ans:"couldn't take me to the bus station, could you?",
+      exp:'Nhờ vả: You couldn\'t take me ..., could you?' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 52.3 – Asking for things / information',
+      q:'Bạn đang tìm điện thoại. Có lẽ Bao đã thấy nó. → Bao, you ______',
+      acc:["haven't seen my phone have you"], ans:"haven't seen my phone, have you?",
+      exp:'You haven\'t seen ..., have you?' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

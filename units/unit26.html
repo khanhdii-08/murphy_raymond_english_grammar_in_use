@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 26 – Can, could and (be) able to | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 26 – Can, could and (be) able to</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">53 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p><b>Can</b> diễn tả <b>khả năng</b>, <b>sự cho phép</b> hoặc điều <b>có thể xảy ra</b>. Vấn đề là <i>can</i> chỉ có 2 dạng (<i>can</i> / <i>could</i>), nên ở các thì khác ta phải "mượn" <b>be able to</b>. Unit này cũng giải quyết lỗi kinh điển: <b>could</b> (khả năng chung trong quá khứ) khác <b>was able to / managed to</b> (làm được trong MỘT tình huống cụ thể).</p>
+      <div class="ex"><b class="en">My grandfather <mark>could speak</mark> five languages.</b> → khả năng chung.<br><b class="en">The fire spread quickly, but everybody <mark>was able to escape</mark>.</b> → làm được trong một lần cụ thể (không nói <i>could escape</i>).</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">can / can't (cannot) + V            I can swim.  I can't come.
+could / couldn't + V                 She could read at 4.
+be able to + V                       I've been able to… / I might be able to…
+managed to + V  (= xoay xở làm được)  We managed to find him.</div>
+      <div class="scroll"><table>
+        <tr><th>Cần nói</th><th>Không dùng được can → dùng</th><th>Ví dụ</th></tr>
+        <tr><td>hiện tại hoàn thành</td><td>have/has been able to</td><td>I haven't been able to sleep recently.</td></tr>
+        <tr><td>sau might / must / will</td><td>might be able to…</td><td>Tom might be able to come.</td></tr>
+        <tr><td>sau used to / would like to</td><td>used to be able to…</td><td>I'd like to be able to play the piano.</td></tr>
+        <tr><td>nguyên mẫu / V-ing</td><td>to be able to / being able to</td><td>Applicants must be able to speak English.</td></tr>
+      </table></div>
+
+      <h2>1.3 · A. Can = khả năng, cho phép, có thể</h2>
+      <ul>
+        <li>Khả năng: <i>Can you speak any foreign languages?</i></li>
+        <li>Cho phép: <i>'I don't have a pen.' 'You <b>can use</b> mine.'</i></li>
+        <li>Có thể (khả năng xảy ra): <i>The word 'dream' <b>can be</b> a noun or a verb.</i></li>
+        <li>Phủ định: <b>can't = cannot</b> (viết liền).</li>
+      </ul>
+
+      <h2>1.4 · B. Could = quá khứ của can</h2>
+      <p>Hay dùng với động từ <b>giác quan &amp; nhận thức</b>:
+        <span class="chip">see</span><span class="chip">hear</span><span class="chip">smell</span><span class="chip">taste</span><span class="chip">feel</span><span class="chip">remember</span><span class="chip">understand</span></p>
+      <ul>
+        <li><i>As soon as I walked in, I <b>could smell</b> gas.</i></li>
+        <li><i>I was at the back and <b>couldn't hear</b> very well.</i></li>
+        <li>Khả năng/sự cho phép <b>chung</b>: <i>We were free. We <b>could do</b> what we wanted.</i></li>
+      </ul>
+
+      <h2>1.5 · C. Could vs was able to / managed to</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>could</th><th>was/were able to · managed to</th></tr>
+        <tr><td>Dùng khi</td><td>khả năng CHUNG (nhiều lần, nói chung)</td><td>làm được trong MỘT tình huống cụ thể</td></tr>
+        <tr><td>Ví dụ</td><td>Jack <b>could beat</b> anybody when he was young.</td><td>Andy played well, but Jack <b>managed to beat</b> him yesterday.</td></tr>
+        <tr><td>Phủ định</td><td colspan="2"><b>couldn't</b> dùng được cho CẢ HAI: <i>We looked everywhere but <b>couldn't find</b> him.</i></td></tr>
+      </table></div>
+      <p class="note">⚠️ <b>Ngoại lệ:</b> với động từ giác quan (see, hear…), <i>could</i> vẫn dùng được cho tình huống cụ thể: <i>I looked carefully and I <b>could see</b> someone in the distance.</i></p>
+
+      <h2>1.6 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Dấu hiệu</th><th>Chọn</th></tr>
+        <tr><td>recently, never, since… (hiện tại hoàn thành)</td><td>have been able to</td></tr>
+        <tr><td>might / will / must / used to / would like to + ___</td><td>be able to</td></tr>
+        <tr><td>when he was young, at the age of… (khả năng chung)</td><td>could</td></tr>
+        <tr><td>fortunately, in the end, although it was hard (một lần cụ thể)</td><td>was able to / managed to</td></tr>
+        <tr><td>câu phủ định quá khứ</td><td>couldn't (luôn đúng)</td></tr>
+      </table></div>
+
+      <h2>1.7 · So sánh &amp; lỗi hay gặp</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I haven't could sleep recently.</td><td class="yes">I haven't <b>been able to</b> sleep recently.</td></tr>
+        <tr><td class="no">She might can come.</td><td class="yes">She might <b>be able to</b> come.</td></tr>
+        <tr><td class="no">Fortunately, everybody could escape.</td><td class="yes">Everybody <b>was able to / managed to</b> escape.</td></tr>
+        <tr><td class="no">I can to swim.</td><td class="yes">I can <b>swim</b>.</td></tr>
+        <tr><td class="no">He cans speak English.</td><td class="yes">He <b>can</b> speak English.</td></tr>
+        <tr><td class="no">I will can help you.</td><td class="yes">I <b>will be able to</b> help you.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 27</b> (could do / could have done) · <b>Unit 28</b> (must / can't) · <b>Unit 37</b> (Can/Could you…? – lời đề nghị).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🏨 <b class="en">We <mark>can see</mark> the sea from our hotel room.</b> <span class="note">(du lịch)</span></div>
+      <div class="ex">🖊️ <b class="en">'I don't have a pen.' 'You <mark>can use</mark> mine.'</b> <span class="note">(cho phép)</span></div>
+      <div class="ex">😴 <b class="en">I <mark>haven't been able to</mark> sleep well recently.</b> <span class="note">(sức khỏe)</span></div>
+      <div class="ex">💼 <b class="en">Applicants must <mark>be able to</mark> speak English fluently.</b> <span class="note">(tin tuyển dụng)</span></div>
+      <div class="ex">👴 <b class="en">My grandfather <mark>could speak</mark> French and Russian.</b> <span class="note">(khả năng chung quá khứ)</span></div>
+      <div class="ex">🏃 <b class="en">The marathon was really hard, but I <mark>managed to finish</mark>.</b> <span class="note">(một lần cụ thể)</span></div>
+      <div class="ex">🔥 <b class="en">As soon as I opened the door, I <mark>could smell</mark> smoke.</b> <span class="note">(could + giác quan)</span></div>
+      <div class="ex">📅 <b class="en">I'm busy today, but I <mark>might be able to</mark> help you tomorrow.</b> <span class="note">(công việc)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>can "lười biếng"</b> 😴: chỉ có 2 dạng can/could, không đi sau might, will, have… → gặp chỗ đó thì gọi <b>be able to</b> thay thế.</li>
+        <li><b>could = "hồi đó có tài"</b> (nói chung) · <b>managed to = "lần đó xoay xở được"</b> (một lần cụ thể).</li>
+        <li><b>couldn't = "vé thông hành"</b> 🎫: phủ định quá khứ thì dùng couldn't lúc nào cũng được.</li>
+        <li>Giác quan + could: <i>could see / hear / smell / taste / feel</i> — luôn an toàn.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Thấy <b>have/has/haven't ___</b> → điền <b>been able to</b>.</li>
+        <li>Thấy <b>might / will / must / used to / 'd like to ___</b> → <b>be able to</b>.</li>
+        <li>Câu khẳng định quá khứ có <b>fortunately / in the end / although…</b> → <b>managed to / was able to</b>, không chọn could.</li>
+        <li>Câu phủ định quá khứ → <b>couldn't</b> là đáp án an toàn.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I can to speak English.</td><td class="yes">I can <b>speak</b> English.</td><td class="why">sau can không có to</td></tr>
+        <tr><td class="no">She cans cook very well.</td><td class="yes">She <b>can</b> cook very well.</td><td class="why">can không thêm -s</td></tr>
+        <tr><td class="no">I will can come tomorrow.</td><td class="yes">I <b>will be able to</b> come.</td><td class="why">không ghép 2 động từ khuyết thiếu</td></tr>
+        <tr><td class="no">I haven't can find a job.</td><td class="yes">I haven't <b>been able to</b> find a job.</td><td class="why">hiện tại hoàn thành → been able to</td></tr>
+        <tr><td class="no">Yesterday I could pass the test.</td><td class="yes">Yesterday I <b>managed to / was able to</b> pass the test.</td><td class="why">một lần cụ thể</td></tr>
+        <tr><td class="no">Do you can swim?</td><td class="yes"><b>Can you</b> swim?</td><td class="why">can tự đảo lên đầu câu hỏi</td></tr>
+        <tr><td class="no">I don't can come.</td><td class="yes">I <b>can't</b> come.</td><td class="why">phủ định: can't / cannot</td></tr>
+        <tr><td class="no">I can not to go.</td><td class="yes">I <b>cannot</b> go.</td><td class="why">cannot viết liền, không to</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>CV / phỏng vấn:</b> <i>"I can use Excel and Photoshop. I'm able to work under pressure."</i></li>
+        <li><b>Kể chuyện:</b> <i>"The road was flooded, but we managed to get home."</i></li>
+        <li><b>IELTS Speaking Part 2:</b> kể về kỹ năng: <i>"When I was a child I couldn't swim, but now I can."</i></li>
+        <li><b>Mục tiêu:</b> <i>"I'd like to be able to play the guitar by the end of the year."</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3 ngày, 7 ngày và 14 ngày. Liên quan: <b>Unit 27</b> (could do / could have done), <b>Unit 37</b> (Can you…? Could you…?), <b>Unit 18</b> (used to).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit26.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 26 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 26 – Can, could and (be) able to | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit26.html';
+  var KEY = 'egu4_unit26_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền từ / chia động từ',    desc:'Điền can / could / be able to / managed to cho đúng.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 26.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 26 Exercises)', desc:'Bài 26.1 → 26.5 theo đúng dạng bài trong sách Murphy, câu đã viết lại.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I haven\'t ______ sleep well since I moved here.',
+      opts:['could','can','been able to','be able to'], a:2,
+      exp:'Hiện tại hoàn thành (haven\'t + V3) → can không có dạng V3 → been able to.' },
+    { id:'a2', sec:'A', type:'mcq', q:'Tom might ______ come to the party tomorrow.',
+      opts:['can','be able to','could','able'], a:1,
+      exp:'Sau might (động từ khuyết thiếu) không dùng can → might be able to.' },
+    { id:'a3', sec:'A', type:'mcq', q:'The building was on fire, but fortunately everyone ______ escape.',
+      opts:['could','was able to','can','could be able to'], a:1,
+      exp:'Làm được trong MỘT tình huống cụ thể → was able to / managed to (không dùng could).' },
+    { id:'a4', sec:'A', type:'mcq', q:'When she was five, my sister ______ read and write.',
+      opts:['could','managed to','was able to manage','can'], a:0,
+      exp:'Khả năng chung trong quá khứ → could.' },
+    { id:'a5', sec:'A', type:'mcq', q:'We looked everywhere for the keys, but we ______ find them.',
+      opts:['couldn\'t','can\'t','didn\'t able to','not could'], a:0,
+      exp:'Phủ định quá khứ → couldn\'t dùng được cho cả tình huống cụ thể.' },
+    { id:'a6', sec:'A', type:'mcq', q:'As soon as I walked into the kitchen, I ______ smell something burning.',
+      opts:['managed to','could','was able','can'], a:1,
+      exp:'Động từ giác quan (smell) → could dùng được cả trong tình huống cụ thể.' },
+    { id:'a7', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I will can help you next week.','I will be able to help you next week.'], a:1,
+      exp:'Không ghép will + can → will be able to.' },
+    { id:'a8', sec:'A', type:'mcq', q:'Jack and Andy played chess yesterday. Andy played well, but Jack ______ beat him.',
+      opts:['could','managed to','can'], a:1,
+      exp:'Thắng trong một trận cụ thể → managed to (không dùng could).' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'Mai has lived in Japan for years. She ______ speak Japanese fluently. (can / be able to)',
+      acc:['can'], ans:'can',
+      exp:'Hiện tại, khả năng chung → can là tự nhiên nhất.' },
+    { id:'b2', sec:'B', type:'fill', q:'I used to ______ touch my toes, but I can\'t any more.',
+      acc:['be able to'], ans:'be able to',
+      exp:'Sau used to cần nguyên mẫu → be able to.' },
+    { id:'b3', sec:'B', type:'fill', q:'I\'ve never ______ understand physics.',
+      acc:['been able to'], ans:'been able to',
+      exp:'Hiện tại hoàn thành (have never + V3) → been able to.' },
+    { id:'b4', sec:'B', type:'fill', q:'I\'d love to ______ play the guitar.',
+      acc:['be able to'], ans:'be able to',
+      exp:'Sau would like to / would love to → be able to.' },
+    { id:'b5', sec:'B', type:'fill', q:'The exam was hard, but I ______ (manage) to answer all the questions.',
+      acc:['managed'], ans:'managed',
+      exp:'Một lần cụ thể trong quá khứ → managed to.' },
+    { id:'b6', sec:'B', type:'fill', q:'Speak up, please. I ______ hear you. (phủ định của can)',
+      acc:['can\'t','cannot','can not'], ans:'can\'t',
+      exp:'Hiện tại phủ định → can\'t / cannot.' },
+    { id:'b7', sec:'B', type:'fill', q:'My grandmother ______ play the piano beautifully when she was young.',
+      acc:['could'], ans:'could',
+      exp:'Khả năng chung trong quá khứ → could.' },
+    { id:'b8', sec:'B', type:'fill', q:'Candidates must ______ work in a team.',
+      acc:['be able to'], ans:'be able to',
+      exp:'Sau must không dùng can → must be able to.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (we / can / see / the lake / from our hotel)',
+      tokens:['We','can','see','the','lake','from','our','hotel'],
+      acc:['we can see the lake from our hotel'], ans:'We can see the lake from our hotel.',
+      exp:'can + V nguyên mẫu (không to).' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (I / haven\'t / been / able / to / sleep / recently)',
+      tokens:['I',"haven't",'been','able','to','sleep','recently'],
+      acc:["i haven't been able to sleep recently"], ans:'I haven\'t been able to sleep recently.',
+      exp:'Hiện tại hoàn thành của can → have been able to.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (we / managed / to / find / him / in the end)',
+      tokens:['We','managed','to','find','him','in','the','end'],
+      acc:['we managed to find him in the end'], ans:'We managed to find him in the end.',
+      exp:'Tình huống cụ thể, kết quả thành công → managed to.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (she / might / be / able / to / help you)',
+      tokens:['She','might','be','able','to','help','you'],
+      acc:['she might be able to help you'], ans:'She might be able to help you.',
+      exp:'might + be able to + V.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (my grandfather / could / speak / five languages)',
+      tokens:['My','grandfather','could','speak','five','languages'],
+      acc:['my grandfather could speak five languages'], ans:'My grandfather could speak five languages.',
+      exp:'Khả năng chung trong quá khứ → could.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: I don\'t have a charger.  B: You ______ use mine.',
+      acc:['can','could'], ans:'can',
+      exp:'Cho phép → can.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Did you find the restaurant easily?  B: Yes, your map was clear, so we ______ (be able to) find it.',
+      acc:['were able to'], ans:'were able to',
+      exp:'Một lần cụ thể, chủ ngữ we → were able to.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: You look exhausted.  B: Yes, I ______ (sleep) last night. The neighbours were so noisy.',
+      acc:['couldn\'t sleep','could not sleep'], ans:'couldn\'t sleep',
+      exp:'Phủ định quá khứ → couldn\'t sleep.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Can you come on Friday?  B: Sorry, I can\'t, but I ______ meet you on Saturday.',
+      acc:['can'], ans:'can',
+      exp:'Hiện tại, có thể sắp xếp được → can.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 4 câu về bản thân: (1) điều bạn từng làm được; (2) điều muốn làm được; (3) điều chưa bao giờ làm được; (4) điều bạn làm được bây giờ.',
+      sample:'I used to be able to run 5 km without stopping. I\'d like to be able to speak Korean. I\'ve never been able to cook well. I can swim quite fast.',
+      exp:'used to / would like to / have never + be able to; hiện tại → can.' },
+    { id:'e2', sec:'E', type:'self', q:'Kể ngắn (2–3 câu) một lần bạn gặp khó khăn nhưng vẫn làm được, dùng managed to / was able to.',
+      sample:'Last month my motorbike broke down in the rain. I couldn\'t start it, but I managed to push it to a garage. The mechanic was able to fix it in 20 minutes.',
+      exp:'Tình huống cụ thể khẳng định → managed to / was able to; phủ định → couldn\'t.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu tin tuyển dụng (job advert) dùng must be able to / should be able to.',
+      sample:'Applicants must be able to speak English. The successful candidate should be able to work at weekends.',
+      exp:'Sau must / should → be able to.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'I ______ come to your wedding. I\'m so sorry.',
+      opts:['can\'t','am not able','don\'t can'], a:0,
+      exp:'Phủ định của can → can\'t. "am not able" thiếu to.' },
+    { id:'f2', sec:'F', type:'fill', q:'Ask Long. He might ______ fix your computer.',
+      acc:['be able to'], ans:'be able to',
+      exp:'Sau might → be able to.' },
+    { id:'f3', sec:'F', type:'mcq', q:'The road was blocked, but we ______ get home by another route.',
+      opts:['could','managed to'], a:1,
+      exp:'Thành công trong tình huống cụ thể → managed to.' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch: "Tôi đã không thể tìm thấy hộ chiếu của mình."',
+      acc:['i couldn\'t find my passport','i could not find my passport','i wasn\'t able to find my passport','i was not able to find my passport'],
+      ans:'I couldn\'t find my passport.',
+      exp:'Phủ định quá khứ → couldn\'t (hoặc wasn\'t able to).' },
+    { id:'f5', sec:'F', type:'mcq', q:'Chọn câu SAI:',
+      opts:['I couldn\'t open the door.','Fortunately I could open the door in the end.','I managed to open the door in the end.'], a:1,
+      exp:'Khẳng định + tình huống cụ thể → không dùng could; phải là managed to / was able to.' },
+    { id:'f6', sec:'F', type:'fill', q:'When Dung was 16, he ______ (run) 100 metres in 12 seconds.',
+      acc:['could run'], ans:'could run',
+      exp:'Khả năng chung ở một giai đoạn quá khứ → could run.' },
+    { id:'f7', sec:'F', type:'mcq', q:'Since the operation, she ______ walk without help.',
+      opts:['can','has been able to','could'], a:1,
+      exp:'since → hiện tại hoàn thành → has been able to.' },
+    { id:'f8', sec:'F', type:'fill', q:'I sat at the back of the hall and ______ (not / hear) the speaker very well.',
+      acc:['couldn\'t hear','could not hear'], ans:'couldn\'t hear',
+      exp:'Giác quan, phủ định quá khứ → couldn\'t hear.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 26.1 – can or (be) able to',
+      q:'Huong ______ drive, but she doesn\'t have a car. (Dùng can nếu được)',
+      acc:['can'], ans:'can',
+      exp:'Hiện tại đơn, khả năng → can.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 26.1 – can or (be) able to',
+      q:'I used to ______ do the splits, but I can\'t do it now.',
+      acc:['be able to'], ans:'be able to',
+      exp:'Sau used to → be able to.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 26.1 – can or (be) able to',
+      q:'I can\'t understand my boss. I\'ve never ______ understand him.',
+      acc:['been able to'], ans:'been able to',
+      exp:'have never + V3 → been able to.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 26.1 – can or (be) able to',
+      q:'I\'m busy on Monday, but I ______ see you on Tuesday afternoon. (có 2 đáp án)',
+      acc:['can','will be able to','\'ll be able to'], ans:'can',
+      exp:'can hoặc will be able to đều được cho việc sắp tới.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 26.1 – can or (be) able to',
+      q:'Talk to Ms Thao about it. She might ______ help you.',
+      acc:['be able to'], ans:'be able to',
+      exp:'Sau might → be able to.' },
+
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 26.3 – can/can\'t/could/couldn\'t + verb',
+      q:'\'Are you in a rush?\' \'No, I\'ve got lots of time. I ______.\' (wait)',
+      acc:['can wait'], ans:'can wait',
+      exp:'Hiện tại, có khả năng chờ → can wait.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 26.3 – can/can\'t/could/couldn\'t + verb',
+      q:'I had a stomachache yesterday. I ______ anything. (eat)',
+      acc:['couldn\'t eat','could not eat'], ans:'couldn\'t eat',
+      exp:'Quá khứ, phủ định → couldn\'t eat.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 26.3 – can/can\'t/could/couldn\'t + verb',
+      q:'Could you turn the music down? I ______ you properly. (hear)',
+      acc:['can\'t hear','cannot hear','can not hear'], ans:'can\'t hear',
+      exp:'Hiện tại, phủ định → can\'t hear.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 26.3 – can/can\'t/could/couldn\'t + verb',
+      q:'\'You look sleepy.\' \'Yes, I ______ last night.\' (sleep)',
+      acc:['couldn\'t sleep','could not sleep'], ans:'couldn\'t sleep',
+      exp:'Quá khứ (last night), phủ định → couldn\'t sleep.' },
+
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 26.4 – was/were able to …',
+      q:'A: Did you finish the report this morning?  B: Yes, the office was quiet, so I ______.',
+      acc:['was able to finish it','was able to finish','was able to finish the report','was able to do it'], ans:'was able to finish it',
+      exp:'Một lần cụ thể, thành công → was able to finish it.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 26.4 – was/were able to …',
+      q:'A: Was it hard to find a parking space?  B: Not really. We ______ one near the entrance.',
+      acc:['were able to find','were able to get'], ans:'were able to find',
+      exp:'Chủ ngữ we, tình huống cụ thể → were able to find.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 26.4 – was/were able to …',
+      q:'A: Did the robber escape?  B: Yes. Nobody noticed, so he ______.',
+      acc:['was able to escape','was able to get away','was able to run away'], ans:'was able to escape',
+      exp:'Thành công trong tình huống cụ thể → was able to escape.' },
+
+    { id:'h13', sec:'G', type:'mcq', sub:'Bài 26.5 – could, couldn\'t or managed to',
+      q:'Linh had hurt her ankle and ______ walk very well.',
+      opts:['couldn\'t','managed to','could'], a:0,
+      exp:'Phủ định quá khứ → couldn\'t.' },
+    { id:'h14', sec:'G', type:'mcq', sub:'Bài 26.5 – could, couldn\'t or managed to',
+      q:'I did my first triathlon last month. It was exhausting, but I ______ finish.',
+      opts:['could','managed to','couldn\'t'], a:1,
+      exp:'Thành công trong một lần cụ thể → managed to.' },
+    { id:'h15', sec:'G', type:'mcq', sub:'Bài 26.5 – could, couldn\'t or managed to',
+      q:'I looked through the binoculars and I ______ see a boat far away.',
+      opts:['could','managed to','couldn\'t'], a:0,
+      exp:'Động từ giác quan see → could dùng được cho tình huống cụ thể.' },
+    { id:'h16', sec:'G', type:'mcq', sub:'Bài 26.5 – could, couldn\'t or managed to',
+      q:'The first pharmacy was closed, but I ______ get the medicine at another one.',
+      opts:['could','managed to'], a:1,
+      exp:'Tình huống cụ thể, khẳng định → managed to.' },
+    { id:'h17', sec:'G', type:'mcq', sub:'Bài 26.5 – could, couldn\'t or managed to',
+      q:'My uncle loved sport. He ______ swim really well.',
+      opts:['could','managed to'], a:0,
+      exp:'Khả năng chung → could.' },
+    { id:'h18', sec:'G', type:'mcq', sub:'Bài 26.5 – could, couldn\'t or managed to',
+      q:'A boy fell off the boat, but luckily we ______ pull him out.',
+      opts:['could','managed to'], a:1,
+      exp:'Thành công trong một lần cụ thể → managed to.' },
+    { id:'h19', sec:'G', type:'mcq', sub:'Bài 26.5 – could, couldn\'t or managed to',
+      q:'I\'d left my phone at home, so I ______ take any photos.',
+      opts:['couldn\'t','managed to','could'], a:0,
+      exp:'Phủ định quá khứ → couldn\'t.' },
+    { id:'h20', sec:'G', type:'mcq', sub:'Bài 26.5 – could, couldn\'t or managed to',
+      q:'They refused to help at first, but we ______ persuade them.',
+      opts:['could','managed to'], a:1,
+      exp:'Thuyết phục thành công một lần → managed to.' }
+  ];
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

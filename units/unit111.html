@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 111 – Still, yet and already; any more / any longer / no longer | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 111 – Still, yet and already; Any more / any longer / no longer</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">57 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Bốn nhóm từ trong unit này đều trả lời câu hỏi: <b>tình huống so với kỳ vọng / so với trước đây thế nào?</b></p>
+      <ul>
+        <li><b>still</b> = <b>vẫn còn</b> — chưa thay đổi, chưa dừng.</li>
+        <li><b>not … any more / any longer / no longer</b> = <b>không … nữa</b> — đã thay đổi so với trước.</li>
+        <li><b>yet</b> = <b>tính đến giờ (chưa)</b> — người nói <b>đang chờ</b> điều đó xảy ra.</li>
+        <li><b>already</b> = <b>đã … rồi</b> — xảy ra <b>sớm hơn</b> mong đợi.</li>
+      </ul>
+      <div class="ex"><b class="en">It's 10 o'clock and Joe is <mark>still</mark> in bed. — He <mark>hasn't</mark> got up <mark>yet</mark>.</b><br>Cùng một tình huống, nhìn từ hai phía: <u>still</u> nhấn việc đang tiếp diễn; <u>not … yet</u> nhấn việc được chờ đợi chưa xảy ra.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">still        → giữa câu      She still lives in Hue.      He is still asleep.
+still + not  → trước phủ định  He still hasn't replied.  (sốt ruột, ngạc nhiên)
+not … yet    → cuối câu      I haven't finished yet.
+yet ?        → cuối câu      Have you finished yet?
+already      → giữa câu      She has already left.  /  Do you already know?
+not … any more / any longer → cuối câu   He doesn't work here any more.
+no longer    → giữa câu      He no longer works here.</div>
+      <div class="scroll"><table>
+        <tr><th>Từ</th><th>Nghĩa</th><th>Loại câu</th><th>Vị trí</th></tr>
+        <tr><td><b>still</b></td><td>vẫn còn</td><td>khẳng định, câu hỏi (và trước phủ định)</td><td>giữa câu</td></tr>
+        <tr><td><b>yet</b></td><td>(chưa) tính đến giờ</td><td>phủ định, câu hỏi</td><td>cuối câu</td></tr>
+        <tr><td><b>already</b></td><td>đã … rồi (sớm hơn dự kiến)</td><td>khẳng định, câu hỏi</td><td>giữa câu</td></tr>
+        <tr><td><b>any more / any longer</b></td><td>không … nữa</td><td>phủ định (not)</td><td>cuối câu</td></tr>
+        <tr><td><b>no longer</b></td><td>không … nữa (trang trọng hơn)</td><td>động từ khẳng định</td><td>giữa câu</td></tr>
+      </table></div>
+      <p class="note">📏 "Giữa câu" = <b>trước động từ thường</b>, <b>sau be / trợ động từ đầu tiên</b> (xem Unit 110): <i>She <b>still</b> works</i> · <i>She is <b>still</b> here</i> · <i>She has <b>already</b> gone</i>.</p>
+
+      <h2>1.3 · A. Still — vẫn còn</h2>
+      <p>Dùng <b>still</b> khi một tình huống/hành động <b>vẫn đang tiếp tục</b>, chưa thay đổi hay dừng lại.</p>
+      <div class="ex"><b class="en">When I got home, Lan was <mark>still</mark> studying.<br>Do you <mark>still</mark> want to come, or have you changed your mind?</b></div>
+
+      <h2>1.4 · B. Not … any more / any longer / no longer — không … nữa</h2>
+      <p>Khi tình huống <b>đã thay đổi</b>: dùng <b>not … any more</b> hoặc <b>not … any longer</b> (cuối câu), hoặc <b>no longer</b> (giữa câu, động từ ở dạng khẳng định).</p>
+      <div class="formula">Minh doesn't work here any more.   = Minh doesn't work here any longer.
+Minh no longer works here.          (không dùng thêm not!)
+We aren't friends any more.  /  We are no longer friends.   ❌ We are no more friends.</div>
+      <p>So sánh: <i>Hoa <b>still</b> works here, but Minh <b>doesn't</b> work here <b>any more</b>.</i></p>
+
+      <h2>1.5 · C. Yet — tính đến giờ (đang chờ)</h2>
+      <p><b>yet</b> chủ yếu trong <b>câu phủ định</b> và <b>câu hỏi</b>, đứng <b>cuối câu</b>, hay đi với <b>hiện tại hoàn thành</b>. Người nói <b>mong chờ</b> việc đó sẽ xảy ra.</p>
+      <div class="ex"><b class="en">The bus isn't here <mark>yet</mark>. · Have you booked the tickets <mark>yet</mark>? · 'Where are you going?' 'We don't know <mark>yet</mark>.'</b></div>
+      <p><b>still + phủ định</b> (still đứng TRƯỚC haven't/isn't…) mang cảm xúc <b>sốt ruột / ngạc nhiên</b> mạnh hơn <b>not … yet</b>:</p>
+      <div class="scroll"><table>
+        <tr><th>Câu</th><th>Sắc thái</th></tr>
+        <tr><td>I emailed him yesterday. He <b>hasn't</b> replied <b>yet</b>.</td><td>bình thường, chắc sắp trả lời</td></tr>
+        <tr><td>I emailed him two weeks ago and he <b>still hasn't</b> replied.</td><td>lẽ ra phải trả lời từ lâu rồi!</td></tr>
+      </table></div>
+
+      <h2>1.6 · D. Already — đã … rồi (sớm hơn mong đợi)</h2>
+      <div class="ex"><b class="en">'When is Nam leaving?' 'He's <mark>already</mark> left.'<br>Shall I tell her the news, or does she <mark>already</mark> know?<br>I've just had lunch and I'm <mark>already</mark> hungry.</b></div>
+
+      <h2>1.7 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th>still</th><th>not … yet</th><th>not … any more</th></tr>
+        <tr><td>Is it <b>still</b> raining?<br>(mưa vẫn đang tiếp diễn?)</td><td>Has it stopped raining <b>yet</b>?<br>(đã tạnh chưa — mong tạnh)</td><td>It isn't raining <b>any more</b>.<br>(đã tạnh — thay đổi rồi)</td></tr>
+        <tr><td>He is <b>still</b> unemployed.</td><td>He hasn't found a job <b>yet</b>.</td><td>He isn't unemployed <b>any more</b>.</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">He doesn't still work here.</td><td class="yes">He doesn't work here <b>any more</b>.</td></tr>
+        <tr><td class="no">We are no more friends.</td><td class="yes">We are <b>no longer</b> friends.</td></tr>
+        <tr><td class="no">He doesn't no longer live here.</td><td class="yes">He <b>no longer lives</b> here.</td></tr>
+        <tr><td class="no">I haven't yet finished it yet.</td><td class="yes">I haven't finished it <b>yet</b>.</td></tr>
+        <tr><td class="no">She has left already? (ý: sốc vì sớm)</td><td class="yes">Has she <b>already</b> left?</td></tr>
+        <tr><td class="no">I still am tired.</td><td class="yes">I am <b>still</b> tired.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 7D</b> (hiện tại hoàn thành + just/already/yet) · <b>Unit 110</b> (vị trí trạng từ giữa câu) · <b>Unit 112</b> (even).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🌧️ <b class="en">Is it <mark>still</mark> raining? I want to go out.</b> <span class="note">(đời sống — hỏi thời tiết)</span></div>
+      <div class="ex">📦 <b class="en">My order <mark>hasn't</mark> arrived <mark>yet</mark>.</b> <span class="note">(mua sắm online — đang chờ hàng)</span></div>
+      <div class="ex">😤 <b class="en">I ordered it a month ago and it <mark>still hasn't</mark> arrived!</b> <span class="note">(phàn nàn — sốt ruột)</span></div>
+      <div class="ex">✈️ <b class="en">'Shall I book a taxi?' 'I've <mark>already</mark> booked one.'</b> <span class="note">(du lịch — làm sớm hơn mong đợi)</span></div>
+      <div class="ex">🏢 <b class="en">Ms Thu <mark>no longer</mark> works for this company.</b> <span class="note">(công việc — email trang trọng)</span></div>
+      <div class="ex">🍜 <b class="en">That restaurant isn't open <mark>any more</mark>. It closed last year.</b> <span class="note">(đời sống — thông tin đã thay đổi)</span></div>
+      <div class="ex">📝 <b class="en">Have you finished your report <mark>yet</mark>?</b> <span class="note">(công việc — sếp hỏi tiến độ)</span></div>
+      <div class="ex">🎓 <b class="en">I graduated ten years ago, but I <mark>still</mark> remember my first teacher.</b> <span class="note">(IELTS Speaking — kể kỷ niệm)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>still = "vẫn"</b>, <b>yet = "chưa … (đang chờ)"</b>, <b>already = "rồi (sớm thế!)"</b>, <b>any more = "nữa"</b>.</li>
+        <li><b>Vị trí:</b> <i>still / already / no longer</i> → <b>giữa</b>; <i>yet / any more / any longer</i> → <b>cuối</b>.</li>
+        <li><b>no longer đã mang nghĩa phủ định</b> → động từ đi sau ở dạng khẳng định: <i>He no longer <b>works</b>.</i></li>
+        <li>Câu chuyển: <i>still + khẳng định</i> ⇄ <i>not … yet</i>: <i>She's still sleeping</i> ⇄ <i>She hasn't woken up yet</i>.</li>
+        <li><b>"no more"</b> gần như không dùng thay cho no longer — tránh <i>We are no more friends</i>.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Câu <b>phủ định / câu hỏi</b> + hiện tại hoàn thành, chỗ trống ở <b>cuối</b> → gần như chắc là <b>yet</b>.</li>
+        <li>Chỗ trống <b>trước</b> <i>hasn't/isn't/can't</i> → <b>still</b> (still đứng trước phủ định), không phải yet.</li>
+        <li>Thấy <i>used to … but now …</i> → đáp án thường là <b>not … any more / no longer</b>.</li>
+        <li>Câu khẳng định "sớm hơn dự kiến" (<i>I've just eaten and I'm ___ hungry</i>) → <b>already</b>.</li>
+        <li>Bẫy: <i>He doesn't ___ live here</i> → không điền <i>still</i>; viết lại thành <i>He doesn't live here any more</i>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I don't still like it.</td><td class="yes">I don't like it <b>any more</b>.</td><td class="why">"không … nữa" = not … any more</td></tr>
+        <tr><td class="no">I still haven't finished yet.</td><td class="yes">I <b>still haven't</b> finished. / I haven't finished <b>yet</b>.</td><td class="why">chọn 1 trong 2, không dùng cả hai</td></tr>
+        <tr><td class="no">He yet hasn't come.</td><td class="yes">He hasn't come <b>yet</b>.</td><td class="why">yet đứng cuối câu</td></tr>
+        <tr><td class="no">She already has gone.</td><td class="yes">She <b>has already</b> gone.</td><td class="why">already sau trợ động từ</td></tr>
+        <tr><td class="no">We are no more neighbours.</td><td class="yes">We are <b>no longer</b> neighbours.</td><td class="why">no more không dùng kiểu này</td></tr>
+        <tr><td class="no">He doesn't no longer smoke.</td><td class="yes">He <b>no longer smokes</b>.</td><td class="why">no longer đã là phủ định</td></tr>
+        <tr><td class="no">Did you finish yet? (ý chung chung)</td><td class="yes"><b>Have</b> you finished <b>yet</b>?</td><td class="why">yet hay đi với hiện tại hoàn thành (Anh-Anh)</td></tr>
+        <tr><td class="no">I still am waiting.</td><td class="yes">I <b>am still</b> waiting.</td><td class="why">still đứng sau be</td></tr>
+        <tr><td class="no">I have already finished it yet.</td><td class="yes">I have <b>already</b> finished it.</td><td class="why">yet không dùng trong câu khẳng định</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> so sánh bản thân 5 năm trước và bây giờ: <i>"I still live in Hanoi. I don't play games any more. I no longer drink soft drinks."</i></li>
+        <li><b>Viết (to-do list):</b> mỗi tối ghi <i>"I've already … / I haven't … yet"</i> cho 3 việc trong ngày.</li>
+        <li><b>Email công việc:</b> <i>"I haven't received the file yet."</i> (lịch sự) → nếu quá hạn: <i>"I still haven't received the file."</i> (nhấn mạnh).</li>
+        <li><b>Phàn nàn dịch vụ:</b> <i>"My internet still isn't working."</i></li>
+        <li><b>Quy tắc vàng:</b> trước khi nói, hỏi thầm: <i>tiếp diễn (still)? chưa xảy ra mà đang chờ (yet)? sớm hơn (already)? đã thay đổi (any more)?</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> ôn lại unit này sau 3/7/14 ngày, mỗi lần làm lại phần câu sai. Liên quan: <b>Unit 7</b> (present perfect + already/yet), <b>Unit 110</b> (vị trí trạng từ), <b>Unit 112</b> (even).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit111.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 111 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 111 – Still, yet, already, any more | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit111.html';
+  var KEY = 'egu4_unit111_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền still / yet / already / any more', desc:'Điền từ thích hợp vào chỗ trống.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 111.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 111 Exercises)', desc:'Bài 111.1 → 111.3 theo đúng dạng bài trong sách Murphy (câu đã được viết lại).' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'It\'s 11 a.m. and my brother is ______ in bed.',
+      opts:['yet','still','already','any more'], a:1,
+      exp:'Tình huống vẫn đang tiếp diễn (vẫn nằm trên giường) → still, đứng sau be.' },
+    { id:'a2', sec:'A', type:'mcq', q:'Have you finished your homework ______?',
+      opts:['still','already','yet','no longer'], a:2,
+      exp:'Câu hỏi, người hỏi đang chờ việc hoàn thành → yet, đứng cuối câu.' },
+    { id:'a3', sec:'A', type:'mcq', q:'Linh ______ works here. She left in March.',
+      opts:['no longer','any more','still','yet'], a:0,
+      exp:'Tình huống đã thay đổi; chỗ trống ở giữa câu, động từ khẳng định (works) → no longer. "any more" phải đi với not và đứng cuối câu.' },
+    { id:'a4', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['He doesn\'t still live in Da Nang.','He doesn\'t live in Da Nang any more.','He no longer doesn\'t live in Da Nang.'], a:1,
+      exp:'"Không … nữa" = not … any more (cuối câu). Không nói "doesn\'t still"; no longer đã mang nghĩa phủ định nên không thêm doesn\'t.' },
+    { id:'a5', sec:'A', type:'mcq', q:'\'Is Nam coming to the meeting?\' \'He\'s ______ here. He arrived ten minutes ago.\'',
+      opts:['yet','still','any longer','already'], a:3,
+      exp:'Đến sớm hơn người hỏi nghĩ → already (giữa câu, sau be).' },
+    { id:'a6', sec:'A', type:'mcq', q:'I sent the invoice six weeks ago and they ______ paid. (rất bực mình)',
+      opts:['still haven\'t','haven\'t still','haven\'t yet','already haven\'t'], a:0,
+      exp:'still + phủ định (still đứng TRƯỚC haven\'t) thể hiện sốt ruột/ngạc nhiên: lẽ ra họ phải trả từ lâu rồi.' },
+    { id:'a7', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['We are no more friends.','We are no longer friends.'], a:1,
+      exp:'Dùng no longer, không dùng "no more" với nghĩa "không còn … nữa".' },
+    { id:'a8', sec:'A', type:'mcq', q:'I\'ve just had a big breakfast, and I\'m ______ hungry!',
+      opts:['already','yet','any more','no longer'], a:0,
+      exp:'Vừa ăn xong mà đã đói → xảy ra sớm hơn mong đợi → already.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'The film started an hour ago and it hasn\'t finished ______.',
+      acc:['yet'], ans:'yet',
+      exp:'Phủ định + hiện tại hoàn thành, cuối câu, đang chờ phim kết thúc → yet.' },
+    { id:'b2', sec:'B', type:'fill', q:'My grandmother is 90, but she ______ walks to the market every day.',
+      acc:['still'], ans:'still',
+      exp:'Thói quen vẫn tiếp tục, chưa dừng → still (trước động từ thường walks).' },
+    { id:'b3', sec:'B', type:'fill', q:'I used to drink a lot of coffee, but I don\'t drink it ______.',
+      acc:['any more','anymore','any longer'], ans:'any more',
+      exp:'used to … but now → đã thay đổi → not … any more / any longer ở cuối câu.' },
+    { id:'b4', sec:'B', type:'fill', q:'\'Do you want me to explain the rules?\' \'No, I ______ know them.\'',
+      acc:['already'], ans:'already',
+      exp:'Đã biết rồi (sớm hơn người kia nghĩ) → already, đứng trước động từ thường know.' },
+    { id:'b5', sec:'B', type:'fill', q:'This phone is so old that the company ______ ______ makes it. (2 từ, giữa câu)',
+      acc:['no longer'], ans:'no longer',
+      exp:'Giữa câu, động từ khẳng định makes → no longer.' },
+    { id:'b6', sec:'B', type:'fill', q:'Is your sister ______ living in Canada, or has she come back?',
+      acc:['still'], ans:'still',
+      exp:'Hỏi xem tình huống có còn tiếp tục không → still (sau be, trước V-ing).' },
+    { id:'b7', sec:'B', type:'fill', q:'\'Where will you stay in Hanoi?\' \'We don\'t know ______.\'',
+      acc:['yet'], ans:'yet',
+      exp:'Chưa biết nhưng sẽ quyết định → not … yet, cuối câu.' },
+    { id:'b8', sec:'B', type:'fill', q:'Hurry up! The train has ______ arrived.',
+      acc:['already'], ans:'already',
+      exp:'Câu khẳng định, tàu đến sớm hơn dự đoán → has already arrived (already sau has).' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (he / still / hasn\'t / called / me)',
+      tokens:['He','still',"hasn't",'called','me'],
+      acc:["he still hasn't called me"], ans:'He still hasn\'t called me.',
+      exp:'still đứng TRƯỚC trợ động từ phủ định → sốt ruột: lẽ ra anh ấy phải gọi rồi.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (my aunt / no longer / teaches / at this school)',
+      tokens:['My','aunt','no','longer','teaches','at','this','school'],
+      acc:['my aunt no longer teaches at this school'], ans:'My aunt no longer teaches at this school.',
+      exp:'no longer đứng giữa câu, trước động từ khẳng định teaches.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (have / you / met / your new boss / yet)',
+      tokens:['Have','you','met','your','new','boss','yet'],
+      acc:['have you met your new boss yet'], ans:'Have you met your new boss yet?',
+      exp:'Câu hỏi hiện tại hoàn thành + yet ở cuối câu.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (they / have / already / sold / the house)',
+      tokens:['They','have','already','sold','the','house'],
+      acc:['they have already sold the house'], ans:'They have already sold the house.',
+      exp:'already đứng sau trợ động từ have, trước phân từ sold.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (we / don\'t / go / there / any more)',
+      tokens:['We',"don't",'go','there','any','more'],
+      acc:["we don't go there any more"], ans:'We don\'t go there any more.',
+      exp:'not … any more: any more đứng cuối câu.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Is Hoa ready?  B: No, she\'s ______ getting dressed.',
+      acc:['still'], ans:'still',
+      exp:'Việc mặc đồ vẫn đang diễn ra → still.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Has the parcel come ______?  B: No, not yet.',
+      acc:['yet'], ans:'yet',
+      exp:'Câu hỏi đang chờ đợi + present perfect → yet ở cuối.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Shall I wash the dishes?  B: Don\'t worry, I\'ve ______ done them.',
+      acc:['already'], ans:'already',
+      exp:'Việc đã làm xong rồi (sớm hơn A nghĩ) → already.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Do you still play the guitar?  B: No, I don\'t play it ______. I stopped years ago.',
+      acc:['any more','anymore','any longer'], ans:'any more',
+      exp:'Đã ngừng → not … any more / any longer.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'So sánh bạn 5 năm trước và bây giờ: viết 2 câu với still và 2 câu với not … any more / no longer.',
+      sample:'I still live with my parents. I still love football. I don\'t eat fast food any more. I no longer work at night.',
+      exp:'still → điều không đổi; not … any more (cuối câu) / no longer (giữa câu, động từ khẳng định) → điều đã thay đổi.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết danh sách việc hôm nay: 2 việc bạn đã làm (already) và 2 việc chưa làm (not … yet).',
+      sample:'I\'ve already answered my emails. I\'ve already been to the bank. I haven\'t cooked dinner yet. I haven\'t called my mum yet.',
+      exp:'already đứng sau have; yet đứng cuối câu phủ định. Cả hai thường dùng với hiện tại hoàn thành.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết một email ngắn (2–3 câu) phàn nàn vì đơn hàng chưa đến dù đã đặt lâu, dùng still … not.',
+      sample:'I ordered a laptop from your website three weeks ago, but I still haven\'t received it. Could you please check my order?',
+      exp:'still + haven\'t thể hiện sự sốt ruột mạnh hơn "I haven\'t received it yet".' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'It\'s midnight and the neighbours are ______ making a noise.',
+      acc:['still'], ans:'still',
+      exp:'Vẫn đang tiếp tục → still, sau be.' },
+    { id:'f2', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I haven\'t yet decided yet.','I haven\'t decided yet.','I yet haven\'t decided.'], a:1,
+      exp:'yet đứng cuối câu, chỉ dùng một lần.' },
+    { id:'f3', sec:'F', type:'fill', q:'Viết lại với no longer: "Tuan doesn\'t smoke any more." → Tuan ______.',
+      acc:['no longer smokes'], ans:'no longer smokes',
+      exp:'no longer + động từ khẳng định (smokes), không giữ doesn\'t.' },
+    { id:'f4', sec:'F', type:'mcq', q:'\'Is the shop ______ open?\' \'No, it closed at 9.\'',
+      opts:['yet','already','still'], a:2,
+      exp:'Hỏi xem tình trạng mở cửa có còn tiếp diễn không → still (đứng sau be). yet không dùng ở giữa câu hỏi kiểu này; already = đã … rồi (không hợp nghĩa).' },
+    { id:'f5', sec:'F', type:'fill', q:'Dịch sang tiếng Anh: "Tôi vẫn chưa tìm được việc." (dùng still, nhấn mạnh sốt ruột)',
+      acc:["i still haven't found a job","i still have not found a job","i still haven't found a job yet"],
+      ans:'I still haven\'t found a job.',
+      exp:'still + haven\'t + V3: nhấn mạnh việc đáng lẽ đã phải xảy ra.' },
+    { id:'f6', sec:'F', type:'mcq', q:'Shall I tell Mai the news, or does she ______ know?',
+      opts:['yet','already','any more','no longer'], a:1,
+      exp:'Hỏi xem cô ấy đã biết rồi chưa (có thể sớm hơn ta nghĩ) → already, trước động từ know.' },
+    { id:'f7', sec:'F', type:'fill', q:'We used to be neighbours, but we aren\'t neighbours ______ ______.',
+      acc:['any more','any longer','anymore'], ans:'any more',
+      exp:'Đã thay đổi → not … any more / any longer.' },
+    { id:'f8', sec:'F', type:'mcq', q:'Chọn câu có nghĩa gần nhất với "The baby is still asleep."',
+      opts:['The baby hasn\'t woken up yet.','The baby has already woken up.','The baby isn\'t asleep any more.'], a:0,
+      exp:'still asleep ⇄ hasn\'t woken up yet: cùng diễn tả việc thức dậy chưa xảy ra.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 111.1 – Write sentences with still and any more',
+      q:'Linh vài năm trước: "I work in a bank." — Bây giờ: "I work in a school." → (bank) She ______.',
+      acc:["doesn't work in a bank any more","does not work in a bank any more","doesn't work in a bank any longer","does not work in a bank any longer","doesn't work in a bank anymore"],
+      ans:'doesn\'t work in a bank any more',
+      exp:'Điều đã thay đổi → doesn\'t + V + any more (cuối câu).' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 111.1 – Write sentences with still and any more',
+      q:'Trước: "I paint pictures." — Bây giờ: "I gave up painting." → (paint) She ______.',
+      acc:["doesn't paint pictures any more","does not paint pictures any more","doesn't paint pictures any longer","does not paint pictures any longer","doesn't paint any more","doesn't paint pictures anymore"],
+      ans:'doesn\'t paint pictures any more',
+      exp:'Đã bỏ vẽ → not … any more.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 111.1 – Write sentences with still and any more',
+      q:'Trước: "I want to be a doctor." — Bây giờ: "I want to be a doctor." → (doctor) She ______.',
+      acc:['still wants to be a doctor'], ans:'still wants to be a doctor',
+      exp:'Không thay đổi → still + động từ (wants, chủ ngữ she).' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 111.1 – Write sentences with still and any more',
+      q:'Trước: "I\'m interested in football." — Bây giờ: "I\'m not interested in football." → (football) She ______.',
+      acc:["isn't interested in football any more","is not interested in football any more","'s not interested in football any more","isn't interested in football any longer","is not interested in football any longer","isn't interested in football anymore"],
+      ans:'isn\'t interested in football any more',
+      exp:'Đã thay đổi; động từ be → isn\'t … any more.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 111.1 – Write sentences with still and any more',
+      q:'Trước: "I\'m single." — Bây giờ: "I\'m single." → (single) She ______.',
+      acc:['is still single',"'s still single"], ans:'is still single',
+      exp:'Không đổi → still đứng SAU be: is still single.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 111.1 – Write sentences with still and any more',
+      q:'Trước: "I go cycling a lot." — Bây giờ: "I haven\'t been cycling for years." → (cycling) She ______.',
+      acc:["doesn't go cycling any more","does not go cycling any more","doesn't go cycling any longer","does not go cycling any longer","doesn't go cycling anymore"],
+      ans:'doesn\'t go cycling any more',
+      exp:'Thói quen đã dừng → doesn\'t go … any more.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 111.1 – Write sentences with no longer',
+      q:'Viết lại với no longer: (paint) She ______.',
+      acc:['no longer paints pictures','no longer paints'], ans:'no longer paints pictures',
+      exp:'no longer + động từ khẳng định chia theo she: paints.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 111.1 – Write sentences with no longer',
+      q:'Viết lại với no longer: (football) She ______.',
+      acc:['is no longer interested in football',"'s no longer interested in football"], ans:'is no longer interested in football',
+      exp:'Với be: no longer đứng SAU be → is no longer interested.' },
+
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 111.2 – Write sentences with not … yet',
+      q:'"Minh is still at the office." (go) → He ______.',
+      acc:["hasn't gone yet","has not gone yet","hasn't gone home yet","has not gone home yet","hasn't left yet","has not left yet"],
+      ans:'hasn\'t gone yet',
+      exp:'still ở đây ⇄ chưa đi: hasn\'t gone yet (present perfect + yet).' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 111.2 – Write sentences with not … yet',
+      q:'"The workers are still painting the bridge." (finish) → They ______.',
+      acc:["haven't finished yet","have not finished yet","haven't finished painting the bridge yet","have not finished painting the bridge yet","haven't finished painting yet","haven't finished the bridge yet"],
+      ans:'haven\'t finished (painting the bridge) yet',
+      exp:'Vẫn đang sơn ⇄ chưa xong: haven\'t finished yet.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 111.2 – Write sentences with not … yet',
+      q:'"My parents are still asleep." (wake up) → They ______.',
+      acc:["haven't woken up yet","have not woken up yet","haven't woke up yet"],
+      ans:'haven\'t woken up yet',
+      exp:'wake – woke – woken → haven\'t woken up yet.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 111.2 – Write sentences with not … yet',
+      q:'"Is Lan still looking for a new job?" (find) → ______?',
+      acc:['has she found a new job yet','has she found a job yet','has lan found a new job yet','has lan found a job yet','has she found one yet'],
+      ans:'Has she found a new job yet?',
+      exp:'Câu hỏi với yet: Has she found … yet?' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 111.2 – Write sentences with not … yet',
+      q:'"I\'m still thinking about which course to take." (decide) → I ______.',
+      acc:["haven't decided yet","have not decided yet","haven't decided which course to take yet","have not decided which course to take yet"],
+      ans:'haven\'t decided (which course to take) yet',
+      exp:'Vẫn đang suy nghĩ ⇄ chưa quyết định: haven\'t decided yet.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 111.2 – Write sentences with not … yet',
+      q:'"The plane is still on the ground." (take off) → It ______.',
+      acc:["hasn't taken off yet","has not taken off yet"], ans:'hasn\'t taken off yet',
+      exp:'take – took – taken → hasn\'t taken off yet.' },
+
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'Can we wait a bit? I don\'t want to leave ______.',
+      acc:['yet'], ans:'yet',
+      exp:'Chưa muốn đi (sẽ đi sau) → not … yet.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'Hai used to work at the bank, but he doesn\'t work there ______.',
+      acc:['any more','anymore','any longer'], ans:'any more',
+      exp:'used to … → đã thay đổi → not … any more.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'I lived in Hue for years. I ______ have a lot of friends there.',
+      acc:['still'], ans:'still',
+      exp:'Mối quan hệ vẫn còn → still, trước have.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'\'Let me introduce you to Quang.\' \'No need — we\'ve ______ met.\'',
+      acc:['already'], ans:'already',
+      exp:'Đã gặp rồi (sớm hơn người kia nghĩ) → we\'ve already met.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'Would you like some cake, or have you ______ eaten?',
+      acc:['already'], ans:'already',
+      exp:'Có thể đã ăn rồi → have you already eaten.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'The meeting was supposed to start at 2. It\'s 2.30 now and the manager ______ isn\'t here.',
+      acc:['still'], ans:'still',
+      exp:'Quá giờ mà vẫn chưa đến → still + phủ định (sốt ruột). "isn\'t here yet" cũng được nhưng chỗ trống đứng trước isn\'t.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'Do you want to join our team, or are you ______ a member?',
+      acc:['already'], ans:'already',
+      exp:'Có thể đã là thành viên rồi → are you already a member.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'It was a long time ago, but I can ______ remember it clearly.',
+      acc:['still'], ans:'still',
+      exp:'Ký ức vẫn còn → can still remember (still sau động từ khuyết thiếu).' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'I\'ve lost weight. These jeans don\'t fit me ______.',
+      acc:['any more','anymore','any longer'], ans:'any more',
+      exp:'Trước vừa, giờ không vừa nữa → don\'t fit … any more.' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 111.3 – Put in still, yet, already or any more',
+      q:'\'Have you finished with my charger ______?\' \'No, I\'m ______ using it.\' (2 từ, cách nhau bằng dấu cách)',
+      acc:['yet still','yet / still','yet, still','yet - still'], ans:'yet … still',
+      exp:'Câu hỏi đang chờ → yet (cuối). Câu trả lời: vẫn đang dùng → still.' }
+  ];
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

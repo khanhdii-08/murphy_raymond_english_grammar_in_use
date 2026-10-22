@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 103 – Enough and too | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 103 – Enough and too</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">53 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p><b>Enough</b> = đủ (đúng mức cần thiết). <b>Too</b> = quá (nhiều hơn mức cần thiết, thường mang ý <b>tiêu cực</b>). Điểm mấu chốt của unit là <b>vị trí</b>: enough đứng <b>sau</b> tính từ/trạng từ nhưng <b>trước</b> danh từ; too luôn đứng <b>trước</b> tính từ/trạng từ.</p>
+      <div class="ex"><b class="en">I can't run very far. I'm <mark>not fit enough</mark>. — I don't have <mark>enough energy</mark>.</b><br>fit là tính từ → <u>fit enough</u>; energy là danh từ → <u>enough energy</u>.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">adjective / adverb + enough           fit enough · long enough · soon enough
+enough + noun                         enough money · enough chairs
+too + adjective / adverb              too hard · too far
+too much + uncountable / too many + plural
+
+... enough / too ... + for somebody / something
+... enough / too ... + to do something
+... enough / too ... + for somebody + to do something</div>
+      <div class="scroll"><table>
+        <tr><th>Từ</th><th>Vị trí</th><th>Ví dụ</th></tr>
+        <tr><td>enough</td><td>SAU adj/adv</td><td>big enough · well enough</td></tr>
+        <tr><td>enough</td><td>TRƯỚC noun</td><td>enough time · enough cups</td></tr>
+        <tr><td>enough</td><td>đứng một mình</td><td>We've got enough.</td></tr>
+        <tr><td>too</td><td>TRƯỚC adj/adv</td><td>too hot · too quickly</td></tr>
+        <tr><td>too much / too many</td><td>TRƯỚC noun</td><td>too much furniture · too many people</td></tr>
+      </table></div>
+      <p class="note">⚠️ <b>Không nói</b> <i>enough fit</i>, <i>money enough</i>. Không dùng <i>too</i> trực tiếp trước danh từ: <i>too people</i> ❌ → <i>too many people</i> ✅.</p>
+
+      <h2>1.3 · A. Enough sau tính từ / trạng từ</h2>
+      <ul>
+        <li><i>Let's go. We've waited <b>long enough</b>.</i></li>
+        <li><i>Is tomorrow <b>soon enough</b>?</i></li>
+        <li>So sánh: <i>You work <b>too hard</b>.</i> (quá mức) ↔ <i>You don't work <b>hard enough</b>.</i> (thiếu)</li>
+      </ul>
+
+      <h2>1.4 · B. Enough trước danh từ, too much/many</h2>
+      <ul>
+        <li><i>Do we have <b>enough petrol</b>?</i> · <i>There weren't <b>enough chairs</b>.</i></li>
+        <li><i>There were <b>too many people</b> and <b>not enough chairs</b>.</i></li>
+        <li><i>There's <b>too much furniture</b>. There's <b>not enough space</b>.</i></li>
+      </ul>
+
+      <h2>1.5 · C. for somebody/something · to do something</h2>
+      <div class="formula">This bag isn't big enough for all my clothes.        (for + noun)
+She's not old enough to have a driving licence.      (to + V)
+The bridge is wide enough for two cars to pass.      (for + noun + to V)
+Does Joe have enough experience to do the job?       (không nói for doing)</div>
+
+      <h2>1.6 · D. Too hot to eat (không lặp "it")</h2>
+      <div class="formula">The food was very hot. We couldn't eat it.
+→ The food was so hot that we couldn't eat it.      (có it)
+→ The food was too hot to eat.                       (KHÔNG có it)
+This chair isn't strong enough to stand on.          (không nói stand on it)</div>
+      <p>Chủ ngữ của câu chính đã là đối tượng của động từ sau <b>to</b>, nên không lặp lại <i>it / them</i>.</p>
+
+      <h2>1.7 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Ý muốn diễn đạt</th><th>Dùng</th></tr>
+        <tr><td>đủ / chưa đủ (thiếu)</td><td>(not) ... enough</td></tr>
+        <tr><td>quá mức → không làm được</td><td>too ... (to V)</td></tr>
+        <tr><td>quá nhiều (danh từ)</td><td>too much / too many</td></tr>
+      </table></div>
+
+      <h2>1.8 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>too ... to V</th><th>so ... that (Unit 102)</th><th>very</th></tr>
+        <tr><td>Ý nghĩa</td><td>quá ... nên không thể</td><td>rất ... đến nỗi</td><td>rất (không nói kết quả)</td></tr>
+        <tr><td>Ví dụ</td><td>It's <b>too heavy to carry</b>.</td><td>It's <b>so heavy that</b> I can't carry it.</td><td>It's <b>very heavy</b>, but I can carry it.</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I'm not enough old.</td><td class="yes">I'm not <b>old enough</b>.</td></tr>
+        <tr><td class="no">We have money enough.</td><td class="yes">We have <b>enough money</b>.</td></tr>
+        <tr><td class="no">The box is too heavy to carry it.</td><td class="yes">The box is too heavy <b>to carry</b>.</td></tr>
+        <tr><td class="no">enough experience for doing the job</td><td class="yes">enough experience <b>to do</b> the job</td></tr>
+        <tr><td class="no">There are too people here.</td><td class="yes">There are <b>too many</b> people here.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 64</b> (to ... và for ... chỉ mục đích) · <b>Unit 65</b> (adjective + to ...) · <b>Unit 102</b> (so và such).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🏃 <b class="en">I'm not <mark>fit enough</mark> to run 10 kilometres.</b> <span class="note">(đời sống — sức khỏe)</span></div>
+      <div class="ex">💰 <b class="en">We don't have <mark>enough money</mark> to buy a flat yet.</b> <span class="note">(đời sống — tài chính)</span></div>
+      <div class="ex">☕ <b class="en">This coffee is <mark>too hot to drink</mark>.</b> <span class="note">(giao tiếp — quán cà phê)</span></div>
+      <div class="ex">🚕 <b class="en">Let's get a taxi. It's <mark>too far to walk</mark>.</b> <span class="note">(du lịch)</span></div>
+      <div class="ex">💼 <b class="en">Does she have <mark>enough experience</mark> for this position?</b> <span class="note">(công việc — tuyển dụng)</span></div>
+      <div class="ex">🪑 <b class="en">There were <mark>too many</mark> people and <mark>not enough</mark> chairs.</b> <span class="note">(sự kiện)</span></div>
+      <div class="ex">👕 <b class="en">That shirt is <mark>too small for</mark> you. Try a larger size.</b> <span class="note">(mua sắm)</span></div>
+      <div class="ex">📝 <b class="en">The reading passage was <mark>too long to finish</mark> in 20 minutes.</b> <span class="note">(thi cử — IELTS Reading)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Enough ôm danh từ từ phía trước, theo tính từ từ phía sau"</b>: enough money · big enough.</li>
+        <li><b>Too luôn đi trước</b>: too + adj/adv; gặp danh từ thì phải có much/many chen vào.</li>
+        <li><b>too = not ... enough (đảo nghĩa):</b> too young = not old enough · too slow = not fast enough.</li>
+        <li><b>"Too ... to" cắt đuôi it:</b> too hot to eat, too heavy to carry — không có it/them ở cuối.</li>
+        <li><b>for + người, to + động từ:</b> big enough <i>for me</i> · old enough <i>to drive</i>.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Thấy chỗ trống gồm <b>enough + tính từ</b> → kiểm tra thứ tự; đáp án đúng luôn là <b>tính từ + enough</b>.</li>
+        <li>Câu viết lại: <i>He is too young to drive</i> ⇄ <i>He isn't old enough to drive</i> — nhớ đổi sang tính từ <b>trái nghĩa</b>.</li>
+        <li>Đáp án có thêm <b>it/them</b> sau "too ... to V" → thường là bẫy, loại.</li>
+        <li>Sau enough/too chọn <b>to + V</b>, không chọn <i>for + V-ing</i>.</li>
+        <li>Danh từ không đếm được (money, time, space, furniture) → too <b>much</b>; số nhiều → too <b>many</b>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">He is enough tall.</td><td class="yes">He is <b>tall enough</b>.</td><td class="why">enough đứng sau tính từ</td></tr>
+        <tr><td class="no">I don't have time enough.</td><td class="yes">I don't have <b>enough time</b>.</td><td class="why">enough đứng trước danh từ</td></tr>
+        <tr><td class="no">It's too hot to drink it.</td><td class="yes">It's too hot <b>to drink</b>.</td><td class="why">không lặp tân ngữ</td></tr>
+        <tr><td class="no">There are too much cars.</td><td class="yes">There are <b>too many</b> cars.</td><td class="why">cars đếm được</td></tr>
+        <tr><td class="no">She is too beautiful. (khen)</td><td class="yes">She is <b>very / so</b> beautiful.</td><td class="why">too mang ý quá mức, tiêu cực</td></tr>
+        <tr><td class="no">I'm not enough money.</td><td class="yes">I <b>don't have</b> enough money.</td><td class="why">thiếu động từ have</td></tr>
+        <tr><td class="no">This bag is too small to me.</td><td class="yes">This bag is too small <b>for</b> me.</td><td class="why">too/enough + for + người</td></tr>
+        <tr><td class="no">Enough experience for doing it.</td><td class="yes">Enough experience <b>to do</b> it.</td><td class="why">enough + to V</td></tr>
+        <tr><td class="no">The room isn't enough big for us.</td><td class="yes">The room isn't <b>big enough</b> for us.</td><td class="why">adj + enough</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói (2 phút/ngày):</b> từ chối lời mời lịch sự: <i>"Sorry, I'm too busy to come today."</i></li>
+        <li><b>Viết (5 câu/ngày):</b> mô tả nhà/phòng của bạn: có gì <i>too much/too many</i>, thiếu gì <i>not enough</i>.</li>
+        <li><b>At work:</b> <i>"We don't have enough time to finish this by Friday."</i></li>
+        <li><b>IELTS Writing Task 2:</b> <i>"Many young people are not experienced enough to make such decisions."</i></li>
+        <li><b>Quy tắc vàng:</b> trước khi nói, hỏi <i>"Sau enough là tính từ hay danh từ?"</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần Bài tập sau 3 ngày, 7 ngày và 14 ngày; tập trung vào vị trí của enough. Liên quan: <b>Unit 102</b> (so/such), <b>Unit 64</b> (mục đích to/for), <b>Unit 65</b> (adjective + to).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit103.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 103 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 103 – Enough and too | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit103.html';
+  var KEY = 'egu4_unit103_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất: enough, too, too much/many…' },
+    { id:'B', title:'B. Điền từ (enough / too)',    desc:'Điền enough hoặc too + từ gợi ý vào đúng vị trí.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 103.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 103 Exercises)', desc:'Bài 103.1 → 103.3 theo đúng dạng bài của sách Murphy, câu đã viết lại, kèm giải thích.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I can\'t lift this suitcase. I\'m not ______.',
+      opts:['enough strong','strong enough','too strong','enough strength enough'], a:1,
+      exp:'enough đứng SAU tính từ/trạng từ: strong enough. "enough strong" là lỗi rất phổ biến.' },
+    { id:'a2', sec:'A', type:'mcq', q:'We don\'t have ______ to buy a new car.',
+      opts:['money enough','too much money','enough money','enough of money'], a:2,
+      exp:'enough đứng TRƯỚC danh từ: enough money (không nói money enough).' },
+    { id:'a3', sec:'A', type:'mcq', q:'You work ______. You should take a break.',
+      opts:['too hard','hard enough','enough hard','too much hard'], a:0,
+      exp:'too + adj/adv = nhiều hơn mức cần thiết (ý tiêu cực). too hard = làm việc quá sức.' },
+    { id:'a4', sec:'A', type:'mcq', q:'There were ______ people and not enough chairs.',
+      opts:['too much','too','enough','too many'], a:3,
+      exp:'people là danh từ số nhiều → too many. too much dùng với danh từ không đếm được.' },
+    { id:'a5', sec:'A', type:'mcq', q:'This jacket is too small ______ me.',
+      opts:['to','for','with','enough'], a:1,
+      exp:'too/enough + ... + for somebody/something: too small for me.' },
+    { id:'a6', sec:'A', type:'mcq', q:'Does she have enough experience ______ the job?',
+      opts:['for doing','doing','to do','to doing'], a:2,
+      exp:'enough/too ... + to + V (động từ nguyên mẫu): enough experience to do the job. Không nói "for doing".' },
+    { id:'a7', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['The tea was too hot to drink it.','The tea was too hot to drink.','The tea was enough hot to drink.'], a:1,
+      exp:'Khi chủ ngữ chính là tân ngữ của động từ sau to, KHÔNG lặp lại "it": too hot to drink (không có it).' },
+    { id:'a8', sec:'A', type:'mcq', q:'We don\'t need to buy more bread. We\'ve got ______.',
+      opts:['enough','too','too many','enough bread enough'], a:0,
+      exp:'enough có thể đứng một mình (không cần danh từ) khi đã rõ đang nói về cái gì.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'Is the water ______ (warm) to swim in?  (dùng enough)',
+      acc:['warm enough'], ans:'warm enough',
+      exp:'Tính từ + enough: warm enough.' },
+    { id:'b2', sec:'B', type:'fill', q:'There isn\'t ______ (time) to finish everything today.  (dùng enough)',
+      acc:['enough time'], ans:'enough time',
+      exp:'enough + danh từ: enough time.' },
+    { id:'b3', sec:'B', type:'fill', q:'The shelf is ______ (high) for the children to reach.  (dùng too)',
+      acc:['too high'], ans:'too high',
+      exp:'too + tính từ: too high. Có cả for + người + to do: for the children to reach.' },
+    { id:'b4', sec:'B', type:'fill', q:'He speaks ______ (quickly). I can\'t understand him.  (dùng too)',
+      acc:['too quickly'], ans:'too quickly',
+      exp:'too + trạng từ: too quickly.' },
+    { id:'b5', sec:'B', type:'fill', q:'She didn\'t do ______ (well) to pass the exam.  (dùng enough)',
+      acc:['well enough'], ans:'well enough',
+      exp:'Trạng từ + enough: well enough.' },
+    { id:'b6', sec:'B', type:'fill', q:'There\'s ______ (sugar) in this cake. It\'s far too sweet.  (dùng too)',
+      acc:['too much sugar'], ans:'too much sugar',
+      exp:'sugar không đếm được → too much sugar.' },
+    { id:'b7', sec:'B', type:'fill', q:'There aren\'t ______ (rooms) in the hotel for all the guests.  (dùng enough)',
+      acc:['enough rooms'], ans:'enough rooms',
+      exp:'enough + danh từ số nhiều: enough rooms.' },
+    { id:'b8', sec:'B', type:'fill', q:'I made ______ (mistakes) in the test, so I failed.  (dùng too)',
+      acc:['too many mistakes'], ans:'too many mistakes',
+      exp:'mistakes số nhiều đếm được → too many mistakes.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (she / is / not / old / enough / to / vote)',
+      tokens:['She','is','not','old','enough','to','vote'],
+      acc:['she is not old enough to vote'], ans:'She is not old enough to vote.',
+      exp:'not + adj + enough + to V.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (this / box / is / too / heavy / to / carry)',
+      tokens:['This','box','is','too','heavy','to','carry'],
+      acc:['this box is too heavy to carry'], ans:'This box is too heavy to carry.',
+      exp:'too + adj + to V; không thêm "it" ở cuối vì this box đã là tân ngữ của carry.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (we / don\'t / have / enough / chairs / for / everyone)',
+      tokens:['We',"don't",'have','enough','chairs','for','everyone'],
+      acc:["we don't have enough chairs for everyone"], ans:'We don\'t have enough chairs for everyone.',
+      exp:'enough + noun + for somebody.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (the / road / is / wide / enough / for / two / buses)',
+      tokens:['The','road','is','wide','enough','for','two','buses'],
+      acc:['the road is wide enough for two buses'], ans:'The road is wide enough for two buses.',
+      exp:'adj + enough + for + something.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (it\'s / too / far / to / walk / from / here)',
+      tokens:["It's",'too','far','to','walk','from','here'],
+      acc:["it's too far to walk from here"], ans:'It\'s too far to walk from here.',
+      exp:'too + adj + to V: too far to walk.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Can you finish the report by 5?  B: Yes, I think that\'s ______ (long). I\'ll start now.',
+      acc:['long enough'], ans:'long enough',
+      exp:'adj + enough: long enough (đủ lâu).' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Shall we go for a walk?  B: No, it\'s ______ (cold) to go out.',
+      acc:['too cold'], ans:'too cold',
+      exp:'too + adj + to V: quá lạnh để ra ngoài.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Do you want more coffee?  B: No thanks, I\'ve had ______.',
+      acc:['enough'], ans:'enough',
+      exp:'enough đứng một mình, không cần danh từ.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Can your son drive?  B: No, he\'s ______ (young) to get a licence.',
+      acc:['too young'], ans:'too young',
+      exp:'too young = not old enough.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 2 câu về bản thân: 1 câu với "not + adj + enough + to V", 1 câu với "too + adj + to V".',
+      sample:'I\'m not tall enough to play basketball. I\'m too tired to go out tonight.',
+      exp:'enough sau tính từ; too trước tính từ; theo sau là to + V nguyên mẫu.' },
+    { id:'e2', sec:'E', type:'self', q:'Mô tả căn phòng/văn phòng của bạn với too much / too many / not enough.',
+      sample:'There is too much furniture in my room and there isn\'t enough space for a desk.',
+      exp:'too much + không đếm được, too many + số nhiều, enough + danh từ.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 1 câu theo mẫu "The ... was too ... to ..." (không thêm it ở cuối).',
+      sample:'The film was too long to watch in one evening.',
+      exp:'Không lặp tân ngữ: too long to watch (không phải to watch it).' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'I\'m not ______ (fit) to run a marathon.  (dùng enough)',
+      acc:['fit enough'], ans:'fit enough',
+      exp:'adj + enough: fit enough.' },
+    { id:'f2', sec:'F', type:'mcq', q:'There is ______ furniture in this room. There\'s not enough space.',
+      opts:['too many','enough','too much','too'], a:2,
+      exp:'furniture không đếm được → too much furniture.' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['These shoes are too big for me.','These shoes are too big to me.','These shoes are big enough to me.'], a:0,
+      exp:'too/enough ... for + người: too big for me.' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch: "Chúng tôi không có đủ tiền để đi du lịch." (We don\'t have ______ to travel.)',
+      acc:['enough money'], ans:'enough money',
+      exp:'enough + danh từ + to V.' },
+    { id:'f5', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['This chair isn\'t strong enough to stand on it.','This chair isn\'t enough strong to stand on.','This chair isn\'t strong enough to stand on.'], a:2,
+      exp:'strong enough to stand on — không thêm it vì this chair đã là đối tượng của stand on.' },
+    { id:'f6', sec:'F', type:'fill', q:'You\'re lazy. You don\'t study ______ (hard).  (dùng enough)',
+      acc:['hard enough'], ans:'hard enough',
+      exp:'not ... enough = ít hơn mức cần thiết.' },
+    { id:'f7', sec:'F', type:'mcq', q:'The bridge is just wide enough ______ two cars to pass.',
+      opts:['to','for','that','with'], a:1,
+      exp:'enough + for + something + to V: wide enough for two cars to pass.' },
+    { id:'f8', sec:'F', type:'fill', q:'The bag was ______ (big) to put in my pocket.  (dùng too)',
+      acc:['too big'], ans:'too big',
+      exp:'too + adj + to V, không có it ở cuối.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 103.1 – Complete with enough + word',
+      q:'1. I\'d love to buy that house, but I haven\'t got ______ (money).', acc:['enough money'], ans:'enough money',
+      exp:'enough + danh từ: enough money.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 103.1 – Complete with enough + word',
+      q:'2. Is there ______ (milk) in your tea, or would you like some more?', acc:['enough milk'], ans:'enough milk',
+      exp:'enough đứng trước danh từ milk.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 103.1 – Complete with enough + word',
+      q:'3. Are you ______ (warm)? Or shall I close the window?', acc:['warm enough'], ans:'warm enough',
+      exp:'enough đứng sau tính từ: warm enough.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 103.1 – Complete with enough + word',
+      q:'4. It\'s a small tent. There isn\'t ______ (room) for four people.', acc:['enough room'], ans:'enough room',
+      exp:'room ở đây = chỗ trống (không đếm được) → enough room.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 103.1 – Complete with enough + word',
+      q:'5. Anna didn\'t feel ______ (well) to go to school today.', acc:['well enough'], ans:'well enough',
+      exp:'well (khỏe) + enough.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 103.1 – Complete with enough + word',
+      q:'6. The trip was fun, but there wasn\'t ______ (time) to see all the museums.', acc:['enough time'], ans:'enough time',
+      exp:'enough + danh từ time.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 103.1 – Complete with enough + word',
+      q:'7. Try these trousers on and see if they\'re ______ (big) for you.', acc:['big enough'], ans:'big enough',
+      exp:'adj + enough + for you.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 103.1 – Complete with enough + word',
+      q:'8. There weren\'t ______ (plates) for everybody to eat at the same time.', acc:['enough plates'], ans:'enough plates',
+      exp:'enough + danh từ số nhiều.' },
+
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 103.2 – Answer with too or enough',
+      q:'1. "Can we talk now?" (busy) — "Sorry, I\'m ______ to talk right now."', acc:['too busy'], ans:'too busy',
+      exp:'too + adj + to V: too busy to talk.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 103.2 – Answer with too or enough',
+      q:'2. "Let\'s go to the party." (late) — "No, it\'s ______ to go now."', acc:['too late'], ans:'too late',
+      exp:'too late to go.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 103.2 – Answer with too or enough',
+      q:'3. "Why don\'t we have lunch in the garden?" (warm) — "It\'s not ______ to eat outside."', acc:['warm enough'], ans:'warm enough',
+      exp:'not + adj + enough + to V.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 103.2 – Answer with too or enough',
+      q:'4. "Would you like to be an actor?" (shy) — "No, I\'m ______ to be an actor."', acc:['too shy'], ans:'too shy',
+      exp:'too shy to be ...' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 103.2 – Answer with too or enough',
+      q:'5. "Would you like to be a nurse?" (patience) — "No, I don\'t have ______ to be a nurse."', acc:['enough patience'], ans:'enough patience',
+      exp:'patience là danh từ → enough đứng trước: enough patience.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 103.2 – Answer with too or enough',
+      q:'6. "Can she write emails in French?" (French) — "No, she doesn\'t know ______ to write emails."', acc:['enough french'], ans:'enough French',
+      exp:'French (tiếng Pháp) là danh từ → enough French.' },
+
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 103.3 – Make one sentence (too / enough)',
+      q:'1. I can\'t eat this soup. It\'s too salty. → This soup is ______.', acc:['too salty to eat'], ans:'too salty to eat',
+      exp:'too + adj + to V, không thêm it: too salty to eat.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 103.3 – Make one sentence (too / enough)',
+      q:'2. Nobody could lift the fridge. It was too heavy. → The fridge was ______.', acc:['too heavy to lift'], ans:'too heavy to lift',
+      exp:'too heavy to lift (không có it).' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 103.3 – Make one sentence (too / enough)',
+      q:'3. Don\'t drink this milk. It\'s not fresh enough. → This milk isn\'t ______.', acc:['fresh enough to drink'], ans:'fresh enough to drink',
+      exp:'adj + enough + to V: fresh enough to drink.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 103.3 – Make one sentence (too / enough)',
+      q:'4. I can\'t answer the question. It is too difficult. → The question is ______.', acc:['too difficult to answer'], ans:'too difficult to answer',
+      exp:'too difficult to answer.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 103.3 – Make one sentence (too / enough)',
+      q:'5. We couldn\'t jump over the river. It was too wide. → The river was ______.', acc:['too wide to jump over'], ans:'too wide to jump over',
+      exp:'Giữ giới từ over ở cuối nhưng không thêm it: too wide to jump over.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 103.3 – Make one sentence (too / enough)',
+      q:'6. Five people can\'t sit at this table. It isn\'t big enough. → This table isn\'t big enough ______.',
+      acc:['for five people','for five people to sit at','for 5 people','for 5 people to sit at'], ans:'for five people (to sit at)',
+      exp:'enough + for + người (+ to V): big enough for five people (to sit at).' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

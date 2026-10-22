@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 39 – If I knew ... I wish I knew ... | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 39 – If I knew ... I wish I knew ...</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">56 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Unit này dạy cách nói về <b>tình huống tưởng tượng / trái với thực tế ở HIỆN TẠI</b>. Điểm mấu chốt: ta dùng <b>dạng quá khứ</b> (knew, were, had, could, didn't…) nhưng <b>ý nghĩa là hiện tại</b>. "Lùi thì" ở đây là tín hiệu cho người nghe biết: <i>điều này không có thật</i>.</p>
+      <div class="ex"><b class="en">Mai wants to text Tuan, but she doesn't have his number.<br><mark>If I knew</mark> his number, I <mark>would text</mark> him.  ·  <mark>I wish I knew</mark> his number.</b><br>Thực tế: cô ấy <u>không biết</u> số → tưởng tượng điều ngược lại bằng <u>if + quá khứ</u> / <u>wish + quá khứ</u>.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">If + S + V-quá khứ ...,  S + would / could / might + V
+   If I had more time, I would learn Japanese.     (thực tế: I don't have time)
+
+S + wish + S + V-quá khứ                (tiếc nuối về hiện tại)
+   I wish I lived near the sea.                     (thực tế: I don't live near the sea)
+
+be → were (mọi ngôi) hoặc was:  If I were you ... / I wish it was warmer.</div>
+      <div class="scroll"><table>
+        <tr><th>Thực tế (hiện tại)</th><th>If ... (tưởng tượng)</th><th>I wish ... (tiếc nuối)</th></tr>
+        <tr><td>I don't know the answer.</td><td>If I <b>knew</b> the answer, I'd tell you.</td><td>I wish I <b>knew</b> the answer.</td></tr>
+        <tr><td>I can't swim.</td><td>If I <b>could</b> swim, I'd join you.</td><td>I wish I <b>could</b> swim.</td></tr>
+        <tr><td>It's raining.</td><td>If it <b>wasn't/weren't</b> raining, we'd go out.</td><td>I wish it <b>wasn't/weren't</b> raining.</td></tr>
+        <tr><td>I have to work tomorrow.</td><td>If I <b>didn't have to</b> work, I'd sleep late.</td><td>I wish I <b>didn't have to</b> work.</td></tr>
+      </table></div>
+      <p class="note">⚠️ <b>Quy tắc vàng:</b> vế <b>if</b> và vế sau <b>wish</b> dùng <b>quá khứ</b>; chỉ vế <b>kết quả</b> mới có <b>would</b>.</p>
+
+      <h2>1.3 · A. If + quá khứ = tưởng tượng ở hiện tại</h2>
+      <ul>
+        <li>Dạng quá khứ <b>không</b> chỉ thời gian đã qua mà chỉ <b>sự "xa rời thực tế"</b>: <i>If we <b>didn't</b> work, we wouldn't have any money.</i> (thực tế: chúng ta có làm việc)</li>
+        <li>Hỏi ý kiến người khác bằng tình huống giả định: <i>If you <b>were</b> in my position, what <b>would</b> you do?</i></li>
+        <li>Vế kết quả có thể là <b>would / could / might</b>: <i>It would be useful if he could drive.</i></li>
+      </ul>
+
+      <h2>1.4 · B. Wish + quá khứ = tiếc rằng hiện tại không như mong muốn</h2>
+      <ul>
+        <li><i>I wish I <b>had</b> an umbrella.</i> (= không có ô, và tiếc)</li>
+        <li><i>It's so crowded. I wish there <b>weren't</b> so many people.</i></li>
+        <li><i>Do you ever wish you <b>could</b> fly?</i> (bạn không bay được)</li>
+        <li>Câu khẳng định thực tế → wish <b>phủ định</b>, và ngược lại: <i>I live in a noisy street → I wish I <b>didn't live</b> in a noisy street.</i></li>
+      </ul>
+
+      <h2>1.5 · C. If I were / if I was</h2>
+      <p>Sau <b>if</b> và <b>wish</b>, dùng <b>were</b> cho mọi ngôi (trang trọng, rất phổ biến) — <b>was</b> cũng được chấp nhận trong văn nói.</p>
+      <div class="formula">If I were you, I'd take the job.        = If I was you, ...   (lời khuyên kinh điển)
+I'd go swimming if it weren't so cold.  = ... if it wasn't so cold.
+I wish she were here.                   = I wish she was here.</div>
+
+      <h2>1.6 · D. KHÔNG dùng would trong vế if / sau wish</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">If I would be rich, I would travel.</td><td class="yes">If I <b>were</b> rich, I would travel.</td></tr>
+        <tr><td class="no">Who would you call if you would need help?</td><td class="yes">... if you <b>needed</b> help?</td></tr>
+        <tr><td class="no">I wish I would have a car.</td><td class="yes">I wish I <b>had</b> a car.</td></tr>
+        <tr><td class="no">I wish I can speak French.</td><td class="yes">I wish I <b>could</b> speak French.</td></tr>
+        <tr><td class="no">I wish it doesn't rain so much.</td><td class="yes">I wish it <b>didn't</b> rain so much.</td></tr>
+      </table></div>
+      <p class="note">ℹ️ <i>I wish you <b>would</b> ...</i> có tồn tại nhưng mang nghĩa khác (phàn nàn, mong ai đó thay đổi hành vi) → học ở <b>Unit 41</b>.</p>
+
+      <h2>1.7 · E. Could = would be able to / was able to</h2>
+      <div class="formula">She could get a better job  if she could speak English.
+   (could get = would be able to get)   (could speak = were able to speak)
+I wish I could help you.   (= I wish I was able to help you)</div>
+
+      <h2>1.8 · Dấu hiệu nhận biết &amp; so sánh</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>If I do ... (Unit 38 – có thể xảy ra)</th><th>If I did ... (Unit 39 – trái thực tế)</th></tr>
+        <tr><td>Người nói nghĩ</td><td>có khả năng thật</td><td>không có thật / khó xảy ra</td></tr>
+        <tr><td>Ví dụ</td><td>If I <b>find</b> your keys, I'<b>ll</b> call you.</td><td>If I <b>knew</b> where they were, I'<b>d</b> tell you.</td></tr>
+        <tr><td>Dấu hiệu</td><td>will, can, may</td><td>would, could, might; "but I don't / can't / it isn't"</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 38</b> (if I do / if I did) · <b>Unit 40</b> (if I had known / I wish I had known – quá khứ) · <b>Unit 41</b> (wish … would) · <b>Units 26–27</b> (could).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🧭 <b class="en">If I <mark>were</mark> you, I'<mark>d ask</mark> for a pay rise.</b> <span class="note">(công việc — lời khuyên lịch sự)</span></div>
+      <div class="ex">🏖️ <b class="en">I wish I <mark>were</mark> on a beach right now.</b> <span class="note">(đời sống — than thở thứ Hai đầu tuần)</span></div>
+      <div class="ex">💻 <b class="en">If my laptop <mark>was</mark> faster, I <mark>could finish</mark> this report today.</b> <span class="note">(công việc — giải thích lý do)</span></div>
+      <div class="ex">🗣️ <b class="en">I wish I <mark>could speak</mark> English more fluently.</b> <span class="note">(IELTS Speaking — nói về mục tiêu)</span></div>
+      <div class="ex">🌧️ <b class="en">We'd eat outside if it <mark>wasn't</mark> raining.</b> <span class="note">(đời sống — tình huống hiện tại)</span></div>
+      <div class="ex">🏙️ <b class="en">If there <mark>weren't</mark> so many motorbikes, the air <mark>would be</mark> cleaner.</b> <span class="note">(IELTS Writing — giả định về xã hội)</span></div>
+      <div class="ex">⏰ <b class="en">I wish I <mark>didn't have to</mark> get up so early.</b> <span class="note">(đời sống — tiếc nuối thói quen bắt buộc)</span></div>
+      <div class="ex">🤔 <b class="en">What <mark>would</mark> you do if you <mark>won</mark> the lottery?</b> <span class="note">(giao tiếp — câu hỏi giả định)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Lùi một bước khỏi thực tế":</b> hiện tại thật → lùi về quá khứ khi tưởng tượng: <i>know → knew, can → could, am/is → were</i>.</li>
+        <li><b>Đảo dấu:</b> thực tế khẳng định → wish phủ định (<i>I'm tired → I wish I <b>weren't</b> tired</i>); thực tế phủ định → wish khẳng định (<i>I can't → I wish I <b>could</b></i>).</li>
+        <li><b>"Would không vào nhà if":</b> would chỉ đứng ở vế kết quả, không bao giờ ngay sau if hay wish (với nghĩa này).</li>
+        <li><b>Câu thần chú:</b> <i>If I were you, I'd …</i> — học thuộc như một cụm cố định để khuyên ai đó.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Thấy <b>wish</b> + hành động hiện tại → chọn dạng <b>quá khứ đơn / could / were</b>; loại ngay <i>will, can, am, would have</i>.</li>
+        <li>Thấy vế còn lại có <b>would/could + V</b> → vế if dùng <b>quá khứ đơn</b>.</li>
+        <li>Đề cho tình huống thật (<i>I don't have a car, so I can't …</i>) và yêu cầu viết câu if → <b>đổi khẳng định ↔ phủ định</b> ở cả hai vế.</li>
+        <li>Với <b>be</b>, ưu tiên <b>were</b> (đặc biệt trong bài viết trang trọng); <b>was</b> vẫn đúng.</li>
+        <li>Câu có <b>but I don't / but it isn't</b> trong ngoặc → dấu hiệu trái thực tế hiện tại.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I wish I have more money.</td><td class="yes">I wish I <b>had</b> more money.</td><td class="why">wish (hiện tại) + quá khứ</td></tr>
+        <tr><td class="no">If I know his number, I would call him.</td><td class="yes">If I <b>knew</b> his number, I would call him.</td><td class="why">có would → vế if lùi về quá khứ</td></tr>
+        <tr><td class="no">If I would have time, I would help.</td><td class="yes">If I <b>had</b> time, I would help.</td><td class="why">không dùng would trong vế if</td></tr>
+        <tr><td class="no">I wish I can drive.</td><td class="yes">I wish I <b>could</b> drive.</td><td class="why">can → could sau wish</td></tr>
+        <tr><td class="no">If I am you, I will go.</td><td class="yes">If I <b>were</b> you, I<b>'d</b> go.</td><td class="why">mình không thể là bạn → trái thực tế</td></tr>
+        <tr><td class="no">I wish it isn't so hot.</td><td class="yes">I wish it <b>wasn't/weren't</b> so hot.</td><td class="why">is → was/were</td></tr>
+        <tr><td class="no">I wish I don't have to work today.</td><td class="yes">I wish I <b>didn't have to</b> work today.</td><td class="why">don't have to → didn't have to</td></tr>
+        <tr><td class="no">If I had a car, I drive to work.</td><td class="yes">If I had a car, I <b>would drive</b> to work.</td><td class="why">vế kết quả cần would</td></tr>
+        <tr><td class="no">I hope I knew the answer.</td><td class="yes">I <b>wish</b> I knew the answer.</td><td class="why">hope = có thể xảy ra; wish = trái thực tế</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói (2 phút/ngày):</b> nói 3 câu <i>I wish …</i> về cuộc sống hiện tại: chỗ ở, công việc, kỹ năng (<i>I wish I could cook better</i>).</li>
+        <li><b>Khuyên bạn bè / đồng nghiệp:</b> thay "You should…" bằng <i>If I were you, I'd …</i> — nghe mềm mỏng hơn.</li>
+        <li><b>IELTS Speaking Part 3:</b> trả lời câu hỏi giả định: <i>If the government invested more in public transport, fewer people would drive.</i></li>
+        <li><b>Viết (5 câu/ngày):</b> chọn 1 vấn đề (kẹt xe, giá nhà…) và viết <i>If … , … would …</i> về giải pháp tưởng tượng.</li>
+        <li><b>Tự kiểm tra:</b> mỗi câu if/wish, hỏi "điều này có thật không?" → không thật → lùi thì.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau <b>3 / 7 / 14 ngày</b>, chú ý các câu sai về <i>wish + quá khứ</i> và <i>were</i>. Liên quan: <b>Unit 38</b> (if I do / if I did), <b>Unit 40</b> (quá khứ không có thật), <b>Unit 41</b> (wish … would).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit39.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 39 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 39 – If I knew / I wish I knew | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit39.html';
+  var KEY = 'egu4_unit39_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền từ / chia động từ',    desc:'Viết hình thức đúng của động từ trong ngoặc (if / wish + quá khứ).' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 39.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 39 Exercises)', desc:'Bài 39.1 → 39.4 theo đúng dạng bài của sách Murphy, câu đã được viết lại.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'If I ______ his address, I would send him a card.',
+      opts:['know','knew','would know','have known'], a:1,
+      exp:'Tình huống tưởng tượng ở hiện tại (thực tế: không biết địa chỉ) → if + quá khứ đơn: knew. Không dùng would trong vế if.' },
+    { id:'a2', sec:'A', type:'mcq', q:'I wish I ______ a bigger flat. This one is too small.',
+      opts:['had','have','would have','will have'], a:0,
+      exp:'wish + quá khứ để tiếc về hiện tại: I wish I had… (thực tế: I don\'t have a bigger flat).' },
+    { id:'a3', sec:'A', type:'mcq', q:'If I ______ you, I wouldn\'t lend him any more money.',
+      opts:['am','will be','were','would be'], a:2,
+      exp:'If I were you… là cấu trúc khuyên kinh điển (mình không thể là bạn → trái thực tế). were dùng cho mọi ngôi; was cũng được nhưng không có trong đáp án.' },
+    { id:'a4', sec:'A', type:'mcq', q:'We ______ more often if the tickets weren\'t so expensive.',
+      opts:['go to concerts','went to concerts','would go to concerts','will go to concerts'], a:2,
+      exp:'Vế if dùng quá khứ (weren\'t) → vế kết quả dùng would + V: would go.' },
+    { id:'a5', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I wish I can play the guitar.','I wish I could play the guitar.','I wish I would play the guitar.','I wish I play the guitar.'], a:1,
+      exp:'can → could sau wish: I wish I could… (= I wish I was able to…). "would" sau wish (chính mình) không dùng cho nghĩa này.' },
+    { id:'a6', sec:'A', type:'mcq', q:'It\'s really cold today. I wish it ______ so cold.',
+      opts:['isn\'t','won\'t be','doesn\'t','wasn\'t'], a:3,
+      exp:'Thực tế: it is cold → wish đảo sang phủ định ở quá khứ: I wish it wasn\'t / weren\'t so cold.' },
+    { id:'a7', sec:'A', type:'mcq', q:'What would you do if you ______ your job tomorrow?',
+      opts:['lost','lose','would lose','will lose'], a:0,
+      exp:'Tình huống giả định (khó xảy ra) → if + quá khứ đơn: lost; vế chính đã có would.' },
+    { id:'a8', sec:'A', type:'mcq', q:'She could get a job abroad if she ______ speak another language.',
+      opts:['can','could','would','will'], a:1,
+      exp:'if she could speak = if she were able to speak. Vế if trái thực tế hiện tại → could.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'If I ______ (have) a car, I would drive you to the airport.',
+      acc:['had'], ans:'had',
+      exp:'Thực tế không có xe → if + quá khứ: had.' },
+    { id:'b2', sec:'B', type:'fill', q:'I ______ (not / worry) so much if I were you.',
+      acc:["wouldn't worry",'would not worry'], ans:"wouldn't worry",
+      exp:'Vế kết quả của câu điều kiện không có thật → would + V; phủ định: wouldn\'t worry.' },
+    { id:'b3', sec:'B', type:'fill', q:'I wish I ______ (live) closer to my office. The journey takes ages.',
+      acc:['lived'], ans:'lived',
+      exp:'wish + quá khứ đơn (thực tế: I don\'t live close).' },
+    { id:'b4', sec:'B', type:'fill', q:'It\'s a pity you can\'t come. It would be more fun if you ______ (can) come.',
+      acc:['could'], ans:'could',
+      exp:'can → could trong vế if trái thực tế.' },
+    { id:'b5', sec:'B', type:'fill', q:'I wish there ______ (not / be) so much traffic in this city.',
+      acc:["weren't",'were not',"wasn't",'was not'], ans:"weren't",
+      exp:'Thực tế: there is a lot of traffic → I wish there weren\'t / wasn\'t…' },
+    { id:'b6', sec:'B', type:'fill', q:'If you ______ (not / spend) so much on clothes, you could save some money.',
+      acc:["didn't spend",'did not spend'], ans:"didn't spend",
+      exp:'Vế if dùng quá khứ đơn: didn\'t spend (thực tế: bạn tiêu nhiều).' },
+    { id:'b7', sec:'B', type:'fill', q:'I wish I ______ (not / have to) work this weekend.',
+      acc:["didn't have to",'did not have to'], ans:"didn't have to",
+      exp:'have to → didn\'t have to sau wish (thực tế: I have to work).' },
+    { id:'b8', sec:'B', type:'fill', q:'If my brother ______ (be) here, he would know what to do.',
+      acc:['were','was'], ans:'were',
+      exp:'Sau if trong câu trái thực tế, be → were (hoặc was).' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (if / I / were / you / I\'d / apologise)',
+      tokens:['If','I','were','you','I\'d','apologise'],
+      acc:["if i were you i'd apologise"], ans:'If I were you, I\'d apologise.',
+      exp:'If I were you, I\'d + V… = lời khuyên. Vế if dùng were, vế chính dùng \'d (would).' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (I / wish / I / knew / the answer)',
+      tokens:['I','wish','I','knew','the','answer'],
+      acc:['i wish i knew the answer'], ans:'I wish I knew the answer.',
+      exp:'wish + S + quá khứ đơn (knew) → tiếc là hiện tại không biết.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (what / would / you / do / if / you / were / rich)',
+      tokens:['What','would','you','do','if','you','were','rich'],
+      acc:['what would you do if you were rich'], ans:'What would you do if you were rich?',
+      exp:'Câu hỏi giả định: What would you do + if + S + quá khứ?' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (we / could / go / out / if / it / wasn\'t / raining)',
+      tokens:['We','could','go','out','if','it',"wasn't",'raining'],
+      acc:["we could go out if it wasn't raining"], ans:'We could go out if it wasn\'t raining.',
+      exp:'Vế chính có could; vế if dùng quá khứ tiếp diễn wasn\'t raining (thực tế: đang mưa).' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (I / wish / I / could / come / with you)',
+      tokens:['I','wish','I','could','come','with','you'],
+      acc:['i wish i could come with you'], ans:'I wish I could come with you.',
+      exp:'wish + could + V: tiếc vì hiện tại không thể làm được.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Are you coming to the beach?  B: I can\'t. I wish I ______ (can), but I have an exam tomorrow.',
+      acc:['could'], ans:'could',
+      exp:'I wish I could = tiếc vì không thể. Câu rút gọn: I wish I could (come).' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Should I accept the offer?  B: If I ______ (be) you, I\'d take it.',
+      acc:['were','was'], ans:'were',
+      exp:'If I were you, I\'d… — lời khuyên dựa trên tình huống tưởng tượng.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Do you know where Linh is?  B: No. If I ______ (know), I\'d tell you.',
+      acc:['knew'], ans:'knew',
+      exp:'Thực tế không biết → If I knew, I\'d tell you.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Your phone is always dying!  B: I know. I wish the battery ______ (last) longer.',
+      acc:['lasted'], ans:'lasted',
+      exp:'wish + quá khứ đơn: lasted (thực tế: pin không bền).' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu I wish … về cuộc sống HIỆN TẠI của bạn (chỗ ở, công việc, kỹ năng).',
+      sample:'I wish I lived nearer the city centre. I wish I didn\'t have to work on Saturdays. I wish I could speak Korean.',
+      exp:'Kiểm tra: động từ sau wish đã lùi về quá khứ chưa (live → lived, can → could, have to → didn\'t have to)? Không dùng would/will.' },
+    { id:'e2', sec:'E', type:'self', q:'Bạn của bạn đang phân vân có nên nghỉ việc không. Viết 2 lời khuyên bắt đầu bằng "If I were you, …".',
+      sample:'If I were you, I wouldn\'t quit before finding a new job. If I were you, I\'d talk to my manager first.',
+      exp:'If I were you, I\'d / I wouldn\'t + V nguyên dạng.' },
+    { id:'e3', sec:'E', type:'self', q:'Trả lời câu hỏi IELTS: "What would you change about your city if you could?" (2–3 câu dùng if + quá khứ).',
+      sample:'If I could change one thing, I would improve public transport. If there were more buses, fewer people would ride motorbikes and the air would be cleaner.',
+      exp:'Chuỗi giả định: if + quá khứ → would + V. Có thể nối nhiều câu giả định liên tiếp.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'I don\'t have a passport, so I can\'t travel abroad. → If I ______ a passport, I could travel abroad.',
+      opts:['have','had','would have','had had'], a:1,
+      exp:'Trái thực tế hiện tại → if + quá khứ đơn: had. "had had" là quá khứ hoàn thành – dùng cho quá khứ (Unit 40).' },
+    { id:'f2', sec:'F', type:'fill', q:'I wish I ______ (not / be) so tired all the time.',
+      acc:["weren't",'were not',"wasn't",'was not'], ans:"weren't",
+      exp:'Thực tế: I am tired → I wish I weren\'t / wasn\'t…' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu SAI:',
+      opts:['If I were rich, I would travel a lot.','If I would be rich, I would travel a lot.','I\'d travel a lot if I was rich.'], a:1,
+      exp:'Không dùng would trong vế if: "If I would be rich" sai. was/were đều được.' },
+    { id:'f4', sec:'F', type:'fill', q:'If people ______ (drive) more carefully, there would be fewer accidents.',
+      acc:['drove'], ans:'drove',
+      exp:'Vế kết quả có would → vế if dùng quá khứ: drove.' },
+    { id:'f5', sec:'F', type:'mcq', q:'"I wish I knew the answer." nghĩa là:',
+      opts:['Tôi đã biết câu trả lời.','Tôi không biết câu trả lời và tiếc vì điều đó.','Tôi sẽ biết câu trả lời.','Tôi đã không biết câu trả lời trong quá khứ.'], a:1,
+      exp:'wish + quá khứ = tiếc về HIỆN TẠI. Dạng quá khứ nhưng nghĩa hiện tại.' },
+    { id:'f6', sec:'F', type:'fill', q:'This coffee ______ (taste) better if it wasn\'t so sweet.',
+      acc:['would taste',"'d taste"], ans:'would taste',
+      exp:'Vế kết quả: would + V: would taste.' },
+    { id:'f7', sec:'F', type:'mcq', q:'I wish I ______ swim. Everyone else is in the pool.',
+      opts:['could','can','will','would'], a:0,
+      exp:'Năng lực mong muốn ở hiện tại → I wish I could + V.' },
+    { id:'f8', sec:'F', type:'fill', q:'If you ______ (need) help, who would you ask?',
+      acc:['needed'], ans:'needed',
+      exp:'Câu hỏi giả định: who would you ask if you needed…? (không nói if you would need).' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 39.1 – Put the verb into the correct form',
+      q:'3. ______ (I / lend) you the money if I had it, but I\'m afraid I don\'t.',
+      acc:["i'd lend",'i would lend'], ans:"I'd lend",
+      exp:'Vế kết quả của tình huống không có thật → I\'d / I would + V.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 39.1 – Put the verb into the correct form',
+      q:'4. We don\'t need a garden now, but we would need one if ______ (we / have) children.',
+      acc:['we had'], ans:'we had',
+      exp:'Vế if trái thực tế hiện tại → quá khứ đơn: we had.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 39.1 – Put the verb into the correct form',
+      q:'5. If we had more money, ______ (we / buy) a house by the sea.',
+      acc:["we'd buy",'we would buy'], ans:"we'd buy",
+      exp:'If + quá khứ → vế chính would + V: we\'d buy.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 39.1 – Put the verb into the correct form',
+      q:'6. This room is very dark. ______ (it / look) nicer if the walls were white.',
+      acc:["it would look","it'd look"], ans:'It would look',
+      exp:'Vế kết quả: it would look. Vế if (were white) đã ở dạng quá khứ.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 39.1 – Put the verb into the correct form',
+      q:'7. I\'d enjoy my job more if my boss ______ (be) friendlier.',
+      acc:['were','was'], ans:'were',
+      exp:'be → were / was trong vế if trái thực tế.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 39.1 – Put the verb into the correct form',
+      q:'8. If I were you, ______ (I / not / sign) the contract yet.',
+      acc:["i wouldn't sign",'i would not sign'], ans:"I wouldn't sign",
+      exp:'If I were you + I wouldn\'t + V: lời khuyên phủ định.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 39.1 – Put the verb into the correct form',
+      q:'9. You always have a headache. If ______ (you / not / look) at your phone so much, you wouldn\'t have headaches.',
+      acc:["you didn't look",'you did not look'], ans:"you didn't look",
+      exp:'Thực tế: bạn nhìn điện thoại nhiều → vế if phủ định ở quá khứ: you didn\'t look.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 39.1 – Put the verb into the correct form',
+      q:'10. If ______ (there / not / be) so many tourists, the old town would be more pleasant.',
+      acc:["there weren't",'there were not',"there wasn't",'there was not'], ans:"there weren't",
+      exp:'there are many tourists → if there weren\'t / wasn\'t so many…' },
+
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 39.2 – Write a sentence with if …',
+      q:'2. It\'s a nice jacket but it\'s too expensive, so I\'m not going to buy it. → I\'d buy it if ______.',
+      acc:["it wasn't so expensive","it weren't so expensive",'it was not so expensive','it were not so expensive',"it wasn't too expensive","it weren't too expensive"], ans:"it wasn't so expensive",
+      exp:'Thực tế: it is expensive → giả định ngược lại: if it wasn\'t / weren\'t so expensive.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 39.2 – Write a sentence with if …',
+      q:'3. We don\'t eat out very often — we can\'t afford it. → We would eat out more often if ______.',
+      acc:['we could afford it'], ans:'we could afford it',
+      exp:'can\'t afford → (giả định khẳng định) could afford.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 39.2 – Write a sentence with if …',
+      q:'4. I can\'t come to your party on Saturday — I have to work. → If I ______ work on Saturday, I could come to your party.',
+      acc:["didn't have to",'did not have to'], ans:"didn't have to",
+      exp:'have to → giả định ngược: didn\'t have to.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 39.2 – Write a sentence with if …',
+      q:'5. It would be nice to go for a walk, but it\'s snowing, so we can\'t. → We could go for a walk if it ______.',
+      acc:["wasn't snowing","weren't snowing",'was not snowing','were not snowing'], ans:"wasn't snowing",
+      exp:'Hành động đang diễn ra (it\'s snowing) → giả định: if it wasn\'t / weren\'t snowing.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 39.2 – Write a sentence with if …',
+      q:'6. I don\'t want his opinion, and that\'s why I\'m not going to ask for it. → If I ______ his opinion, I\'d ask for it.',
+      acc:['wanted'], ans:'wanted',
+      exp:'don\'t want → giả định khẳng định: if I wanted…' },
+
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 39.3 – Write sentences beginning I wish …',
+      q:'2. I don\'t have a bike (and I need one). → I wish ______.',
+      acc:['i had a bike'], ans:'I had a bike',
+      exp:'don\'t have → I wish I had…' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 39.3 – Write sentences beginning I wish …',
+      q:'3. My sister isn\'t here (and I need to talk to her). → I wish ______.',
+      acc:['my sister were here','my sister was here','she were here','she was here'], ans:'my sister were here',
+      exp:'isn\'t here → I wish she were / was here.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 39.3 – Write sentences beginning I wish …',
+      q:'4. It\'s very hot (and I hate hot weather). → I wish ______.',
+      acc:["it wasn't so hot","it weren't so hot",'it was not so hot','it were not so hot',"it wasn't very hot","it weren't very hot"], ans:"it wasn't so hot",
+      exp:'it is hot → I wish it wasn\'t / weren\'t so hot.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 39.3 – Write sentences beginning I wish …',
+      q:'5. I work in a noisy office (and I don\'t like it). → I wish ______.',
+      acc:["i didn't work in a noisy office",'i did not work in a noisy office'], ans:"I didn't work in a noisy office",
+      exp:'Thực tế khẳng định → wish phủ định: I didn\'t work…' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 39.3 – Write sentences beginning I wish …',
+      q:'6. I can\'t go to the concert (and I\'d like to). → I wish ______.',
+      acc:['i could go to the concert','i could go'], ans:'I could go to the concert',
+      exp:'can\'t → I wish I could…' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 39.3 – Write sentences beginning I wish …',
+      q:'7. I have to finish this report tonight (but I\'d like to relax). → I wish ______.',
+      acc:["i didn't have to finish this report tonight",'i did not have to finish this report tonight',"i didn't have to finish this report",'i did not have to finish this report'], ans:"I didn't have to finish this report tonight",
+      exp:'have to → I wish I didn\'t have to…' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 39.3 – Write sentences beginning I wish …',
+      q:'8. I don\'t know anything about computers (and mine has just stopped working). → I wish ______.',
+      acc:['i knew something about computers','i knew more about computers','i knew about computers'], ans:'I knew something about computers',
+      exp:'don\'t know anything → I wish I knew something…' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 39.3 – Write sentences beginning I wish …',
+      q:'9. I\'m not sleeping well these days (and it\'s horrible). → I wish ______.',
+      acc:['i was sleeping well','i were sleeping well','i was sleeping better','i were sleeping better','i slept better','i slept well'], ans:'I was sleeping better',
+      exp:'Thì tiếp diễn cũng lùi: I\'m not sleeping → I wish I was / were sleeping better.' },
+
+    { id:'h22', sec:'G', type:'mcq', sub:'Bài 39.4 – Write your own sentences beginning I wish …',
+      q:'(somewhere you\'d like to be now) Câu nào ĐÚNG?',
+      opts:['I wish I am in Da Lat now.','I wish I will be in Da Lat now.','I wish I was in Da Lat now.','I wish I would be in Da Lat now.'], a:2,
+      exp:'Nơi muốn ở ngay bây giờ (nhưng không ở) → I wish I was / were…' },
+    { id:'h23', sec:'G', type:'mcq', sub:'Bài 39.4 – Write your own sentences beginning I wish …',
+      q:'(something you\'d like to be able to do) Câu nào ĐÚNG?',
+      opts:['I wish I could dance.','I wish I can dance.','I wish I could danced.','I wish I can to dance.'], a:0,
+      exp:'Khả năng mong muốn → I wish I could + V nguyên dạng.' }
+  ];
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 61 – Be/get used to something (I'm used to ...) | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 61 – Be/get used to something (I'm used to ...)</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">54 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p><b>be used to something</b> = điều gì đó <b>không còn lạ / không còn khó</b> với mình nữa — tức là <b>đã quen</b>. <b>get used to</b> nói về <b>quá trình</b> trở nên quen. Unit này cũng giúp bạn tách bạch hoàn toàn với <b>used to do</b> (thói quen trong quá khứ, nay không còn).</p>
+      <div class="ex"><b class="en">Minh moved to London. At first he <mark>wasn't used to</mark> the cold weather.<br>After a few months he <mark>got used to</mark> it. Now he <mark>is used to</mark> wearing a coat every day.</b><br>Chưa quen → dần quen → đã quen.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">be used to + N / pronoun / V-ing     = đã quen với
+get used to + N / pronoun / V-ing    = dần quen với (quá trình)
+be used to + somebody + V-ing        She's used to him being away.
+
+≠  used to + V nguyên mẫu            = trước đây thường (nay không còn) — Unit 18</div>
+      <div class="scroll"><table>
+        <tr><th>Trạng thái</th><th>Cấu trúc</th><th>Ví dụ</th></tr>
+        <tr><td>Chưa quen</td><td>be not used to</td><td>I'm not used to <b>the noise</b>.</td></tr>
+        <tr><td>Đang/sẽ quen dần</td><td>get used to</td><td>You'll soon <b>get used to</b> it.</td></tr>
+        <tr><td>Đã quen</td><td>be used to</td><td>She's used to <b>getting up</b> at 5.</td></tr>
+        <tr><td>Quá khứ đã quen dần</td><td>got used to</td><td>He <b>got used to</b> driving on the left.</td></tr>
+      </table></div>
+
+      <h2>1.3 · A. Ví dụ tình huống</h2>
+      <ul>
+        <li><b>He is used to living alone.</b> — anh ấy sống một mình 15 năm rồi; việc đó chẳng có gì lạ.</li>
+        <li><b>I wasn't used to them.</b> — đôi giày mới lúc đầu hơi khó chịu vì chưa quen.</li>
+        <li><b>We'll get used to the noise.</b> — căn hộ trên phố đông; giờ còn khó chịu nhưng rồi sẽ quen.</li>
+        <li><b>She isn't used to getting up so early.</b> — việc mới phải dậy lúc 6 giờ.</li>
+        <li><b>She is used to him being away.</b> — chồng hay đi vắng, cô ấy đã quen.</li>
+      </ul>
+
+      <h2>1.4 · B. Sau be/get used to KHÔNG dùng động từ nguyên mẫu</h2>
+      <p>Trong <i>be/get used to</i>, chữ <b>to là giới từ</b> (như Unit 60C), nên sau nó là <b>danh từ / đại từ / V-ing</b>:</p>
+      <div class="formula">She is used to driving on the left.    (KHÔNG: is used to drive)
+We're not used to the noise. / We're not used to it.
+He had to get used to living alone.     (KHÔNG: get used to live)</div>
+
+      <h2>1.5 · C. I am used to doing ≠ I used to do</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>be used to + V-ing</th><th>used to + V</th></tr>
+        <tr><td>Nghĩa</td><td>đã quen với (không lạ)</td><td>trước đây thường làm, giờ thì không</td></tr>
+        <tr><td>Thời gian</td><td>hiện tại / quá khứ / tương lai (đổi "be")</td><td>chỉ quá khứ</td></tr>
+        <tr><td>Ví dụ</td><td>I'<b>m used to cycling</b> to work. (quen rồi)</td><td>I <b>used to cycle</b> to work. (giờ không nữa)</td></tr>
+      </table></div>
+
+      <h2>1.6 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Thấy…</th><th>Dùng</th></tr>
+        <tr><td>"at first it was strange/difficult", "it's new for me"</td><td>wasn't / isn't used to + V-ing</td></tr>
+        <tr><td>"after a while", "soon", "it took months", "you'll have to"</td><td>get / got used to + V-ing</td></tr>
+        <tr><td>"it's no problem now", "I've always…"</td><td>be used to + V-ing</td></tr>
+        <tr><td>"… but now I don't / no longer"</td><td>used to + V (Unit 18)</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I'm used to get up early.</td><td class="yes">I'm used to <b>getting</b> up early.</td></tr>
+        <tr><td class="no">I'm used to drive on the right before.</td><td class="yes">I <b>used to drive</b> on the right.</td></tr>
+        <tr><td class="no">I used to working at night.</td><td class="yes">I'<b>m used to</b> working at night. / I <b>used to work</b> at night.</td></tr>
+        <tr><td class="no">She can't get use to the food.</td><td class="yes">She can't get <b>used</b> to the food.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 18</b> (used to do) · <b>Unit 60C</b> (to + -ing).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🛵 <b class="en">Foreign visitors aren't <mark>used to</mark> the traffic in Hanoi.</b> <span class="note">(du lịch — trải nghiệm)</span></div>
+      <div class="ex">🌶️ <b class="en">My Australian friend soon <mark>got used to</mark> eating spicy food.</b> <span class="note">(đời sống — văn hoá)</span></div>
+      <div class="ex">⏰ <b class="en">I'm a nurse, so I'm <mark>used to working</mark> night shifts.</b> <span class="note">(công việc — nói về ca làm)</span></div>
+      <div class="ex">💻 <b class="en">It took me a month to <mark>get used to</mark> the new software.</b> <span class="note">(công việc — thích nghi)</span></div>
+      <div class="ex">🧥 <b class="en">I'm not <mark>used to</mark> such cold weather.</b> <span class="note">(giao tiếp — than thời tiết)</span></div>
+      <div class="ex">🎓 <b class="en">International students have to <mark>get used to</mark> speaking English all day.</b> <span class="note">(IELTS — du học)</span></div>
+      <div class="ex">🚌 <b class="en">I <mark>used to take</mark> the bus, but now I ride a motorbike.</b> <span class="note">(so sánh — used to do, Unit 18)</span></div>
+      <div class="ex">👶 <b class="en">New parents need time to <mark>get used to</mark> not sleeping much.</b> <span class="note">(đời sống — phủ định với -ing)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>Có "be/get" → nghĩa "quen"</b> và đi với <b>-ing</b>. <b>Không có be/get</b> → "đã từng" + V nguyên mẫu.</li>
+        <li><b>to trong "used to" của be/get là giới từ</b> → thử thay bằng danh từ: <i>I'm used to <b>the noise</b></i> ✓.</li>
+        <li><b>be</b> = trạng thái (đã quen), <b>get</b> = quá trình (đang/sẽ/đã trở nên quen).</li>
+        <li>Chia thì bằng <b>be/get</b>: <i>was used to, will get used to, have got used to</i> — "used" luôn giữ nguyên.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Chỗ trống sau <i>am/is/are/was/get/got used to</i> → <b>V-ing</b> hoặc danh từ.</li>
+        <li>Chỗ trống sau <i>used to</i> không có be/get trước → <b>V nguyên mẫu</b>.</li>
+        <li>Câu chứa "now / no longer / but these days" → nghiêng về <b>used to do</b>.</li>
+        <li>Câu chứa "at first … but after a while" → <b>wasn't used to … got used to … is used to</b>.</li>
+        <li>Coi chừng <i>There used to <b>be</b></i> (có từng có) — không phải "being".</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I'm used to wake up at 5.</td><td class="yes">I'm used to <b>waking</b> up at 5.</td><td class="why">to là giới từ → -ing</td></tr>
+        <tr><td class="no">I'm not use to it.</td><td class="yes">I'm not <b>used</b> to it.</td><td class="why">luôn là "used"</td></tr>
+        <tr><td class="no">I used to living here.</td><td class="yes">I'<b>m used to</b> living here.</td><td class="why">thiếu be</td></tr>
+        <tr><td class="no">I am used to play football when I was young.</td><td class="yes">I <b>used to play</b> football when I was young.</td><td class="why">thói quen cũ → used to + V</td></tr>
+        <tr><td class="no">I can't used to the noise.</td><td class="yes">I can't <b>get</b> used to the noise.</td><td class="why">thiếu get (quá trình)</td></tr>
+        <tr><td class="no">She got used to live alone.</td><td class="yes">She got used to <b>living</b> alone.</td><td class="why">-ing sau to</td></tr>
+        <tr><td class="no">I'm used to that she is late.</td><td class="yes">I'm used to <b>her being</b> late.</td><td class="why">to + (người) + V-ing</td></tr>
+        <tr><td class="no">Did you used to smoke?</td><td class="yes">Did you <b>use</b> to smoke?</td><td class="why">sau did → use</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> kể về một thay đổi lớn (chuyển nhà, đổi việc): <i>At first I wasn't used to…, but I soon got used to it. Now I'm used to…</i></li>
+        <li><b>Phỏng vấn:</b> <i>I'm used to working under pressure / working with international clients.</i></li>
+        <li><b>IELTS Speaking Part 2:</b> chủ đề "a change in your life" — dùng cả 3: <i>used to do / get used to / be used to</i>.</li>
+        <li><b>Viết:</b> 3 câu về điều bạn đã quen, 2 câu về điều bạn chưa quen ở nơi làm việc/học.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau <b>3</b>, <b>7</b> và <b>14 ngày</b>. Liên quan: <b>Unit 18</b> (used to do), <b>Unit 60</b> (giới từ + -ing), <b>Unit 62</b> (verb + preposition + -ing).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit61.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 61 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 61 – Be/get used to something | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit61.html';
+  var KEY = 'egu4_unit61_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền từ / chia động từ',    desc:'Điền dạng đúng với be used to / get used to / used to.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit',            desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 61.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 61 Exercises)', desc:'Bài 61.1 → 61.4 theo đúng dạng bài của sách Murphy (câu đã viết lại), kèm giải thích.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I\'ve lived in Da Lat for years, so I\'m used to ______ cold mornings.',
+      opts:['have','having','had','to have'], a:1,
+      exp:'be used to + V-ing (to là giới từ) → having.' },
+    { id:'a2', sec:'A', type:'mcq', q:'When I was a child, I ______ swim in the river every summer.',
+      opts:['am used to','was used to','used to','got used to'], a:2,
+      exp:'Thói quen trong quá khứ, nay không còn → used to + V nguyên mẫu: used to swim.' },
+    { id:'a3', sec:'A', type:'mcq', q:'The new office is very noisy, but I\'m sure we\'ll ______ it.',
+      opts:['get used to','be use to','used to','use to'], a:0,
+      exp:'Quá trình trở nên quen trong tương lai → will get used to it.' },
+    { id:'a4', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['She is used to work long hours.','She is used to working long hours.','She used to working long hours.'], a:1,
+      exp:'be used to + V-ing → is used to working.' },
+    { id:'a5', sec:'A', type:'mcq', q:'At first, Hana ______ driving on the left, but now it\'s easy for her.',
+      opts:['didn\'t use to','wasn\'t used to','isn\'t used to','not used to'], a:1,
+      exp:'Lúc đầu (quá khứ) chưa quen → wasn\'t used to + V-ing.' },
+    { id:'a6', sec:'A', type:'mcq', q:'It took me a long time to ______ my new glasses.',
+      opts:['used to','be use to','get used to','getting used'], a:2,
+      exp:'took me … to get used to + N = mất bao lâu để quen.' },
+    { id:'a7', sec:'A', type:'mcq', q:'There ______ a cinema in this street, but it closed down.',
+      opts:['is used to be','used to be','was used to','got used to be'], a:1,
+      exp:'Trước đây có, nay không còn → There used to be.' },
+    { id:'a8', sec:'A', type:'mcq', q:'Her husband travels a lot, but she\'s used to ______ away.',
+      opts:['he is','him be','him being','his to be'], a:2,
+      exp:'be used to + somebody + V-ing → used to him being away.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'I\'m not used to ______ (eat) dinner so late.',
+      acc:['eating','having'], ans:'eating',
+      exp:'be used to + V-ing.' },
+    { id:'b2', sec:'B', type:'fill', q:'My grandfather used to ______ (work) on a farm.',
+      acc:['work'], ans:'work',
+      exp:'used to + V nguyên mẫu (thói quen quá khứ).' },
+    { id:'b3', sec:'B', type:'fill', q:'Don\'t worry about the new job. You\'ll soon get used to ______ (be) in charge.',
+      acc:['being'], ans:'being',
+      exp:'get used to + V-ing → being.' },
+    { id:'b4', sec:'B', type:'fill', q:'He moved to Canada last year and he still hasn\'t got used to ______ (speak) English all day.',
+      acc:['speaking'], ans:'speaking',
+      exp:'get used to + V-ing.' },
+    { id:'b5', sec:'B', type:'fill', q:'We used to ______ (live) near the sea, but we moved to the city.',
+      acc:['live'], ans:'live',
+      exp:'used to + V (nay không còn).' },
+    { id:'b6', sec:'B', type:'fill', q:'I\'m a teacher, so I\'m used to ______ (talk) in front of people.',
+      acc:['talking','speaking'], ans:'talking',
+      exp:'be used to + V-ing.' },
+    { id:'b7', sec:'B', type:'fill', q:'She had to get used to ______ (not / have) a car.',
+      acc:['not having'], ans:'not having',
+      exp:'get used to + not + V-ing.' },
+    { id:'b8', sec:'B', type:'fill', q:'Our new manager isn\'t used to ______ (wear) a suit every day.',
+      acc:['wearing'], ans:'wearing',
+      exp:'be (not) used to + V-ing.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (I\'m / used / to / getting / up / early)',
+      tokens:["I'm",'used','to','getting','up','early'],
+      acc:["i'm used to getting up early"], ans:'I\'m used to getting up early.',
+      exp:'be used to + V-ing.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (she / soon / got / used / to / the / food)',
+      tokens:['She','soon','got','used','to','the','food'],
+      acc:['she soon got used to the food'], ans:'She soon got used to the food.',
+      exp:'get used to + N; soon đứng trước động từ.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (we / aren\'t / used / to / this / heat)',
+      tokens:['We',"aren't",'used','to','this','heat'],
+      acc:["we aren't used to this heat"], ans:'We aren\'t used to this heat.',
+      exp:'be not used to + N.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (he / used / to / smoke / a / lot)',
+      tokens:['He','used','to','smoke','a','lot'],
+      acc:['he used to smoke a lot'], ans:'He used to smoke a lot.',
+      exp:'used to + V = trước đây hay hút (nay không).' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (you\'ll / get / used / to / it / soon)',
+      tokens:["You'll",'get','used','to','it','soon'],
+      acc:["you'll get used to it soon"], ans:'You\'ll get used to it soon.',
+      exp:'will get used to + đại từ.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Isn\'t it hard to work at night?  B: Not really. I\'m used to ______ (sleep) during the day.',
+      acc:['sleeping'], ans:'sleeping',
+      exp:'be used to + V-ing.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: How do you like the new city?  B: It was strange at first, but I\'m getting ______ to it. (1 từ)',
+      acc:['used'], ans:'used',
+      exp:'getting used to it = đang dần quen.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Do you play the piano?  B: Not now, but I used to ______ (play) when I was at school.',
+      acc:['play','play it'], ans:'play',
+      exp:'used to + V nguyên mẫu.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: You look tired.  B: Yes, I\'m not used to ______ (stay) up so late.',
+      acc:['staying'], ans:'staying',
+      exp:'be not used to + V-ing.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Kể về một thay đổi trong đời bạn với 3 câu: wasn\'t used to → got used to → am used to.',
+      sample:'When I started university, I wasn\'t used to living away from home. After a few months I got used to it. Now I\'m used to cooking for myself.',
+      exp:'Chưa quen → dần quen → đã quen; luôn + N hoặc V-ing.' },
+    { id:'e2', sec:'E', type:'self', q:'Một người nước ngoài sắp đến Việt Nam sống. Viết 2 câu về những điều họ sẽ phải quen (They\'ll have to get used to…).',
+      sample:'They\'ll have to get used to the heavy traffic. They\'ll have to get used to eating rice every day.',
+      exp:'will have to get used to + N / V-ing.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 1 câu "I used to…" (thói quen cũ) và 1 câu "I\'m used to…" (điều đã quen) để thấy sự khác biệt.',
+      sample:'I used to play video games every night. I\'m used to working from home now.',
+      exp:'used to + V (quá khứ, nay không còn) ≠ be used to + V-ing (đã quen).' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'I can\'t ______ to this new phone. The buttons are in different places.',
+      opts:['use','get used','be use','used'], a:1,
+      exp:'can\'t get used to + N.' },
+    { id:'f2', sec:'F', type:'fill', q:'Dịch: "Tôi đã quen với tiếng ồn." (be used to)',
+      acc:["i'm used to the noise",'i am used to the noise'], ans:'I\'m used to the noise.',
+      exp:'be used to + N.' },
+    { id:'f3', sec:'F', type:'mcq', q:'"I used to drink a lot of coffee" nghĩa là:',
+      opts:['Tôi đã quen uống nhiều cà phê.','Trước đây tôi hay uống nhiều cà phê (giờ thì không).'], a:1,
+      exp:'used to + V = thói quen quá khứ, nay không còn.' },
+    { id:'f4', sec:'F', type:'fill', q:'Lisa is from the USA. She wasn\'t used to ______ (drive) on the left when she came to the UK.',
+      acc:['driving'], ans:'driving',
+      exp:'wasn\'t used to + V-ing.' },
+    { id:'f5', sec:'F', type:'mcq', q:'Chọn câu SAI:',
+      opts:['I\'m used to it.','I got used to the climate.','I\'m used to walk to school.','I used to walk to school.'], a:2,
+      exp:'be used to + V-ing → I\'m used to walking. "I\'m used to walk" là sai.' },
+    { id:'f6', sec:'F', type:'fill', q:'Did you use to ______ (have) long hair?',
+      acc:['have'], ans:'have',
+      exp:'Did you use to + V? (câu hỏi của used to).' },
+    { id:'f7', sec:'F', type:'fill', q:'It\'s hard to get used to ______ (share) a room with three people.',
+      acc:['sharing'], ans:'sharing',
+      exp:'get used to + V-ing.' },
+    { id:'f8', sec:'F', type:'mcq', q:'After two years in Japan, I\'m ______ bowing when I meet people.',
+      opts:['use to','used to','using to','used'], a:1,
+      exp:'be used to + V-ing → I\'m used to bowing.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 61.1 – Complete the situation using used to',
+      q:'Tom takes a crowded train to work every day. When he started this job, he ______ taking a crowded train, … (dạng phủ định, quá khứ)',
+      acc:["wasn't used to",'was not used to'], ans:'wasn\'t used to',
+      exp:'Lúc mới bắt đầu chưa quen → wasn\'t used to + V-ing.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 61.1 – Complete the situation using used to',
+      q:'… but after a few weeks he ______ it. (quá trình, quá khứ)',
+      acc:['got used to'], ans:'got used to',
+      exp:'Dần quen trong quá khứ → got used to it.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 61.1 – Complete the situation using used to',
+      q:'… Now it\'s no problem for him. He ______ a crowded train every day.',
+      acc:['is used to taking',"'s used to taking","'s used to catching",'is used to catching'], ans:'is used to taking',
+      exp:'Hiện tại đã quen → is used to + V-ing.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 61.1 – Complete the situation using used to',
+      q:'Kim is a chef. Last year she started working at weekends. At first she found it hard. She ______ at weekends, …',
+      acc:["wasn't used to working",'was not used to working'], ans:'wasn\'t used to working',
+      exp:'wasn\'t used to + V-ing.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 61.1 – Complete the situation using used to',
+      q:'… and it took her a while to ______ it.',
+      acc:['get used to'], ans:'get used to',
+      exp:'took her a while to get used to it.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 61.1 – Complete the situation using used to',
+      q:'… Now it\'s fine for her. She ______ at weekends.',
+      acc:['is used to working',"'s used to working"], ans:'is used to working',
+      exp:'is used to + V-ing.' },
+
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 61.2 – What do you say? Use I\'m (not) used to …',
+      q:'You have always eaten very spicy food. Friend: "Isn\'t this too spicy for you?" You: "No, ______."',
+      acc:["i'm used to eating spicy food",'i am used to eating spicy food',"i'm used to it","i'm used to spicy food"], ans:'I\'m used to eating spicy food',
+      exp:'Việc quen thuộc từ lâu → I\'m used to + V-ing/N.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 61.2 – What do you say? Use I\'m (not) used to …',
+      q:'You have always walked to work. Friend: "Isn\'t it a long way to walk every day?" You: "Yes, but ______."',
+      acc:["i'm used to walking to work",'i am used to walking to work',"i'm used to walking","i'm used to it"], ans:'I\'m used to walking to work',
+      exp:'I\'m used to + V-ing.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 61.2 – What do you say? Use I\'m (not) used to …',
+      q:'You usually sleep a lot, but last night you slept only four hours. Friend: "You look tired." You: "Yes, ______ so little."',
+      acc:["i'm not used to sleeping",'i am not used to sleeping'], ans:'I\'m not used to sleeping',
+      exp:'Việc mới, chưa quen → I\'m not used to + V-ing.' },
+
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 61.3 – Complete using get/got used to',
+      q:'Your neighbours have a new baby who cries all night. They\'ll have to ______ the crying.',
+      acc:['get used to'], ans:'get used to',
+      exp:'will have to get used to + N.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 61.3 – Complete using get/got used to',
+      q:'The team got a new coach with very different methods, but the players quickly ______ him.',
+      acc:['got used to'], ans:'got used to',
+      exp:'Quá khứ, quá trình nhanh chóng quen → got used to him.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 61.3 – Complete using get/got used to',
+      q:'Duc moved from the countryside to a big city. He had to ______ in a crowded place. (get used to + live)',
+      acc:['get used to living'], ans:'get used to living',
+      exp:'had to get used to + V-ing.' },
+
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'My aunt used to ______ a lot of sweets. Now she avoids sugar.',
+      acc:['eat'], ans:'eat',
+      exp:'used to + V (thói quen cũ).' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'I\'ve got a headache. I\'m not used to ______ so long in front of a screen.',
+      acc:['sitting','working','being'], ans:'sitting',
+      exp:'be not used to + V-ing.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'I don\'t want to share a desk. I\'m used to ______ my own desk.',
+      acc:['having'], ans:'having',
+      exp:'be used to + V-ing.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'I used to ______ a motorbike, but I sold it last year.',
+      acc:['have','own','ride'], ans:'have',
+      exp:'used to + V nguyên mẫu.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'When we were kids, we used to ______ fishing every weekend.',
+      acc:['go'], ans:'go',
+      exp:'used to + go (go fishing).' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'There used to ______ a market here, but now it\'s a car park.',
+      acc:['be'], ans:'be',
+      exp:'There used to be = trước đây có.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'I\'m the manager. I\'m not used to ______ told what to do.',
+      acc:['being'], ans:'being',
+      exp:'be used to + being + V3 (bị động).' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'We used to ______ in a small town. Then we moved to Hanoi and had to get used to … (1 từ)',
+      acc:['live'], ans:'live',
+      exp:'used to + V nguyên mẫu.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 61.4 – Complete with one word',
+      q:'… and had to get used to ______ in a big city. (1 từ)',
+      acc:['living'], ans:'living',
+      exp:'get used to + V-ing. So sánh với câu trước: used to live ↔ get used to living.' }
+  ];
+
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

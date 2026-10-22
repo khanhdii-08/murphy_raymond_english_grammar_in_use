@@ -1,0 +1,1058 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 30 – May and might 2 | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 30 – May and might 2</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">53 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Unit 29 dùng <b>may/might</b> để đoán về hiện tại và quá khứ. Unit này dùng chúng cho <b>tương lai</b>: một việc <b>có thể</b> xảy ra, nhưng người nói <b>chưa chắc</b>. Nói cách khác, <i>may/might + V</i> ≈ <i>perhaps … will …</i> (khoảng 50% hoặc thấp hơn).</p>
+      <div class="ex"><b class="en">I haven't decided yet. I <mark>might go</mark> to Da Lat. (= perhaps I will go)<br>I<mark>'ll go</mark> to Da Lat next week. (= chắc chắn)</b><br>Cùng là tương lai, nhưng <u>will</u> = chắc chắn, <u>may/might</u> = có thể thôi.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">(+)  S + may / might + V             It might rain later.
+(-)  S + may not / might not + V      Amy may not come. (mightn't ít dùng hơn)
+Tiếp diễn:  may / might + be + V-ing   I might be working at 8.
+Có thể phải / có thể làm được:
+            might have to + V           We might have to wait.
+            might be able to + V        She might be able to help.
+might as well + V  = chẳng có lý do gì để không làm → làm luôn đi</div>
+      <div class="scroll"><table>
+        <tr><th>Cấu trúc</th><th>Nghĩa</th><th>Ví dụ</th></tr>
+        <tr><td>will + V</td><td>chắc chắn</td><td>I'll be late tonight.</td></tr>
+        <tr><td>may / might + V</td><td>có thể (chưa chắc)</td><td>I may/might be late tonight.</td></tr>
+        <tr><td>may not / might not + V</td><td>có thể không</td><td>There might not be enough time.</td></tr>
+        <tr><td>might as well + V</td><td>làm cũng được, không có lựa chọn nào tốt hơn</td><td>We might as well walk.</td></tr>
+      </table></div>
+      <p class="note">⚠️ <b>may/might là động từ khuyết thiếu:</b> sau chúng luôn là <b>V nguyên dạng</b>, không thêm <i>to</i>, không thêm <i>-s</i>: <i>She might <b>come</b></i> (không phải <i>might comes / might to come</i>).</p>
+
+      <h2>1.3 · A. Khả năng trong tương lai</h2>
+      <ul>
+        <li>Dùng khi <b>có thể</b> xảy ra: <i>Take an umbrella. It <b>might rain</b> later.</i></li>
+        <li>Phủ định: <b>may not / might not</b>: <i>There <b>might not be</b> enough chairs for everyone.</i></li>
+        <li>Đi với <b>have to / be able to</b> (vì sau might không thể dùng <i>must</i> hay <i>can</i>): <i>We <b>might have to</b> wait. Jane <b>might be able to</b> help you.</i></li>
+      </ul>
+
+      <h2>1.4 · B. May hay might? — Thường như nhau, trừ tình huống không có thật</h2>
+      <ul>
+        <li>Hầu hết trường hợp dùng <b>may</b> hay <b>might</b> đều được: <i>I may go / I might go to Ireland.</i></li>
+        <li>Nhưng với tình huống <b>không có thật</b> (giả định, câu điều kiện loại 2) → <b>chỉ dùng might</b>: <i>If they paid me better, I <b>might</b> work harder.</i> (không dùng <i>may</i>)</li>
+      </ul>
+
+      <h2>1.5 · C. may / might be + V-ing</h2>
+      <ul>
+        <li>Việc <b>có thể đang diễn ra</b> tại một thời điểm tương lai: <i>Don't phone at 8.30. I <b>might be watching</b> the football.</i> (so sánh: <i>I'll be watching</i> = chắc chắn)</li>
+        <li>Kế hoạch <b>có thể</b> có: <i>I <b>might be going</b> to Ireland soon.</i> (so sánh: <i>I'm going</i> = đã định chắc). Nói <i>I might go</i> cũng gần như cùng nghĩa.</li>
+      </ul>
+
+      <h2>1.6 · D. Might as well</h2>
+      <p><b>We might as well do something</b> = nên làm việc đó vì <b>không có lựa chọn nào tốt hơn</b>, chẳng có lý do gì để không làm. <i>May as well</i> cũng được.</p>
+      <div class="formula">The next bus is in an hour.  → We might as well walk.
+I'm ready, so I might as well go now.
+Taxis are as cheap as buses, so you might as well get a taxi.</div>
+
+      <h2>1.7 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Dấu hiệu</th><th>Ví dụ</th></tr>
+        <tr><td>I'm not sure / I haven't decided yet / perhaps</td><td>I haven't decided yet. I <b>might</b> buy a Honda.</td></tr>
+        <tr><td>Lời cảnh báo: Be careful / Don't … / Take …</td><td>Be careful. You <b>might</b> slip.</td></tr>
+        <tr><td>Không có lựa chọn tốt hơn: nothing else to do, plenty left</td><td>We <b>might as well</b> watch the film.</td></tr>
+        <tr><td>Câu điều kiện không có thật (If + quá khứ)</td><td>If I had time, I <b>might</b> learn Japanese.</td></tr>
+      </table></div>
+
+      <h2>1.8 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>may/might (Unit 30)</th><th>will (Unit 21)</th><th>may/might have + V3 (Unit 29)</th></tr>
+        <tr><td>Thời gian</td><td>tương lai</td><td>tương lai</td><td>quá khứ</td></tr>
+        <tr><td>Mức chắc chắn</td><td>có thể</td><td>chắc chắn</td><td>có thể đã</td></tr>
+        <tr><td>Ví dụ</td><td>He <b>might come</b> tomorrow.</td><td>He<b>'ll come</b> tomorrow.</td><td>He <b>might have come</b> yesterday.</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">It might rains later.</td><td class="yes">It might <b>rain</b> later.</td></tr>
+        <tr><td class="no">I might to go to Ireland.</td><td class="yes">I might <b>go</b> to Ireland.</td></tr>
+        <tr><td class="no">We might must wait.</td><td class="yes">We might <b>have to</b> wait.</td></tr>
+        <tr><td class="no">I might can help you.</td><td class="yes">I might <b>be able to</b> help you.</td></tr>
+        <tr><td class="no">If they paid me more, I may work harder.</td><td class="yes">…, I <b>might</b> work harder.</td></tr>
+        <tr><td class="no">Liz doesn't might come.</td><td class="yes">Liz <b>might not</b> come.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 29</b> (May/might 1 – đoán hiện tại &amp; quá khứ) · <b>Unit 24</b> (will be -ing) · <b>Unit 37C</b> (May I …?) · <b>Units 38C, 40D</b> (might với if).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">☔ <b class="en">Take a raincoat. It <mark>might rain</mark> this afternoon.</b> <span class="note">(đời sống — nhắc nhở)</span></div>
+      <div class="ex">✈️ <b class="en">I haven't booked anything yet. I <mark>may go</mark> to Phu Quoc in June.</b> <span class="note">(kế hoạch chưa chắc)</span></div>
+      <div class="ex">🏢 <b class="en">The meeting is running late. I <mark>might have to</mark> stay until seven.</b> <span class="note">(công việc — báo trước)</span></div>
+      <div class="ex">🛠️ <b class="en">Send me the file. I <mark>might be able to</mark> fix it.</b> <span class="note">(công việc — đề nghị giúp)</span></div>
+      <div class="ex">📵 <b class="en">Don't call me at nine. I <mark>might be driving</mark>.</b> <span class="note">(đời sống — tiếp diễn tương lai)</span></div>
+      <div class="ex">🎫 <b class="en">There <mark>might not be</mark> any tickets left, so let's book now.</b> <span class="note">(du lịch — dự đoán phủ định)</span></div>
+      <div class="ex">🚶 <b class="en">The next bus is in 40 minutes. We <mark>might as well</mark> walk.</b> <span class="note">(giao tiếp — "thôi thì…")</span></div>
+      <div class="ex">💰 <b class="en">If the company paid us more, people <mark>might</mark> stay longer.</b> <span class="note">(IELTS Writing — tình huống giả định, chỉ dùng might)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>will = 100%, may/might = "hên xui".</b> Câu nào có <i>I'm not sure / perhaps / I haven't decided</i> → nghĩ ngay tới might.</li>
+        <li><b>Might + V trơn</b> — giống can/must/should: không <i>to</i>, không <i>-s</i>, không <i>-ed</i>.</li>
+        <li><b>Không chồng 2 modal:</b> <i>might must ❌, might can ❌</i> → thay bằng <b>might have to / might be able to</b>.</li>
+        <li><b>Câu giả định (If + quá khứ) → chỉ might</b>, vì may không dùng cho chuyện không có thật.</li>
+        <li><b>"Might as well" = "thôi thì cứ… đi"</b> — dùng khi mọi phương án khác đều không hơn.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Thấy 2 động từ khuyết thiếu đứng cạnh nhau trong đáp án (<i>might must, may can</i>) → <b>loại ngay</b>.</li>
+        <li>Phủ định đúng là <b>might not / may not</b>, không bao giờ là <i>don't might</i>.</li>
+        <li>Câu cảnh báo kiểu <i>Be careful… / Don't let the children…</i> thường cần <b>might + V</b> nói hậu quả có thể xảy ra.</li>
+        <li>Bài viết lại câu <i>"I'm not sure that X will…"</i> → <b>X might not …</b> (giữ nguyên nghĩa "có thể không").</li>
+        <li>Trong câu điều kiện loại 2, đáp án <b>may</b> là bẫy; chọn <b>might</b> hoặc <b>would</b>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">Maybe I will might go.</td><td class="yes">I <b>might go</b>. / Maybe I'll go.</td><td class="why">không dùng will + might cùng lúc</td></tr>
+        <tr><td class="no">She might comes tomorrow.</td><td class="yes">She might <b>come</b> tomorrow.</td><td class="why">modal + V nguyên dạng</td></tr>
+        <tr><td class="no">I might to be late.</td><td class="yes">I might <b>be</b> late.</td><td class="why">không có "to" sau might</td></tr>
+        <tr><td class="no">We might must leave early.</td><td class="yes">We might <b>have to</b> leave early.</td><td class="why">không ghép 2 modal</td></tr>
+        <tr><td class="no">I might can help you.</td><td class="yes">I might <b>be able to</b> help you.</td><td class="why">can → be able to sau might</td></tr>
+        <tr><td class="no">He doesn't might come.</td><td class="yes">He <b>might not</b> come.</td><td class="why">phủ định: might + not</td></tr>
+        <tr><td class="no">Might it rain? (nói thường ngày)</td><td class="yes">Do you think it <b>will</b> rain?</td><td class="why">câu hỏi với might rất trang trọng, ít dùng</td></tr>
+        <tr><td class="no">If I were rich, I may buy a house.</td><td class="yes">If I were rich, I <b>might</b> buy a house.</td><td class="why">tình huống không thật → might</td></tr>
+        <tr><td class="no">We might as well to walk.</td><td class="yes">We might as well <b>walk</b>.</td><td class="why">might as well + V nguyên dạng</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói (2 phút/ngày):</b> kể 3 kế hoạch chưa chắc của cuối tuần: <i>"I might visit my parents. I may go swimming. I might not go out on Sunday."</i></li>
+        <li><b>Công việc:</b> báo trước rủi ro một cách lịch sự: <i>"The delivery might be a day late." / "We might have to change the deadline."</i></li>
+        <li><b>Nhắn tin:</b> <i>"Don't wait for me. I might be stuck in traffic."</i></li>
+        <li><b>IELTS Speaking Part 1:</b> câu hỏi về tương lai (<i>Will you…?</i>) → trả lời mềm hơn bằng <i>"I might…, but I'm not sure yet."</i></li>
+        <li><b>Quy tắc vàng:</b> trước khi nói <i>will</i>, tự hỏi <i>"Mình có chắc không?"</i> — không chắc → <b>might</b>.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3 ngày, 7 ngày và 14 ngày; mỗi lần ưu tiên "Làm lại câu sai". Liên quan: <b>Unit 29</b> (may/might 1), <b>Unit 21</b> (will), <b>Unit 24</b> (will be -ing), <b>Unit 38</b> (If I did …).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit30.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 30 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 30 – May and might 2 | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit30.html';
+  var KEY = 'egu4_unit30_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền từ / chia động từ',    desc:'Viết dạng đúng với may/might theo gợi ý trong ngoặc.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 30.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 30 Exercises)', desc:'Bài 30.1 → 30.5 theo đúng dạng bài của sách Murphy, câu đã viết lại, kèm giải thích.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I haven\'t decided yet, but I ______ to Japan next spring.',
+      opts:['will go','might go','might going','might to go'], a:1,
+      exp:'"I haven\'t decided yet" → chưa chắc → might + V nguyên dạng: might go. "will go" là chắc chắn; "might going/might to go" sai dạng.' },
+    { id:'a2', sec:'A', type:'mcq', q:'Take a jacket with you. It ______ cold later.',
+      opts:['might get','might gets','mights get','is might get'], a:0,
+      exp:'Khả năng trong tương lai → might + V nguyên dạng (get). Modal không thêm -s, không đi với "is".' },
+    { id:'a3', sec:'A', type:'mcq', q:'The traffic is terrible. We ______ wait a long time.',
+      opts:['might must','might can','might have to','might to'], a:2,
+      exp:'Không ghép 2 modal (might must). "Có thể sẽ phải" = might have to + V.' },
+    { id:'a4', sec:'A', type:'mcq', q:'If I had more free time, I ______ learn to play the guitar.',
+      opts:['may','might','will','am going to'], a:1,
+      exp:'Tình huống không có thật (If + quá khứ) → chỉ dùng might (hoặc would), không dùng may.' },
+    { id:'a5', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['Ben doesn\'t might come tonight.','Ben might not come tonight.','Ben might not to come tonight.','Ben not might come tonight.'], a:1,
+      exp:'Phủ định của might: might not + V nguyên dạng. Không dùng do/does với modal.' },
+    { id:'a6', sec:'A', type:'mcq', q:'Don\'t phone me at 9. I ______ my online class then.',
+      opts:['might be having','might having','might have had','might had'], a:0,
+      exp:'Việc có thể đang diễn ra tại một thời điểm tương lai → might be + V-ing.' },
+    { id:'a7', sec:'A', type:'mcq', q:'— There\'s nothing good on TV. — Well, we ______ go to bed early, then.',
+      opts:['must as well','might as well','might well as','may well to'], a:1,
+      exp:'might as well + V = chẳng có lựa chọn nào tốt hơn → làm luôn. Cụm cố định, không đổi trật tự.' },
+    { id:'a8', sec:'A', type:'mcq', q:'Ask Linh about the visa. She ______ help you.',
+      opts:['might can','might be able to','can might','might could'], a:1,
+      exp:'Sau might không dùng can → thay bằng be able to: might be able to help.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'Be careful with that knife. You ______ (might / cut) yourself.',
+      acc:['might cut','may cut'], ans:'might cut',
+      exp:'Cảnh báo hậu quả có thể xảy ra → might + V nguyên dạng.' },
+    { id:'b2', sec:'B', type:'fill', q:'I\'m not sure Anna will be at the party. She ______ (might not / be) there.',
+      acc:['might not be','may not be',"mightn't be"], ans:'might not be',
+      exp:'"Có thể không" → might not + V. Mightn\'t cũng đúng nhưng ít dùng.' },
+    { id:'b3', sec:'B', type:'fill', q:'My laptop is very old. I ______ (might / have to) buy a new one.',
+      acc:['might have to buy','may have to buy'], ans:'might have to buy',
+      exp:'Có thể sẽ phải → might have to + V.' },
+    { id:'b4', sec:'B', type:'fill', q:'I\'m busy today, but I ______ (might / be able to / see) you tomorrow.',
+      acc:['might be able to see','may be able to see'], ans:'might be able to see',
+      exp:'Có thể sẽ làm được → might be able to + V.' },
+    { id:'b5', sec:'B', type:'fill', q:'Don\'t come at 7. We ______ (might / have) dinner then.',
+      acc:['might be having','may be having'], ans:'might be having',
+      exp:'Có thể đang làm gì tại thời điểm tương lai (7 giờ) → might be + V-ing.' },
+    { id:'b6', sec:'B', type:'fill', q:'The shop is closed. We ______ (might as well / go) home.',
+      acc:['might as well go','may as well go'], ans:'might as well go',
+      exp:'Không còn lựa chọn tốt hơn → might as well + V.' },
+    { id:'b7', sec:'B', type:'fill', q:'If you asked him nicely, he ______ (might / agree).',
+      acc:['might agree'], ans:'might agree',
+      exp:'Câu giả định (If + quá khứ) → chỉ dùng might, không dùng may.' },
+    { id:'b8', sec:'B', type:'fill', q:'The road is closed, so the bus ______ (might / not / arrive) on time.',
+      acc:['might not arrive','may not arrive',"mightn't arrive"], ans:'might not arrive',
+      exp:'Phủ định: might not + V nguyên dạng arrive.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (might / it / later / snow)',
+      tokens:['It','might','snow','later'],
+      acc:['it might snow later'], ans:'It might snow later.',
+      exp:'S + might + V + trạng từ thời gian.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (not / enough / there / be / might / seats)',
+      tokens:['There','might','not','be','enough','seats'],
+      acc:['there might not be enough seats'], ans:'There might not be enough seats.',
+      exp:'There + might not + be + danh từ: có thể không đủ chỗ.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (have / we / work / might / to / on Saturday)',
+      tokens:['We','might','have','to','work','on','Saturday'],
+      acc:['we might have to work on saturday'], ans:'We might have to work on Saturday.',
+      exp:'might have to + V = có thể sẽ phải.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (as / might / well / we / a taxi / take)',
+      tokens:['We','might','as','well','take','a','taxi'],
+      acc:['we might as well take a taxi'], ans:'We might as well take a taxi.',
+      exp:'Cụm cố định: might as well + V.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (be / I / working / might / late tonight)',
+      tokens:['I','might','be','working','late','tonight'],
+      acc:['i might be working late tonight'], ans:'I might be working late tonight.',
+      exp:'might be + V-ing: có thể đang làm việc vào lúc đó.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Are you coming to the beach on Sunday?  B: I\'m not sure. I ______ (visit) my grandmother.',
+      acc:['might visit','may visit','might be visiting','may be visiting'], ans:'might visit',
+      exp:'"I\'m not sure" → might + V (hoặc might be visiting cho kế hoạch có thể có).' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Can you fix my phone?  B: I don\'t know. I ______ (be able to) do it — let me look.',
+      acc:['might be able to','may be able to'], ans:'might be able to',
+      exp:'Khả năng làm được trong tương lai nhưng chưa chắc → might be able to.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: We\'ve missed the last train!  B: Well, we ______ get a taxi, then.',
+      acc:['might as well','may as well'], ans:'might as well',
+      exp:'Không còn cách nào tốt hơn → might as well + V.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Will the shop be open on the holiday?  B: Maybe not. It ______ (not / open).',
+      acc:['might not open','may not open',"mightn't open"], ans:'might not open',
+      exp:'"Maybe not" → khả năng phủ định → might not + V.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu về kế hoạch CHƯA CHẮC chắn của bạn cho tháng tới, dùng might / may / might not.',
+      sample:'I might start a new English course. I may visit my cousin in Hue. I might not have time to go to the gym.',
+      exp:'Kiểm tra: sau might/may là V nguyên dạng, phủ định là might not, không dùng will cùng lúc.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 2 câu cảnh báo một người bạn, dùng might + V (Be careful… / Don\'t…).',
+      sample:'Be careful on the stairs. You might fall. Don\'t leave your bag there — somebody might take it.',
+      exp:'Câu cảnh báo thường gồm mệnh lệnh + might + hậu quả có thể xảy ra.' },
+    { id:'e3', sec:'E', type:'self', q:'Mô tả 1 tình huống và quyết định bằng "might as well".',
+      sample:'The film starts in ten minutes and there\'s nothing else to do, so we might as well watch it.',
+      exp:'might as well dùng khi không có lựa chọn nào tốt hơn — nêu lý do trước rồi kết luận bằng might as well + V.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'I\'m not sure, but I ______ (might / change) my job next year.',
+      acc:['might change','may change'], ans:'might change',
+      exp:'Chưa chắc → might + V nguyên dạng.' },
+    { id:'f2', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['We might must cancel the trip.','We might have to cancel the trip.'], a:1,
+      exp:'Không dùng 2 modal liền nhau → might have to.' },
+    { id:'f3', sec:'F', type:'mcq', q:'If I won the lottery, I ______ stop working.',
+      opts:['may','might'], a:1,
+      exp:'Tình huống không có thật → chỉ dùng might.' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch sang tiếng Anh: "Ngày mai trời có thể không mưa."',
+      acc:['it might not rain tomorrow','it may not rain tomorrow',"it mightn't rain tomorrow"],
+      ans:'It might not rain tomorrow.',
+      exp:'Có thể không → might not + V; chủ ngữ giả "it" cho thời tiết.' },
+    { id:'f5', sec:'F', type:'fill', q:'Call me after 10. I ______ (might / sleep) before that.',
+      acc:['might be sleeping','may be sleeping'], ans:'might be sleeping',
+      exp:'Có thể đang ngủ tại thời điểm tương lai → might be + V-ing.' },
+    { id:'f6', sec:'F', type:'mcq', q:'— The restaurant is full. — We ______ eat at home, then.',
+      opts:['might as well','might well as','might as good'], a:0,
+      exp:'Cụm cố định might as well + V.' },
+    { id:'f7', sec:'F', type:'fill', q:'Ask the manager. She ______ (might / be able to / give) you a discount.',
+      acc:['might be able to give','may be able to give'], ans:'might be able to give',
+      exp:'Có thể sẽ làm được → might be able to + V.' },
+    { id:'f8', sec:'F', type:'mcq', q:'Chọn câu thể hiện ý CHẮC CHẮN:',
+      opts:['I might be late tonight.','I\'ll be late tonight.','I may be late tonight.'], a:1,
+      exp:'will = chắc chắn; may/might = chỉ là có thể.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 30.1 – Write sentences with might',
+      q:'2. What are you going to cook tonight? (pasta???) — I\'m not sure yet. I ______.',
+      acc:['might cook pasta','may cook pasta','might make pasta','may make pasta'], ans:'might cook pasta',
+      exp:'Ba dấu ??? = chưa chắc → might + V. (Dùng may cũng đúng.)' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 30.1 – Write sentences with might',
+      q:'3. When is Lan coming back? (next week???) — She hasn\'t said yet. She ______.',
+      acc:['might come back next week','may come back next week'], ans:'might come back next week',
+      exp:'Thời điểm chưa chắc → She might come back next week.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 30.1 – Write sentences with might',
+      q:'4. Where are you going to put the new sofa? (by the window???) — I haven\'t made up my mind yet. I ______.',
+      acc:['might put it by the window','may put it by the window'], ans:'might put it by the window',
+      exp:'might + put + it (thay cho the sofa) + by the window.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 30.1 – Write sentences with might',
+      q:'5. What is Minh going to do after his exams? (travel???) — He\'s still thinking about it. He ______.',
+      acc:['might travel','may travel'], ans:'might travel',
+      exp:'Chưa quyết → might + V nguyên dạng travel.' },
+
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 30.2 – might + bite / break / need / slip / wake',
+      q:'2. Please speak quietly. You ______ the baby.',
+      acc:['might wake','may wake'], ans:'might wake',
+      exp:'Hậu quả có thể xảy ra nếu ồn → might wake (đánh thức).' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 30.2 – might + bite / break / need / slip / wake',
+      q:'3. Don\'t touch that cat. It ______ you.',
+      acc:['might bite','may bite'], ans:'might bite',
+      exp:'Cảnh báo → might bite (có thể cắn).' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 30.2 – might + bite / break / need / slip / wake',
+      q:'4. Keep the receipt. We ______ it if we want to return the shoes.',
+      acc:['might need','may need'], ans:'might need',
+      exp:'Có thể sẽ cần → might need.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 30.2 – might + bite / break / need / slip / wake',
+      q:'5. Watch your step. The floor is wet. You ______.',
+      acc:['might slip','may slip'], ans:'might slip',
+      exp:'Sàn ướt → có thể trượt → might slip.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 30.2 – might + bite / break / need / slip / wake',
+      q:'6. Don\'t let the dog into the kitchen. It ______ something.',
+      acc:['might break','may break'], ans:'might break',
+      exp:'Có thể làm vỡ đồ → might break.' },
+
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 30.3 – might be able to / might have to',
+      q:'2. I can\'t meet you today, but I ______ (meet) you on Friday.',
+      acc:['might be able to meet','may be able to meet'], ans:'might be able to meet',
+      exp:'Có thể sẽ làm được → might be able to meet.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 30.3 – might be able to / might have to',
+      q:'3. I don\'t know if I\'ll be free next weekend. I ______ (work).',
+      acc:['might have to work','may have to work'], ans:'might have to work',
+      exp:'Có thể sẽ bị bắt buộc làm → might have to work.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 30.3 – might be able to / might have to',
+      q:'4. I can come to the party, but I ______ (leave) early.',
+      acc:['might have to leave','may have to leave'], ans:'might have to leave',
+      exp:'Có thể sẽ phải về sớm → might have to leave.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 30.3 – might be able to / might have to',
+      q:'5. We need money. We love this house, but we ______ (sell) it.',
+      acc:['might have to sell','may have to sell'], ans:'might have to sell',
+      exp:'Không muốn nhưng có thể buộc phải → might have to sell.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 30.3 – might be able to / might have to',
+      q:'6. A: My printer isn\'t working.  B: Let me see. I ______ (fix) it.',
+      acc:['might be able to fix','may be able to fix'], ans:'might be able to fix',
+      exp:'Đề nghị giúp, chưa chắc làm được → might be able to fix.' },
+
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 30.4 – Write sentences with might not',
+      q:'2. I\'m not sure that I\'ll go to the gym today. → I ______ to the gym today.',
+      acc:['might not go','may not go',"mightn't go"], ans:'might not go',
+      exp:'"Not sure that I will" → I might not + V.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 30.4 – Write sentences with might not',
+      q:'3. I\'m not sure that we\'ll be able to find a hotel. → We ______ find a hotel.',
+      acc:['might not be able to','may not be able to',"mightn't be able to"], ans:'might not be able to',
+      exp:'will be able to → might not be able to (giữ be able to).' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 30.4 – Write sentences with might not',
+      q:'4. I\'m not sure that Hoa will be able to come with us. → Hoa ______ come with us.',
+      acc:['might not be able to','may not be able to',"mightn't be able to"], ans:'might not be able to',
+      exp:'Hoa might not be able to come with us.' },
+
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 30.5 – Make sentences with might as well',
+      q:'2. You\'re invited to a wedding. You\'re not excited, but you have no other plans. → I\'m not doing anything else, so I ______ to the wedding.',
+      acc:['might as well go','may as well go'], ans:'might as well go',
+      exp:'Không có lý do để không đi → might as well go.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 30.5 – Make sentences with might as well',
+      q:'3. You\'ve cleaned the living room and you still have energy. Why not clean the bedroom too? → We ______ the bedroom too.',
+      acc:['might as well clean','may as well clean'], ans:'might as well clean',
+      exp:'Tiện thì làm luôn → might as well clean.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 30.5 – Make sentences with might as well',
+      q:'4. You\'re bored at home and a football match is starting on TV. → We ______ it. There\'s nothing else to do.',
+      acc:['might as well watch','may as well watch'], ans:'might as well watch',
+      exp:'"There\'s nothing else to do" → might as well watch it.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

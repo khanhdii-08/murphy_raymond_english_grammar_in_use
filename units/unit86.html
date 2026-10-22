@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 86 – No/none/any, Nothing/nobody etc. | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 86 – No/none/any · Nothing/nobody etc.</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">60 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Tiếng Việt nói "<b>không</b> có ai", "<b>không</b> làm gì" — hai chữ phủ định đứng cạnh nhau rất tự nhiên. Tiếng Anh chuẩn thì <b>chỉ cho một từ phủ định trong một mệnh đề</b>: hoặc <b>no / none / nothing / nobody / nowhere</b> (đã mang sẵn nghĩa "không"), hoặc <b>not + any / anything / anybody / anywhere</b>. Unit này giúp bạn chọn đúng <b>no</b> (đi với danh từ) hay <b>none</b> (đứng một mình), và không bao giờ nói <s>I didn't say nothing</s>.</p>
+      <div class="ex"><b class="en">There was <mark>no</mark> bus, so we walked. = There <mark>wasn't a</mark> bus.<br>'How much money have you got?' '<mark>None</mark>.'<br>I said <mark>nothing</mark>. = I <mark>didn't</mark> say <mark>anything</mark>.</b></div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">no + danh từ              There are no shops open.   No reason was given.
+none (đứng một mình)      'How many?' 'None.'   There are none left.
+none of + the/my/them...  None of my friends came.   None of it is mine.
+
+nothing / nobody (no-one) / nowhere  =  not + anything / anybody / anywhere
+   I said nothing.          =  I didn't say anything.
+   They have nowhere to live.  =  They don't have anywhere to live.</div>
+      <div class="scroll"><table>
+        <tr><th>Từ</th><th>Dùng khi</th><th>Ví dụ</th></tr>
+        <tr><td><b>no</b></td><td>+ danh từ (= not a / not any)</td><td>I have <b>no</b> time.</td></tr>
+        <tr><td><b>none</b></td><td>không có danh từ theo sau</td><td>'Any eggs?' '<b>None</b>.'</td></tr>
+        <tr><td><b>none of</b></td><td>+ the/my/these + N, it, them, us</td><td><b>None of</b> them called.</td></tr>
+        <tr><td><b>nothing</b></td><td>không vật gì</td><td><b>Nothing</b> happened.</td></tr>
+        <tr><td><b>nobody / no-one</b></td><td>không ai</td><td><b>Nobody</b> knows.</td></tr>
+        <tr><td><b>nowhere</b></td><td>không nơi nào</td><td>We had <b>nowhere</b> to stay.</td></tr>
+      </table></div>
+      <p class="note">⚠️ Đã có <b>nothing/nobody/no/none</b> → động từ phải <b>khẳng định</b>: <i>I saw nobody</i>, không phải <s>I didn't see nobody</s>.</p>
+
+      <h2>1.3 · A. No và none</h2>
+      <ul>
+        <li><b>no + danh từ</b>, có thể đứng đầu câu: <i><b>No</b> explanation was given.</i> · <i>She'll have <b>no</b> problem finding a job.</i></li>
+        <li><b>none</b> thay cho no + danh từ: <i>All the seats are taken. There are <b>none</b> left.</i></li>
+        <li><b>none of</b> + the/my/it/them: <i>This money is yours. <b>None of it</b> is mine.</i></li>
+        <li>So sánh: <i>'How much luggage do you have?' '<b>None</b>.' / 'I don't have <b>any</b>.'</i></li>
+        <li>Sau <b>none of + danh từ số nhiều</b>, động từ số ít hay số nhiều đều được (số nhiều phổ biến hơn): <i>None of the shops <b>were</b> (was) open.</i></li>
+      </ul>
+
+      <h2>1.4 · B. Nothing / nobody (no-one) / nowhere</h2>
+      <ul>
+        <li>Đứng <b>đầu câu</b> hoặc <b>một mình</b> làm câu trả lời: <i>'Who knows?' '<b>Nobody</b>.' · '<b>Where</b> are you going?' '<b>Nowhere</b>.'</i></li>
+        <li>Sau động từ, nhất là <b>be / have</b>: <i>There's <b>nobody</b> living there. · We had <b>nothing</b> to eat.</i></li>
+        <li><b>= not + any-</b>: <i>Jane told <b>nobody</b>. = Jane <b>didn't</b> tell <b>anybody</b>.</i></li>
+      </ul>
+
+      <h2>1.5 · C. Nobody + they/them/their</h2>
+      <ul>
+        <li><i>Nobody is perfect, are <b>they</b>?</i></li>
+        <li><i>No-one did what I asked <b>them</b> to do.</i></li>
+        <li><i>Nobody in the class did <b>their</b> homework.</i> — nobody vẫn đi với động từ số ít (<i>Nobody <b>is</b> ...</i>).</li>
+      </ul>
+
+      <h2>1.6 · D. No- hay any- (nghĩa "bất kỳ")?</h2>
+      <div class="formula">There was no bus, so we walked.        ↔  You can take any bus. (xe nào cũng được)
+'What do you want?' 'Nothing.'         ↔  I'm so hungry I could eat anything.
+The exam was very hard. Nobody passed. ↔  It was easy. Anybody could have passed.</div>
+
+      <h2>1.7 · So sánh &amp; lỗi hay gặp</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I didn't say nothing.</td><td class="yes">I said <b>nothing</b>. / I didn't say <b>anything</b>.</td></tr>
+        <tr><td class="no">There are none shops open.</td><td class="yes">There are <b>no</b> shops open.</td></tr>
+        <tr><td class="no">'How many tickets?' 'No.'</td><td class="yes">'<b>None</b>.'</td></tr>
+        <tr><td class="no">No of my friends came.</td><td class="yes"><b>None of</b> my friends came.</td></tr>
+        <tr><td class="no">Nobody don't know.</td><td class="yes"><b>Nobody knows</b>.</td></tr>
+        <tr><td class="no">I couldn't see no-one.</td><td class="yes">I couldn't see <b>anyone</b>.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 85</b> (some &amp; any) · <b>Unit 88</b> (none of ...) · <b>Unit 106B</b> (any bigger / no better).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🚕 <b class="en">There were <mark>no</mark> taxis, so we walked home.</b> <span class="note">(đời sống — no + danh từ)</span></div>
+      <div class="ex">🎟️ <b class="en">Sorry, the tickets are sold out. There are <mark>none</mark> left.</b> <span class="note">(dịch vụ — none đứng một mình)</span></div>
+      <div class="ex">🤷 <b class="en">— What's wrong? — <mark>Nothing</mark>. I'm just tired.</b> <span class="note">(giao tiếp — trả lời ngắn)</span></div>
+      <div class="ex">📵 <b class="en"><mark>Nobody</mark> answered the phone.</b> <span class="note">(công việc — nobody làm chủ ngữ)</span></div>
+      <div class="ex">🏠 <b class="en">After the flood, many families had <mark>nowhere</mark> to live.</b> <span class="note">(tin tức — nowhere sau have)</span></div>
+      <div class="ex">👥 <b class="en"><mark>None of</mark> my colleagues knew the answer.</b> <span class="note">(văn phòng — none of + N)</span></div>
+      <div class="ex">📢 <b class="en"><mark>No</mark> reason was given for the delay.</b> <span class="note">(thông báo — no đứng đầu câu)</span></div>
+      <div class="ex">🎓 <b class="en">The test was so easy that <mark>anybody</mark> could have passed.</b> <span class="note">(thi cử — so sánh no-/any-)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Một câu – một phủ định":</b> not ... any- <b>hoặc</b> no-/none/nothing — không bao giờ cả hai.</li>
+        <li><b>no cần bạn đồng hành (danh từ), none đi một mình.</b> <i>no money</i> / <i>None.</i></li>
+        <li><b>none of</b> = "không ai/cái nào trong số ..." — luôn có <i>the/my/these/them/it</i> sau of.</li>
+        <li><b>Trả lời một chữ:</b> Who? → <i>Nobody</i>. What? → <i>Nothing</i>. Where? → <i>Nowhere</i>. How many/much? → <i>None</i>.</li>
+        <li><b>nobody</b> chia động từ số ít, gọi lại bằng <b>they/their</b>.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Chỗ trống <b>trước danh từ</b> → no hoặc any; <b>không có danh từ</b> phía sau → none hoặc any (đứng một mình).</li>
+        <li>Thấy động từ đã phủ định (<i>didn't, couldn't, haven't</i>) → chọn <b>any-</b>.</li>
+        <li>Động từ khẳng định mà nghĩa là "không" → chọn <b>no-/nothing/nobody</b>.</li>
+        <li><i>Nobody/Anybody could do it</i>: "dễ, ai cũng làm được" → Anybody; "khó, không ai làm được" → Nobody.</li>
+        <li>Chuyển câu: <i>I didn't see anybody</i> ⇄ <i>I saw nobody</i> — nhớ đổi động từ về khẳng định.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I don't know nothing about it.</td><td class="yes">I don't know <b>anything</b> about it.</td><td class="why">2 phủ định → sai</td></tr>
+        <tr><td class="no">Nobody didn't come.</td><td class="yes"><b>Nobody came</b>.</td><td class="why">nobody đã phủ định</td></tr>
+        <tr><td class="no">I have none money.</td><td class="yes">I have <b>no</b> money.</td><td class="why">trước danh từ dùng no</td></tr>
+        <tr><td class="no">— How many? — No.</td><td class="yes">— <b>None</b>.</td><td class="why">đứng một mình dùng none</td></tr>
+        <tr><td class="no">No of them came.</td><td class="yes"><b>None of</b> them came.</td><td class="why">"no of" không tồn tại</td></tr>
+        <tr><td class="no">Nobody know the answer.</td><td class="yes">Nobody <b>knows</b> the answer.</td><td class="why">nobody số ít → -s</td></tr>
+        <tr><td class="no">I went to nowhere.</td><td class="yes">I went <b>nowhere</b>. / I didn't go <b>anywhere</b>.</td><td class="why">nowhere là trạng từ, không cần to</td></tr>
+        <tr><td class="no">There is not nobody here.</td><td class="yes">There is <b>nobody</b> here.</td><td class="why">một phủ định thôi</td></tr>
+        <tr><td class="no">I could eat nothing. (= gì cũng ăn được)</td><td class="yes">I could eat <b>anything</b>.</td><td class="why">"gì cũng được" → any-</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> tập trả lời nhanh bằng một từ: <i>Nothing. / Nobody. / Nowhere. / None.</i></li>
+        <li><b>Viết:</b> trong văn trang trọng, <i>no + N</i> nghe gọn hơn: <i>There is <b>no</b> evidence that ...</i> (IELTS Writing).</li>
+        <li><b>Công việc:</b> báo cáo: <i>"None of the customers complained." / "No problems were reported."</i></li>
+        <li><b>Tự kiểm tra:</b> đọc lại câu, đếm số từ phủ định — nhiều hơn 1 là phải sửa.</li>
+        <li><b>Quy tắc vàng:</b> muốn nói "không ... gì/ai/đâu" → chọn <i>not + any-</i> hoặc <i>no-</i>, không trộn.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3 ngày, 7 ngày và 14 ngày; ưu tiên nút "Làm lại câu sai". Liên quan: <b>Unit 85</b> (some/any), <b>Unit 88</b> (all of / none of), <b>Unit 89</b> (neither/either).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit86.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 86 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 86 – No/none/any, Nothing/nobody | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit86.html';
+  var KEY = 'egu4_unit86_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn no / none / any / nothing / nobody / nowhere.' },
+    { id:'B', title:'B. Điền từ',                   desc:'Điền no, none, any hoặc no-/any- + body/thing/where.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Trả lời ngắn hoặc điền từ còn thiếu theo ngữ cảnh.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 86.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 86 Exercises)', desc:'Bài 86.1 → 86.4 theo đúng dạng bài của sách Murphy, câu đã viết lại, kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'It was Sunday, so there were ______ banks open.',
+      opts:['no','none','any','nothing'], a:0,
+      exp:'Trước danh từ (banks) + động từ khẳng định (were) → no. "none" không đứng trước danh từ.' },
+    { id:'a2', sec:'A', type:'mcq', q:'\'How many messages did you get?\' \'______.\'',
+      opts:['No','None','Nothing','Nobody'], a:1,
+      exp:'Trả lời một mình cho How many → None (= no messages).' },
+    { id:'a3', sec:'A', type:'mcq', q:'I didn\'t tell ______ about the surprise party.',
+      opts:['nobody','somebody else','anybody','no-one'], a:2,
+      exp:'Đã có didn\'t → dùng anybody. "didn\'t tell nobody" là 2 phủ định.' },
+    { id:'a4', sec:'A', type:'mcq', q:'______ of my friends could come to the wedding.',
+      opts:['No','Nobody','Nothing','None'], a:3,
+      exp:'none of + my/the/them... → None of my friends. "No of" không tồn tại.' },
+    { id:'a5', sec:'A', type:'mcq', q:'The flat is empty. There\'s ______ living there now.',
+      opts:['nobody','anybody','none','nowhere'], a:0,
+      exp:'Động từ khẳng định (There\'s) + nghĩa "không ai" → nobody.' },
+    { id:'a6', sec:'A', type:'mcq', q:'This puzzle is really simple. ______ could solve it.',
+      opts:['Nobody','Anybody','None','Nothing'], a:1,
+      exp:'Dễ → "ai cũng làm được" → Anybody (nghĩa "it doesn\'t matter who").' },
+    { id:'a7', sec:'A', type:'mcq', q:'Nobody in the team remembered ______ password.',
+      opts:['his','its','their','our'], a:2,
+      exp:'Sau nobody dùng they/them/their để chỉ chung (không rõ nam/nữ).' },
+    { id:'a8', sec:'A', type:'mcq', q:'\'Where did you go last night?\' \'______. I stayed in.\'',
+      opts:['Anywhere','Somewhere','Nothing','Nowhere'], a:3,
+      exp:'Trả lời một mình cho Where → Nowhere.' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'I have ______ idea where she lives. (no/none/any)',
+      acc:['no'], ans:'no',
+      exp:'have no idea = không biết gì cả. Trước danh từ + động từ khẳng định → no.' },
+    { id:'b2', sec:'B', type:'fill', q:'We haven\'t got ______ milk left. (no/none/any)',
+      acc:['any'], ans:'any',
+      exp:'haven\'t (phủ định) → any.' },
+    { id:'b3', sec:'B', type:'fill', q:'All the cakes were eaten. There were ______ left. (no/none/any)',
+      acc:['none'], ans:'none',
+      exp:'Không có danh từ sau chỗ trống, động từ khẳng định → none.' },
+    { id:'b4', sec:'B', type:'fill', q:'There\'s ______ (no-/any- + vật) in the box. It\'s empty.',
+      acc:['nothing'], ans:'nothing',
+      exp:'There\'s (khẳng định) + nghĩa "không có gì" → nothing.' },
+    { id:'b5', sec:'B', type:'fill', q:'I couldn\'t find my keys ______ (no-/any- + nơi chốn).',
+      acc:['anywhere'], ans:'anywhere',
+      exp:'couldn\'t (phủ định) → anywhere.' },
+    { id:'b6', sec:'B', type:'fill', q:'______ (no-/any- + người) knows what will happen next year.',
+      acc:['nobody','no-one','no one'], ans:'Nobody / No-one',
+      exp:'Nobody/No-one đứng đầu câu, động từ khẳng định số ít (knows).' },
+    { id:'b7', sec:'B', type:'fill', q:'This money is all yours. ______ of it belongs to me.',
+      acc:['none'], ans:'None',
+      exp:'none of it = không phần nào trong số đó.' },
+    { id:'b8', sec:'B', type:'fill', q:'I\'m so thirsty I could drink ______ (no-/any- + vật).',
+      acc:['anything'], ans:'anything',
+      exp:'"gì cũng uống được" → anything (nghĩa "it doesn\'t matter what").' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (nothing / said / she / the meeting / at)',
+      tokens:['She','said','nothing','at','the','meeting'],
+      acc:['she said nothing at the meeting'], ans:'She said nothing at the meeting.',
+      exp:'S + V khẳng định + nothing (= didn\'t say anything).' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (none / the / of / shops / open / were)',
+      tokens:['None','of','the','shops','were','open'],
+      acc:['none of the shops were open'], ans:'None of the shops were open.',
+      exp:'None of + the + N số nhiều → động từ thường dùng số nhiều (were).' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (had / nowhere / they / to / stay)',
+      tokens:['They','had','nowhere','to','stay'],
+      acc:['they had nowhere to stay'], ans:'They had nowhere to stay.',
+      exp:'have nowhere to + V = không có chỗ nào để ...' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (no / was / reason / given)',
+      tokens:['No','reason','was','given'],
+      acc:['no reason was given'], ans:'No reason was given.',
+      exp:'no + danh từ có thể đứng đầu câu.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (didn\'t / anything / I / buy / today)',
+      tokens:['I',"didn't",'buy','anything','today'],
+      acc:["i didn't buy anything today"], ans:'I didn\'t buy anything today.',
+      exp:'didn\'t + anything (= I bought nothing).' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Who did you see at the office?  B: ______. Everyone was on holiday.',
+      acc:['nobody','no-one','no one'], ans:'Nobody / No-one',
+      exp:'Trả lời một từ cho Who → Nobody/No-one.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: What happened?  B: ______. Don\'t worry.',
+      acc:['nothing'], ans:'Nothing',
+      exp:'Trả lời một từ cho What → Nothing.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: How much sugar do you take?  B: ______, thanks.',
+      acc:['none'], ans:'None',
+      exp:'How much → None (= no sugar).' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Did you go anywhere at the weekend?  B: No, I didn\'t go ______.',
+      acc:['anywhere'], ans:'anywhere',
+      exp:'didn\'t go + anywhere (= I went nowhere).' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 1 câu với "no + danh từ" và viết lại nó bằng "not ... any".',
+      sample:'There are no buses after midnight. = There aren\'t any buses after midnight.',
+      exp:'no = not a / not any. Khi đổi sang any, động từ phải ở dạng phủ định.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 3 câu hỏi Who/What/Where và trả lời bằng một từ (Nobody/Nothing/Nowhere).',
+      sample:'Who called? — Nobody. What did you buy? — Nothing. Where are you going? — Nowhere.',
+      exp:'Nobody/Nothing/Nowhere đứng một mình làm câu trả lời ngắn.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 1 câu với "None of ..." về bạn bè/đồng nghiệp của bạn.',
+      sample:'None of my friends like horror films.',
+      exp:'None of + the/my + N số nhiều; động từ số nhiều hoặc số ít đều được (số nhiều phổ biến hơn).' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I didn\'t see nobody.','I saw anybody.','I didn\'t see anybody.'], a:2,
+      exp:'didn\'t + anybody. Hoặc nói I saw nobody.' },
+    { id:'f2', sec:'F', type:'fill', q:'There was ______ bridge, so we had to swim across. (no/none/any)',
+      acc:['no'], ans:'no',
+      exp:'no + danh từ = not a: There was no bridge.' },
+    { id:'f3', sec:'F', type:'mcq', q:'\'Did you take any photos?\' \'No, I didn\'t take ______.\'',
+      opts:['none','any','no','nothing'], a:1,
+      exp:'didn\'t take + any (đứng một mình thay cho any photos).' },
+    { id:'f4', sec:'F', type:'fill', q:'Viết lại không dùng not: "They don\'t have anywhere to live." → They have ______ to live.',
+      acc:['nowhere'], ans:'nowhere',
+      exp:'not ... anywhere = nowhere; động từ chuyển về khẳng định (have).' },
+    { id:'f5', sec:'F', type:'mcq', q:'The exam was so hard that ______ passed.',
+      opts:['anybody','none','nobody','any'], a:2,
+      exp:'Khó → không ai đậu → nobody (động từ khẳng định passed).' },
+    { id:'f6', sec:'F', type:'fill', q:'We invited ten people, but ______ of them came.',
+      acc:['none'], ans:'none',
+      exp:'none of them = không ai trong số họ.' },
+    { id:'f7', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['Nobody are perfect.','Nobody isn\'t perfect.','Nobody is perfect.'], a:2,
+      exp:'nobody chia động từ số ít (is) và không thêm not.' },
+    { id:'f8', sec:'F', type:'fill', q:'Dịch: "Tôi không biết gì về kinh tế." (dùng anything)',
+      acc:["i don't know anything about economics",'i do not know anything about economics',"i don't know anything about the economy",'i do not know anything about the economy'],
+      ans:'I don\'t know anything about economics.',
+      exp:'don\'t know + anything. Không nói "I don\'t know nothing".' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 86.1 – Điền no, none hoặc any',
+      q:'The museum was closed, so there were ______ visitors.', acc:['no'], ans:'no',
+      exp:'were (khẳng định) + danh từ → no.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 86.1 – Điền no, none hoặc any',
+      q:'I haven\'t got ______ stamps. Can you give me one?', acc:['any'], ans:'any',
+      exp:'haven\'t got → any.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 86.1 – Điền no, none hoặc any',
+      q:'We had to stand because there weren\'t ______ seats.', acc:['any'], ans:'any',
+      exp:'weren\'t → any.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 86.1 – Điền no, none hoặc any',
+      q:'\'How many tomatoes are there?\' \'______. Shall I buy some?\'', acc:['none'], ans:'None',
+      exp:'Trả lời một mình → None.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 86.1 – Điền no, none hoặc any',
+      q:'I wrote three songs, but ______ of them were very good.', acc:['none'], ans:'none',
+      exp:'none of them.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 86.1 – Điền no, none hoặc any',
+      q:'What a silly idea! ______ sensible person would agree with that.', acc:['no'], ans:'No',
+      exp:'No + danh từ đứng đầu câu (= không người hiểu chuyện nào).' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 86.1 – Điền no, none hoặc any',
+      q:'I haven\'t watched ______ of the films you recommended.', acc:['any'], ans:'any',
+      exp:'haven\'t (phủ định) + any of.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 86.1 – Điền no, none hoặc any',
+      q:'The trip was cancelled because ______ of the students had paid.', acc:['none'], ans:'none',
+      exp:'Động từ khẳng định (had paid) → none of.' },
+
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 86.2 – Trả lời ngắn none/nobody/nothing/nowhere',
+      q:'Who did you speak to at the party? (trả lời 1 từ)', acc:['nobody','no-one','no one'], ans:'Nobody / No-one',
+      exp:'Who → Nobody/No-one.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 86.2 – Trả lời ngắn none/nobody/nothing/nowhere',
+      q:'How much bread did you buy? (trả lời 1 từ)', acc:['none'], ans:'None',
+      exp:'How much → None.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 86.2 – Trả lời ngắn none/nobody/nothing/nowhere',
+      q:'What are you doing this evening? (trả lời 1 từ)', acc:['nothing'], ans:'Nothing',
+      exp:'What → Nothing.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 86.2 – Trả lời bằng câu đầy đủ với any-',
+      q:'Who were you waiting for? → I wasn\'t waiting for ______.', acc:['anybody','anyone'], ans:'anybody / anyone',
+      exp:'wasn\'t + anybody/anyone.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 86.2 – Trả lời bằng câu đầy đủ với any-',
+      q:'How much salt do you want? → I don\'t want ______ salt.', acc:['any'], ans:'any',
+      exp:'don\'t want + any + danh từ.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 86.2 – Trả lời bằng câu đầy đủ với any-',
+      q:'Where are you going? → I\'m not going ______.', acc:['anywhere'], ans:'anywhere',
+      exp:'not going + anywhere.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 86.2 – Trả lời bằng câu đầy đủ với any-',
+      q:'How much did you spend? → I didn\'t spend ______.', acc:['anything'], ans:'anything',
+      exp:'didn\'t spend + anything.' },
+
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 86.3 – no- hoặc any- + -body/-thing/-where',
+      q:'The restaurant was completely empty. There was ______ eating there.', acc:['nobody','no-one','no one'], ans:'nobody / no-one',
+      exp:'There was (khẳng định) → nobody.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 86.3 – no- hoặc any- + -body/-thing/-where',
+      q:'\'Where did you go yesterday?\' \'______. I was at home all day.\'', acc:['nowhere'], ans:'Nowhere',
+      exp:'Trả lời một từ → Nowhere.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 86.3 – no- hoặc any- + -body/-thing/-where',
+      q:'I looked in the fridge, but I didn\'t find ______ to eat.', acc:['anything'], ans:'anything',
+      exp:'didn\'t → anything.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 86.3 – no- hoặc any- + -body/-thing/-where',
+      q:'My hometown looks exactly the same. ______ has changed.', acc:['nothing'], ans:'Nothing',
+      exp:'Nothing đứng đầu câu, động từ khẳng định (has changed).' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 86.3 – no- hoặc any- + -body/-thing/-where',
+      q:'Have you seen my phone? I can\'t find it ______.', acc:['anywhere'], ans:'anywhere',
+      exp:'can\'t → anywhere.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 86.3 – no- hoặc any- + -body/-thing/-where',
+      q:'The room went quiet. ______ said ______. (2 chỗ)', acc:['nobody ... anything','no-one ... anything','no one ... anything','nobody anything','no-one anything','no one anything'], ans:'Nobody ... anything',
+      exp:'Nobody đã phủ định → vế sau dùng anything (Nobody said anything).' },
+
+    { id:'h22', sec:'G', type:'mcq', sub:'Bài 86.4 – Chọn từ đúng',
+      q:'The crash looked serious, but luckily ______ was hurt.',
+      opts:['nobody','anybody'], a:0,
+      exp:'was (khẳng định) + nghĩa "không ai" → nobody.' },
+    { id:'h23', sec:'G', type:'mcq', sub:'Bài 86.4 – Chọn từ đúng',
+      q:'I knocked on the door, but I couldn\'t hear ______.',
+      opts:['no-one','anyone'], a:1,
+      exp:'couldn\'t → anyone.' },
+    { id:'h24', sec:'G', type:'mcq', sub:'Bài 86.4 – Chọn từ đúng',
+      q:'\'What\'s in your pocket?\' \'______. It\'s empty.\'',
+      opts:['Nothing','Anything'], a:0,
+      exp:'Trả lời một từ, nghĩa "không có gì" → Nothing.' },
+    { id:'h25', sec:'G', type:'mcq', sub:'Bài 86.4 – Chọn từ đúng',
+      q:'The weather is very changeable. ______ could happen tomorrow.',
+      opts:['Nothing','Anything'], a:1,
+      exp:'Không chắc → "điều gì cũng có thể xảy ra" → Anything.' },
+    { id:'h26', sec:'G', type:'mcq', sub:'Bài 86.4 – Chọn từ đúng',
+      q:'Feel free to ask me ______ questions you have.',
+      opts:['any','no'], a:0,
+      exp:'any = bất kỳ câu hỏi nào.' },
+    { id:'h27', sec:'G', type:'mcq', sub:'Bài 86.4 – Chọn từ đúng',
+      q:'I don\'t know ______ about cars.',
+      opts:['nothing','anything'], a:1,
+      exp:'don\'t → anything (tránh 2 phủ định).' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

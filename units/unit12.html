@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 12 – For and since, When ... ? and How long ... ? | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 12 – For and since, When ... ? and How long ... ?</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">59 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Unit này giúp bạn nói <b>một việc đã kéo dài bao lâu</b> tính đến bây giờ. Hai từ khóa: <b>for</b> (đi với <u>độ dài</u> khoảng thời gian) và <b>since</b> (đi với <u>điểm bắt đầu</u>). Kèm theo đó là cách phân biệt câu hỏi <b>When ...?</b> (hỏi thời điểm → quá khứ đơn) và <b>How long ...?</b> (hỏi độ dài đến nay → hiện tại hoàn thành).</p>
+      <div class="ex"><b class="en">I've been waiting <mark>for</mark> two hours. = I've been waiting <mark>since</mark> 8 o'clock.</b><br>Cùng một sự việc: "for" đo <u>bao lâu</u>, "since" chỉ <u>bắt đầu từ lúc nào</u>.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">for   + KHOẢNG thời gian      for two hours / for six months / for ages
+since + MỐC bắt đầu          since 8 o'clock / since Monday / since 2019
+since + mệnh đề quá khứ      since I left school / since we arrived
+
+How long + have/has + S + (been) ...?   → How long have you known her?
+When + did + S + V?                       → When did you meet her?
+
+It's / It's been + khoảng TG + since + quá khứ đơn
+   It's two years since I last saw Joe.</div>
+      <div class="scroll"><table>
+        <tr><th>for (độ dài)</th><th>since (mốc bắt đầu)</th></tr>
+        <tr><td>two hours, 20 minutes, five days</td><td>8 o'clock, Monday, 12 May</td></tr>
+        <tr><td>a long time, six months, 50 years</td><td>April, 2001, Christmas</td></tr>
+        <tr><td>a week, ages, years</td><td>lunchtime, we arrived, I got up</td></tr>
+      </table></div>
+      <p class="note">⚠️ Mẹo kiểm tra: đặt câu hỏi <b>"bao lâu?"</b> → for. Đặt câu hỏi <b>"từ khi nào?"</b> → since. <i>since six months</i> là SAI vì "six months" là độ dài, không phải mốc.</p>
+
+      <h2>1.3 · A. For và since với hiện tại hoàn thành</h2>
+      <ul>
+        <li><i>Sally has been working here <b>for</b> six months.</i> = <i>... <b>since</b> April.</i> (từ tháng 4 đến giờ)</li>
+        <li><i>I haven't seen Tom <b>for</b> three days.</i> = <i>... <b>since</b> Monday.</i></li>
+        <li>Since + mệnh đề: động từ sau since thường ở <b>quá khứ đơn</b>: <i>He has been looking for a job since he <b>left</b> school.</i></li>
+      </ul>
+
+      <h2>1.4 · B. Bỏ "for", "all", và "in"</h2>
+      <ul>
+        <li>Câu khẳng định có thể <b>bỏ for</b>: <i>They've been married (for) ten years.</i></li>
+        <li>Câu phủ định thì <b>giữ for</b>: <i>They haven't had a holiday <b>for</b> ten years.</i></li>
+        <li><b>Không</b> dùng for + all: <i>I've lived here <b>all my life</b></i> (không nói <s>for all my life</s>).</li>
+        <li>Câu phủ định có thể dùng <b>in</b> thay for: <i>They haven't had a holiday <b>in</b> ten years.</i></li>
+      </ul>
+
+      <h2>1.5 · C. When ...? và How long ...?</h2>
+      <div class="scroll"><table>
+        <tr><th>Câu hỏi</th><th>Thì</th><th>Trả lời</th></tr>
+        <tr><td><b>When</b> did it start raining?</td><td>quá khứ đơn (một thời điểm)</td><td>It started <b>an hour ago</b> / <b>at 1 o'clock</b>.</td></tr>
+        <tr><td><b>How long</b> has it been raining?</td><td>hiện tại hoàn thành (tiếp diễn)</td><td>It's been raining <b>for an hour</b> / <b>since 1 o'clock</b>.</td></tr>
+        <tr><td><b>When</b> did they first meet?</td><td>quá khứ đơn</td><td>A long time ago / When they were at school.</td></tr>
+        <tr><td><b>How long</b> have they known each other?</td><td>hiện tại hoàn thành</td><td>For a long time / Since they were at school.</td></tr>
+      </table></div>
+      <p class="note">📌 <b>ago</b> đi với quá khứ đơn (When...?), <b>for/since</b> đi với hiện tại hoàn thành (How long...?).</p>
+
+      <h2>1.6 · D. It's (been) ... since ...</h2>
+      <div class="formula">It's two years since I last saw Joe.        = I haven't seen Joe for two years.
+It's been ages since we went to the cinema. = We haven't been to the cinema for ages.
+How long is it since ...? / How long has it been since ...?</div>
+      <p>Sau <b>since</b> trong mẫu này dùng <b>quá khứ đơn</b> (I last saw / we went). Câu mang nghĩa phủ định ("đã lâu rồi không...") dù không có "not".</p>
+
+      <h2>1.7 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Thấy...</th><th>Dùng</th><th>Ví dụ</th></tr>
+        <tr><td>số + đơn vị thời gian (two days, a month, ages)</td><td>for</td><td>for <b>three weeks</b></td></tr>
+        <tr><td>giờ, thứ, ngày, tháng, năm, sự kiện</td><td>since</td><td>since <b>Friday</b> / since <b>2020</b></td></tr>
+        <tr><td>mệnh đề "S + V quá khứ"</td><td>since</td><td>since <b>she moved here</b></td></tr>
+        <tr><td>ago, in 2015, yesterday</td><td>When + quá khứ đơn</td><td>She arrived <b>two days ago</b>.</td></tr>
+      </table></div>
+
+      <h2>1.8 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>for / since (Unit 12)</th><th>ago (Unit 5)</th></tr>
+        <tr><td>Ý nghĩa</td><td>kéo dài từ quá khứ <b>đến nay</b></td><td>thời điểm <b>cách đây</b> bao lâu</td></tr>
+        <tr><td>Thì</td><td>hiện tại hoàn thành</td><td>quá khứ đơn</td></tr>
+        <tr><td>Ví dụ</td><td>She<b>'s lived</b> here <b>for</b> a year.</td><td>She <b>moved</b> here a year <b>ago</b>.</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I've worked here since three years.</td><td class="yes">I've worked here <b>for</b> three years.</td></tr>
+        <tr><td class="no">I work here for three years.</td><td class="yes">I<b>'ve worked</b> here for three years.</td></tr>
+        <tr><td class="no">I've lived here for all my life.</td><td class="yes">I've lived here <b>all my life</b>.</td></tr>
+        <tr><td class="no">How long ago have you known her?</td><td class="yes"><b>How long have</b> you known her?</td></tr>
+        <tr><td class="no">When have you started learning English?</td><td class="yes">When <b>did</b> you <b>start</b> learning English?</td></tr>
+        <tr><td class="no">It's two years since I have seen him.</td><td class="yes">It's two years since I <b>saw</b> him.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 11</b> (How long have you (been)...?) · <b>Units 7–8</b> (hiện tại hoàn thành) · <b>Unit 5</b> (quá khứ đơn) · <b>Unit 13–14</b> (hiện tại hoàn thành vs quá khứ).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">💼 <b class="en">I've worked at this company <mark>for</mark> five years.</b> <span class="note">(phỏng vấn — nói kinh nghiệm)</span></div>
+      <div class="ex">🏠 <b class="en">We've lived in Da Nang <mark>since</mark> 2018.</b> <span class="note">(giới thiệu bản thân)</span></div>
+      <div class="ex">⏰ <b class="en">— How long have you been waiting? — <mark>Since</mark> ten o'clock.</b> <span class="note">(hẹn gặp bạn bè)</span></div>
+      <div class="ex">📚 <b class="en">When did you start learning English? — Three years <mark>ago</mark>.</b> <span class="note">(IELTS Speaking Part 1)</span></div>
+      <div class="ex">👫 <b class="en">They've known each other <mark>since</mark> they were at school.</b> <span class="note">(kể về bạn thân)</span></div>
+      <div class="ex">🎬 <b class="en"><mark>It's ages since</mark> I went to the cinema.</b> <span class="note">(than thở trong hội thoại)</span></div>
+      <div class="ex">🤒 <b class="en">I haven't felt well <mark>for</mark> a few days.</b> <span class="note">(đi khám bác sĩ)</span></div>
+      <div class="ex">🏡 <b class="en">My grandmother has lived in this village <mark>all her life</mark>.</b> <span class="note">(không dùng for all)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>For = "trong" bao lâu</b> (độ dài) · <b>Since = "từ" khi nào</b> (điểm mốc). Dịch được "trong" → for; dịch được "từ" → since.</li>
+        <li><b>"Since" đi với "start point"</b> — hai chữ S. Since Sunday, since summer, since school.</li>
+        <li><b>How long = thước dây</b>, đo từ quá khứ đến hiện tại → hiện tại hoàn thành. <b>When = cái đinh</b> đóng vào một điểm trên lịch → quá khứ đơn.</li>
+        <li>Câu "It's ... since ..." = "đã ... rồi kể từ khi ..." → sau since là <b>quá khứ đơn</b>.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Điền for/since: chỉ cần nhìn từ ngay sau chỗ trống — có <b>số lượng / a / ages</b> → for; có <b>tên ngày/giờ/năm hoặc mệnh đề</b> → since.</li>
+        <li>Thấy <b>for/since</b> trong câu → động từ chính gần như chắc chắn là <b>have/has + V3</b> hoặc <b>have/has been + V-ing</b>.</li>
+        <li>Thấy <b>ago</b> → loại ngay các đáp án hiện tại hoàn thành.</li>
+        <li>Dạng viết lại câu: <i>I haven't seen her for a year</i> ⇄ <i>It's a year since I last saw her</i> ⇄ <i>The last time I saw her was a year ago</i>.</li>
+        <li>Bẫy: <i>since last week</i> (mốc) nhưng <i>for the last week</i> (khoảng) — cả hai đều đúng!</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I live here since 2015.</td><td class="yes">I<b>'ve lived</b> here since 2015.</td><td class="why">kéo dài đến nay → hiện tại hoàn thành</td></tr>
+        <tr><td class="no">I've studied English since five years.</td><td class="yes">... <b>for</b> five years.</td><td class="why">five years là khoảng → for</td></tr>
+        <tr><td class="no">I've known him for 2010.</td><td class="yes">... <b>since</b> 2010.</td><td class="why">2010 là mốc → since</td></tr>
+        <tr><td class="no">How long time have you lived here?</td><td class="yes"><b>How long</b> have you lived here?</td><td class="why">không thêm "time" sau How long</td></tr>
+        <tr><td class="no">How long do you know her?</td><td class="yes">How long <b>have</b> you <b>known</b> her?</td><td class="why">dịch từ "bạn biết cô ấy bao lâu" → sai thì</td></tr>
+        <tr><td class="no">When have you arrived?</td><td class="yes">When <b>did</b> you arrive?</td><td class="why">When → quá khứ đơn</td></tr>
+        <tr><td class="no">I've worked here for all my life.</td><td class="yes">I've worked here <b>all my life</b>.</td><td class="why">không dùng for + all</td></tr>
+        <tr><td class="no">It's a long time since I don't see her.</td><td class="yes">It's a long time since I <b>saw</b> her.</td><td class="why">mẫu này tự mang nghĩa phủ định</td></tr>
+        <tr><td class="no">I haven't eaten pho since a month.</td><td class="yes">... <b>for</b> a month.</td><td class="why">a month = độ dài</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> giới thiệu 3 điều với for/since: <i>"I've lived in Hanoi since 2019. I've worked as a designer for four years. I've known my best friend since high school."</i></li>
+        <li><b>Viết:</b> mỗi ngày 2 câu "It's ... since ...": <i>It's three months since I went swimming.</i></li>
+        <li><b>Hỏi lại người khác:</b> luyện cặp <i>When did you...? / How long have you...?</i> khi trò chuyện với đồng nghiệp.</li>
+        <li><b>CV / LinkedIn:</b> <i>"I have been working in marketing since 2021."</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3 ngày, 7 ngày và 14 ngày; ưu tiên nút "Làm lại câu sai". Liên quan: <b>Unit 11</b> (How long have you (been)...?), <b>Units 13–14</b> (hiện tại hoàn thành vs quá khứ đơn).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit12.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 12 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 12 – For and since | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit12.html';
+  var KEY = 'egu4_unit12_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền for / since / thì đúng', desc:'Điền for hoặc since, hoặc chia động từ trong ngoặc.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 12.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 12 Exercises)', desc:'Bài 12.1 → 12.4 theo dạng bài của sách Murphy (câu đã viết lại), kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I\'ve been learning Korean ______ six months.',
+      opts:['since','for','from','ago'], a:1,
+      exp:'"six months" là một KHOẢNG thời gian (độ dài) → for. since chỉ đi với mốc bắt đầu.' },
+    { id:'a2', sec:'A', type:'mcq', q:'She has worked at the hospital ______ 2019.',
+      opts:['for','ago','since','during'], a:2,
+      exp:'2019 là MỐC bắt đầu → since. "for 2019" sai vì 2019 không phải độ dài.' },
+    { id:'a3', sec:'A', type:'mcq', q:'______ did you start your new job?',
+      opts:['When','How long','Since when have','How long ago have'], a:0,
+      exp:'Hỏi một thời điểm trong quá khứ + "did" → When did...? How long dùng với hiện tại hoàn thành (How long have you...?).' },
+    { id:'a4', sec:'A', type:'mcq', q:'How long ______ each other?',
+      opts:['do you know','did you know','have you known','are you knowing'], a:2,
+      exp:'How long hỏi độ dài từ quá khứ đến nay → hiện tại hoàn thành: How long have you known each other? know là động từ trạng thái nên không dùng tiếp diễn.' },
+    { id:'a5', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I\'ve lived here for all my life.','I\'ve lived here all my life.','I live here all my life.'], a:1,
+      exp:'Không dùng "for + all" (for all my life / for all day). Nói: I\'ve lived here all my life. Câu 3 sai thì (cần hiện tại hoàn thành).' },
+    { id:'a6', sec:'A', type:'mcq', q:'It\'s three years since I ______ my old school friends.',
+      opts:['last saw','have last seen','haven\'t seen','see'], a:0,
+      exp:'Mẫu It\'s + khoảng thời gian + since + QUÁ KHỨ ĐƠN: It\'s three years since I last saw them (= I haven\'t seen them for three years).' },
+    { id:'a7', sec:'A', type:'mcq', q:'They haven\'t had a day off ______ weeks.',
+      opts:['since','in','ago','from'], a:1,
+      exp:'Trong câu PHỦ ĐỊNH có thể dùng "in" thay cho "for": haven\'t had a day off in weeks = for weeks. "since weeks" sai vì weeks là độ dài.' },
+    { id:'a8', sec:'A', type:'mcq', q:'— When did it start snowing? — It started ______.',
+      opts:['for two hours','since two hours','two hours ago','two hours'], a:2,
+      exp:'Trả lời câu hỏi When + quá khứ đơn → dùng mốc thời gian / "ago": It started two hours ago. for/since dùng cho How long.' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'My uncle has been a taxi driver ______ twenty years. (for/since)',
+      acc:['for'], ans:'for',
+      exp:'twenty years = khoảng thời gian → for.' },
+    { id:'b2', sec:'B', type:'fill', q:'We\'ve been waiting here ______ half past six. (for/since)',
+      acc:['since'], ans:'since',
+      exp:'half past six = mốc giờ bắt đầu → since.' },
+    { id:'b3', sec:'B', type:'fill', q:'Lan has felt much better ______ she started doing yoga. (for/since)',
+      acc:['since'], ans:'since',
+      exp:'Sau chỗ trống là một mệnh đề quá khứ (she started...) = mốc bắt đầu → since.' },
+    { id:'b4', sec:'B', type:'fill', q:'I haven\'t had a proper holiday ______ ages. (for/since)',
+      acc:['for','in'], ans:'for',
+      exp:'ages = "rất lâu" (một khoảng) → for. Vì câu phủ định nên "in ages" cũng chấp nhận.' },
+    { id:'b5', sec:'B', type:'fill', q:'Hoa ______ (know) Minh since they were children.',
+      acc:['has known',"'s known"], ans:'has known',
+      exp:'since + mốc → hiện tại hoàn thành; know là động từ trạng thái → has known (không dùng has been knowing).' },
+    { id:'b6', sec:'B', type:'fill', q:'When ______ (you / move) to Saigon?',
+      acc:['did you move'], ans:'did you move',
+      exp:'When hỏi thời điểm cụ thể trong quá khứ → quá khứ đơn: When did you move...?' },
+    { id:'b7', sec:'B', type:'fill', q:'How long ______ (they / be) married?',
+      acc:['have they been'], ans:'have they been',
+      exp:'How long + hiện tại hoàn thành: How long have they been married? (họ đã cưới được bao lâu tính đến nay).' },
+    { id:'b8', sec:'B', type:'fill', q:'It\'s two months since I ______ (last / go) to the gym.',
+      acc:['last went'], ans:'last went',
+      exp:'Sau "It\'s + khoảng TG + since" dùng quá khứ đơn: since I last went.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (has / here / she / worked / since / April)',
+      tokens:['She','has','worked','here','since','April'],
+      acc:['she has worked here since april'], ans:'She has worked here since April.',
+      exp:'S + has + V3 + nơi chốn + since + mốc. April là mốc → since.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (long / you / how / known / have / Mai)',
+      tokens:['How','long','have','you','known','Mai'],
+      acc:['how long have you known mai'], ans:'How long have you known Mai?',
+      exp:'How long + have + S + V3? → hỏi độ dài đến hiện tại.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (ages / it\'s / since / we / ate / out)',
+      tokens:["It's",'ages','since','we','ate','out'],
+      acc:["it's ages since we ate out"], ans:'It\'s ages since we ate out.',
+      exp:'It\'s + khoảng TG + since + quá khứ đơn (ate). Nghĩa: lâu lắm rồi chúng ta không đi ăn ngoài.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (did / when / first / they / meet)',
+      tokens:['When','did','they','first','meet'],
+      acc:['when did they first meet'], ans:'When did they first meet?',
+      exp:'When + did + S + (first) + V nguyên dạng? → hỏi thời điểm quá khứ.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (haven\'t / I / for / him / heard from / a week)',
+      tokens:['I',"haven't",'heard','from','him','for','a','week'],
+      acc:["i haven't heard from him for a week"], ans:'I haven\'t heard from him for a week.',
+      exp:'Câu phủ định hiện tại hoàn thành + for + khoảng thời gian (không bỏ for trong câu phủ định).' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: How long have you been living in this flat?  B: ______ last summer.',
+      acc:['since'], ans:'Since',
+      exp:'last summer là mốc bắt đầu → Since last summer.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: ______ did you buy that bike?  B: About a month ago.',
+      acc:['when'], ans:'When',
+      exp:'Câu trả lời có "ago" + câu hỏi có "did" → When did you buy...?' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Is Nam still ill?  B: Yes, he ______ (be) ill for almost a week.',
+      acc:['has been',"'s been"], ans:'has been',
+      exp:'Vẫn còn ốm đến bây giờ + for → hiện tại hoàn thành: he has been ill for almost a week.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Do you still play chess?  B: Not really. It\'s years ______ I last played.',
+      acc:['since'], ans:'since',
+      exp:'Mẫu It\'s years since I last played = I haven\'t played for years.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu về bản thân: 2 câu dùng for, 1 câu dùng since (nơi ở, công việc, sở thích...).',
+      sample:'I\'ve lived in Hanoi for six years. I\'ve been playing badminton for a long time. I\'ve worked as a nurse since 2020.',
+      exp:'Kiểm tra: động từ ở hiện tại hoàn thành (have/has + V3 hoặc have/has been + V-ing); for + độ dài, since + mốc.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết một cặp câu hỏi về một người bạn: 1 câu When...? và 1 câu How long...?, kèm câu trả lời.',
+      sample:'— When did you meet Linh? — We met at university in 2017. — How long have you known her? — I\'ve known her for about eight years.',
+      exp:'When → quá khứ đơn (did + V). How long → hiện tại hoàn thành (have + V3).' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu "It\'s ... since ..." về những việc lâu rồi bạn không làm.',
+      sample:'It\'s ages since I went to the beach. It\'s been two years since I last visited my grandparents.',
+      exp:'It\'s / It\'s been + khoảng TG + since + quá khứ đơn. Không dùng "since I haven\'t...".' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'The museum has been closed ______ last Monday. (for/since)',
+      acc:['since'], ans:'since',
+      exp:'last Monday = mốc → since.' },
+    { id:'f2', sec:'F', type:'fill', q:'I\'ve had this phone ______ about three years. (for/since)',
+      acc:['for'], ans:'for',
+      exp:'about three years = khoảng thời gian → for.' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['When have you arrived?','When did you arrive?','How long did you arrive?'], a:1,
+      exp:'When + quá khứ đơn. Không dùng hiện tại hoàn thành với When.' },
+    { id:'f4', sec:'F', type:'fill', q:'Viết lại: "I haven\'t seen Quang for a year." → It\'s a year since ______.',
+      acc:['i last saw quang','i saw quang','i last saw him','i saw him'], ans:'I last saw Quang',
+      exp:'It\'s + khoảng TG + since + quá khứ đơn: It\'s a year since I (last) saw Quang.' },
+    { id:'f5', sec:'F', type:'mcq', q:'Chọn câu SAI:',
+      opts:['We\'ve been friends since 2015.','We\'ve been friends for ten years.','We\'ve been friends since ten years.'], a:2,
+      exp:'ten years là độ dài → phải dùng for. "since ten years" là lỗi rất phổ biến.' },
+    { id:'f6', sec:'F', type:'fill', q:'How long ______ (it / rain)? — Since lunchtime.',
+      acc:['has it been raining'], ans:'has it been raining',
+      exp:'Hành động liên tục kéo dài đến nay → hiện tại hoàn thành tiếp diễn: How long has it been raining?' },
+    { id:'f7', sec:'F', type:'mcq', q:'Linh ______ in Australia since 2021.',
+      opts:['lives','is living','has lived','lived'], a:2,
+      exp:'since 2021 (từ 2021 đến nay) → hiện tại hoàn thành: has lived.' },
+    { id:'f8', sec:'F', type:'fill', q:'Dịch: "Tôi đã không ăn thịt được hai năm rồi."',
+      acc:["i haven't eaten meat for two years","i have not eaten meat for two years","i haven't eaten meat in two years","i haven't had meat for two years"],
+      ans:'I haven\'t eaten meat for two years.',
+      exp:'Phủ định hiện tại hoàn thành + for + khoảng thời gian (có thể dùng "in two years" trong câu phủ định).' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 12.1 – Write for or since',
+      q:'1. Lan has lived in Hue ______ 2016.', acc:['since'], ans:'since',
+      exp:'2016 là mốc năm → since.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 12.1 – Write for or since',
+      q:'2. Minh has worked in Japan ______ six years.', acc:['for'], ans:'for',
+      exp:'six years = độ dài → for.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 12.1 – Write for or since',
+      q:'3. We\'ve been standing in this queue ______ forty minutes.', acc:['for'], ans:'for',
+      exp:'forty minutes = khoảng thời gian → for.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 12.1 – Write for or since',
+      q:'4. Tuan has been looking for a flat ______ he moved to the city.', acc:['since'], ans:'since',
+      exp:'Sau chỗ trống là mệnh đề quá khứ (he moved...) → since.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 12.1 – Write for or since',
+      q:'5. I haven\'t been to a concert ______ ages.', acc:['for','in'], ans:'for',
+      exp:'ages = khoảng thời gian dài → for (câu phủ định nên "in ages" cũng được).' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 12.1 – Write for or since',
+      q:'6. Where\'s Peter? I haven\'t heard from him ______ last month.', acc:['since'], ans:'since',
+      exp:'last month = mốc → since.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 12.1 – Write for or since',
+      q:'7. The shop is closed. It\'s been closed ______ Tuesday.', acc:['since'], ans:'since',
+      exp:'Tuesday = ngày bắt đầu → since.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 12.1 – Write for or since',
+      q:'8. The garden is very dry. It hasn\'t rained ______ a couple of weeks.', acc:['for','in'], ans:'for',
+      exp:'a couple of weeks = khoảng thời gian → for.' },
+
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 12.2 – Write questions with how long and when',
+      q:'Nam is learning the guitar. (how long / learn?)',
+      acc:['how long has nam been learning the guitar','how long has he been learning the guitar','how long has nam been learning guitar'],
+      ans:'How long has Nam been learning the guitar?',
+      exp:'Việc đang tiếp diễn đến nay → How long + has + S + been + V-ing?' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 12.2 – Write questions with how long and when',
+      q:'Nam is learning the guitar. (when / start?)',
+      acc:['when did nam start learning the guitar','when did nam start to learn the guitar','when did he start learning the guitar','when did nam start learning guitar'],
+      ans:'When did Nam start learning the guitar?',
+      exp:'When + quá khứ đơn: When did Nam start learning...? (start + V-ing hoặc to V đều được).' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 12.2 – Write questions with how long and when',
+      q:'I know Hoa. (how long / you / know?)',
+      acc:['how long have you known hoa','how long have you known her'],
+      ans:'How long have you known Hoa?',
+      exp:'know là động từ trạng thái → How long have you known (không dùng been knowing).' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 12.2 – Write questions with how long and when',
+      q:'I know Hoa. (when / you / first / meet?)',
+      acc:['when did you first meet hoa','when did you and hoa first meet','when did you first meet her'],
+      ans:'When did you first meet Hoa?',
+      exp:'When + did + S + first + V? → quá khứ đơn cho thời điểm gặp lần đầu.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 12.2 – Write questions with how long and when',
+      q:'Tom and Mai are married. (how long?)',
+      acc:['how long have tom and mai been married','how long have they been married'],
+      ans:'How long have Tom and Mai been married?',
+      exp:'be married (trạng thái) → How long have ... been married?' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 12.2 – Write questions with how long and when',
+      q:'Tom and Mai are married. (when?)',
+      acc:['when did tom and mai get married','when did tom and mai marry','when did they get married'],
+      ans:'When did Tom and Mai get married?',
+      exp:'Thời điểm cưới (sự kiện) → When did ... get married? (hoặc marry).' },
+
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
+      q:'Linh is ill. She became ill on Tuesday. → She ______ Tuesday.',
+      acc:['has been ill since'], ans:'has been ill since',
+      exp:'Tuesday là mốc → She has been ill since Tuesday.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
+      q:'Linh is ill. She became ill three days ago. → She ______ three days.',
+      acc:['has been ill for'], ans:'has been ill for',
+      exp:'three days là độ dài → She has been ill for three days.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
+      q:'Quang is married. He\'s been married for two years. → He got ______.',
+      acc:['married two years ago'], ans:'married two years ago',
+      exp:'Chuyển sang quá khứ đơn + ago: He got married two years ago.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
+      q:'You have a backache. It started when you got up. → I\'ve ______ I got up.',
+      acc:['had a backache since','had backache since'], ans:'had a backache since',
+      exp:'have (bị đau) là trạng thái → I\'ve had a backache since I got up.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
+      q:'Ha has been in Korea for the last two weeks. → She went ______.',
+      acc:['to korea two weeks ago'], ans:'to Korea two weeks ago',
+      exp:'went (quá khứ đơn) + ago: She went to Korea two weeks ago.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
+      q:'You\'re working in a bank. You started a year ago. → I\'ve ______.',
+      acc:['been working in a bank for a year','worked in a bank for a year','been working in a bank for one year','worked in a bank for one year'],
+      ans:'been working in a bank for a year',
+      exp:'Vẫn đang làm → I\'ve been working (hoặc I\'ve worked) in a bank for a year.' },
+
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 12.4 – Write B\'s sentences',
+      q:'A: Do you often see your cousins?  B: No, ______ (see / about a year)',
+      acc:["i haven't seen them for about a year","i have not seen them for about a year","i haven't seen my cousins for about a year"],
+      ans:'I haven\'t seen them for about a year.',
+      exp:'Phủ định hiện tại hoàn thành + for + khoảng thời gian.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 12.4 – Write B\'s sentences',
+      q:'A: Do you often play football?  B: No, ______ (play / a long time)',
+      acc:["i haven't played football for a long time","i have not played football for a long time","i haven't played for a long time"],
+      ans:'I haven\'t played football for a long time.',
+      exp:'a long time = khoảng → for; câu phủ định nên phải giữ for.' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 12.4 – Write B\'s sentences',
+      q:'A: Do you often eat sushi?  B: No, ______ (eat / ages)',
+      acc:["i haven't eaten sushi for ages","i have not eaten sushi for ages","i haven't had sushi for ages","i haven't eaten sushi in ages"],
+      ans:'I haven\'t eaten sushi for ages.',
+      exp:'for ages = rất lâu rồi; động từ eat → V3 eaten.' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 12.4 – Write B\'s sentences',
+      q:'Viết lại câu trả lời về anh chị em họ bằng It\'s ... since ...: No, ______.',
+      acc:["it's about a year since i last saw them","it's about a year since i saw them","it's been about a year since i last saw them","it's been about a year since i saw them","it is about a year since i last saw them"],
+      ans:'It\'s about a year since I last saw them.',
+      exp:'It\'s + khoảng TG + since + quá khứ đơn (saw).' },
+    { id:'h25', sec:'G', type:'fill', sub:'Bài 12.4 – Write B\'s sentences',
+      q:'Viết lại câu trả lời về bóng đá bằng It\'s ... since ...: No, ______.',
+      acc:["it's a long time since i last played football","it's a long time since i played football","it's been a long time since i last played football","it's been a long time since i played football","it is a long time since i played football"],
+      ans:'It\'s a long time since I last played football.',
+      exp:'It\'s a long time since + quá khứ đơn (played).' },
+    { id:'h26', sec:'G', type:'fill', sub:'Bài 12.4 – Write B\'s sentences',
+      q:'Viết lại câu trả lời về sushi bằng It\'s ... since ...: No, ______.',
+      acc:["it's ages since i last ate sushi","it's ages since i ate sushi","it's been ages since i last ate sushi","it's been ages since i ate sushi","it is ages since i ate sushi","it's ages since i had sushi"],
+      ans:'It\'s ages since I last ate sushi.',
+      exp:'It\'s ages since + quá khứ đơn (ate, không phải have eaten).' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

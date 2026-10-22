@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 46 – Have something done | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 46 – Have something done</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">53 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p><b>Have something done</b> diễn tả việc ta <b>sắp xếp / trả tiền cho người khác làm</b> một việc gì đó cho mình (cắt tóc, sửa xe, sơn nhà…). Ngoài ra nó còn có nghĩa thứ hai: <b>điều (thường là không hay) xảy ra với ta hoặc đồ của ta</b>.</p>
+      <div class="ex"><b class="en">Hung's motorbike broke down, so he took it to a garage.<br>Hung <mark>had his motorbike repaired</mark> yesterday.</b><br>Hung <u>không tự sửa</u> — anh ấy nhờ/thuê thợ sửa. So sánh: <i>Hung <b>repaired</b> his motorbike</i> = anh ấy tự sửa.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">have (chia theo thì) + tân ngữ (vật) + V3
+get  (chia theo thì) + tân ngữ (vật) + V3      (thân mật hơn)
+
+   Lisa had          the roof        repaired yesterday.
+   Where did you have  your hair     cut?
+   We are having     the house       painted this week.
+   You should get    your eyes       tested.</div>
+      <div class="scroll"><table>
+        <tr><th>Thì</th><th>Ví dụ</th></tr>
+        <tr><td>Present simple</td><td>How often do you <b>have</b> your car <b>serviced</b>?</td></tr>
+        <tr><td>Present continuous</td><td>We<b>'re having</b> a new kitchen <b>fitted</b>.</td></tr>
+        <tr><td>Past simple</td><td>I <b>had</b> my phone screen <b>replaced</b> last week.</td></tr>
+        <tr><td>Present perfect</td><td>Have you <b>had</b> your hair <b>cut</b>? It looks nice.</td></tr>
+        <tr><td>Modal / to</td><td>You should <b>have</b> that jacket <b>cleaned</b>. · I need <b>to get</b> this <b>printed</b>.</td></tr>
+        <tr><td>V-ing</td><td>I don't like <b>having</b> my photo <b>taken</b>.</td></tr>
+      </table></div>
+      <p class="note">⚠️ <b>Trật tự từ:</b> <b>tân ngữ đứng TRƯỚC V3</b>. <i>I had my hair cut</i> ✅ — <i>I had cut my hair</i> ❌ (= tôi đã tự cắt, quá khứ hoàn thành).</p>
+
+      <h2>1.3 · A. Tự làm vs nhờ người khác làm</h2>
+      <div class="scroll"><table>
+        <tr><th>Tự làm</th><th>Nhờ / thuê người khác</th></tr>
+        <tr><td>Lan <b>cut</b> her hair.</td><td>Lan <b>had her hair cut</b>.</td></tr>
+        <tr><td>Did you <b>make</b> that dress?</td><td>Did you <b>have</b> that dress <b>made</b>?</td></tr>
+        <tr><td>I <b>cleaned</b> the carpets.</td><td>I <b>had</b> the carpets <b>cleaned</b>.</td></tr>
+      </table></div>
+
+      <h2>1.4 · B. Get something done</h2>
+      <ul>
+        <li>Nghĩa giống have, thường dùng trong văn nói: <i>When are you going to <b>get</b> the roof <b>repaired</b>?</i></li>
+        <li><i>I think you should <b>get</b> your hair <b>cut</b> really short.</i></li>
+      </ul>
+
+      <h2>1.5 · C. Nghĩa thứ hai: bị (điều không hay xảy ra)</h2>
+      <ul>
+        <li><i>They <b>had their bags stolen</b> while travelling.</i> = their bags were stolen (họ không hề "sắp xếp" việc này!).</li>
+        <li><i>He <b>had his nose broken</b> in a fight.</i> · <i>Have you ever <b>had your phone stolen</b>?</i></li>
+      </ul>
+
+      <h2>1.6 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Dấu hiệu</th><th>Gợi ý</th></tr>
+        <tr><td>Dịch vụ: hairdresser, garage, dentist, tailor, builder…</td><td>have / get + vật + V3</td></tr>
+        <tr><td>"didn't do it himself / herself", "by a professional"</td><td>had something done</td></tr>
+        <tr><td>stolen, broken, damaged, searched (sự cố)</td><td>nghĩa "bị"</td></tr>
+      </table></div>
+
+      <h2>1.7 · Lỗi hay gặp</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I cut my hair at the hairdresser's.</td><td class="yes">I <b>had my hair cut</b> at the hairdresser's.</td></tr>
+        <tr><td class="no">I had repaired my car yesterday.</td><td class="yes">I had <b>my car repaired</b> yesterday.</td></tr>
+        <tr><td class="no">She had her nails do.</td><td class="yes">She had her nails <b>done</b>.</td></tr>
+        <tr><td class="no">We are having painted the house.</td><td class="yes">We are having <b>the house painted</b>.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Units 42–44</b> (Passive) · <b>Unit 44D</b> (get + V3) · <b>Appendix 1</b> (V3 bất quy tắc).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">💇 <b class="en">I<mark>'m having my hair cut</mark> this afternoon.</b> <span class="note">(đời sống — lịch hẹn)</span></div>
+      <div class="ex">🛵 <b class="en">You should <mark>get your brakes checked</mark> before the trip.</b> <span class="note">(đời sống — lời khuyên)</span></div>
+      <div class="ex">👔 <b class="en">I <mark>had this suit made</mark> by a tailor in Hoi An.</b> <span class="note">(du lịch — may đo)</span></div>
+      <div class="ex">🦷 <b class="en">How often do you <mark>have your teeth cleaned</mark>?</b> <span class="note">(sức khỏe — hỏi thói quen)</span></div>
+      <div class="ex">📄 <b class="en">We need to <mark>get this contract translated</mark> by Friday.</b> <span class="note">(công việc — giao việc)</span></div>
+      <div class="ex">🏠 <b class="en">We<mark>'ve just had</mark> solar panels <mark>installed</mark>.</b> <span class="note">(IELTS Speaking — nói về nhà ở)</span></div>
+      <div class="ex">🎒 <b class="en">I <mark>had my wallet stolen</mark> on the bus.</b> <span class="note">(nghĩa "bị" — kể sự cố)</span></div>
+      <div class="ex">🛂 <b class="en">We all <mark>had our bags searched</mark> at the border.</b> <span class="note">(du lịch — nghĩa "bị")</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>Công thức "H-O-P":</b> <b>H</b>ave + <b>O</b>bject + <b>P</b>ast participle.</li>
+        <li><b>Thì nằm ở have:</b> had (quá khứ), am having (đang), have had (vừa xong), will have…</li>
+        <li><b>Tiếng Việt "đi cắt tóc", "đi sửa xe"</b> → tiếng Anh gần như luôn là <i>have/get … cut / repaired</i>.</li>
+        <li><b>Câu hỏi:</b> dùng trợ động từ cho have: <i><b>Did</b> you <b>have</b> it fixed? <b>Do</b> you <b>have</b> it delivered?</i></li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Bài sắp xếp: tìm <b>have/had</b> → ngay sau là <b>vật</b> → rồi mới đến <b>V3</b> → cuối cùng trạng từ thời gian.</li>
+        <li>Bài viết lại "X didn't do it himself" → <i>X had it done</i>.</li>
+        <li>Phân biệt <i>had my car repaired</i> (nhờ sửa) với <i>had repaired my car</i> (quá khứ hoàn thành, tự sửa).</li>
+        <li>Nhớ <b>V3 bất quy tắc</b>: cut, made, built, done, stolen, broken, taken.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I cut my hair yesterday. (đi tiệm)</td><td class="yes">I <b>had my hair cut</b> yesterday.</td><td class="why">không tự cắt</td></tr>
+        <tr><td class="no">I repaired my phone at the shop.</td><td class="yes">I <b>had my phone repaired</b>.</td><td class="why">thợ sửa</td></tr>
+        <tr><td class="no">I had cut my hair.</td><td class="yes">I had <b>my hair cut</b>.</td><td class="why">sai trật tự</td></tr>
+        <tr><td class="no">She has her car wash every week.</td><td class="yes">She has her car <b>washed</b>.</td><td class="why">cần V3</td></tr>
+        <tr><td class="no">Did you had it fixed?</td><td class="yes">Did you <b>have</b> it fixed?</td><td class="why">did + V nguyên dạng</td></tr>
+        <tr><td class="no">I was stolen my bag.</td><td class="yes">I <b>had my bag stolen</b>. / My bag was stolen.</td><td class="why">người không bị lấy cắp</td></tr>
+        <tr><td class="no">We are painting the house. (thuê thợ)</td><td class="yes">We are <b>having the house painted</b>.</td><td class="why">nhờ người khác</td></tr>
+        <tr><td class="no">I need get my eyes test.</td><td class="yes">I need <b>to get</b> my eyes <b>tested</b>.</td><td class="why">need to + get + V3</td></tr>
+        <tr><td class="no">He had broken his nose in a fight.</td><td class="yes">He <b>had his nose broken</b> in a fight.</td><td class="why">bị người khác đánh gãy</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Lịch tuần:</b> nói 3 việc bạn nhờ người khác làm: <i>I have my clothes washed at the laundry. I get my motorbike serviced every 3 months.</i></li>
+        <li><b>Công việc:</b> <i>Could you get these documents signed by the director?</i></li>
+        <li><b>Kể sự cố:</b> <i>I had my phone stolen in Bangkok.</i></li>
+        <li><b>IELTS Speaking (Part 1 – Hairstyles / Clothes):</b> <i>I usually have my hair cut every month.</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại bài tập sau <b>3 / 7 / 14 ngày</b>, chú ý trật tự <i>have + vật + V3</i>. Liên quan: <b>Units 42–44</b> (Passive).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit46.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 46 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 46 – Have something done | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit46.html';
+  var KEY = 'egu4_unit46_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền từ / chia động từ',    desc:'Dùng cấu trúc have / get + tân ngữ + V3 với thì phù hợp.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 46.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 46 Exercises)', desc:'Bài 46.1 → 46.4 theo đúng dạng bài của sách Murphy, câu đã được viết lại.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I don\'t cut my own hair. I ______ every month.',
+      opts:['cut it','have it cut','have cut it','am cut'], a:1,
+      exp:'Nhờ thợ cắt → have + tân ngữ (it) + V3 (cut).' },
+    { id:'a2', sec:'A', type:'mcq', q:'Chọn câu có nghĩa "Tôi đã thuê người sửa máy tính":',
+      opts:['I had repaired my computer.','I repaired my computer.','I was repaired my computer.','I had my computer repaired.'], a:3,
+      exp:'had + my computer + repaired. "I had repaired" là quá khứ hoàn thành – tự sửa.' },
+    { id:'a3', sec:'A', type:'mcq', q:'We ______ the house painted at the moment, so it\'s a bit messy.',
+      opts:['are having','have','had','are painting'], a:0,
+      exp:'at the moment → hiện tại tiếp diễn của have: are having + the house + painted.' },
+    { id:'a4', sec:'A', type:'mcq', q:'Where ______ your suit made?',
+      opts:['did you','had you','did you have','have you'], a:2,
+      exp:'Câu hỏi quá khứ: Where did you have + tân ngữ + V3?' },
+    { id:'a5', sec:'A', type:'mcq', q:'Your eyes look tired. You should ______ tested.',
+      opts:['get your eyes','get tested your eyes','your eyes get','have tested your eyes'], a:0,
+      exp:'get + tân ngữ + V3: get your eyes tested.' },
+    { id:'a6', sec:'A', type:'mcq', q:'"Mai had her bag stolen on the train." nghĩa là:',
+      opts:['Mai thuê người lấy túi.','Mai đã lấy cắp túi.','Túi của Mai bị lấy cắp.','Mai đã tìm thấy túi.'], a:2,
+      exp:'Nghĩa thứ hai của have something done: điều không hay xảy ra với ta = her bag was stolen.' },
+    { id:'a7', sec:'A', type:'mcq', q:'How often do you ______ ?',
+      opts:['have serviced your car','your car serviced','have your car service','have your car serviced'], a:3,
+      exp:'have + your car + serviced (V3).' },
+    { id:'a8', sec:'A', type:'mcq', q:'I don\'t like ______ my photo taken.',
+      opts:['having','have','had','to having'], a:0,
+      exp:'like + V-ing → having + my photo + taken.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'I ______ (have / my phone screen / replace) last week. It cost a lot.',
+      acc:['had my phone screen replaced'], ans:'had my phone screen replaced',
+      exp:'Quá khứ: had + tân ngữ + V3.' },
+    { id:'b2', sec:'B', type:'fill', q:'We ______ (have / a new air conditioner / install) tomorrow.',
+      acc:["are having a new air conditioner installed","'re having a new air conditioner installed"], ans:'are having a new air conditioner installed',
+      exp:'Kế hoạch tương lai gần → hiện tại tiếp diễn: are having … installed.' },
+    { id:'b3', sec:'B', type:'fill', q:'Your hair looks great! Have you ______ (have / it / cut)?',
+      acc:['had it cut'], ans:'had it cut',
+      exp:'Hiện tại hoàn thành: have you had it cut?' },
+    { id:'b4', sec:'B', type:'fill', q:'I need to ______ (get / these photos / print) for my visa.',
+      acc:['get these photos printed'], ans:'get these photos printed',
+      exp:'need to + get + tân ngữ + V3.' },
+    { id:'b5', sec:'B', type:'fill', q:'She ______ (have / her nails / do) every two weeks.',
+      acc:['has her nails done'], ans:'has her nails done',
+      exp:'Thói quen, she → has + her nails + done.' },
+    { id:'b6', sec:'B', type:'fill', q:'Tuan ______ (have / his arm / break) in a football match last year.',
+      acc:['had his arm broken'], ans:'had his arm broken',
+      exp:'Nghĩa "bị": had his arm broken = his arm was broken.' },
+    { id:'b7', sec:'B', type:'fill', q:'You should ______ (have / that jacket / clean). It\'s really dirty.',
+      acc:['have that jacket cleaned'], ans:'have that jacket cleaned',
+      exp:'should + have + tân ngữ + V3.' },
+    { id:'b8', sec:'B', type:'fill', q:'Did you ______ (have / the pizza / deliver) or did you pick it up?',
+      acc:['have the pizza delivered'], ans:'have the pizza delivered',
+      exp:'Did you + have (nguyên dạng) + tân ngữ + V3?' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (I / had / my / car / washed / yesterday)',
+      tokens:['I','had','my','car','washed','yesterday'],
+      acc:['i had my car washed yesterday'], ans:'I had my car washed yesterday.',
+      exp:'have + tân ngữ + V3 + thời gian.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (where / do / you / have / your hair / cut)',
+      tokens:['Where','do','you','have','your','hair','cut'],
+      acc:['where do you have your hair cut'], ans:'Where do you have your hair cut?',
+      exp:'Wh- + do + you + have + tân ngữ + V3?' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (they\'re / having / a / swimming pool / built)',
+      tokens:["They're",'having','a','swimming','pool','built'],
+      acc:["they're having a swimming pool built"], ans:'They\'re having a swimming pool built.',
+      exp:'are having + tân ngữ + V3.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (we / need / to / get / the roof / fixed)',
+      tokens:['We','need','to','get','the','roof','fixed'],
+      acc:['we need to get the roof fixed'], ans:'We need to get the roof fixed.',
+      exp:'need to + get + tân ngữ + V3.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (he / had / his / passport / stolen / in Paris)',
+      tokens:['He','had','his','passport','stolen','in','Paris'],
+      acc:['he had his passport stolen in paris'], ans:'He had his passport stolen in Paris.',
+      exp:'Nghĩa "bị": had + tân ngữ + stolen.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Did you make this cake yourself?  B: No, I ______ it made at a bakery.',
+      acc:['had','got'], ans:'had',
+      exp:'had it made = nhờ tiệm làm.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: What\'s that noise next door?  B: They\'re ______ (have / their kitchen / renovate).',
+      acc:['having their kitchen renovated'], ans:'having their kitchen renovated',
+      exp:'are having + their kitchen + renovated.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Is your laptop working now?  B: Yes, I ______ (get / it / fix) on Monday.',
+      acc:['got it fixed'], ans:'got it fixed',
+      exp:'Quá khứ, get thay have: got it fixed.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Why were you so late at the airport?  B: We all ______ (have / our bags / search).',
+      acc:['had our bags searched'], ans:'had our bags searched',
+      exp:'Nghĩa "bị": had our bags searched.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu về những việc bạn thường nhờ/thuê người khác làm (cắt tóc, bảo dưỡng xe, giặt đồ…).',
+      sample:'I have my hair cut once a month. I get my motorbike serviced every three months. I have my shirts ironed at the laundry.',
+      exp:'have/get + tân ngữ + V3; chia have/get theo thì.' },
+    { id:'e2', sec:'E', type:'self', q:'Bạn sắp chuyển nhà. Viết 2 câu về những việc bạn sẽ thuê người làm (will have / am going to have…).',
+      sample:'I\'m going to have the walls painted white. I\'ll have the furniture delivered on Saturday.',
+      exp:'going to / will + have + tân ngữ + V3.' },
+    { id:'e3', sec:'E', type:'self', q:'Kể một sự cố (nghĩa "bị") dùng had + something + V3.',
+      sample:'Last year I had my phone stolen while I was shopping at a night market.',
+      exp:'had + tân ngữ + V3 = điều không hay xảy ra với đồ của mình.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'Linh didn\'t paint her flat herself. She ______.',
+      opts:['painted it','had painted it','had it painted','was painted it'], a:2,
+      exp:'had + it + painted = nhờ người sơn.' },
+    { id:'f2', sec:'F', type:'fill', q:'I lost my key, so I\'ll have to ______ (have / another key / make).',
+      acc:['have another key made'], ans:'have another key made',
+      exp:'have + tân ngữ + V3 (make – made).' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['She had cut her hair short.','She had her hair cut short.','She had her hair cutting short.','She cut her hair at the salon.'], a:1,
+      exp:'had + tân ngữ + V3. "had cut her hair" = quá khứ hoàn thành (tự cắt).' },
+    { id:'f4', sec:'F', type:'fill', q:'When was the last time you ______ (have / your teeth / check)?',
+      acc:['had your teeth checked'], ans:'had your teeth checked',
+      exp:'Quá khứ: had your teeth checked.' },
+    { id:'f5', sec:'F', type:'mcq', q:'We\'ve just ______ new windows fitted.',
+      opts:['have','having','fitted','had'], a:3,
+      exp:'Hiện tại hoàn thành: have just had + tân ngữ + V3.' },
+    { id:'f6', sec:'F', type:'fill', q:'Do you ______ (have / a newspaper / deliver) every morning?',
+      acc:['have a newspaper delivered'], ans:'have a newspaper delivered',
+      exp:'Do you + have + tân ngữ + V3?' },
+    { id:'f7', sec:'F', type:'mcq', q:'"I got my car repaired." = ',
+      opts:['I repaired my car.','My car repaired itself.','I had my car repaired.','I was repaired by my car.'], a:2,
+      exp:'get something done = have something done.' },
+    { id:'f8', sec:'F', type:'fill', q:'If you want to wear earrings, why don\'t you ______ (have / your ears / pierce)?',
+      acc:['have your ears pierced','get your ears pierced'], ans:'have your ears pierced',
+      exp:'why don\'t you + have + tân ngữ + V3?' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'mcq', sub:'Bài 46.1 – Choose the correct sentence (a) or (b)',
+      q:'Hoa is sitting in a salon; a hairdresser is cutting her hair. →',
+      opts:['Hoa is cutting her hair.','Hoa is having her hair cut.'], a:1,
+      exp:'Người khác cắt → is having her hair cut.' },
+    { id:'h2', sec:'G', type:'mcq', sub:'Bài 46.1 – Choose the correct sentence (a) or (b)',
+      q:'Nam is standing in front of a mirror with scissors in his hand. →',
+      opts:['Nam is cutting his hair.','Nam is having his hair cut.'], a:0,
+      exp:'Tự cầm kéo → tự cắt: is cutting his hair.' },
+    { id:'h3', sec:'G', type:'mcq', sub:'Bài 46.1 – Choose the correct sentence (a) or (b)',
+      q:'Quan is reading a newspaper while a man polishes his shoes. →',
+      opts:['Quan is cleaning his shoes.','Quan is having his shoes cleaned.'], a:1,
+      exp:'Người khác đánh giày → is having his shoes cleaned.' },
+    { id:'h4', sec:'G', type:'mcq', sub:'Bài 46.1 – Choose the correct sentence (a) or (b)',
+      q:'Mai is holding a camera and photographing the sunset. →',
+      opts:['Mai is having her picture taken.','Mai is taking a picture.'], a:1,
+      exp:'Mai tự chụp → is taking a picture.' },
+
+    { id:'h5', sec:'G', type:'order', sub:'Bài 46.2 – Put the words in the correct order',
+      q:'(checked / his motorbike / Hung / every six months / has)',
+      tokens:['Hung','has','his','motorbike','checked','every','six','months'],
+      acc:['hung has his motorbike checked every six months'], ans:'Hung has his motorbike checked every six months.',
+      exp:'S + has + tân ngữ + V3 + tần suất.' },
+    { id:'h6', sec:'G', type:'order', sub:'Bài 46.2 – Put the words in the correct order',
+      q:'(cost / my dress / to have / it / shortened / twenty dollars)',
+      tokens:['It','cost','twenty','dollars','to','have','my','dress','shortened'],
+      acc:['it cost twenty dollars to have my dress shortened'], ans:'It cost twenty dollars to have my dress shortened.',
+      exp:'It cost + số tiền + to have + tân ngữ + V3.' },
+    { id:'h7', sec:'G', type:'order', sub:'Bài 46.2 – Put the words in the correct order',
+      q:'(was / the last time / three years ago / had / I / my blood pressure / measured)',
+      tokens:['The','last','time','I','had','my','blood','pressure','measured','was','three','years','ago'],
+      acc:['the last time i had my blood pressure measured was three years ago'], ans:'The last time I had my blood pressure measured was three years ago.',
+      exp:'The last time + S + had + tân ngữ + V3 + was + thời gian.' },
+    { id:'h8', sec:'G', type:'order', sub:'Bài 46.2 – Put the words in the correct order',
+      q:'(installed / we\'ve / a new shower / had / in the bathroom)',
+      tokens:["We've",'had','a','new','shower','installed','in','the','bathroom'],
+      acc:["we've had a new shower installed in the bathroom"], ans:'We\'ve had a new shower installed in the bathroom.',
+      exp:'Hiện tại hoàn thành: have had + tân ngữ + V3.' },
+    { id:'h9', sec:'G', type:'order', sub:'Bài 46.2 – Put the words in the correct order',
+      q:'(need / to get / checked / we / this report / before Monday)',
+      tokens:['We','need','to','get','this','report','checked','before','Monday'],
+      acc:['we need to get this report checked before monday'], ans:'We need to get this report checked before Monday.',
+      exp:'need to get + tân ngữ + V3.' },
+
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 46.3 – Write sentences in the way shown',
+      q:'2. I didn\'t fix my bike myself. → I ______.',
+      acc:['had it fixed','got it fixed'], ans:'had it fixed',
+      exp:'Không tự làm → had it fixed.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 46.3 – Write sentences in the way shown',
+      q:'3. We didn\'t clean the windows ourselves. → We ______.',
+      acc:['had them cleaned','got them cleaned'], ans:'had them cleaned',
+      exp:'windows → them; had them cleaned.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 46.3 – Write sentences in the way shown',
+      q:'4. My uncle didn\'t build that fence himself. → He ______.',
+      acc:['had it built','got it built'], ans:'had it built',
+      exp:'build – built – built: had it built.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 46.3 – Write sentences in the way shown',
+      q:'5. I didn\'t deliver the parcels myself. → I ______.',
+      acc:['had them delivered','got them delivered'], ans:'had them delivered',
+      exp:'parcels → them; had them delivered.' },
+
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 46.4 – Use have something done',
+      q:'2. The battery in my watch is dead. I\'ll have to ______ (the battery / replace).',
+      acc:['have the battery replaced','get the battery replaced'], ans:'have the battery replaced',
+      exp:'have to + have + tân ngữ + V3.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 46.4 – Use have something done',
+      q:'3. When was the last time ______ (you / your car / wash)?',
+      acc:['you had your car washed'], ans:'you had your car washed',
+      exp:'Mệnh đề quá khứ: you had your car washed.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 46.4 – Use have something done',
+      q:'4. ______ (you / your groceries / deliver) or do you go to the supermarket?',
+      acc:['do you have your groceries delivered'], ans:'Do you have your groceries delivered',
+      exp:'Câu hỏi hiện tại: Do you have + tân ngữ + V3?' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 46.4 – Use have something done',
+      q:'5. A: Why is there a builder in your yard?  B: Oh, ______ (we / a new wall / build).',
+      acc:["we're having a new wall built",'we are having a new wall built'], ans:"we're having a new wall built",
+      exp:'Đang diễn ra → we are having … built.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 46.4 – Use have something done',
+      q:'6. A: ______ (you / the air conditioner / fix)?  B: Not yet. The technician is coming on Friday.',
+      acc:['have you had the air conditioner fixed','did you have the air conditioner fixed'], ans:'Have you had the air conditioner fixed',
+      exp:'Hỏi kết quả đến giờ → Have you had … fixed? (Did you have… cũng được.)' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 46.4 – Use have something done',
+      q:'9. (nghĩa "bị") Did I tell you about Nga? ______ (she / her laptop / steal) at the café.',
+      acc:['she had her laptop stolen'], ans:'She had her laptop stolen',
+      exp:'Nghĩa thứ hai: she had her laptop stolen = her laptop was stolen.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 46.4 – Use have something done',
+      q:'10. (nghĩa "bị") Security was very tight at the stadium. ______ (we all / our tickets / check) twice.',
+      acc:['we all had our tickets checked'], ans:'We all had our tickets checked',
+      exp:'we all had + our tickets + checked.' }
+  ];
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

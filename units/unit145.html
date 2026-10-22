@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 145 – Phrasal verbs 9: away/back | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 145 – Phrasal verbs 9: away/back</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">56 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Unit cuối của chuỗi phrasal verbs so sánh <b>away</b> (đi xa, rời khỏi nhà / một nơi / một người) và <b>back</b> (quay lại nhà / nơi cũ / người cũ). Sau đó là các cụm mở rộng: <i>get away (with), keep away, give away, put away, throw away</i> và <i>wave/smile back, call back, get back to, look back, pay back</i>.</p>
+      <div class="ex"><b class="en">We're <mark>going away</mark> for the weekend. We'll <mark>be back</mark> on Monday.</b><br><i>go away</i> = đi xa khỏi nhà; <i>be back</i> = trở về.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">away = rời xa (nhà / nơi / người)       back = trở về (nhà / nơi / người)
+   go away · be away                        come back · go back · get back · be back
+   drive / walk / run / fly / blow away     walk back · take sth back · give sth back
+   look away · take sth away                put sth back (về chỗ cũ)
+
+away (khác):  get away · get away with sth · keep away (from) · give sth away
+              put sth away · throw sth away
+back (khác):  wave / smile / shout / write back · hit sb back
+              call / phone / ring sb back · get back to sb · look back (on) · pay sb back
+
+Đại từ:       throw it away · give them back · call me back   (KHÔNG: throw away it)</div>
+      <div class="scroll"><table>
+        <tr><th>away</th><th>back</th></tr>
+        <tr><td>I'm <b>going away</b> on holiday.</td><td>I'll <b>be back</b> next week.</td></tr>
+        <tr><td>The bird <b>flew away</b>.</td><td>We <b>walked back</b> to the hotel.</td></tr>
+        <tr><td>The police <b>took away</b> his laptop.</td><td>I forgot to <b>give</b> the keys <b>back</b>.</td></tr>
+      </table></div>
+
+      <h2>1.3 · A. away và back — nghĩa gốc</h2>
+      <ul>
+        <li><b>away</b> = xa nhà: <i>She's away on a business trip.</i> · rời khỏi một nơi/người: <i>He started the car and drove away.</i></li>
+        <li>Tương tự: <b>walk away, run away, look away, fly away, blow away</b> (gió thổi bay), <b>take sth away</b> (mang đi).</li>
+        <li><b>back</b> = về nhà / về chỗ cũ / trả lại: <i>What time will you be back?</i> / <i>Put the book back on the shelf.</i></li>
+        <li>Tương tự: <b>go back, come back, get back, take sth back</b> (mang trả lại cửa hàng).</li>
+      </ul>
+
+      <h2>1.4 · B. Các cụm khác với <i>away</i></h2>
+      <ul>
+        <li><b>get away</b> = trốn thoát, rời đi (khó khăn): <i>The thief got away on a motorbike.</i></li>
+        <li><b>get away with sth</b> = làm sai mà không bị phạt: <i>He cheated, and he got away with it.</i></li>
+        <li><b>keep away (from …)</b> = tránh xa: <i>Keep away from the dog — it bites.</i></li>
+        <li><b>give sth away</b> = cho đi (không lấy tiền): <i>I gave my old clothes away.</i></li>
+        <li><b>put sth away</b> = cất đi đúng chỗ: <i>Put your toys away, please.</i></li>
+        <li><b>throw sth away</b> = vứt bỏ: <i>Don't throw that box away.</i></li>
+      </ul>
+
+      <h2>1.5 · C. Các cụm khác với <i>back</i></h2>
+      <ul>
+        <li><b>wave back / smile back / shout back / write back / hit sb back</b> = đáp lại hành động tương tự: <i>I smiled at her and she smiled back.</i></li>
+        <li><b>call / phone / ring (sb) back</b> = gọi lại: <i>I'm busy — I'll call you back.</i></li>
+        <li><b>get back to sb</b> = trả lời (sau khi có thông tin): <i>I'll get back to you tomorrow.</i></li>
+        <li><b>look back (on sth)</b> = nhìn lại quá khứ: <i>Looking back, I made the right choice.</i></li>
+        <li><b>pay sth back / pay sb back</b> = trả lại tiền: <i>I'll pay you back on Friday.</i></li>
+      </ul>
+
+      <h2>1.6 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Ngữ cảnh</th><th>Cụm phù hợp</th></tr>
+        <tr><td>đi du lịch, công tác, vắng nhà</td><td>go away / be away ↔ be back / come back</td></tr>
+        <tr><td>tên trộm, kẻ chạy trốn</td><td>get away, run away</td></tr>
+        <tr><td>làm sai mà không bị bắt</td><td>get away with</td></tr>
+        <tr><td>đồ không dùng nữa</td><td>throw away (rác) / give away (cho người khác)</td></tr>
+        <tr><td>điện thoại, email</td><td>call back, get back to</td></tr>
+        <tr><td>vay tiền</td><td>pay back</td></tr>
+        <tr><td>ký ức, quá khứ</td><td>look back on</td></tr>
+      </table></div>
+
+      <h2>1.7 · So sánh &amp; lỗi dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>Cụm A</th><th>Cụm B</th></tr>
+        <tr><td>cho / vứt</td><td><b>give away</b>: cho người khác</td><td><b>throw away</b>: bỏ vào thùng rác</td></tr>
+        <tr><td>trả lại</td><td><b>give back</b>: trả đồ cho chủ</td><td><b>take back</b>: mang trả lại (cửa hàng)</td></tr>
+        <tr><td>cất / đặt lại</td><td><b>put away</b>: cất vào chỗ (khuất)</td><td><b>put back</b>: đặt lại chỗ cũ</td></tr>
+        <tr><td>đi</td><td><b>go away</b>: đi xa nhà</td><td><b>go out</b>: ra ngoài một lát (Unit 138)</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I'll call back you later.</td><td class="yes">I'll <b>call you back</b> later.</td></tr>
+        <tr><td class="no">Don't throw away it.</td><td class="yes">Don't <b>throw it away</b>.</td></tr>
+        <tr><td class="no">I'll return you the money next week.</td><td class="yes">I'll <b>pay you back</b> next week.</td></tr>
+        <tr><td class="no">He got away it.</td><td class="yes">He got away <b>with</b> it.</td></tr>
+        <tr><td class="no">Keep away the fire.</td><td class="yes">Keep away <b>from</b> the fire.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 137</b> (nguyên tắc chung) · <b>Unit 138</b> (in/out) · <b>Unit 140</b> (walk off / run off ≈ walk away / run away).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🧳 <b class="en">We're <mark>going away</mark> for Tet. We'll <mark>be back</mark> on the 5th.</b> <span class="note">(đời sống — báo vắng nhà)</span></div>
+      <div class="ex">📞 <b class="en">I'm in a meeting. Can I <mark>call you back</mark> in ten minutes?</b> <span class="note">(công việc — điện thoại)</span></div>
+      <div class="ex">📧 <b class="en">I'll check with my manager and <mark>get back to</mark> you tomorrow.</b> <span class="note">(email chuyên nghiệp)</span></div>
+      <div class="ex">💵 <b class="en">Thanks for the loan. I'll <mark>pay you back</mark> at the end of the month.</b> <span class="note">(bạn bè — vay tiền)</span></div>
+      <div class="ex">♻️ <b class="en">Don't <mark>throw away</mark> plastic bottles — recycle them.</b> <span class="note">(IELTS — môi trường)</span></div>
+      <div class="ex">🎁 <b class="en">When I moved, I <mark>gave away</mark> most of my books.</b> <span class="note">(đời sống — dọn nhà)</span></div>
+      <div class="ex">🚓 <b class="en">The thief tried to <mark>get away</mark>, but the police caught him.</b> <span class="note">(tin tức)</span></div>
+      <div class="ex">🎓 <b class="en"><mark>Looking back</mark>, university was the best time of my life.</b> <span class="note">(IELTS Speaking Part 2 — kể kỷ niệm)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>away = mũi tên ra xa ➡️</b>, <b>back = mũi tên quay về ⬅️</b>. Đồ vật, người, tiền đều theo hướng đó.</li>
+        <li><b>3 cách "bỏ đồ":</b> <i>throw away</i> (vào thùng rác), <i>give away</i> (cho người), <i>put away</i> (cất đi).</li>
+        <li><b>"Đáp lại" = V + back:</b> wave back, smile back, write back, call back, hit back.</li>
+        <li><b>get away with</b> = "thoát cùng với tội lỗi" → làm sai mà không bị phạt.</li>
+        <li><b>pay back</b> = trả lại tiền; <b>give back</b> = trả lại đồ.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Đại từ kẹp giữa: <i>throw it away, give them back, pay you back, call me back, put it back</i>.</li>
+        <li>Có nơi chốn/người phía sau: <i>keep away <b>from</b>, get back <b>to</b> sb, get away <b>with</b> sth, look back <b>on</b></i>.</li>
+        <li>"When will you ___ back?" → <b>be</b> (be back = trở về).</li>
+        <li>Tranh "trả hàng" → <i>take them back to the shop</i>.</li>
+        <li>Câu khuyên "đừng sống trong quá khứ" → <i>don't look back</i>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I'll call back you.</td><td class="yes">I'll <b>call you back</b>.</td><td class="why">đại từ kẹp giữa</td></tr>
+        <tr><td class="no">I will return the money for you.</td><td class="yes">I'll <b>pay you back</b>.</td><td class="why">trả nợ = pay sb back</td></tr>
+        <tr><td class="no">Throw it to the rubbish.</td><td class="yes"><b>Throw it away</b>.</td><td class="why">vứt bỏ = throw away</td></tr>
+        <tr><td class="no">I'll reply you later.</td><td class="yes">I'll <b>get back to</b> you later.</td><td class="why">trả lời sau = get back to sb</td></tr>
+        <tr><td class="no">When do you come home back?</td><td class="yes">When will you <b>be back</b>?</td><td class="why">be back = trở về</td></tr>
+        <tr><td class="no">Stay far from the edge!</td><td class="yes"><b>Keep away from</b> the edge!</td><td class="why">tránh xa = keep away from</td></tr>
+        <tr><td class="no">He escaped the punishment of cheating.</td><td class="yes">He cheated and <b>got away with it</b>.</td><td class="why">không bị phạt = get away with</td></tr>
+        <tr><td class="no">Please keep your clothes in the wardrobe after.</td><td class="yes">Please <b>put</b> your clothes <b>away</b>.</td><td class="why">cất đi = put away</td></tr>
+        <tr><td class="no">She waved me again.</td><td class="yes">She <b>waved back</b>.</td><td class="why">đáp lại = V + back</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Email công việc:</b> <i>"Thanks for your message. I'll get back to you by Friday."</i></li>
+        <li><b>Điện thoại:</b> <i>"Sorry, I missed your call. Can you call me back?"</i></li>
+        <li><b>IELTS Writing (môi trường):</b> <i>"People throw away huge amounts of plastic every day."</i></li>
+        <li><b>IELTS Speaking Part 2:</b> <i>"Looking back on it, I realise that experience taught me a lot."</i></li>
+        <li><b>Mẹo:</b> khi dọn nhà, nói thành tiếng: <i>throw away / give away / put away / put back</i>.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> ôn lại sau 3/7/14 ngày. Đây là unit cuối của chuỗi phrasal verbs — hãy ôn tổng hợp <b>Units 137–145</b> (in/out, on/off, up/down, away/back).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit145.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 145 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 145 – Phrasal verbs 9: away/back | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit145.html';
+  var KEY = 'egu4_unit145_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền cụm động từ',           desc:'Điền động từ / tiểu từ away, back ở dạng đúng.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền cụm động từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 145.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 145 Exercises)', desc:'Bài 145.1 → 145.4 theo dạng bài của sách Murphy (câu viết lại), kèm giải thích.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I\'m busy right now. Can I ______ in half an hour?',
+      opts:['call back you','call you away','call you back','get you back'], a:2,
+      exp:'call somebody back = gọi lại; đại từ kẹp giữa: call you back.' },
+    { id:'a2', sec:'A', type:'mcq', q:'The thief jumped over the wall and ______.',
+      opts:['got away','got back','gave away','put away'], a:0,
+      exp:'get away = trốn thoát.' },
+    { id:'a3', sec:'A', type:'mcq', q:'He copied his friend\'s homework and the teacher didn\'t notice. He ______ it.',
+      opts:['got back to','got away with','kept away from','paid back'], a:1,
+      exp:'get away with something = làm sai mà không bị phát hiện/phạt.' },
+    { id:'a4', sec:'A', type:'mcq', q:'I didn\'t need my old bike, so I ______ to a student.',
+      opts:['threw it away','put it away','gave it away','took it away'], a:2,
+      exp:'give something away = cho đi. throw away là vứt vào thùng rác.' },
+    { id:'a5', sec:'A', type:'mcq', q:'______ from the fire! It\'s dangerous.',
+      opts:['Keep away','Get away with','Look back','Put away'], a:0,
+      exp:'keep away from = tránh xa.' },
+    { id:'a6', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['Thanks for lending me the money. I\'ll pay back you soon.','Thanks for lending me the money. I\'ll pay you back soon.'], a:1,
+      exp:'pay somebody back; đại từ kẹp giữa: pay you back.' },
+    { id:'a7', sec:'A', type:'mcq', q:'I waved to Lan across the street, and she ______.',
+      opts:['waved away','waved back','looked away','went back'], a:1,
+      exp:'wave back = vẫy tay đáp lại.' },
+    { id:'a8', sec:'A', type:'mcq', q:'The shoes were too small, so I ______ to the shop.',
+      opts:['gave them away','threw them away','took them back','put them away'], a:2,
+      exp:'take something back (to the shop) = mang trả lại.' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'My neighbours are ______ on holiday this week. (away / back)',
+      acc:['away'], ans:'away',
+      exp:'be away = đi vắng, không ở nhà.' },
+    { id:'b2', sec:'B', type:'fill', q:'When you\'ve finished with the scissors, please put them ______ in the drawer. (away / back)',
+      acc:['back','away'], ans:'back (away cũng được)',
+      exp:'put something back = đặt lại chỗ cũ; put away = cất đi — cả hai đều hợp ngữ cảnh "in the drawer".' },
+    { id:'b3', sec:'B', type:'fill', q:'Don\'t ______ away those boxes. We can use them when we move. (throw)',
+      acc:['throw'], ans:'throw',
+      exp:'throw something away = vứt bỏ; Don\'t + V nguyên mẫu.' },
+    { id:'b4', sec:'B', type:'fill', q:'I sent her three messages, but she never ______ back to me. (get)',
+      acc:['got'], ans:'got',
+      exp:'get back to somebody = trả lời/liên lạc lại; quá khứ got.' },
+    { id:'b5', sec:'B', type:'fill', q:'The wind was so strong that my hat ______ away. (blow)',
+      acc:['blew'], ans:'blew',
+      exp:'blow away = bị gió thổi bay; blow – blew – blown.' },
+    { id:'b6', sec:'B', type:'fill', q:'I smiled at the baby and she ______ back. (smile)',
+      acc:['smiled'], ans:'smiled',
+      exp:'smile back = cười đáp lại.' },
+    { id:'b7', sec:'B', type:'fill', q:'The police searched the office and ______ away several laptops. (take)',
+      acc:['took'], ans:'took',
+      exp:'take something away = mang đi; quá khứ took.' },
+    { id:'b8', sec:'B', type:'fill', q:'After the meal, we ______ back to our hotel along the beach. (walk)',
+      acc:['walked'], ans:'walked',
+      exp:'walk back = đi bộ quay về.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (I\'ll / get / back / to / you / tomorrow)',
+      tokens:["I'll",'get','back','to','you','tomorrow'],
+      acc:["i'll get back to you tomorrow"], ans:'I\'ll get back to you tomorrow.',
+      exp:'get back to somebody = trả lời sau.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (what / time / will / you / be / back)',
+      tokens:['What','time','will','you','be','back'],
+      acc:['what time will you be back'], ans:'What time will you be back?',
+      exp:'be back = trở về.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (put / your toys / away / before / dinner)',
+      tokens:['Put','your','toys','away','before','dinner'],
+      acc:['put your toys away before dinner'], ans:'Put your toys away before dinner.',
+      exp:'put something away = cất đi.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (looking / back / I / learnt / a lot / from that job)',
+      tokens:['Looking','back','I','learnt','a','lot','from','that','job'],
+      acc:['looking back i learnt a lot from that job'], ans:'Looking back, I learnt a lot from that job.',
+      exp:'look back (on sth) = nhìn lại quá khứ.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (he / parked / illegally / and / got / away / with / it)',
+      tokens:['He','parked','illegally','and','got','away','with','it'],
+      acc:['he parked illegally and got away with it'], ans:'He parked illegally and got away with it.',
+      exp:'get away with it = không bị phạt.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: I\'m going to the shop.  B: OK. What time will you ______ back? (1 từ)',
+      acc:['be'], ans:'be',
+      exp:'be back = trở về.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Do you still have my umbrella?  B: No, I ______ it back to you last week. (give)',
+      acc:['gave'], ans:'gave',
+      exp:'give something back = trả lại; quá khứ gave.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Can you lend me 200,000 dong?  B: Sure, but ______ me back by Friday. (pay)',
+      acc:['pay'], ans:'pay',
+      exp:'pay somebody back = trả tiền lại.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Did you speak to the manager?  B: She was out, so I left a message asking her to ______ me back. (call)',
+      acc:['call','phone','ring'], ans:'call',
+      exp:'call/phone/ring somebody back = gọi lại.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết tin nhắn báo bạn sẽ đi xa và ngày trở về (go away / be back).',
+      sample:'Hi Minh, I\'m going away for a few days. I\'ll be back on Sunday evening, so let\'s meet next week.',
+      exp:'go away = đi xa; be back = trở về.' },
+    { id:'e2', sec:'E', type:'self', q:'Kể cách bạn xử lý đồ cũ khi dọn nhà: dùng throw away, give away, put away.',
+      sample:'When I moved house, I threw away a lot of old papers. I gave away my old clothes to a charity, and I put the rest of my things away in boxes.',
+      exp:'throw away (vứt), give away (cho), put away (cất).' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu email công việc dùng get back to và call back.',
+      sample:'Thank you for your enquiry. I\'ll check the details and get back to you by Thursday. If it\'s urgent, please call me back on this number.',
+      exp:'get back to sb = phản hồi lại; call sb back = gọi lại.' },
+
+    /* ===== F. Quiz ===== */
+    { id:'f1', sec:'F', type:'fill', q:'I tried to photograph the butterfly, but it ______ away. (fly)',
+      acc:['flew'], ans:'flew',
+      exp:'fly away = bay đi; fly – flew – flown.' },
+    { id:'f2', sec:'F', type:'mcq', q:'"get away with something" có nghĩa là:',
+      opts:['mang theo cái gì đi','làm sai mà không bị phạt','trốn khỏi nhà','trả lại đồ'], a:1,
+      exp:'get away with sth = làm điều sai mà không bị bắt/phạt.' },
+    { id:'f3', sec:'F', type:'fill', q:'Don\'t ______ back all the time. Think about the future. (look)',
+      acc:['look'], ans:'look',
+      exp:'look back = nhìn lại quá khứ.' },
+    { id:'f4', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I read the letter and threw away it.','I read the letter and threw it away.','I read the letter and threw it back away.'], a:1,
+      exp:'Đại từ kẹp giữa: threw it away.' },
+    { id:'f5', sec:'F', type:'fill', q:'Dịch: "Tránh xa con chó đó!" → ______ away from that dog! (1 từ)',
+      acc:['keep'], ans:'Keep',
+      exp:'keep away from = tránh xa.' },
+    { id:'f6', sec:'F', type:'mcq', q:'He saw the police car and ______.',
+      opts:['ran away','ran back','gave away','paid back'], a:0,
+      exp:'run away = bỏ chạy.' },
+    { id:'f7', sec:'F', type:'fill', q:'The boy hit his brother, so his brother ______ him back. (hit — quá khứ)',
+      acc:['hit'], ans:'hit',
+      exp:'hit somebody back = đánh trả; hit – hit – hit.' },
+    { id:'f8', sec:'F', type:'mcq', q:'She was so generous that she ______ all her lottery money.',
+      opts:['gave away','threw back','took away','got away'], a:0,
+      exp:'give away = cho đi.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 145.1 – Describe the situation',
+      q:'1. (Trời gió, tờ tiền rơi ra và bay mất.) I dropped a banknote and it ______. (2 từ)', acc:['blew away'], ans:'blew away',
+      exp:'blow away = bị gió thổi bay.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 145.1 – Describe the situation',
+      q:'2. (Thu đọc thư xong rồi bỏ lại vào phong bì.) Thu read the letter and ______ in the envelope. (3 từ)', acc:['put it back'], ans:'put it back',
+      exp:'put something back = đặt lại chỗ cũ.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 145.1 – Describe the situation',
+      q:'3. (Anh ấy cố bắt chuyện nhưng cô ấy quay lưng bỏ đi.) He tried to talk to her, but she just ______. (2 từ)', acc:['walked away'], ans:'walked away',
+      exp:'walk away = bỏ đi.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 145.1 – Describe the situation',
+      q:'4. (Cô ấy ném quả bóng cho anh ấy, anh ấy ném lại.) She threw the ball to him and he ______ to her. (3 từ)', acc:['threw it back'], ans:'threw it back',
+      exp:'throw something back = ném trả lại.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 145.1 – Describe the situation',
+      q:'5. (Đôi giày rách hết, anh ấy vứt vào thùng rác.) His shoes were worn out, so he ______. (3 từ)', acc:['threw them away'], ans:'threw them away',
+      exp:'throw something away = vứt bỏ; shoes → them.' },
+
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 145.2 – Verb + away or back',
+      q:'1. The house next door has been dark for days. I think they must ______. (2 từ)', acc:['be away','have gone away'], ans:'be away',
+      exp:'must be away = chắc đi vắng (hoặc must have gone away).' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 145.2 – Verb + away or back',
+      q:'2. "I\'m going to the gym." "OK. When will you ______?" (2 từ)', acc:['be back','get back','come back'], ans:'be back',
+      exp:'be back = trở về.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 145.2 – Verb + away or back',
+      q:'3. A boy was trying to steal a bike. When he saw me, he ______. (2 từ)', acc:['ran away'], ans:'ran away',
+      exp:'run away = bỏ chạy; quá khứ ran.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 145.2 – Verb + away or back',
+      q:'4. I smiled at the receptionist, but she didn\'t ______. (2 từ)', acc:['smile back'], ans:'smile back',
+      exp:'smile back = cười đáp lại.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 145.2 – Verb + away or back',
+      q:'5. If you copy someone\'s work, you might ______ with it — but you might get caught. (2 từ)', acc:['get away'], ans:'get away',
+      exp:'get away with something = không bị phạt.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 145.2 – Verb + away or back',
+      q:'6. Careful! That wire is dangerous. ______ from it. (2 từ)', acc:['keep away','keep back','stay away'], ans:'Keep away',
+      exp:'keep away from = tránh xa.' },
+
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 145.3 – Complete using a verb',
+      q:'1. Here\'s the money you wanted. ______ me back next month. (1 từ)', acc:['pay'], ans:'Pay',
+      exp:'pay somebody back = trả lại tiền.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 145.3 – Complete using a verb',
+      q:'2. Don\'t ______ that jar away. I can keep buttons in it. (1 từ)', acc:['throw'], ans:'throw',
+      exp:'throw away = vứt bỏ.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 145.3 – Complete using a verb',
+      q:'3. Hung never finishes his work on time. I don\'t know how he ______ away with it. (1 từ)', acc:['gets'], ans:'gets',
+      exp:'get away with it; hiện tại đơn, he → gets.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 145.3 – Complete using a verb',
+      q:'4. I\'m going to the post office. I\'ll ______ back in twenty minutes. (1 từ)', acc:['be'], ans:'be',
+      exp:'be back = quay về.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 145.3 – Complete using a verb',
+      q:'5. You should enjoy the present; don\'t ______ back all the time. (1 từ)', acc:['look'], ans:'look',
+      exp:'look back = nhìn lại quá khứ.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 145.3 – Complete using a verb',
+      q:'6. My uncle is very kind. He sold his old house and ______ half the money away to charity. (1 từ)', acc:['gave'], ans:'gave',
+      exp:'give something away = cho đi; quá khứ gave.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 145.3 – Complete using a verb',
+      q:'7. I\'ll ______ back to you as soon as I know the price. (1 từ)', acc:['get'], ans:'get',
+      exp:'get back to somebody = phản hồi lại.' },
+
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 145.4 – Verb in brackets + away or back',
+      q:'1. A: Do you want this old calendar? B: No, you can ______. (throw — 3 từ)', acc:['throw it away'], ans:'throw it away',
+      exp:'throw something away; đại từ kẹp giữa.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 145.4 – Verb in brackets + away or back',
+      q:'2. A: Do the new trousers fit? B: No, I\'m going to ______ to the shop. (take — 3 từ)', acc:['take them back'], ans:'take them back',
+      exp:'take something back (to the shop) = mang trả lại; trousers → them.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 145.4 – Verb in brackets + away or back',
+      q:'3. A: Here\'s the money you asked for. B: Thanks. I\'ll ______ next week. (pay — 3 từ)', acc:['pay you back','pay it back'], ans:'pay you back',
+      exp:'pay somebody/something back.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 145.4 – Verb in brackets + away or back',
+      q:'4. A: What happened to your old CDs? B: I didn\'t want them any more, so I ______. (give — 3 từ)', acc:['gave them away'], ans:'gave them away',
+      exp:'give something away = cho đi; quá khứ gave.' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 145.4 – Verb in brackets + away or back',
+      q:'5. A: Did you speak to the landlord? B: He was busy, so I asked him to ______. (call — 2–3 từ)', acc:['call me back','call back'], ans:'call me back',
+      exp:'call (somebody) back = gọi lại.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

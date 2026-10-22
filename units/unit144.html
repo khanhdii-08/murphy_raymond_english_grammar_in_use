@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 144 – Phrasal verbs 8: up (2) | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 144 – Phrasal verbs 8: up (2)</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">57 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Phần 2 về <b>up</b>, gồm 4 nhóm: <b>(1) ý tưởng, chủ đề</b> — nêu ra, nghĩ ra, bịa ra (<i>bring up, come up, come up with, make up</i>); <b>(2) cảm xúc, tiền, thời tiết</b> — vui lên, để dành, tạnh ráo (<i>cheer up, save up, clear up</i>); <b>(3) phá hủy</b> (<i>blow up, tear up, beat up</i>); <b>(4) các cụm khác</b> (<i>break up, do up, look up, put up with, hold up, mix up</i>).</p>
+      <div class="ex"><b class="en">I didn't know the word, so I <mark>looked</mark> it <mark>up</mark>. — Good idea. Who <mark>came up with</mark> it?</b><br><i>look sth up</i> = tra (từ điển, mạng); <i>come up with</i> = nghĩ ra (ý tưởng).</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">Chủ đề / ý tưởng
+   bring sth up (= nêu ra)       ·  sth comes up (= được nêu ra)
+   come up with + idea/plan      ·  make sth up (= bịa ra)
+
+Cảm xúc / tiền / thời tiết
+   cheer up · cheer sb up        ·  save up for sth / to do sth  ·  it clears up
+
+Phá hủy
+   blow up (nổ) · blow sth up    ·  tear sth up  ·  beat sb up
+
+Khác
+   break up / split up (with sb)  ·  do up (coat; building)  ·  look sth up
+   put up with sth  ·  hold sb/sth up  ·  mix up / get sb mixed up
+
+Đại từ:  bring it up · look it up · tear it up · cheer her up   (KHÔNG: look up it)
+3 từ:    come up with · put up with · save up for  → tân ngữ đứng SAU cả cụm</div>
+
+      <h2>1.3 · A. Nêu ra, nghĩ ra, bịa ra</h2>
+      <ul>
+        <li><b>bring up</b> a topic = nêu ra, khơi lại chuyện: <i>Please don't bring up money at dinner.</i></li>
+        <li><b>come up</b> = (chủ đề) được nhắc tới: <i>Your name came up in the meeting.</i></li>
+        <li><b>come up with</b> an idea / a plan / a solution = nghĩ ra: <i>We need to come up with a better plan.</i></li>
+        <li><b>make sth up</b> = bịa ra: <i>That story isn't true — he made it up.</i></li>
+      </ul>
+
+      <h2>1.4 · B. Vui lên, để dành tiền, trời tạnh</h2>
+      <ul>
+        <li><b>cheer up</b> = vui lên; <b>cheer sb up</b> = làm ai vui: <i>Cheer up! It's not the end of the world.</i></li>
+        <li><b>save up for sth / to do sth</b> = để dành tiền: <i>I'm saving up for a new laptop.</i></li>
+        <li><b>clear up</b> (thời tiết) = tạnh, quang đãng: <i>It rained all morning, but it cleared up after lunch.</i></li>
+      </ul>
+
+      <h2>1.5 · C. Phá hủy, làm hỏng</h2>
+      <ul>
+        <li><b>blow up</b> = nổ tung; <b>blow sth up</b> = cho nổ tung: <i>The bridge was blown up during the war.</i></li>
+        <li><b>tear sth up</b> = xé vụn: <i>She tore up the letter without reading it.</i></li>
+        <li><b>beat sb up</b> = đánh ai bị thương nặng: <i>He was beaten up by a gang.</i></li>
+      </ul>
+
+      <h2>1.6 · D. Các cụm khác với <i>up</i></h2>
+      <ul>
+        <li><b>break up / split up (with sb)</b> = chia tay: <i>She broke up with her boyfriend last month.</i></li>
+        <li><b>do up</b> a coat / buttons / shoelaces = cài, buộc; <b>do up</b> a building / room = sửa sang lại: <i>They bought an old flat and did it up.</i></li>
+        <li><b>look sth up</b> (in a dictionary, online) = tra cứu: <i>Look it up on your phone.</i></li>
+        <li><b>put up with sth</b> = chịu đựng: <i>I can't put up with this noise any longer.</i></li>
+        <li><b>hold sb/sth up</b> = làm chậm trễ: <i>Sorry I'm late — I was held up in traffic.</i></li>
+        <li><b>mix up</b> / <b>get sb/sth mixed up</b> = nhầm lẫn cái này với cái kia: <i>People often mix up the twins.</i></li>
+      </ul>
+
+      <h2>1.7 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>Nghĩa A</th><th>Nghĩa B</th></tr>
+        <tr><td><b>bring up</b></td><td>nuôi dạy trẻ (Unit 143)</td><td>nêu ra chủ đề (Unit 144)</td></tr>
+        <tr><td><b>make up</b></td><td>chiếm tỉ lệ (Unit 143)</td><td>bịa chuyện (Unit 144)</td></tr>
+        <tr><td><b>clear up</b></td><td>dọn dẹp (Unit 143)</td><td>trời tạnh (Unit 144)</td></tr>
+        <tr><td><b>come up</b> vs <b>come up with</b></td><td><i>A problem came up.</i> (vấn đề nảy sinh)</td><td><i>She came up with a solution.</i> (người nghĩ ra)</td></tr>
+        <tr><td><b>do up</b></td><td>cài áo, buộc dây</td><td>sửa sang nhà cửa</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I'll look up it in the dictionary.</td><td class="yes">I'll <b>look it up</b> in the dictionary.</td></tr>
+        <tr><td class="no">I can't put up this noise.</td><td class="yes">I can't put up <b>with</b> this noise.</td></tr>
+        <tr><td class="no">She came up an idea.</td><td class="yes">She came up <b>with</b> an idea.</td></tr>
+        <tr><td class="no">He broke up her.</td><td class="yes">He broke up <b>with</b> her.</td></tr>
+        <tr><td class="no">I'm saving up to a car.</td><td class="yes">I'm saving up <b>for</b> a car.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 137</b> (nguyên tắc chung) · <b>Units 142–143</b> (up/down, up 1) · <b>Appendix 7</b> (Anh–Mỹ).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">💡 <b class="en">Our team <mark>came up with</mark> a great idea for the campaign.</b> <span class="note">(công việc — họp nhóm)</span></div>
+      <div class="ex">📖 <b class="en">If you don't know a word, <mark>look</mark> it <mark>up</mark>.</b> <span class="note">(học tập — tra từ)</span></div>
+      <div class="ex">🚗 <b class="en">Sorry I'm late. I was <mark>held up</mark> in traffic.</b> <span class="note">(đời sống — xin lỗi)</span></div>
+      <div class="ex">🔊 <b class="en">I can't <mark>put up with</mark> the noise from the building site any more.</b> <span class="note">(phàn nàn)</span></div>
+      <div class="ex">💰 <b class="en">I'm <mark>saving up for</mark> a trip to Japan.</b> <span class="note">(IELTS Speaking — kế hoạch)</span></div>
+      <div class="ex">💔 <b class="en">They <mark>broke up</mark> after five years together.</b> <span class="note">(giao tiếp — chuyện tình cảm)</span></div>
+      <div class="ex">😊 <b class="en">She was feeling down, so we took her out to <mark>cheer</mark> her <mark>up</mark>.</b> <span class="note">(bạn bè)</span></div>
+      <div class="ex">🏠 <b class="en">They bought an old house in the Old Quarter and <mark>did</mark> it <mark>up</mark>.</b> <span class="note">(nhà cửa)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>up = "nổi lên bề mặt":</b> chủ đề nổi lên (<i>come up</i>), đưa chủ đề lên (<i>bring up</i>), ý tưởng nổi lên (<i>come up with</i>), tra từ "lôi lên" (<i>look up</i>).</li>
+        <li><b>up = "tăng lên":</b> tâm trạng (<i>cheer up</i>), tiền tiết kiệm (<i>save up</i>), bầu trời sáng lên (<i>clear up</i>).</li>
+        <li><b>up = "tan tành":</b> <i>blow up, tear up, beat up, break up</i>.</li>
+        <li><b>Cụm 3 từ</b> không tách được: <i>come up with, put up with, save up for</i> — tân ngữ luôn đứng cuối.</li>
+        <li><b>make up</b> chuyện = "dựng lên" một câu chuyện không có thật.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Bị động hay gặp: <i>was held up, was blown up, was beaten up, has been done up</i>.</li>
+        <li>"tolerate" → <b>put up with</b>; "think of an idea" → <b>come up with</b>; "invent (a story)" → <b>make up</b>.</li>
+        <li>Đại từ với cụm 2 từ → kẹp giữa: <i>look it up, tear it up, make it up, cheer him up</i>.</li>
+        <li>Thời tiết + "hope it…soon" → <b>clears up</b> (hiện tại đơn sau hope cũng được).</li>
+        <li><i>get mixed up</i>: <i>I got their names mixed up</i> = tôi nhầm tên họ.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I'll search it in the dictionary.</td><td class="yes">I'll <b>look it up</b> in the dictionary.</td><td class="why">tra từ điển = look up</td></tr>
+        <tr><td class="no">I can't bear with him.</td><td class="yes">I can't <b>put up with</b> him.</td><td class="why">chịu đựng = put up with</td></tr>
+        <tr><td class="no">She thought out a new idea.</td><td class="yes">She <b>came up with</b> a new idea.</td><td class="why">nghĩ ra ý tưởng = come up with</td></tr>
+        <tr><td class="no">He invented that story.</td><td class="yes">He <b>made</b> that story <b>up</b>.</td><td class="why">bịa chuyện = make up</td></tr>
+        <tr><td class="no">They separated love last year.</td><td class="yes">They <b>broke up</b> last year.</td><td class="why">chia tay = break up / split up</td></tr>
+        <tr><td class="no">I'm collecting money for a new phone.</td><td class="yes">I'm <b>saving up for</b> a new phone.</td><td class="why">để dành tiền = save up for</td></tr>
+        <tr><td class="no">I was stuck by traffic.</td><td class="yes">I was <b>held up</b> in traffic.</td><td class="why">bị chậm trễ = be held up</td></tr>
+        <tr><td class="no">Don't talk again about that problem.</td><td class="yes">Don't <b>bring</b> that problem <b>up</b> again.</td><td class="why">khơi lại chuyện = bring up</td></tr>
+        <tr><td class="no">I confused their names.</td><td class="yes">I <b>got</b> their names <b>mixed up</b>.</td><td class="why">nhầm lẫn = mix up / get mixed up</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Họp nhóm:</b> <i>"Can anyone come up with a better solution?"</i> / <i>"I'd like to bring up one more point."</i></li>
+        <li><b>Email xin lỗi:</b> <i>"Sorry for the delay — I was held up by another meeting."</i></li>
+        <li><b>IELTS Speaking:</b> <i>"I'm saving up to travel abroad."</i> / <i>"Living in a city, you have to put up with a lot of noise."</i></li>
+        <li><b>Học từ vựng:</b> <i>"Whenever I see a new word, I look it up and write an example."</i></li>
+        <li><b>Mẹo:</b> chọn 3 cụm mỗi ngày và dùng trong tin nhắn với bạn bè.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> ôn lại sau 3/7/14 ngày, tập trung câu sai. Liên quan: <b>Unit 143</b> (up 1 — chú ý nghĩa khác của bring up/make up/clear up), <b>Unit 142</b>, <b>Unit 137</b>.</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit144.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 144 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 144 – Phrasal verbs 8: up (2) | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit144.html';
+  var KEY = 'egu4_unit144_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền cụm động từ',           desc:'Điền động từ + up (và giới từ nếu cần) ở dạng đúng.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền cụm động từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 144.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 144 Exercises)', desc:'Bài 144.1 → 144.4 theo dạng bài của sách Murphy (câu viết lại), kèm giải thích.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'Nobody knew what to do until Hien ______ a brilliant solution.',
+      opts:['came up with','brought up','made up of','put up with'], a:0,
+      exp:'come up with an idea/solution = nghĩ ra.' },
+    { id:'a2', sec:'A', type:'mcq', q:'I don\'t know what this word means. I\'ll ______.',
+      opts:['look up it','look it up','look after it','make it up'], a:1,
+      exp:'look something up = tra cứu; đại từ kẹp giữa: look it up.' },
+    { id:'a3', sec:'A', type:'mcq', q:'Our neighbours have a party every weekend. We have to ______ a lot of noise.',
+      opts:['put up','hold up','put up with','make up with'], a:2,
+      exp:'put up with something = chịu đựng.' },
+    { id:'a4', sec:'A', type:'mcq', q:'Sorry I\'m late. I was ______ in a traffic jam.',
+      opts:['held up','blown up','beaten up','mixed up'], a:0,
+      exp:'be held up = bị chậm trễ.' },
+    { id:'a5', sec:'A', type:'mcq', q:'Linh and her boyfriend have ______. They aren\'t together any more.',
+      opts:['cheered up','done up','split up','looked up'], a:2,
+      exp:'split up / break up = chia tay.' },
+    { id:'a6', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['That story isn\'t true. He made up it.','That story isn\'t true. He made it up.'], a:1,
+      exp:'make something up = bịa; đại từ kẹp giữa: made it up.' },
+    { id:'a7', sec:'A', type:'mcq', q:'It was raining this morning, but now it has ______.',
+      opts:['cleared up','cheered up','blown up','held up'], a:0,
+      exp:'clear up (thời tiết) = tạnh, quang đãng.' },
+    { id:'a8', sec:'A', type:'mcq', q:'Please don\'t ______ the subject of money again. It always causes arguments.',
+      opts:['come up','bring up','save up','do up'], a:1,
+      exp:'bring up a topic = nêu ra, khơi lại chủ đề. come up là nội động từ (không có tân ngữ).' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'You look sad. ______ up! Things will get better. (cheer)',
+      acc:['cheer'], ans:'Cheer',
+      exp:'Cheer up! = Vui lên nào! (mệnh lệnh).' },
+    { id:'b2', sec:'B', type:'fill', q:'Nam is ______ up for a new motorbike. (save)',
+      acc:['saving'], ans:'saving',
+      exp:'save up for something = để dành tiền mua gì; is + V-ing.' },
+    { id:'b3', sec:'B', type:'fill', q:'It\'s freezing outside. ______ up your coat before you go. (do)',
+      acc:['do'], ans:'Do',
+      exp:'do up a coat = cài áo khoác.' },
+    { id:'b4', sec:'B', type:'fill', q:'The old warehouse was ______ up during the film\'s final scene. (blow)',
+      acc:['blown'], ans:'blown',
+      exp:'blow something up = cho nổ tung; bị động was blown up.' },
+    { id:'b5', sec:'B', type:'fill', q:'She didn\'t want to keep the photo, so she ______ it up. (tear)',
+      acc:['tore'], ans:'tore',
+      exp:'tear something up = xé vụn; tear – tore – torn.' },
+    { id:'b6', sec:'B', type:'fill', q:'An interesting question ______ up during the interview. (come)',
+      acc:['came'], ans:'came',
+      exp:'come up = (chủ đề, câu hỏi) được nêu ra; quá khứ came.' },
+    { id:'b7', sec:'B', type:'fill', q:'The twins look so alike that I always get them ______ up. (mix)',
+      acc:['mixed'], ans:'mixed',
+      exp:'get somebody mixed up = nhầm lẫn người này với người kia.' },
+    { id:'b8', sec:'B', type:'fill', q:'The man was badly ______ up and taken to hospital. (beat)',
+      acc:['beaten'], ans:'beaten',
+      exp:'beat somebody up = đánh trọng thương; bị động was beaten up (beat – beat – beaten).' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (I\'m / saving / up / for / a trip / to Japan)',
+      tokens:["I'm",'saving','up','for','a','trip','to','Japan'],
+      acc:["i'm saving up for a trip to japan"], ans:'I\'m saving up for a trip to Japan.',
+      exp:'save up for + thứ muốn mua/làm.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (we / need / to / come / up / with / a new plan)',
+      tokens:['We','need','to','come','up','with','a','new','plan'],
+      acc:['we need to come up with a new plan'], ans:'We need to come up with a new plan.',
+      exp:'come up with + a plan/idea.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (I / can\'t / put / up / with / his rudeness)',
+      tokens:['I',"can't",'put','up','with','his','rudeness'],
+      acc:["i can't put up with his rudeness"], ans:'I can\'t put up with his rudeness.',
+      exp:'put up with = chịu đựng; tân ngữ đứng sau cả cụm.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (they / bought / an old flat / and / did / it / up)',
+      tokens:['They','bought','an','old','flat','and','did','it','up'],
+      acc:['they bought an old flat and did it up'], ans:'They bought an old flat and did it up.',
+      exp:'do up a building/room = sửa sang lại.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (what / can / we / do / to / cheer / her / up)',
+      tokens:['What','can','we','do','to','cheer','her','up'],
+      acc:['what can we do to cheer her up'], ans:'What can we do to cheer her up?',
+      exp:'cheer somebody up; đại từ kẹp giữa.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Was his excuse true?  B: No, he ______ it up. (make)',
+      acc:['made'], ans:'made',
+      exp:'make something up = bịa ra; quá khứ made.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Why didn\'t you call me?  B: I meant to, but I got your number ______ up with your sister\'s. (mix)',
+      acc:['mixed'], ans:'mixed',
+      exp:'get A mixed up with B = nhầm A với B.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Go on without me.  B: Are you sure? We don\'t want to ______ you up. (hold)',
+      acc:['hold'], ans:'hold',
+      exp:'hold somebody up = làm ai chậm trễ.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Are Tom and Mai still together?  B: No, they ______ up last month. (break)',
+      acc:['broke','split'], ans:'broke',
+      exp:'break up / split up = chia tay; quá khứ broke / split.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 2–3 câu về điều bạn đang để dành tiền và một điều bạn phải chịu đựng hằng ngày.',
+      sample:'I\'m saving up for a new laptop because mine is very slow. Every day I have to put up with heavy traffic on the way to work.',
+      exp:'save up for + N; put up with + N.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết đoạn 3 câu kể một cuộc họp: dùng bring up, come up, come up with.',
+      sample:'At the meeting, my manager brought up the problem of late deliveries. Several other issues came up during the discussion. In the end, our team came up with a new schedule.',
+      exp:'bring up (ai đó nêu ra), come up (chủ đề tự nảy ra), come up with (nghĩ ra giải pháp).' },
+    { id:'e3', sec:'E', type:'self', q:'Viết lời khuyên cho người học tiếng Anh, dùng look up và give up/cheer up.',
+      sample:'When you see a new word, look it up and write down an example. Don\'t worry if you make mistakes — cheer up and keep practising.',
+      exp:'look something up — đại từ kẹp giữa: look it up.' },
+
+    /* ===== F. Quiz ===== */
+    { id:'f1', sec:'F', type:'fill', q:'I hope the weather ______ up before the wedding tomorrow. (clear)',
+      acc:['clears','will clear'], ans:'clears',
+      exp:'clear up = trời tạnh; sau hope dùng hiện tại đơn (hoặc will).' },
+    { id:'f2', sec:'F', type:'mcq', q:'"put up with" có nghĩa là:',
+      opts:['treo lên','chịu đựng','dựng lều','tiết kiệm'], a:1,
+      exp:'put up with = tolerate = chịu đựng.' },
+    { id:'f3', sec:'F', type:'fill', q:'Dịch: "Cô ấy luôn nghĩ ra những ý tưởng mới." → She\'s always ______ new ideas. (3 từ)',
+      acc:['coming up with'], ans:'coming up with',
+      exp:'be always + V-ing (thói quen); come up with = nghĩ ra.' },
+    { id:'f4', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['I can\'t put up this noise.','I can\'t put up with this noise.','I can\'t put with up this noise.'], a:1,
+      exp:'put up with + N — cụm 3 từ không tách rời.' },
+    { id:'f5', sec:'F', type:'fill', q:'Plans for the new airport have been ______ up by protests. (hold)',
+      acc:['held'], ans:'held',
+      exp:'hold up = trì hoãn; bị động have been held up.' },
+    { id:'f6', sec:'F', type:'mcq', q:'Which sentence uses "bring up" to mean "nêu ra chủ đề"?',
+      opts:['She was brought up in Hue.','He brought up the issue of salary.','They brought up three children.'], a:1,
+      exp:'bring up a topic/issue = nêu ra. Hai câu kia là "nuôi dạy" (Unit 143).' },
+    { id:'f7', sec:'F', type:'fill', q:'Can you help me ______ up my shoelaces? My fingers are too cold. (do)',
+      acc:['do'], ans:'do',
+      exp:'do up shoelaces = buộc dây giày; help sb (to) + V.' },
+    { id:'f8', sec:'F', type:'mcq', q:'The car caught fire and ______.',
+      opts:['blew up','tore up','beat up','cleared up'], a:0,
+      exp:'blow up = nổ tung.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'match', w:6, sub:'Bài 144.1 – Which goes with which?',
+      q:'Nối phần đầu câu với phần kết phù hợp nhất:',
+      items:[
+        { t:'At the meeting, Hai came up with',  letter:'a', o:'a clever suggestion.' },
+        { t:'My little brother is always making up', letter:'b', o:'excuses for not doing homework.' },
+        { t:'It\'s windy. You should do up',      letter:'c', o:'your jacket.' },
+        { t:'Please don\'t bring up',              letter:'d', o:'that topic at dinner.' },
+        { t:'I\'m saving up for',                  letter:'e', o:'a new phone.' },
+        { t:'On our camping trip we had to put up with', letter:'f', o:'a lot of mosquitoes.' }
+      ],
+      exp:'come up with a suggestion (nghĩ ra); make up excuses (bịa lý do); do up a jacket (cài áo); bring up a topic (nêu chủ đề); save up for sth (để dành mua); put up with sth (chịu đựng).' },
+
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 144.2 – Complete (two or three words)',
+      q:'1. (Đường kẹt xe.) Sorry I\'m late. I was ______ in the traffic. (2 từ)', acc:['held up'], ans:'held up',
+      exp:'be held up = bị chậm trễ.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 144.2 – Complete (two or three words)',
+      q:'2. (Mua căn nhà cũ, sửa lại, giờ rất đẹp.) They bought an old house and ______. It looks great now. (3 từ)', acc:['did it up'], ans:'did it up',
+      exp:'do up a building = sửa sang; đại từ kẹp giữa.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 144.2 – Complete (two or three words)',
+      q:'3. (Bạn đang buồn, cả nhóm rủ đi ăn.) Kim was depressed, so we took her to the cinema to ______. (3 từ)', acc:['cheer her up'], ans:'cheer her up',
+      exp:'cheer somebody up = làm ai vui lên.' },
+
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 144.3 – Complete using a verb + up',
+      q:'1. The gas tank ______ and destroyed the building. (2 từ)', acc:['blew up'], ans:'blew up',
+      exp:'blow up = nổ tung; quá khứ blew.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 144.3 – Complete using a verb + up',
+      q:'7. Several useful suggestions ______ in our team meeting this morning. (2 từ)', acc:['came up'], ans:'came up',
+      exp:'come up = (chủ đề, ý kiến) được nêu ra; quá khứ came.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 144.3 – Complete using a verb + up',
+      q:'2. Police arrested three men after a student was ______ near the station. (2 từ)', acc:['beaten up'], ans:'beaten up',
+      exp:'bị động: was beaten up = bị đánh trọng thương.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 144.3 – Complete using a verb + up',
+      q:'3. "Is Phong still seeing Ha?" "No, they\'ve ______." (2 từ)', acc:['broken up','split up'], ans:'broken up / split up',
+      exp:'have + V3: broken up / split up = chia tay.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 144.3 – Complete using a verb + up',
+      q:'4. My fingers were so cold that I couldn\'t ______ my buttons. (2 từ)', acc:['do up'], ans:'do up',
+      exp:'do up buttons = cài cúc.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 144.3 – Complete using a verb + up',
+      q:'5. I\'m tired of this rain. I hope it ______ soon. (2 từ)', acc:['clears up','will clear up'], ans:'clears up',
+      exp:'clear up = trời tạnh.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 144.3 – Complete using a verb + up',
+      q:'6. I sent the email to the wrong person — I got their addresses ______. (2 từ)', acc:['mixed up'], ans:'mixed up',
+      exp:'get something mixed up = nhầm lẫn.' },
+
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 144.4 – Complete using a verb + up (+ other words)',
+      q:'1. I\'m not sure how to spell this word. I\'ll ______. (3 từ)', acc:['look it up'], ans:'look it up',
+      exp:'look something up = tra cứu.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 144.4 – Complete using a verb + up (+ other words)',
+      q:'2. We can\'t change the situation. We\'ll just have to ______ it. (3 từ)', acc:['put up with'], ans:'put up with',
+      exp:'put up with = chịu đựng.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 144.4 – Complete using a verb + up (+ other words)',
+      q:'3. "Did that really happen to you?" "No, I ______." (3 từ)', acc:['made it up'], ans:'made it up',
+      exp:'make something up = bịa ra; quá khứ.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 144.4 – Complete using a verb + up (+ other words)',
+      q:'4. Let\'s go with Lan\'s idea. Nobody has ______ anything better. (3 từ)', acc:['come up with'], ans:'come up with',
+      exp:'has + V3 (come); come up with = nghĩ ra.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 144.4 – Complete using a verb + up (+ other words)',
+      q:'5. I look terrible in this picture. I\'m going to ______. (3 từ)', acc:['tear it up'], ans:'tear it up',
+      exp:'tear something up = xé bỏ.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 144.4 – Complete using a verb + up (+ other words)',
+      q:'7. You go ahead and start eating. I don\'t want to ______. (3 từ)', acc:['hold you up'], ans:'hold you up',
+      exp:'hold somebody up = làm ai chậm trễ; đại từ kẹp giữa.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 144.4 – Complete using a verb + up (+ other words)',
+      q:'8. Please stop talking about my exam results. Don\'t ______ again! (3 từ)', acc:['bring it up','bring them up'], ans:'bring it up',
+      exp:'bring something up = khơi lại chủ đề; đại từ kẹp giữa.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 144.4 – Complete using a verb + up (+ other words)',
+      q:'6. I\'m not buying any new clothes this year. I\'m ______ a holiday in Korea. (3 từ)', acc:['saving up for'], ans:'saving up for',
+      exp:'save up for something; am + V-ing.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

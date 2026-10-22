@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 51 – Auxiliary verbs (have/do/can etc.) I think so / I hope so etc. | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 51 – Auxiliary verbs (have/do/can etc.) I think so / I hope so etc.</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">58 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p><b>Trợ động từ</b> (auxiliary verbs) như <i>be, have, do, can, will, should, would...</i> "giúp" động từ chính tạo thì, câu hỏi, phủ định. Trong giao tiếp, người bản xứ dùng trợ động từ <b>một mình</b> để <b>khỏi lặp lại cả câu</b>: trả lời ngắn, phản bác, tỏ ra quan tâm, đồng tình (<i>So do I</i>), và các câu <i>I think so / I hope not</i>.</p>
+      <div class="ex"><b class="en">"Have you locked the door?" — "Yes, I <mark>have</mark>." (= I have locked the door)<br>Gary wasn't working, but Laura <mark>was</mark>.</b><br>Trợ động từ thay cho cả cụm động từ đã nói trước đó.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">Trợ ĐT trong câu   →  dùng lại chính nó:  can → can, have → have, was → was
+Hiện tại / quá khứ đơn (không có trợ ĐT)  →  do / does / did
+
+Trả lời ngắn / phản bác :  Yes, I have. / No, I'm not. / Yes, I did!
+Tỏ ý quan tâm          :  Have you? / Isn't she? / Did it?
+Đồng tình (+)          :  So + trợ ĐT + S          So am I. / So did Paul.
+Đồng tình (−)          :  Neither/Nor + trợ ĐT + S  Neither do I. / Nor can I.
+                          = S + trợ ĐT phủ định + either   I don't either.
+think/hope ...         :  I think so. / I hope not.</div>
+      <div class="scroll"><table>
+        <tr><th>Câu gốc</th><th>Trợ ĐT dùng lại</th><th>Ví dụ đáp</th></tr>
+        <tr><td>I'm tired.</td><td>am</td><td>So <b>am</b> I. / Are you? I'm not.</td></tr>
+        <tr><td>I never read newspapers.</td><td>do (hiện tại đơn)</td><td>Neither <b>do</b> I.</td></tr>
+        <tr><td>I passed the exam.</td><td>did (quá khứ đơn)</td><td>So <b>did</b> I. / Did you? Well done!</td></tr>
+        <tr><td>I can't swim.</td><td>can</td><td>Neither <b>can</b> I. / Can't you? I can.</td></tr>
+        <tr><td>I've been to Japan.</td><td>have</td><td>So <b>have</b> I. / Have you? When?</td></tr>
+      </table></div>
+
+      <h2>1.3 · A. Trợ động từ thay cho cả cụm</h2>
+      <ul>
+        <li><i>Jessica could lend me the money, but she <b>won't</b>.</i> (= won't lend me the money)</li>
+        <li>Hiện tại/quá khứ đơn dùng <b>do/does/did</b>: <i>"Do you like onions?" "Yes, I <b>do</b>." / "Does Simon live in London?" "He <b>did</b>, but he <b>doesn't</b> any more."</i></li>
+      </ul>
+
+      <h2>1.4 · B. Phản bác (deny)</h2>
+      <p>Dùng trợ động từ ngược với câu của người kia, thường nhấn giọng mạnh:</p>
+      <div class="formula">"You're sitting in my place."  — "No, I'm not."
+"You didn't lock the door."    — "Yes, I did!"
+"You never listen to me."      — "Yes, I do!"</div>
+
+      <h2>1.5 · C. Tỏ ra quan tâm / ngạc nhiên: Have you? Isn't she?</h2>
+      <ul>
+        <li>"I've just seen Stephen." — "Oh, <b>have you</b>? How is he?"</li>
+        <li>"Lisa isn't very well today." — "Oh, <b>isn't she</b>? What's wrong?"</li>
+        <li>"It rained every day." — "<b>Did it</b>? What a shame!"</li>
+      </ul>
+      <p class="note">Câu khẳng định → hỏi lại khẳng định (<i>have you?</i>); câu phủ định → hỏi lại phủ định (<i>isn't she?</i>). Khác với câu hỏi đuôi (Unit 52)!</p>
+
+      <h2>1.6 · D. So / Neither / Nor (đồng tình)</h2>
+      <ul>
+        <li><b>So + trợ ĐT + S</b> (câu khẳng định): <i>"I'm tired." "<b>So am I</b>." / I passed and <b>so did Paul</b>.</i> (không nói <s>so Paul did</s>)</li>
+        <li><b>Neither/Nor + trợ ĐT + S</b> (câu phủ định): <i>"I never read newspapers." "<b>Neither do I</b>."</i></li>
+        <li>Hoặc <b>S + trợ ĐT phủ định + either</b>: <i>"I don't know." "I <b>don't either</b>."</i></li>
+        <li>Lưu ý: sau Neither dùng trợ ĐT <b>khẳng định</b> (<i>Neither do I</i>, không <s>Neither don't I</s>).</li>
+      </ul>
+
+      <h2>1.7 · E. I think so / I hope so / I'm afraid not...</h2>
+      <div class="scroll"><table>
+        <tr><th>Khẳng định</th><th>Phủ định thông dụng</th></tr>
+        <tr><td>I think so / I expect so</td><td>I <b>don't</b> think so / I <b>don't</b> expect so</td></tr>
+        <tr><td>I hope so / I'm afraid so / I guess so</td><td>I hope <b>not</b> / I'm afraid <b>not</b> / I guess <b>not</b></td></tr>
+        <tr><td>I suppose so</td><td>I don't suppose so <b>hoặc</b> I suppose not</td></tr>
+      </table></div>
+      <p class="note">⚠️ "Do you think it will rain?" — "I hope not." (<b>không</b> nói <s>I don't hope so</s>). <i>I'm afraid so/not</i> = tiếc là có/không (tin xấu).</p>
+
+      <h2>1.8 · So sánh với cấu trúc dễ nhầm &amp; lỗi hay gặp</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>So/Neither (đồng tình)</th><th>Have you? / Do you? (quan tâm)</th><th>Câu hỏi đuôi (Unit 52)</th></tr>
+        <tr><td>Mục đích</td><td>"tôi cũng vậy"</td><td>"thật à?"</td><td>xác nhận câu của chính mình</td></tr>
+        <tr><td>Ví dụ</td><td>I'm hungry. — <b>So am I.</b></td><td>I'm hungry. — <b>Are you?</b></td><td>You're hungry, <b>aren't you?</b></td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">"I like tea." "So I do."</td><td class="yes">"So <b>do I</b>."</td></tr>
+        <tr><td class="no">"I'm not hungry." "Neither I am."</td><td class="yes">"Neither <b>am I</b>."</td></tr>
+        <tr><td class="no">"I can't swim." "Neither can't I."</td><td class="yes">"Neither <b>can</b> I."</td></tr>
+        <tr><td class="no">"I went home early." "So was I."</td><td class="yes">"So <b>did</b> I."</td></tr>
+        <tr><td class="no">"Will it rain?" "I don't hope so."</td><td class="yes">"I <b>hope not</b>."</td></tr>
+        <tr><td class="no">"Is she coming?" "I think."</td><td class="yes">"I think <b>so</b>."</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 52</b> (câu hỏi đuôi) · <b>Unit 49</b> (câu hỏi) · <b>Appendix 7</b> (Anh-Mỹ: I guess so).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">☕ <b class="en">"I need a coffee." — "<mark>So do I</mark>."</b> <span class="note">(văn phòng — đồng tình)</span></div>
+      <div class="ex">🎤 <b class="en">"I can't sing at all." — "<mark>Neither can I</mark>."</b> <span class="note">(karaoke — đồng tình phủ định)</span></div>
+      <div class="ex">✈️ <b class="en">"I've just come back from Japan." — "Oh, <mark>have you</mark>? How was it?"</b> <span class="note">(giao tiếp — tỏ ra quan tâm)</span></div>
+      <div class="ex">🔒 <b class="en">"You didn't lock the door." — "Yes, I <mark>did</mark>!"</b> <span class="note">(gia đình — phản bác)</span></div>
+      <div class="ex">☔ <b class="en">"Is it going to rain?" — "I <mark>hope not</mark>."</b> <span class="note">(đời sống — hope not)</span></div>
+      <div class="ex">🏨 <b class="en">"Have you got a room for tonight?" — "I'm <mark>afraid not</mark>. We're full."</b> <span class="note">(dịch vụ — báo tin xấu lịch sự)</span></div>
+      <div class="ex">📈 <b class="en">"Will we get a bonus this year?" — "I <mark>expect so</mark>."</b> <span class="note">(công việc — dự đoán)</span></div>
+      <div class="ex">🎓 <b class="en">Minh passed the exam and <mark>so did</mark> his sister.</b> <span class="note">(thi cử — đảo ngữ sau so)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Soi trợ động từ":</b> câu gốc dùng trợ ĐT nào thì đáp lại bằng trợ ĐT đó; không có thì dùng do/does/did đúng thì.</li>
+        <li><b>So/Neither + ĐẢO:</b> <i>So am I, Neither do I</i> — giống trật tự câu hỏi.</li>
+        <li><b>Neither đã mang nghĩa phủ định</b> → trợ ĐT sau nó để khẳng định.</li>
+        <li><b>hope / afraid / guess → "not"</b>; <b>think / expect → "don't ... so"</b>.</li>
+        <li><b>Have you? / Did it?</b> = "Thật à?" — giữ nguyên dạng khẳng/phủ định của câu người kia.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Điền trợ ĐT: đọc vế đầu để biết <b>thì</b> và <b>khẳng/phủ định</b>, vế sau thường <b>ngược lại</b>: <i>I wasn't tired, but my friends <b>were</b>.</i></li>
+        <li>Thấy "but" → thường đổi khẳng ↔ phủ định.</li>
+        <li>Câu có <i>never, hardly, nobody</i> là câu <b>phủ định</b> → đồng tình bằng <b>Neither</b>: <i>"I never eat meat." "Neither do I."</i></li>
+        <li>Câu có <b>'d</b>: <i>I'd like</i> = I would → So <b>would</b> I; <i>I'd seen</i> = I had → So <b>had</b> I.</li>
+        <li>Tin xấu xác nhận → <i>I'm afraid so</i>; tin xấu phủ nhận (từ chối) → <i>I'm afraid not</i>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">"I'm tired." "Me too I am."</td><td class="yes">"<b>So am I</b>." / "Me too."</td><td class="why">cấu trúc So + trợ ĐT + S</td></tr>
+        <tr><td class="no">"I like pho." "So I like."</td><td class="yes">"So <b>do</b> I."</td><td class="why">hiện tại đơn → do</td></tr>
+        <tr><td class="no">"I don't smoke." "Me too."</td><td class="yes">"<b>Neither do I</b>." / "Me neither."</td><td class="why">câu phủ định → neither</td></tr>
+        <tr><td class="no">"I didn't go." "Neither didn't I."</td><td class="yes">"Neither <b>did</b> I."</td><td class="why">không phủ định 2 lần</td></tr>
+        <tr><td class="no">"I saw that film." "So was I."</td><td class="yes">"So <b>did</b> I."</td><td class="why">quá khứ đơn → did</td></tr>
+        <tr><td class="no">"Will he come?" "I don't hope so."</td><td class="yes">"I <b>hope not</b>."</td><td class="why">hope → hope not</td></tr>
+        <tr><td class="no">"Is it true?" "I think it."</td><td class="yes">"I think <b>so</b>."</td><td class="why">dùng so thay cho mệnh đề</td></tr>
+        <tr><td class="no">"I think not so."</td><td class="yes">"I <b>don't think so</b>."</td><td class="why">phủ định ở think</td></tr>
+        <tr><td class="no">"You were late!" "No, I didn't!"</td><td class="yes">"No, I <b>wasn't</b>!"</td><td class="why">trợ ĐT phải khớp với was</td></tr>
+        <tr><td class="no">"I've finished." "Oh, are you?"</td><td class="yes">"Oh, <b>have</b> you?"</td><td class="why">I've = I have → have you?</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói chuyện phiếm:</b> mỗi khi bạn bè kể gì, thử phản hồi bằng <i>Did you? / Have you? / Is it?</i> + một câu hỏi tiếp — giúp hội thoại tự nhiên hơn.</li>
+        <li><b>Đồng tình nhanh:</b> thay "Me too" bằng <i>So do I / So am I / Neither can I</i> để luyện phản xạ chọn trợ ĐT.</li>
+        <li><b>Công việc:</b> trả lời câu hỏi chưa chắc chắn: <i>"I think so, but let me check." / "I don't think so."</i></li>
+        <li><b>Quy tắc vàng:</b> khi đáp lại, tự hỏi <i>"Câu kia dùng trợ ĐT gì, thì gì, khẳng hay phủ định?"</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> luyện lại phần A–D sau 3, 7 và 14 ngày. Liên quan: <b>Unit 52</b> (câu hỏi đuôi — cùng dùng trợ động từ), <b>Unit 49</b> (câu hỏi).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit51.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 51 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 51 – Auxiliary verbs / I think so | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit51.html';
+  var KEY = 'egu4_unit51_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền trợ động từ',          desc:'Điền trợ động từ (do/was/can/have...) đúng thì, khẳng định hay phủ định.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền câu đáp ngắn còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 51.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 51 Exercises)', desc:'Bài 51.1 → 51.4 theo đúng dạng bài của sách Murphy, kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'"I\'m really hungry." — "So ______."',
+      opts:['I am','am I','do I','I do'], a:1,
+      exp:'So + trợ ĐT + S (đảo): câu gốc dùng am → So am I.' },
+    { id:'a2', sec:'A', type:'mcq', q:'"I don\'t eat meat." — "______ do I."',
+      opts:['So','Either','Neither','Too'], a:2,
+      exp:'Câu gốc phủ định → Neither/Nor + trợ ĐT + S: Neither do I.' },
+    { id:'a3', sec:'A', type:'mcq', q:'"We watched the match last night." — "So ______ we."',
+      opts:['did','were','watched','have'], a:0,
+      exp:'Quá khứ đơn (watched) → trợ ĐT did: So did we.' },
+    { id:'a4', sec:'A', type:'mcq', q:'"I can\'t drive." — "______"',
+      opts:['Neither can\'t I.','Neither I can.','Neither can I.','So can\'t I.'], a:2,
+      exp:'Neither + trợ ĐT KHẲNG ĐỊNH + S: Neither can I.' },
+    { id:'a5', sec:'A', type:'mcq', q:'"Will you need the car tomorrow?" — "I don\'t ______."',
+      opts:['think so','hope so','think','hope not'], a:0,
+      exp:'think → phủ định là I don\'t think so. (hope → I hope not).' },
+    { id:'a6', sec:'A', type:'mcq', q:'"Do you think it\'ll be cold tomorrow?" (Bạn không muốn trời lạnh) — "I ______."',
+      opts:['don\'t hope so','hope not','not hope','hope no'], a:1,
+      exp:'Với hope, dạng phủ định là I hope not (không nói I don\'t hope so).' },
+    { id:'a7', sec:'A', type:'mcq', q:'"Lan isn\'t coming today." — "Oh, ______? Is she ill?"',
+      opts:['is she','isn\'t she','doesn\'t she','does she'], a:1,
+      exp:'Tỏ ý quan tâm: giữ nguyên dạng câu gốc (phủ định is) → isn\'t she?' },
+    { id:'a8', sec:'A', type:'mcq', q:'"You weren\'t listening!" — "Yes, I ______!"',
+      opts:['did','was','were','am'], a:1,
+      exp:'Phản bác: dùng trợ ĐT tương ứng với weren\'t → Yes, I was!' },
+
+    /* ===== B. Điền trợ động từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'I don\'t like horror films, but my brother ______.',
+      acc:['does'], ans:'does',
+      exp:'Hiện tại đơn, my brother = he, đảo khẳng định → does.' },
+    { id:'b2', sec:'B', type:'fill', q:'Mai has finished her report, but I ______ yet.',
+      acc:["haven't",'have not'], ans:"haven't",
+      exp:'Câu gốc dùng has finished → vế sau phủ định: I haven\'t.' },
+    { id:'b3', sec:'B', type:'fill', q:'"Can you speak Japanese?" — "No, I ______, but my wife can."',
+      acc:["can't",'cannot'], ans:"can't",
+      exp:'Trả lời ngắn với can → No, I can\'t.' },
+    { id:'b4', sec:'B', type:'fill', q:'"Did you call Hung?" — "Yes, I ______. He\'s fine."',
+      acc:['did'], ans:'did',
+      exp:'Câu hỏi với did → Yes, I did.' },
+    { id:'b5', sec:'B', type:'fill', q:'Nam wasn\'t at the meeting, but his manager ______.',
+      acc:['was'], ans:'was',
+      exp:'Câu gốc wasn\'t → vế sau khẳng định was.' },
+    { id:'b6', sec:'B', type:'fill', q:'"I\'d love to visit Iceland." — "So ______ I!"',
+      acc:['would'], ans:'would',
+      exp:'I\'d love = I would love → So would I.' },
+    { id:'b7', sec:'B', type:'fill', q:'"I\'ve never seen snow." — "Neither ______ I."',
+      acc:['have'], ans:'have',
+      exp:'I\'ve never seen = present perfect (have) → Neither have I.' },
+    { id:'b8', sec:'B', type:'fill', q:'"I didn\'t understand the question." — "I ______ either."',
+      acc:["didn't",'did not'], ans:"didn't",
+      exp:'S + trợ ĐT phủ định + either: I didn\'t either.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (passed / I / and / so / Tuan / did / the test)',
+      tokens:['I','passed','the','test','and','so','did','Tuan'],
+      acc:['i passed the test and so did tuan'], ans:'I passed the test and so did Tuan.',
+      exp:'so + did + S (đảo), không nói so Tuan did.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (hasn\'t got / Lan / a car / neither / and / has / Minh)',
+      tokens:['Lan',"hasn't",'got','a','car','and','neither','has','Minh'],
+      acc:["lan hasn't got a car and neither has minh"], ans:'Lan hasn\'t got a car and neither has Minh.',
+      exp:'neither + has + S.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (don\'t / I / think / so)',
+      tokens:['I',"don't",'think','so'],
+      acc:["i don't think so"], ans:'I don\'t think so.',
+      exp:'Phủ định của I think so là I don\'t think so.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (could / Linh / help / but / won\'t / she)',
+      tokens:['Linh','could','help','but','she',"won't"],
+      acc:["linh could help but she won't"], ans:'Linh could help, but she won\'t.',
+      exp:'won\'t thay cho won\'t help — tránh lặp động từ.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (I\'m / afraid / not)',
+      tokens:["I'm",'afraid','not'],
+      acc:["i'm afraid not"], ans:'I\'m afraid not.',
+      exp:'I\'m afraid not = tiếc là không.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: I\'ve just bought a new laptop.  B: Oh, ______? Which one did you get?',
+      acc:['have you'], ans:'have you',
+      exp:'I\'ve = I have → tỏ ý quan tâm: have you?' },
+    { id:'d2', sec:'D', type:'fill', q:'A: It snowed in Sapa last week.  B: ______? That\'s amazing!',
+      acc:['did it'], ans:'Did it',
+      exp:'snowed = quá khứ đơn → Did it?' },
+    { id:'d3', sec:'D', type:'fill', q:'A: You never help with the cooking!  B: Yes, I ______! I cooked yesterday.',
+      acc:['do'], ans:'do',
+      exp:'Phản bác câu hiện tại đơn (never help) → Yes, I do!' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Is the bank open on Sunday?  B: I don\'t think ______.',
+      acc:['so'], ans:'so',
+      exp:'I don\'t think so = tôi nghĩ là không.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Bạn của bạn nói: "I love street food. I can\'t cook. I went to bed late last night." Đáp lại từng câu bằng So/Neither (nếu giống bạn) hoặc câu hỏi quan tâm (nếu khác).',
+      sample:'So do I. / Can\'t you? I can. / So did I.',
+      exp:'So/Neither + trợ ĐT + S; nếu khác thì hỏi lại "Do you? / Can\'t you?" và nói về bạn.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 3 cặp hỏi–đáp dùng I think so / I hope not / I\'m afraid so (hoặc dạng phủ định).',
+      sample:'— Is the shop still open? — I think so. / — Will it rain tomorrow? — I hope not. / — Do we have to work on Saturday? — I\'m afraid so.',
+      exp:'think/expect → don\'t think so; hope/afraid/guess → hope not / afraid not.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu phản bác (deny) điều ai đó nói sai về bạn.',
+      sample:'— You didn\'t send the email. — Yes, I did! / — You\'re always late. — No, I\'m not!',
+      exp:'Dùng trợ ĐT ngược với câu gốc: didn\'t → did; are → am not.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'"I\'m not very good at maths." — "Neither ______ I."',
+      acc:['am'], ans:'am',
+      exp:'Câu gốc dùng am → Neither am I.' },
+    { id:'f2', sec:'F', type:'mcq', q:'"Does Hoa still live in Hue?" — "She ______, but she doesn\'t any more."',
+      opts:['did','does','was','has'], a:0,
+      exp:'Trước đây sống (quá khứ đơn) → She did, but she doesn\'t any more.' },
+    { id:'f3', sec:'F', type:'fill', q:'"Is it going to be a long meeting?" — "I\'m afraid ______." (tiếc là có)',
+      acc:['so'], ans:'so',
+      exp:'Tin xấu được xác nhận → I\'m afraid so.' },
+    { id:'f4', sec:'F', type:'mcq', q:'"I work at weekends." — "______"',
+      opts:['So am I.','So do I.','So I do.','So work I.'], a:1,
+      exp:'Hiện tại đơn → do: So do I.' },
+    { id:'f5', sec:'F', type:'fill', q:'Dịch: "Tôi cũng không biết." (đáp lại "I don\'t know.") — dùng Neither',
+      acc:['neither do i','nor do i'], ans:'Neither do I.',
+      exp:'Neither/Nor + do + I.' },
+    { id:'f6', sec:'F', type:'mcq', q:'Chọn câu SAI:',
+      opts:['I hope not.','I don\'t think so.','I don\'t hope so.','I suppose not.'], a:2,
+      exp:'Không nói "I don\'t hope so" → I hope not.' },
+    { id:'f7', sec:'F', type:'fill', q:'"My phone was stolen yesterday." — "Oh no! ______ it? Where?"',
+      acc:['was'], ans:'Was',
+      exp:'Câu gốc dùng was (bị động) → Was it?' },
+    { id:'f8', sec:'F', type:'fill', q:'I\'d help you if I ______, but I can\'t. (trợ ĐT)',
+      acc:['could'], ans:'could',
+      exp:'Câu điều kiện: I\'d help you if I could (= if I could help you).' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 51.1 – Complete with an auxiliary verb',
+      q:'I like spicy food, but my sister ______.',
+      acc:["doesn't",'does not'], ans:"doesn't",
+      exp:'Hiện tại đơn, ngược nghĩa → doesn\'t.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 51.1 – Complete with an auxiliary verb',
+      q:'"Is Khoa at work?" "He ______ an hour ago, but I think he\'s left now."',
+      acc:['was'], ans:'was',
+      exp:'Quá khứ (an hour ago) của be → He was.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 51.1 – Complete with an auxiliary verb',
+      q:'Thu said she might email me tonight, but I don\'t think she ______.',
+      acc:['will'], ans:'will',
+      exp:'Dự đoán tương lai → I don\'t think she will (email me).' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 51.1 – Complete with an auxiliary verb',
+      q:'"Are you and Ha going to the concert?" "I ______, but Ha isn\'t." (1 từ)',
+      acc:['am'], ans:'am',
+      exp:'Trả lời cho I → I am (going).' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 51.1 – Complete with an auxiliary verb',
+      q:'I can\'t decide whether to take the course. Do you think I ______?',
+      acc:['should'], ans:'should',
+      exp:'Hỏi lời khuyên → Do you think I should (take it)?' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 51.1 – Complete with an auxiliary verb',
+      q:'"Please keep this secret." "Don\'t worry. I ______."',
+      acc:["won't",'will not'], ans:"won't",
+      exp:'Hứa sẽ không nói → I won\'t (tell anyone).' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 51.1 – Complete with an auxiliary verb',
+      q:'"You never say thank you." "Yes, I ______!"',
+      acc:['do'], ans:'do',
+      exp:'Phản bác câu hiện tại đơn → Yes, I do!' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 51.1 – Complete with an auxiliary verb',
+      q:'I expected the bus to be late, but it ______.',
+      acc:["wasn't",'was not'], ans:"wasn't",
+      exp:'expected it to be late → but it wasn\'t (late).' },
+
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 51.2 – Never agree (Are you? I\'m not.)',
+      q:'Linh: "I love winter." → Bạn (không đồng ý): ______? I don\'t.',
+      acc:['do you'], ans:'Do you',
+      exp:'Hiện tại đơn khẳng định → Do you? I don\'t.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 51.2 – Never agree (Are you? I\'m not.)',
+      q:'Linh: "I didn\'t like the concert." → Bạn: ______? I did.',
+      acc:["didn't you"], ans:"Didn't you",
+      exp:'Câu gốc phủ định quá khứ → Didn\'t you? I did.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 51.2 – Never agree (Are you? I\'m not.)',
+      q:'Linh: "I\'ve never been to Thailand." → Bạn: Haven\'t you? I ______.',
+      acc:['have'], ans:'have',
+      exp:'Bạn đã đến → I have.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 51.2 – Never agree (Are you? I\'m not.)',
+      q:'Linh: "I thought the test was difficult." → Bạn: ______? I didn\'t.',
+      acc:['did you'], ans:'Did you',
+      exp:'thought = quá khứ đơn → Did you? I didn\'t.' },
+
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 51.3 – So ... / Neither ... or a question',
+      q:'Hoa: "I watched a film last night." (Bạn cũng xem) → ______',
+      acc:['so did i'], ans:'So did I.',
+      exp:'Quá khứ đơn, giống bạn → So did I.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 51.3 – So ... / Neither ... or a question',
+      q:'Hoa: "I won\'t be at the office on Friday." (Bạn cũng không) → ______',
+      acc:['neither will i','nor will i',"i won't either"], ans:'Neither will I.',
+      exp:'won\'t → Neither will I.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 51.3 – So ... / Neither ... or a question',
+      q:'Hoa: "I love travelling. I travel a lot." (Bạn thì KHÔNG) → ______? Where do you go?',
+      acc:['do you'], ans:'Do you',
+      exp:'Khác bạn → hỏi lại tỏ ý quan tâm: Do you?' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 51.3 – So ... / Neither ... or a question',
+      q:'Hoa: "I\'d like to work abroad." (Bạn cũng muốn) → ______',
+      acc:['so would i'], ans:'So would I.',
+      exp:'I\'d like = I would → So would I.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 51.3 – So ... / Neither ... or a question',
+      q:'Hoa: "I can\'t come to the party tonight." (Bạn thì đi được) → ______? Why not?',
+      acc:["can't you"], ans:"Can't you",
+      exp:'Khác bạn → Can\'t you? Why not?' },
+
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 51.4 – I think so / I hope not etc.',
+      q:'(Bạn đang cần tiền gấp.) A: Do you think you\'ll get paid this week? B: (hope) ______',
+      acc:['i hope so'], ans:'I hope so.',
+      exp:'Mong là có → I hope so.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 51.4 – I think so / I hope not etc.',
+      q:'(Bạn nghĩ Nam có lẽ sẽ đỗ.) A: Do you think Nam will pass? B: (expect) ______',
+      acc:['i expect so'], ans:'I expect so.',
+      exp:'Dự đoán là có → I expect so.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 51.4 – I think so / I hope not etc.',
+      q:'(Bạn không chắc Hoa đã có gia đình chưa — có lẽ là chưa.) A: Is Hoa married? B: (think) ______',
+      acc:["i don't think so",'i do not think so'], ans:"I don't think so.",
+      exp:'Nghĩ là không → I don\'t think so.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 51.4 – I think so / I hope not etc.',
+      q:'(Bạn là nhân viên bán vé, vé đã bán hết.) A: Are there any tickets left? B: (afraid) ______',
+      acc:["i'm afraid not",'i am afraid not'], ans:"I'm afraid not.",
+      exp:'Tiếc là không → I\'m afraid not.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 51.4 – I think so / I hope not etc.',
+      q:'(Bạn phải về sớm, rất tiếc.) A: Do you really have to go now? B: (afraid) ______',
+      acc:["i'm afraid so",'i am afraid so'], ans:"I'm afraid so.",
+      exp:'Tiếc là có → I\'m afraid so.' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 51.4 – I think so / I hope not etc.',
+      q:'(Chị Mai làm việc thứ Hai–Sáu; mai là thứ Ba.) A: Is Mai working tomorrow? B: (suppose) ______',
+      acc:['i suppose so'], ans:'I suppose so.',
+      exp:'Suy ra là có → I suppose so.' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 51.4 – I think so / I hope not etc.',
+      q:'(Bạn rất ghét anh Long.) A: Do you think Long will come to the dinner? B: (hope) ______',
+      acc:['i hope not'], ans:'I hope not.',
+      exp:'Mong là không → I hope not (không nói I don\'t hope so).' },
+    { id:'h25', sec:'G', type:'fill', sub:'Bài 51.4 – I think so / I hope not etc.',
+      q:'(Bạn không chắc trận đấu lúc mấy giờ — có lẽ 8 giờ.) A: Is the match at 8? B: (think) ______',
+      acc:['i think so'], ans:'I think so.',
+      exp:'Nghĩ là đúng → I think so.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

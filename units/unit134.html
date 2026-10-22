@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 134 – Verb + preposition 3 (about and of) | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 134 – Verb + preposition 3 (about and of)</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">57 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Có một nhóm động từ đi được với <b>cả about lẫn of</b>, nhưng <b>nghĩa thay đổi</b> theo giới từ: <i>hear, think, dream, complain, remind, warn</i>. Học unit này là học <b>sắc thái nghĩa</b> — chọn sai giới từ sẽ làm câu mang nghĩa khác.</p>
+      <div class="ex"><b class="en">Did you <mark>hear about</mark> the accident? — I've never <mark>heard of</mark> that singer. — Have you <mark>heard from</mark> Lan?</b><br>about = được kể chuyện gì; of = biết là có tồn tại; from = có liên lạc với ai.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">hear ABOUT = được kể/biết tin        hear OF = biết sb/sth tồn tại
+hear FROM  = nhận tin, liên lạc từ ai
+
+think ABOUT = suy nghĩ, cân nhắc     think OF = nảy ra ý; nêu ý kiến
+dream ABOUT (khi ngủ)               dream OF/ABOUT doing = mơ ước
+complain (to sb) ABOUT = phàn nàn    complain OF = kêu đau, triệu chứng
+remind sb ABOUT = nhắc đừng quên     remind sb OF = gợi nhớ, làm liên tưởng
+warn sb ABOUT (người/vật nguy hiểm)  warn sb ABOUT / OF (nguy cơ sắp xảy ra)</div>
+
+      <h2>1.3 · A. hear about / hear of / hear from</h2>
+      <div class="scroll"><table>
+        <tr><th>Cấu trúc</th><th>Nghĩa</th><th>Ví dụ</th></tr>
+        <tr><td>hear <b>about</b></td><td>được kể, nghe tin về</td><td>Did you hear <b>about</b> the flood in the north?</td></tr>
+        <tr><td>hear <b>of</b></td><td>biết đến sự tồn tại</td><td>I've never heard <b>of</b> that restaurant.</td></tr>
+        <tr><td>hear <b>from</b></td><td>có liên lạc (thư, điện thoại…)</td><td>I haven't heard <b>from</b> him for months.</td></tr>
+      </table></div>
+
+      <h2>1.4 · B. think about / think of</h2>
+      <ul>
+        <li><b>think about</b> = tập trung suy nghĩ, cân nhắc: <i>I'll think <b>about</b> your offer and call you tomorrow.</i></li>
+        <li><b>think of</b> = ý tưởng nảy ra trong đầu: <i>Who thought <b>of</b> this name?</i> · <i>I can't think <b>of</b> her phone number.</i></li>
+        <li><b>think of</b> khi hỏi / nêu ý kiến: <i>What do you think <b>of</b> my new haircut?</i> · <i>I didn't think much <b>of</b> the film.</i> (= không thích lắm)</li>
+        <li>Đôi khi cả hai đều được: <i>I often think of / about my old school.</i> · <i>We're thinking of / about moving.</i> (dự định tương lai)</li>
+      </ul>
+
+      <h2>1.5 · C. dream / complain</h2>
+      <ul>
+        <li><b>dream about</b> (khi ngủ): <i>I dreamt <b>about</b> my exam last night.</i></li>
+        <li><b>dream of / about</b> being / doing (mơ ước): <i>She dreams <b>of</b> becoming a pilot.</i></li>
+        <li><b>I wouldn't dream of</b> doing sth = tôi sẽ không bao giờ làm: <i>"Don't tell Mum." "I wouldn't dream <b>of</b> it."</i></li>
+        <li><b>complain (to sb) about:</b> <i>We complained <b>to</b> the hotel <b>about</b> the noise.</i></li>
+        <li><b>complain of</b> + cơn đau/bệnh: <i>He complained <b>of</b> a headache.</i></li>
+      </ul>
+
+      <h2>1.6 · D. remind / warn</h2>
+      <div class="scroll"><table>
+        <tr><th>Cấu trúc</th><th>Nghĩa</th><th>Ví dụ</th></tr>
+        <tr><td>remind sb <b>about</b></td><td>nhắc ai đừng quên</td><td>Remind me <b>about</b> the meeting tomorrow.</td></tr>
+        <tr><td>remind sb <b>of</b></td><td>làm ai nhớ tới / liên tưởng</td><td>This song reminds me <b>of</b> my childhood.</td></tr>
+        <tr><td>warn sb <b>about</b></td><td>cảnh báo về người / vật xấu, nguy hiểm</td><td>They warned us <b>about</b> the pickpockets.</td></tr>
+        <tr><td>warn sb <b>about / of</b></td><td>cảnh báo nguy cơ có thể xảy ra</td><td>Doctors warn us <b>of</b> (about) the dangers of smoking.</td></tr>
+      </table></div>
+
+      <h2>1.7 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Ngữ cảnh</th><th>Chọn</th></tr>
+        <tr><td>"Who is he? I've never…"</td><td><b>heard of</b></td></tr>
+        <tr><td>email / gọi điện / liên lạc</td><td><b>heard from</b></td></tr>
+        <tr><td>"What did you think ___ it?" (ý kiến)</td><td><b>of</b></td></tr>
+        <tr><td>cần thời gian cân nhắc, quyết định</td><td><b>think about</b></td></tr>
+        <tr><td>đau, triệu chứng</td><td><b>complain of</b></td></tr>
+        <tr><td>"giống / làm tôi nhớ tới"</td><td><b>remind of</b></td></tr>
+      </table></div>
+
+      <h2>1.8 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I've never heard from that band. (= không biết họ)</td><td class="yes">I've never heard <b>of</b> that band.</td></tr>
+        <tr><td class="no">It was my idea. I thought about it first.</td><td class="yes">I thought <b>of</b> it first.</td></tr>
+        <tr><td class="no">I couldn't think about anything to say.</td><td class="yes">I couldn't think <b>of</b> anything to say.</td></tr>
+        <tr><td class="no">She reminds me about my aunt. (= giống)</td><td class="yes">She reminds me <b>of</b> my aunt.</td></tr>
+        <tr><td class="no">I was warned of him.</td><td class="yes">I was warned <b>about</b> him.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 55B</b> (remind / warn sb to do) · <b>Unit 133</b> (talk about, care about…) · <b>Unit 135</b> (động từ + of/for/from/on).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">📰 <b class="en">Did you <mark>hear about</mark> the new metro line?</b> <span class="note">(giao tiếp — tin tức)</span></div>
+      <div class="ex">🤷 <b class="en">I've never <mark>heard of</mark> that company. Is it new?</b> <span class="note">(công việc)</span></div>
+      <div class="ex">📬 <b class="en">We look forward to <mark>hearing from</mark> you.</b> <span class="note">(email trang trọng — câu kết)</span></div>
+      <div class="ex">🤔 <b class="en">Can I <mark>think about</mark> it and get back to you tomorrow?</b> <span class="note">(đàm phán — xin thời gian)</span></div>
+      <div class="ex">🎬 <b class="en">What did you <mark>think of</mark> the film?</b> <span class="note">(giao tiếp — hỏi ý kiến)</span></div>
+      <div class="ex">🏡 <b class="en">This village <mark>reminds</mark> me <mark>of</mark> my grandparents' home.</b> <span class="note">(IELTS Speaking — kỷ niệm)</span></div>
+      <div class="ex">🤒 <b class="en">The patient was <mark>complaining of</mark> chest pain.</b> <span class="note">(y khoa / đời sống)</span></div>
+      <div class="ex">⚠️ <b class="en">Our guide <mark>warned</mark> us <mark>about</mark> the strong currents.</b> <span class="note">(du lịch)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>hear: ABOUT = câu chuyện · OF = cái tên · FROM = người gửi.</b></li>
+        <li><b>think ABOUT = "nghĩ lâu"</b> (cân nhắc) · <b>think OF = "nghĩ ra" / "thấy thế nào"</b>.</li>
+        <li><b>remind ABOUT = cuốn sổ nhắc việc</b> · <b>remind OF = tấm ảnh kỷ niệm</b> (gợi liên tưởng).</li>
+        <li><b>complain ABOUT = than phiền dịch vụ</b> · <b>complain OF = kêu đau</b> (OF = triệu chứng).</li>
+        <li><b>I wouldn't dream OF it!</b> = "Không đời nào!" — học nguyên cụm.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>"Who is X?" + "never heard ___" → <b>of</b>. "call / email / letter" → <b>from</b>.</li>
+        <li>"Why didn't I think ___ that?" (ý tưởng) → <b>of</b>. "I need time to think ___ it" → <b>about</b>.</li>
+        <li>Câu hỏi ý kiến "What do you think ___ …?" → <b>of</b> (KHÔNG about).</li>
+        <li>Một câu có thể cần 2 giới từ: <i>complain <b>to</b> us <b>about</b> the noise</i>, <i>remind me <b>about</b> it</i>.</li>
+        <li>Nếu đề cho "both possible" → <i>think of/about doing</i> (dự định), <i>dream of/about being</i>, <i>warn of/about a danger</i>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">Suddenly I thought about a great idea.</td><td class="yes">Suddenly I thought <b>of</b> a great idea.</td><td class="why">ý tưởng nảy ra → think of</td></tr>
+        <tr><td class="no">I've never heard about him. (không biết ai)</td><td class="yes">I've never heard <b>of</b> him.</td><td class="why">biết sự tồn tại → of</td></tr>
+        <tr><td class="no">I haven't heard of Minh for weeks.</td><td class="yes">I haven't heard <b>from</b> Minh for weeks.</td><td class="why">liên lạc → from</td></tr>
+        <tr><td class="no">He reminds me about my father. (trông giống)</td><td class="yes">He reminds me <b>of</b> my father.</td><td class="why">gợi liên tưởng → of</td></tr>
+        <tr><td class="no">Remind me of the deadline.</td><td class="yes">Remind me <b>about</b> the deadline.</td><td class="why">nhắc đừng quên → about</td></tr>
+        <tr><td class="no">She complained about a headache.</td><td class="yes">She complained <b>of</b> a headache.</td><td class="why">triệu chứng → of</td></tr>
+        <tr><td class="no">We complained the manager.</td><td class="yes">We complained <b>to</b> the manager.</td><td class="why">complain to + người</td></tr>
+        <tr><td class="no">I can't think about his name.</td><td class="yes">I can't think <b>of</b> his name.</td><td class="why">nhớ ra → think of</td></tr>
+        <tr><td class="no">I dreamed of you last night. (giấc mơ)</td><td class="yes">I dreamt <b>about</b> you last night.</td><td class="why">mơ khi ngủ → about</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Email:</b> kết thư bằng <i>"I look forward to hearing from you."</i></li>
+        <li><b>Giao tiếp:</b> hỏi ý kiến bạn bè bằng <i>"What did you think of…?"</i> sau khi xem phim, đọc sách.</li>
+        <li><b>Công việc:</b> <i>"Could you remind me about the deadline?" / "I'll think about it."</i></li>
+        <li><b>IELTS Speaking:</b> <i>"This place reminds me of…" / "I've always dreamed of…"</i>.</li>
+        <li><b>Quy tắc vàng:</b> trước khi chọn about/of, tự hỏi "<i>câu này nói về câu chuyện, hay về sự tồn tại / ý tưởng / liên tưởng?</i>"</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> ôn bảng ở mục 1.2 sau 3 / 7 / 14 ngày; mỗi lần tự đặt 1 câu cho từng cặp (hear, think, remind, complain). Liên quan: <b>Unit 133</b> (about/for/of/after), <b>Unit 55</b> (remind/warn sb to do).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit134.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 134 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 134 – Verb + preposition 3 (about / of) | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit134.html';
+  var KEY = 'egu4_unit134_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn giới từ đúng (about, of, from…) theo nghĩa của câu.' },
+    { id:'B', title:'B. Điền giới từ',              desc:'Điền about / of / from / to cho đúng nghĩa.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 134.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 134 Exercises)', desc:'Bài 134.1 → 134.4 theo đúng dạng bài trong sách Murphy (câu đã viết lại), kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'"Who is Bao Anh?" "No idea. I\'ve never heard ______ her."',
+      opts:['from','about','of','to'], a:2,
+      exp:'hear OF = biết sb/sth tồn tại. Không biết người đó là ai → never heard of.' },
+    { id:'a2', sec:'A', type:'mcq', q:'Have you heard ______ your brother since he moved to Canada?',
+      opts:['from','of','about','with'], a:0,
+      exp:'hear FROM = nhận tin, có liên lạc với ai.' },
+    { id:'a3', sec:'A', type:'mcq', q:'What did you think ______ the concert? Did you enjoy it?',
+      opts:['about','for','on','of'], a:3,
+      exp:'think OF dùng khi hỏi / nêu ý kiến: What did you think of…?' },
+    { id:'a4', sec:'A', type:'mcq', q:'I need a few days to think ______ your offer.',
+      opts:['of','about','from','on'], a:1,
+      exp:'think ABOUT = cân nhắc, tập trung suy nghĩ.' },
+    { id:'a5', sec:'A', type:'mcq', q:'This smell reminds me ______ my mother\'s kitchen.',
+      opts:['about','of','for','to'], a:1,
+      exp:'remind sb OF = gợi nhớ, làm liên tưởng.' },
+    { id:'a6', sec:'A', type:'mcq', q:'The old man was complaining ______ a pain in his back.',
+      opts:['of','about','for','with'], a:0,
+      exp:'complain OF + cơn đau / bệnh.' },
+    { id:'a7', sec:'A', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['It was my idea. I thought about it first.','It was my idea. I thought of it first.'], a:1,
+      exp:'think OF = ý tưởng nảy ra trong đầu.' },
+    { id:'a8', sec:'A', type:'mcq', q:'Please remind me ______ the dentist appointment on Friday.',
+      opts:['of','for','about','on'], a:2,
+      exp:'remind sb ABOUT = nhắc ai đừng quên.' },
+
+    /* ===== B. Điền giới từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'Did you hear ______ the robbery at the bank yesterday?',
+      acc:['about'], ans:'about',
+      exp:'hear ABOUT = được kể / biết tin về chuyện gì.' },
+    { id:'b2', sec:'B', type:'fill', q:'I couldn\'t think ______ anything to say. It was so embarrassing.',
+      acc:['of'], ans:'of',
+      exp:'think OF = nghĩ ra.' },
+    { id:'b3', sec:'B', type:'fill', q:'Last night I dreamt ______ my old school.',
+      acc:['about'], ans:'about',
+      exp:'dream ABOUT (khi đang ngủ).' },
+    { id:'b4', sec:'B', type:'fill', q:'The customers complained ______ the slow service.',
+      acc:['about'], ans:'about',
+      exp:'complain ABOUT = phàn nàn, không hài lòng.' },
+    { id:'b5', sec:'B', type:'fill', q:'Who does that actor remind you ______?',
+      acc:['of'], ans:'of',
+      exp:'remind sb OF somebody = làm liên tưởng tới.' },
+    { id:'b6', sec:'B', type:'fill', q:'The locals warned us ______ the taxi drivers at the airport.',
+      acc:['about'], ans:'about',
+      exp:'warn sb ABOUT a person / thing that is bad (không dùng of với người).' },
+    { id:'b7', sec:'B', type:'fill', q:'Thanks for your message. It was nice to hear ______ you.',
+      acc:['from'], ans:'from',
+      exp:'hear FROM = nhận tin.' },
+    { id:'b8', sec:'B', type:'fill', q:'"Don\'t tell anyone." "I wouldn\'t dream ______ it."',
+      acc:['of'], ans:'of',
+      exp:'I wouldn\'t dream OF (doing) it = tôi sẽ không bao giờ làm thế.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (what / do / you / think / of / my / plan)',
+      tokens:['What','do','you','think','of','my','plan'],
+      acc:['what do you think of my plan'], ans:'What do you think of my plan?',
+      exp:'think OF khi hỏi ý kiến.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (I / haven\'t / heard / from / her / for / ages)',
+      tokens:['I',"haven't",'heard','from','her','for','ages'],
+      acc:["i haven't heard from her for ages"], ans:'I haven\'t heard from her for ages.',
+      exp:'hear FROM = liên lạc.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (we / are / thinking / of / moving / abroad)',
+      tokens:['We','are','thinking','of','moving','abroad'],
+      acc:['we are thinking of moving abroad'], ans:'We are thinking of moving abroad.',
+      exp:'think of / about doing = dự định, cân nhắc làm gì (cả hai đều được).' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (she / complained / to / the / manager / about / it)',
+      tokens:['She','complained','to','the','manager','about','it'],
+      acc:['she complained to the manager about it'], ans:'She complained to the manager about it.',
+      exp:'complain TO somebody ABOUT something.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (this / song / reminds / me / of / summer)',
+      tokens:['This','song','reminds','me','of','summer'],
+      acc:['this song reminds me of summer'], ans:'This song reminds me of summer.',
+      exp:'remind sb OF = gợi nhớ.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Can you lend me some money?  B: I\'ll think ______ it.',
+      acc:['about'], ans:'about',
+      exp:'think ABOUT = cân nhắc trước khi quyết định.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Have you ever heard ______ a city called Kon Tum?  B: Yes, it\'s in the Central Highlands.',
+      acc:['of'], ans:'of',
+      exp:'hear OF = biết có tồn tại.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: How was the film?  B: I didn\'t think much ______ it, to be honest.',
+      acc:['of'], ans:'of',
+      exp:'not think much OF = không thích lắm.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Why did you go to the doctor?  B: I was complaining ______ a sore throat.',
+      acc:['of'], ans:'of',
+      exp:'complain OF + triệu chứng.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu dùng hear about, hear of, hear from.',
+      sample:'Did you hear about the storm? I\'ve never heard of that singer. I heard from my cousin in Japan yesterday.',
+      exp:'about = tin tức; of = biết tồn tại; from = liên lạc.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 2 câu: một câu think about (cân nhắc), một câu think of (ý kiến hoặc ý tưởng).',
+      sample:'I\'m thinking about changing my job. What do you think of my new phone?',
+      exp:'think about = cân nhắc; think of = nảy ra ý / hỏi ý kiến.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu: remind sb about (nhắc) và remind sb of (gợi nhớ).',
+      sample:'Can you remind me about the party on Saturday? That old house reminds me of my grandmother.',
+      exp:'remind ABOUT = đừng quên; remind OF = liên tưởng.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'She has always dreamed ______ becoming a doctor.',
+      acc:['of','about'], ans:'of',
+      exp:'dream OF / ABOUT being / doing = mơ ước.' },
+    { id:'f2', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['Scientists have warned us of the dangers of plastic.','Scientists have warned us from the dangers of plastic.'], a:0,
+      exp:'warn sb ABOUT / OF a danger (nguy cơ có thể xảy ra).' },
+    { id:'f3', sec:'F', type:'fill', q:'I\'ve never heard ______ this brand. Is it Korean?',
+      acc:['of'], ans:'of',
+      exp:'hear OF = biết đến sự tồn tại.' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch sang tiếng Anh: "Anh ấy làm tôi nhớ đến bố tôi."',
+      acc:['he reminds me of my father','he reminds me of my dad','he reminded me of my father','he reminded me of my dad'],
+      ans:'He reminds me of my father.',
+      exp:'remind sb OF somebody = làm liên tưởng.' },
+    { id:'f5', sec:'F', type:'mcq', q:'Why didn\'t I think ______ that? It\'s such a simple solution!',
+      opts:['about','of','on','for'], a:1,
+      exp:'think OF = nghĩ ra ý tưởng.' },
+    { id:'f6', sec:'F', type:'fill', q:'Our neighbours complained ______ us about the noise.',
+      acc:['to'], ans:'to',
+      exp:'complain TO somebody ABOUT something.' },
+    { id:'f7', sec:'F', type:'mcq', q:'I\'d forgotten my keys, but luckily my wife reminded me ______ them.',
+      opts:['about','of','from','to'], a:0,
+      exp:'remind ABOUT = nhắc đừng quên.' },
+    { id:'f8', sec:'F', type:'fill', q:'When I\'m abroad, I often think ______ my family. (gõ 1 giới từ phù hợp)',
+      acc:['of','about'], ans:'of',
+      exp:'Trường hợp này of và about đều được (khác biệt rất nhỏ).' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 134.1 – hear / heard + about / of / from',
+      q:'"Did you ______ the fire at the market?" "Yes, my neighbour told me."',
+      acc:['hear about'], ans:'hear about',
+      exp:'hear ABOUT = được kể / biết tin.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 134.1 – hear / heard + about / of / from',
+      q:'My old roommate used to email me every week, but I haven\'t ______ him for a year.',
+      acc:['heard from'], ans:'heard from',
+      exp:'hear FROM = có liên lạc.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 134.1 – hear / heard + about / of / from',
+      q:'"Have you ______ a painter called Bui Xuan Phai?" "No, who is he?"',
+      acc:['heard of'], ans:'heard of',
+      exp:'hear OF = biết có tồn tại.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 134.1 – hear / heard + about / of / from',
+      q:'Thanks for calling. It\'s always great to ______ you.',
+      acc:['hear from'], ans:'hear from',
+      exp:'hear FROM = nhận tin từ ai.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 134.1 – hear / heard + about / of / from',
+      q:'I come from a tiny village in Nghe An. You\'ve probably never ______ it.',
+      acc:['heard of'], ans:'heard of',
+      exp:'hear OF = biết đến sự tồn tại.' },
+
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 134.2 – think about hay think of (chia đúng dạng)',
+      q:'Before buying a house, you should ______ it very carefully.',
+      acc:['think about'], ans:'think about',
+      exp:'think ABOUT = cân nhắc kỹ.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 134.2 – think about hay think of (chia đúng dạng)',
+      q:'What a clever name for the shop! Who ______ it?',
+      acc:['thought of'], ans:'thought of',
+      exp:'think OF = nghĩ ra; quá khứ → thought of.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 134.2 – think about hay think of (chia đúng dạng)',
+      q:'"I\'ve just read the report." "What did you ______ it?"',
+      acc:['think of'], ans:'think of',
+      exp:'Hỏi ý kiến → think OF.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 134.2 – think about hay think of (chia đúng dạng)',
+      q:'We\'re ______ going to the beach this weekend. Want to join us?',
+      acc:['thinking of','thinking about'], ans:'thinking of',
+      exp:'think of / about doing (dự định) — cả hai đều được.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 134.2 – think about hay think of (chia đúng dạng)',
+      q:'I don\'t want to go to the party. I\'ll have to ______ an excuse.',
+      acc:['think of'], ans:'think of',
+      exp:'think OF an excuse = nghĩ ra một cái cớ.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 134.2 – think about hay think of (chia đúng dạng)',
+      q:'I don\'t ______ much ______ this restaurant. The food is bland.',
+      acc:['think ... of','think of','think...of','think / of'], ans:'think ... of',
+      exp:'not think much OF = không đánh giá cao. Gõ: think ... of' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 134.2 – think about hay think of (chia đúng dạng)',
+      q:'"Should I take the job?" "I can\'t ______ any reason why not."',
+      acc:['think of'], ans:'think of',
+      exp:'think OF any reason = nghĩ ra được lý do nào.' },
+
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 134.3 – Điền giới từ đúng',
+      q:'"I had a weird dream." "Really? What did you dream ______?"',
+      acc:['about'], ans:'about',
+      exp:'dream ABOUT (khi ngủ).' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 134.3 – Điền giới từ đúng',
+      q:'Grandpa was complaining ______ pains in his knees, so we took him to the clinic.',
+      acc:['of'], ans:'of',
+      exp:'complain OF + cơn đau.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 134.3 – Điền giới từ đúng',
+      q:'I love this smell. It reminds me ______ rainy afternoons in Hanoi.',
+      acc:['of'], ans:'of',
+      exp:'remind OF = gợi nhớ.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 134.3 – Điền giới từ đúng',
+      q:'"We\'ve missed the last bus. What can we do?" "Don\'t worry. I\'ll think ______ something."',
+      acc:['of'], ans:'of',
+      exp:'think OF something = nghĩ ra cách.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 134.3 – Điền giới từ đúng',
+      q:'My friend warned me ______ the tap water. She said I shouldn\'t drink it.',
+      acc:['about'], ans:'about',
+      exp:'warn sb ABOUT something bad.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 134.3 – Điền giới từ đúng',
+      q:'Teachers often warn students ______ the dangers of using phones while cycling.',
+      acc:['about','of'], ans:'about',
+      exp:'warn ABOUT / OF a danger — cả hai đều được.' },
+
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 134.4 – complain/dream/hear/remind/think/warn + giới từ',
+      q:'My uncle is never happy. He\'s always ______ something. (complain)',
+      acc:['complaining about'], ans:'complaining about',
+      exp:'always + -ing (phàn nàn liên tục) + ABOUT.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 134.4 – complain/dream/hear/remind/think/warn + giới từ',
+      q:'Before you go swimming, I must ______ you ______ the jellyfish. (warn)',
+      acc:['warn ... about','warn about','warn...about','warn / about'], ans:'warn ... about',
+      exp:'warn sb ABOUT something dangerous. Gõ: warn ... about' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 134.4 – complain/dream/hear/remind/think/warn + giới từ',
+      q:'"You wouldn\'t read my diary, would you?" "Of course not. I wouldn\'t ______ it."',
+      acc:['dream of'], ans:'dream of',
+      exp:'I wouldn\'t dream OF it = tôi sẽ không bao giờ làm.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 134.4 – complain/dream/hear/remind/think/warn + giới từ',
+      q:'I would have missed the flight if Duc hadn\'t ______ me ______ it. (remind)',
+      acc:['reminded ... about','reminded about','reminded...about','reminded / about'], ans:'reminded ... about',
+      exp:'remind sb ABOUT = nhắc đừng quên. Gõ: reminded ... about' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 134.4 – complain/dream/hear/remind/think/warn + giới từ',
+      q:'Look at that girl over there. Does she ______ you ______ anyone you know? (remind)',
+      acc:['remind ... of','remind of','remind...of','remind / of'], ans:'remind ... of',
+      exp:'remind sb OF = làm liên tưởng. Gõ: remind ... of' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 134.4 – complain/dream/hear/remind/think/warn + giới từ',
+      q:'He isn\'t a famous writer. Not many people have ______ him. (hear)',
+      acc:['heard of'], ans:'heard of',
+      exp:'have + heard OF = biết đến.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 87 – Much, many, little, few, a lot, plenty | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 87 – Much, many, little, few, a lot, plenty</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">60 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Đây là nhóm từ chỉ <b>số lượng</b>. Hai câu hỏi cần trả lời mỗi lần dùng: (1) danh từ <b>đếm được số nhiều</b> hay <b>không đếm được</b>? (2) ý của bạn là <b>tích cực</b> ("có một ít, đủ dùng") hay <b>tiêu cực</b> ("ít quá, gần như không")? Ngoài ra, <b>much</b> nghe không tự nhiên trong câu khẳng định — người bản ngữ thường thay bằng <b>a lot (of)</b>.</p>
+      <div class="ex"><b class="en">He spoke <mark>a little</mark> English, so we could talk. ↔ He spoke <mark>little</mark> English, so it was hard to talk.</b><br>Chỉ khác chữ <u>a</u> mà nghĩa ngược hẳn: <i>a little</i> = có một ít (đủ), <i>little</i> = ít ỏi (không đủ).</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">Không đếm được (time, money, water):   much · little · a little
+Số nhiều (friends, cars, ideas):        many · few · a few
+Cả hai loại:                            a lot of · lots of · plenty of
+
+little / few      = không nhiều, ít hơn mong muốn  (ý tiêu cực)
+a little / a few  = một ít, đủ dùng                (ý tích cực)
+plenty (of)       = nhiều hơn mức cần</div>
+      <div class="scroll"><table>
+        <tr><th></th><th>Không đếm được</th><th>Đếm được số nhiều</th></tr>
+        <tr><td>Nhiều</td><td>much / a lot of</td><td>many / a lot of</td></tr>
+        <tr><td>Ít (tiêu cực)</td><td>little / very little</td><td>few / very few</td></tr>
+        <tr><td>Một ít (tích cực)</td><td>a little</td><td>a few</td></tr>
+        <tr><td>Thừa đủ</td><td colspan="2">plenty of (time / ideas)</td></tr>
+      </table></div>
+
+      <h2>1.3 · A–B. Much/many, a lot of, plenty of</h2>
+      <ul>
+        <li><b>much</b> + không đếm được: <i>much time, much luck</i>. <b>many</b> + số nhiều: <i>many friends, many countries</i>.</li>
+        <li><b>a lot of / lots of / plenty of</b> dùng cho cả hai: <i>a lot of luck, lots of people, plenty of ideas</i>.</li>
+        <li><b>plenty</b> = nhiều hơn mức cần: <i>Don't rush. We've got <b>plenty of</b> time.</i></li>
+      </ul>
+
+      <h2>1.4 · C. Much hiếm dùng trong câu khẳng định</h2>
+      <div class="formula">We didn't spend much money.     ✅    We spent a lot of money.   ✅
+We spent much money.            ❌ (không tự nhiên)
+Do you see David much?          ✅    I see David a lot.        ✅  (không: I see David much)</div>
+      <ul>
+        <li><b>many</b> và <b>a lot of</b> thì dùng được trong mọi loại câu: <i>Many people / A lot of people drive too fast.</i></li>
+        <li>Nói <i><b>many years / many weeks / many days</b></i>, không nói <s>a lot of years</s>: <i>We've lived here for many years.</i></li>
+      </ul>
+
+      <h2>1.5 · D. Little = not much, few = not many</h2>
+      <ul>
+        <li><i>Gary is very busy. He has <b>little</b> time for other things.</i> (ít hơn anh ấy muốn)</li>
+        <li><i>Vicky doesn't like the city. She has <b>few</b> friends there.</i></li>
+        <li>Hay dùng <b>very little / very few</b>: <i>very little time, very few friends</i>.</li>
+      </ul>
+
+      <h2>1.6 · E. A little = some, a few = some</h2>
+      <ul>
+        <li><i>Let's get a coffee. We have <b>a little</b> time before the train.</i> (đủ để uống cà phê)</li>
+        <li><i>'Do you speak French?' '<b>A little</b>.'</i></li>
+        <li><i>I have <b>a few</b> friends here and we meet quite often.</i> · <i>I saw her <b>a few</b> days ago.</i></li>
+        <li><b>only a little / only a few</b> (không nói <s>only little / only few</s>): <i>We only have a little time. There were only a few houses.</i></li>
+      </ul>
+      <div class="formula">She's lucky. She has few problems.        (không nhiều vấn đề → tốt)
+Things aren't going well. She has a few problems. (có vài vấn đề)</div>
+
+      <h2>1.7 · So sánh &amp; lỗi hay gặp</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I have many homework.</td><td class="yes">I have <b>a lot of</b> homework. (homework không đếm được)</td></tr>
+        <tr><td class="no">She drinks much coffee.</td><td class="yes">She drinks <b>a lot of</b> coffee.</td></tr>
+        <tr><td class="no">He travels much.</td><td class="yes">He travels <b>a lot</b>.</td></tr>
+        <tr><td class="no">Can you lend me few dollars?</td><td class="yes">... lend me <b>a few</b> dollars?</td></tr>
+        <tr><td class="no">I know only few words.</td><td class="yes">I know <b>only a few</b> words.</td></tr>
+        <tr><td class="no">I haven't seen her for a lot of years.</td><td class="yes">... for <b>many</b> years.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Units 69–70</b> (danh từ đếm được &amp; không đếm được) · <b>Unit 88</b> (all/most/some of).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">⏰ <b class="en">Relax — we've got <mark>plenty of</mark> time.</b> <span class="note">(đời sống — trấn an)</span></div>
+      <div class="ex">💸 <b class="en">We spent <mark>a lot of</mark> money on our holiday.</b> <span class="note">(đời sống — khẳng định dùng a lot of)</span></div>
+      <div class="ex">🚦 <b class="en">There wasn't <mark>much</mark> traffic this morning.</b> <span class="note">(phủ định dùng much)</span></div>
+      <div class="ex">🗣️ <b class="en">— Do you speak Korean? — Only <mark>a little</mark>.</b> <span class="note">(giao tiếp — khiêm tốn)</span></div>
+      <div class="ex">❓ <b class="en">Can I ask you <mark>a few</mark> questions?</b> <span class="note">(công việc — phỏng vấn, khảo sát)</span></div>
+      <div class="ex">🏚️ <b class="en">The town is quiet. <mark>Very few</mark> tourists come here.</b> <span class="note">(mô tả — ý tiêu cực)</span></div>
+      <div class="ex">🧘 <b class="en">She has <mark>little</mark> patience with lazy students.</b> <span class="note">(nhận xét tính cách)</span></div>
+      <div class="ex">📊 <b class="en"><mark>Many</mark> people now work from home.</b> <span class="note">(IELTS Writing — many trang trọng)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Many – Mấy cái đếm được, Much – Mớ không đếm được."</b></li>
+        <li><b>Có chữ "a" = có "chút ánh sáng":</b> a little / a few = tích cực; bỏ "a" = tối, ít ỏi.</li>
+        <li><b>much ngại câu khẳng định:</b> gặp câu khẳng định → đổi sang <i>a lot (of)</i>.</li>
+        <li><b>plenty = dư dả:</b> plenty of time = thời gian thoải mái.</li>
+        <li><b>only luôn đi với a:</b> only a little / only a few.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Bước 1: xác định danh từ đếm được hay không (money, time, advice, information, traffic, rain → không đếm được).</li>
+        <li>Bước 2: đọc ngữ cảnh — kết quả tốt ("so we could talk", "enough") → <b>a little/a few</b>; kết quả xấu ("so it was difficult", "not popular") → <b>little/few</b>.</li>
+        <li>Câu khẳng định có <i>much</i> → thường là chỗ cần sửa thành <i>a lot of / a lot</i>.</li>
+        <li>Động từ đứng cuối (<i>travels much, cost much</i>) → <i>a lot</i> (không có of).</li>
+        <li><i>for ___ years</i> → <b>many</b>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">I have many money.</td><td class="yes">I have <b>a lot of</b> money.</td><td class="why">money không đếm được</td></tr>
+        <tr><td class="no">There are much people here.</td><td class="yes">There are <b>a lot of / many</b> people here.</td><td class="why">people số nhiều</td></tr>
+        <tr><td class="no">He gave me many advices.</td><td class="yes">He gave me <b>a lot of</b> advice.</td><td class="why">advice không đếm được, không thêm -s</td></tr>
+        <tr><td class="no">Very much people like it.</td><td class="yes"><b>A lot of</b> people like it.</td><td class="why">dịch "rất nhiều" máy móc</td></tr>
+        <tr><td class="no">She works much.</td><td class="yes">She works <b>a lot</b>.</td><td class="why">much không tự nhiên trong câu khẳng định</td></tr>
+        <tr><td class="no">I have few time. (= có chút thời gian)</td><td class="yes">I have <b>a little</b> time.</td><td class="why">time không đếm được + ý tích cực</td></tr>
+        <tr><td class="no">Wait few minutes.</td><td class="yes">Wait <b>a few</b> minutes.</td><td class="why">"vài phút" → a few</td></tr>
+        <tr><td class="no">I know only little English.</td><td class="yes">I know <b>only a little</b> English.</td><td class="why">only + a little</td></tr>
+        <tr><td class="no">a lot of informations</td><td class="yes">a lot of <b>information</b></td><td class="why">không đếm được</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> khi được hỏi trình độ: <i>"I speak a little Japanese." / "I know a few words of Thai."</i></li>
+        <li><b>Viết IELTS:</b> dùng <i>many / few / very little</i> để văn trang trọng hơn: <i>"Very few students can afford ..."</i></li>
+        <li><b>Công việc:</b> <i>"Could I have a few minutes of your time?" / "We have plenty of stock."</i></li>
+        <li><b>Tự sửa:</b> mỗi khi định nói <i>much</i> trong câu khẳng định → thay bằng <i>a lot of</i>.</li>
+        <li><b>Quy tắc vàng:</b> đếm được? → many/few; không đếm được? → much/little; tích cực? → thêm <b>a</b>.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3 ngày, 7 ngày và 14 ngày; ưu tiên nút "Làm lại câu sai". Liên quan: <b>Units 69–70</b> (đếm được/không đếm được), <b>Unit 88</b> (all/most/some of).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit87.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 87 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 87 – Much, many, little, few, a lot, plenty | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit87.html';
+  var KEY = 'egu4_unit87_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn much/many/little/few/a lot/plenty phù hợp.' },
+    { id:'B', title:'B. Điền từ chỉ số lượng',      desc:'Điền much, many, little, a little, few, a few, a lot (of)…' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 87.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 87 Exercises)', desc:'Bài 87.1 → 87.5 theo đúng dạng bài của sách Murphy, câu đã viết lại, kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'How ______ students are there in your class?',
+      opts:['many','much','little','a lot'], a:0,
+      exp:'students là danh từ đếm được số nhiều → How many.' },
+    { id:'a2', sec:'A', type:'mcq', q:'We don\'t have ______ information about the new project yet.',
+      opts:['many','much','few','a few'], a:1,
+      exp:'information không đếm được + câu phủ định → much.' },
+    { id:'a3', sec:'A', type:'mcq', q:'Chọn câu TỰ NHIÊN nhất:',
+      opts:['My brother eats much meat.','My brother eats many meat.','My brother eats a lot of meat.'], a:2,
+      exp:'Câu khẳng định → a lot of (much không tự nhiên). meat không đếm được nên không dùng many.' },
+    { id:'a4', sec:'A', type:'mcq', q:'Hurry up! We only have ______ time before the shop closes.',
+      opts:['little','a few','few','a little'], a:3,
+      exp:'time không đếm được; sau only luôn dùng a little (không nói only little).' },
+    { id:'a5', sec:'A', type:'mcq', q:'The film was boring, so ______ people stayed until the end.',
+      opts:['few','a few','a little','much'], a:0,
+      exp:'Ý tiêu cực (phim chán → ít người ở lại) + people số nhiều → few.' },
+    { id:'a6', sec:'A', type:'mcq', q:'Don\'t worry about food — there\'s ______ for everyone.',
+      opts:['plenty of','plenty','many','few'], a:1,
+      exp:'plenty đứng một mình (không có danh từ sau) = nhiều hơn mức cần. plenty of phải có danh từ theo sau.' },
+    { id:'a7', sec:'A', type:'mcq', q:'I\'ve known Lan for ______ years.',
+      opts:['a lot of','much','many','plenty'], a:2,
+      exp:'Với years/weeks/days ta nói many years (không nói a lot of years).' },
+    { id:'a8', sec:'A', type:'mcq', q:'He spoke ______ Spanish, so we managed to understand each other.',
+      opts:['little','few','a few','a little'], a:3,
+      exp:'Kết quả tích cực (vẫn hiểu nhau) + Spanish không đếm được → a little.' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'Did you spend ______ money at the market? (much/many)',
+      acc:['much'], ans:'much',
+      exp:'Câu hỏi + money không đếm được → much.' },
+    { id:'b2', sec:'B', type:'fill', q:'She has very ______ free time because she has two jobs. (little/few)',
+      acc:['little'], ans:'little',
+      exp:'free time không đếm được, ý tiêu cực → very little.' },
+    { id:'b3', sec:'B', type:'fill', q:'I\'ve got ______ ideas for the party. Let\'s discuss them. (a few/a little)',
+      acc:['a few'], ans:'a few',
+      exp:'ideas số nhiều, ý tích cực (có vài ý) → a few.' },
+    { id:'b4', sec:'B', type:'fill', q:'My dad travels ______ for his job — about twice a month. (cụm 2 từ)',
+      acc:['a lot'], ans:'a lot',
+      exp:'Câu khẳng định, sau động từ (không có danh từ) → a lot (không nói travels much).' },
+    { id:'b5', sec:'B', type:'fill', q:'There aren\'t ______ good restaurants in this area. (much/many)',
+      acc:['many'], ans:'many',
+      exp:'restaurants số nhiều → many.' },
+    { id:'b6', sec:'B', type:'fill', q:'Would you like ______ more soup? (a few/a little)',
+      acc:['a little'], ans:'a little',
+      exp:'soup không đếm được + ý "một chút" → a little.' },
+    { id:'b7', sec:'B', type:'fill', q:'It\'s a big flat. There\'s ______ of room for a piano.',
+      acc:['plenty'], ans:'plenty',
+      exp:'plenty of room = rất nhiều chỗ, thừa đủ.' },
+    { id:'b8', sec:'B', type:'fill', q:'The village is tiny. Very ______ people live there. (little/few)',
+      acc:['few'], ans:'few',
+      exp:'people số nhiều, ý tiêu cực → very few.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (we\'ve / plenty / got / of / time)',
+      tokens:["We've",'got','plenty','of','time'],
+      acc:["we've got plenty of time"], ans:'We\'ve got plenty of time.',
+      exp:'have got + plenty of + danh từ.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (how / did / much / cost / it)',
+      tokens:['How','much','did','it','cost'],
+      acc:['how much did it cost'], ans:'How much did it cost?',
+      exp:'Hỏi giá: How much + did + S + V?' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (only / I / a few / know / words)',
+      tokens:['I','know','only','a','few','words'],
+      acc:['i know only a few words'], ans:'I know only a few words.',
+      exp:'only + a few + danh từ số nhiều.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (there / much / wasn\'t / traffic / today)',
+      tokens:['There',"wasn't",'much','traffic','today'],
+      acc:["there wasn't much traffic today"], ans:'There wasn\'t much traffic today.',
+      exp:'Phủ định + danh từ không đếm được → much.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (he / patience / has / very / little)',
+      tokens:['He','has','very','little','patience'],
+      acc:['he has very little patience'], ans:'He has very little patience.',
+      exp:'very little + danh từ không đếm được (ý tiêu cực).' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Do you speak Chinese?  B: Just ______. I can order food.',
+      acc:['a little'], ans:'a little',
+      exp:'Ý tích cực, "một chút" → a little.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: When did you last see Minh?  B: ______ days ago.',
+      acc:['a few'], ans:'A few',
+      exp:'a few days ago = vài ngày trước.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: How ______ coffee do you drink a day?  B: About three cups.',
+      acc:['much'], ans:'much',
+      exp:'coffee không đếm được → How much.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Is there enough bread?  B: Yes, there\'s ______. I bought two loaves.',
+      acc:['plenty'], ans:'plenty',
+      exp:'Thừa đủ, không có danh từ sau → plenty.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 2 câu: 1 câu với a few, 1 câu với few, cho thấy sự khác nhau về nghĩa.',
+      sample:'I have a few close friends, so I\'m never lonely. Few people visit this museum, so it\'s always quiet.',
+      exp:'a few = một vài (tích cực, đủ); few = ít ỏi (gần như không).' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 2 câu về chi tiêu của bạn: 1 câu khẳng định với a lot of, 1 câu phủ định với much.',
+      sample:'I spend a lot of money on books. I don\'t spend much money on clothes.',
+      exp:'Khẳng định → a lot of; phủ định/câu hỏi → much.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 1 câu với plenty of và 1 câu với very little.',
+      sample:'There are plenty of parks in my city. I have very little time to relax during the week.',
+      exp:'plenty of = thừa đủ (đếm được và không đếm được); very little + không đếm được.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['Can you lend me few dollars?','Can you lend me a little dollars?','Can you lend me a few dollars?'], a:2,
+      exp:'dollars đếm được, ý "vài đô" → a few.' },
+    { id:'f2', sec:'F', type:'fill', q:'There\'s ______ milk left. Can you buy some? (little/few)',
+      acc:['little'], ans:'little',
+      exp:'milk không đếm được, ý "gần hết" → little.' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu TỰ NHIÊN nhất:',
+      opts:['It cost much to fix the roof.','It cost a lot to fix the roof.'], a:1,
+      exp:'Câu khẳng định → a lot. (Câu hỏi "Did it cost much?" thì được.)' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch: "Tôi có vài câu hỏi." (dùng a few)',
+      acc:['i have a few questions',"i've got a few questions",'i have got a few questions'],
+      ans:'I have a few questions.',
+      exp:'questions đếm được số nhiều + ý "một vài" → a few.' },
+    { id:'f5', sec:'F', type:'mcq', q:'She isn\'t very popular. She has ______ friends.',
+      opts:['a few','a little','few','much'], a:2,
+      exp:'Ý tiêu cực (không được yêu thích) → few.' },
+    { id:'f6', sec:'F', type:'fill', q:'I need ______ advice about my CV. (a few/a little)',
+      acc:['a little'], ans:'a little',
+      exp:'advice không đếm được → a little.' },
+    { id:'f7', sec:'F', type:'mcq', q:'We haven\'t had ______ rain this summer.',
+      opts:['many','few','a few','much'], a:3,
+      exp:'rain không đếm được + phủ định → much.' },
+    { id:'f8', sec:'F', type:'fill', q:'There are ______ of hotels in the city, so finding a room is easy.',
+      acc:['plenty','lots'], ans:'plenty',
+      exp:'plenty of hotels = rất nhiều khách sạn (thừa đủ). lots of cũng được.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'mcq', sub:'Bài 87.1 – much đúng hay cần đổi?',
+      q:'"Tom drinks much coffee."',
+      opts:['Đổi: Tom drinks a lot of coffee.','OK, giữ nguyên.'], a:0,
+      exp:'Câu khẳng định → a lot of coffee.' },
+    { id:'h2', sec:'G', type:'mcq', sub:'Bài 87.1 – much đúng hay cần đổi?',
+      q:'"Hurry up. We don\'t have much time."',
+      opts:['Đổi: We don\'t have many time.','OK, giữ nguyên.'], a:1,
+      exp:'Phủ định + time không đếm được → much là đúng.' },
+    { id:'h3', sec:'G', type:'mcq', sub:'Bài 87.1 – much đúng hay cần đổi?',
+      q:'"Did it cost much to fix your phone?"',
+      opts:['OK, giữ nguyên.','Đổi: Did it cost a lot of to fix ...'], a:0,
+      exp:'Câu hỏi → much dùng được.' },
+    { id:'h4', sec:'G', type:'mcq', sub:'Bài 87.1 – much đúng hay cần đổi?',
+      q:'"I don\'t know much people in this city."',
+      opts:['OK, giữ nguyên.','Đổi: I don\'t know many people / a lot of people.'], a:1,
+      exp:'people số nhiều → many hoặc a lot of.' },
+    { id:'h5', sec:'G', type:'mcq', sub:'Bài 87.1 – much đúng hay cần đổi?',
+      q:'"My sister travels much."',
+      opts:['Đổi: My sister travels a lot.','OK, giữ nguyên.'], a:0,
+      exp:'Khẳng định, sau động từ → a lot.' },
+    { id:'h6', sec:'G', type:'mcq', sub:'Bài 87.1 – much đúng hay cần đổi?',
+      q:'"You need much patience to teach children."',
+      opts:['OK, giữ nguyên.','Đổi: You need a lot of patience ...'], a:1,
+      exp:'Câu khẳng định → a lot of patience.' },
+
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 87.2 – plenty / plenty of',
+      q:'She\'s rich. She has ______ money.', acc:['plenty of'], ans:'plenty of',
+      exp:'plenty of + danh từ.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 87.2 – plenty / plenty of',
+      q:'Sit down with us. There\'s ______ room.', acc:['plenty of'], ans:'plenty of',
+      exp:'room (chỗ trống) không đếm được → plenty of room.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 87.2 – plenty / plenty of',
+      q:'He\'s a good player, but he still has ______ to learn.', acc:['plenty'], ans:'plenty',
+      exp:'plenty + to V (không có danh từ) → plenty to learn.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 87.2 – plenty / plenty of',
+      q:'Hanoi is a great city to visit. There\'s ______ to see.', acc:['plenty'], ans:'plenty',
+      exp:'plenty to see = có rất nhiều thứ để xem.' },
+
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 87.3 – much / many / little / few (1 từ)',
+      q:'Mai is very busy at the moment. She has ______ free time.', acc:['little'], ans:'little',
+      exp:'free time không đếm được, ý tiêu cực → little.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 87.3 – much / many / little / few (1 từ)',
+      q:'Did you buy ______ souvenirs on your trip?', acc:['many'], ans:'many',
+      exp:'souvenirs số nhiều, câu hỏi → many.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 87.3 – much / many / little / few (1 từ)',
+      q:'I\'m quite relaxed today. I don\'t have ______ to do.', acc:['much'], ans:'much',
+      exp:'Phủ định, không có danh từ cụ thể → much.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 87.3 – much / many / little / few (1 từ)',
+      q:'It\'s a very new town. There are ______ old houses.', acc:['few'], ans:'few',
+      exp:'houses số nhiều, ý "rất ít" → few.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 87.3 – much / many / little / few (1 từ)',
+      q:'\'Have you been to Da Lat?\' \'Not for ______ years.\'', acc:['many'], ans:'many',
+      exp:'for many years.' },
+
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 87.4 – Thêm a (a few / a little) nếu cần; đúng rồi thì ghi OK',
+      q:'Can you give me few euros for the bus? → cụm đúng: ______ euros', acc:['a few','a few euros'], ans:'a few euros',
+      exp:'Xin "vài đồng" (ý tích cực, một số lượng nhỏ) → a few euros.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 87.4 – Thêm a (a few / a little) nếu cần; đúng rồi thì ghi OK',
+      q:'The roads were quiet — there was little traffic, so we arrived early. → (viết OK hoặc sửa)', acc:['ok'], ans:'OK',
+      exp:'little traffic = không nhiều xe (tốt cho chuyến đi) → câu đúng, ghi OK.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 87.4 – Thêm a (a few / a little) nếu cần; đúng rồi thì ghi OK',
+      q:'I can\'t decide now. I need little time to think. → cụm đúng: ______ time', acc:['a little','a little time'], ans:'a little time',
+      exp:'Cần "một chút" thời gian (ý tích cực) → a little time.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 87.4 – Thêm a (a few / a little) nếu cần; đúng rồi thì ghi OK',
+      q:'Nobody thought she would win. Few people expected it. → (viết OK hoặc sửa)', acc:['ok'], ans:'OK',
+      exp:'Few people = rất ít người (gần như không ai) → đúng ý, ghi OK.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 87.4 – Thêm a (a few / a little) nếu cần; đúng rồi thì ghi OK',
+      q:'My Japanese is basic — I know only few phrases. → cụm đúng: only ______ phrases', acc:['a few','only a few','only a few phrases','a few phrases'], ans:'only a few phrases',
+      exp:'Sau only luôn có a: only a few.' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 87.4 – Thêm a (a few / a little) nếu cần; đúng rồi thì ghi OK',
+      q:'I haven\'t heard from Huy for few weeks. → cụm đúng: for ______ weeks', acc:['a few','a few weeks','for a few weeks'], ans:'for a few weeks',
+      exp:'"vài tuần" → a few weeks.' },
+
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 87.5 – little / a little / few / a few',
+      q:'Listen. I\'d like to give you ______ advice before you start.', acc:['a little'], ans:'a little',
+      exp:'advice không đếm được, ý "một chút lời khuyên" → a little.' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 87.5 – little / a little / few / a few',
+      q:'Can I ask you ______ questions about your job?', acc:['a few'], ans:'a few',
+      exp:'questions số nhiều, ý "vài câu" → a few.' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 87.5 – little / a little / few / a few',
+      q:'The beach is hard to reach, so ______ tourists go there.', acc:['few'], ans:'few',
+      exp:'Ý tiêu cực (khó đến → ít khách) → few.' },
+    { id:'h25', sec:'G', type:'fill', sub:'Bài 87.5 – little / a little / few / a few',
+      q:'He wouldn\'t be a good nurse. He has ______ patience.', acc:['little'], ans:'little',
+      exp:'patience không đếm được, ý "rất ít" → little.' },
+    { id:'h26', sec:'G', type:'fill', sub:'Bài 87.5 – little / a little / few / a few',
+      q:'\'Sugar in your tea?\' \'Yes, ______, please.\'', acc:['a little'], ans:'a little',
+      exp:'Một chút đường → a little.' },
+    { id:'h27', sec:'G', type:'fill', sub:'Bài 87.5 – little / a little / few / a few',
+      q:'\'Have you been to Singapore?\' \'Yes, I\'ve been there ______ times.\'', acc:['a few'], ans:'a few',
+      exp:'Vài lần → a few times.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 124 – In/at/on (position) 2 | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 124 – In/at/on (position) 2</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">57 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Unit 123 cho bạn quy tắc chung (in = bên trong, at = điểm, on = bề mặt). Unit này là <b>danh sách các cụm cố định</b> mà người học hay đoán sai: <i>in a photo, in bed, on the second floor, on a farm, on the left, at the top, in the corner / at the corner</i>… Cách học hiệu quả nhất là <b>nhớ theo cụm</b>, không suy luận từng chữ.</p>
+      <div class="ex"><b class="en">The TV is <mark>in</mark> the corner of the room. — There's a shop <mark>at</mark> (or <mark>on</mark>) the corner of the street.</b><br>Góc bên trong phòng → in; góc bên ngoài, chỗ hai con đường gặp nhau → at/on.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">IN : in a line / a row / a queue    in bed           in the sky / the world
+     in an office / a department      in the country(side)
+     in a picture / a photo / a book / a paper / a magazine / a letter
+ON : on the left / right (-hand side)    on the ground / first / second floor
+     on a map / a menu / a list          on a farm
+     on a river / a road / the coast     on the way (home / to work)
+AT : at the top / bottom / end (of)</div>
+      <div class="scroll"><table>
+        <tr><th>Vị trí</th><th>Ô tô</th><th>Toà nhà / rạp / nhóm người</th><th>Tờ giấy / lá thư</th></tr>
+        <tr><td>phía trước</td><td><b>in</b> the front</td><td><b>at</b> the front</td><td><b>on</b> the front</td></tr>
+        <tr><td>phía sau</td><td><b>in</b> the back</td><td><b>at</b> the back</td><td><b>on</b> the back</td></tr>
+      </table></div>
+
+      <h2>1.3 · A – Các cụm với in</h2>
+      <ul>
+        <li><i>I like to sit <b>in the front row</b>. He's still <b>in bed</b>. There wasn't a cloud <b>in the sky</b>.</i></li>
+        <li><i>I work <b>in the sales department</b>. Who's the woman <b>in that photo</b>? — a picture <b>in today's paper</b>.</i></li>
+      </ul>
+
+      <h2>1.4 · B–C – Các cụm với on</h2>
+      <ul>
+        <li><i>In Britain they drive <b>on the left</b>. Our flat is <b>on the second floor</b>.</i></li>
+        <li><i>Don't buy anything that's not <b>on the list</b>. Have you ever worked <b>on a farm</b>?</i></li>
+        <li>Thành phố nằm bên sông/bờ biển: <i>Budapest is <b>on the Danube</b>. Is your town <b>on the coast</b>?</i></li>
+        <li><i>We stopped at a shop <b>on the way home</b>.</i></li>
+      </ul>
+
+      <h2>1.5 · D–F – at the top, front/back, corner</h2>
+      <ul>
+        <li><i>Write your name <b>at the top</b> of the page. Her house is <b>at the other end</b> of the street.</i></li>
+        <li><i>I was sitting <b>in the back</b> (of the car). The garden is <b>at the back</b> of the house. I wrote the date <b>on the back</b> of the photo.</i></li>
+        <li><i>The TV is <b>in the corner</b> of the room. The shop is <b>at/on the corner</b> of the street.</i></li>
+      </ul>
+
+      <h2>1.6 · So sánh &amp; lỗi hay gặp</h2>
+      <div class="scroll"><table>
+        <tr><th>Dễ nhầm</th><th>Đúng</th><th>Ghi chú</th></tr>
+        <tr><td>góc</td><td>in the corner (phòng) / at, on the corner (phố)</td><td>trong ↔ ngoài</td></tr>
+        <tr><td>tầng</td><td>on the 3rd floor</td><td>không dùng in/at</td></tr>
+        <tr><td>ảnh, báo</td><td>in a photo, in the newspaper</td><td>không dùng on</td></tr>
+        <tr><td>danh sách, bản đồ, thực đơn</td><td>on a list / map / menu</td><td>không dùng in</td></tr>
+        <tr><td>giường</td><td>in bed (không "the")</td><td>on the bed = nằm/ngồi trên mặt giường</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">I live in the fourth floor.</td><td class="yes">I live <b>on</b> the fourth floor.</td></tr>
+        <tr><td class="no">Who's that on the photo?</td><td class="yes">Who's that <b>in</b> the photo?</td></tr>
+        <tr><td class="no">It's not in the menu.</td><td class="yes">It's not <b>on</b> the menu.</td></tr>
+        <tr><td class="no">in the top of the page</td><td class="yes"><b>at</b> the top of the page</td></tr>
+        <tr><td class="no">Drive in the right.</td><td class="yes">Drive <b>on</b> the right.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 123</b> &amp; <b>Unit 125</b> (in/at/on vị trí) · <b>Unit 108D</b> (in the world) · <b>Appendix 7</b> (Anh-Mỹ: first floor ở Mỹ = ground floor ở Anh).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🏢 <b class="en">Our office is <mark>on</mark> the 12th floor.</b> <span class="note">(công việc — hướng dẫn khách)</span></div>
+      <div class="ex">🛗 <b class="en">The meeting room is <mark>on</mark> the left as you come out of the lift.</b> <span class="note">(công việc — chỉ đường trong toà nhà)</span></div>
+      <div class="ex">📸 <b class="en">That's my grandmother <mark>in</mark> the photo.</b> <span class="note">(gia đình — giới thiệu ảnh)</span></div>
+      <div class="ex">🍜 <b class="en">Is phở <mark>on</mark> the menu today?</b> <span class="note">(nhà hàng — gọi món)</span></div>
+      <div class="ex">🌊 <b class="en">Nha Trang is a city <mark>on</mark> the coast.</b> <span class="note">(IELTS Speaking — quê hương)</span></div>
+      <div class="ex">🚗 <b class="en">The kids are sleeping <mark>in</mark> the back of the car.</b> <span class="note">(đời sống — đi xa)</span></div>
+      <div class="ex">📝 <b class="en">Write your candidate number <mark>at</mark> the top of the answer sheet.</b> <span class="note">(thi cử — hướng dẫn phòng thi)</span></div>
+      <div class="ex">☕ <b class="en">There's a nice café <mark>on</mark> the corner of my street.</b> <span class="note">(đời sống — giới thiệu khu phố)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>Hình ảnh = in:</b> người/vật "nằm trong khung" của ảnh, sách, báo → in.</li>
+        <li><b>Danh sách = on:</b> tên "nằm trên dòng" của list, menu, map → on.</li>
+        <li><b>Tầng = sàn = on:</b> bạn đứng trên sàn tầng 2 → on the second floor.</li>
+        <li><b>Front/back theo vật:</b> ô tô = in (ngồi trong xe), toà nhà = at (vị trí), tờ giấy = on (bề mặt).</li>
+        <li><b>Góc:</b> góc phòng lõm vào → in; góc phố lồi ra → at/on.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Thấy <b>floor</b> → on; thấy <b>top/bottom/end + of</b> → at.</li>
+        <li>Thấy <b>row, queue, line</b> → in.</li>
+        <li>Thấy <b>left/right</b> → on (không phải in/at).</li>
+        <li>Thấy <b>corner</b> → đọc kỹ: room → in; street → at/on.</li>
+        <li><b>bed</b> không có "the" → in bed; có "the" (sit on the bed) là nghĩa khác.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">My room is in the 5th floor.</td><td class="yes">... <b>on</b> the 5th floor.</td><td class="why">tầng → on</td></tr>
+        <tr><td class="no">She is on this picture.</td><td class="yes">She is <b>in</b> this picture.</td><td class="why">ảnh → in</td></tr>
+        <tr><td class="no">My name is in the list.</td><td class="yes">My name is <b>on</b> the list.</td><td class="why">list → on</td></tr>
+        <tr><td class="no">Turn and it's in the right.</td><td class="yes">It's <b>on</b> the right.</td><td class="why">left/right → on</td></tr>
+        <tr><td class="no">I read it on the newspaper.</td><td class="yes">I read it <b>in</b> the newspaper.</td><td class="why">báo → in</td></tr>
+        <tr><td class="no">There's a shop in the corner of the street.</td><td class="yes">... <b>at/on</b> the corner of the street.</td><td class="why">góc phố → at/on</td></tr>
+        <tr><td class="no">He's still on the bed. (ý: chưa dậy)</td><td class="yes">He's still <b>in bed</b>.</td><td class="why">cụm cố định</td></tr>
+        <tr><td class="no">I sat at the back of the taxi.</td><td class="yes">I sat <b>in</b> the back of the taxi.</td><td class="why">trong xe → in</td></tr>
+        <tr><td class="no">He works at a farm.</td><td class="yes">He works <b>on</b> a farm.</td><td class="why">cụm cố định</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói (2 phút/ngày):</b> chỉ đường trong toà nhà công ty/trường: tầng mấy, bên trái hay phải, cuối hành lang.</li>
+        <li><b>Viết:</b> mô tả 1 tấm ảnh nhóm: <i>in the front row, at the back, on the left</i>.</li>
+        <li><b>Gọi món:</b> <i>"Is there anything vegetarian on the menu?"</i></li>
+        <li><b>Quy tắc vàng:</b> học thuộc theo cụm 2–4 từ, đừng dịch từng giới từ.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> chép bảng cụm cố định ra thẻ, ôn sau 3 ngày, làm lại câu sai sau 7 ngày, tự mô tả nhà/văn phòng sau 14 ngày. Liên quan: <b>Unit 123</b> (quy tắc chung), <b>Unit 125</b> (at/in với toà nhà, phương tiện).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit124.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 124 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 124 – In/at/on (position) 2 | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit124.html';
+  var KEY = 'egu4_unit124_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền in / at / on',         desc:'Điền giới từ chỉ vị trí đúng vào chỗ trống.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 124.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 124 Exercises)', desc:'Bài 124.1 → 124.3 theo dạng bài của sách Murphy (câu đã viết lại), kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'My flat is ______ the third floor.',
+      opts:['in','at','on','to'], a:2,
+      exp:'Tầng của toà nhà → on the ground/first/second/third floor.' },
+    { id:'a2', sec:'A', type:'mcq', q:'Who\'s the girl ______ this photo?',
+      opts:['on','in','at','of'], a:1,
+      exp:'Người/vật xuất hiện trong ảnh, tranh, sách, báo → in a photo / in a picture.' },
+    { id:'a3', sec:'A', type:'mcq', q:'In Vietnam, people drive ______ the right.',
+      opts:['in','on','at','by'], a:1,
+      exp:'on the left / on the right (bên trái/phải).' },
+    { id:'a4', sec:'A', type:'mcq', q:'The TV is ______ the corner of the living room.',
+      opts:['on','at','in','by'], a:2,
+      exp:'Góc bên trong căn phòng → in the corner (of a room).' },
+    { id:'a5', sec:'A', type:'mcq', q:'There\'s a bakery ______ the corner of my street.',
+      opts:['in','at','into','of'], a:1,
+      exp:'Góc đường (góc ngoài) → at the corner hoặc on the corner of a street. "in the corner" chỉ dùng cho góc phòng.' },
+    { id:'a6', sec:'A', type:'mcq', q:'Please sign your name ______ the bottom of the form.',
+      opts:['in','on','at','under'], a:2,
+      exp:'at the top (of) / at the bottom (of) / at the end (of).' },
+    { id:'a7', sec:'A', type:'mcq', q:'Hoi An is ______ the Thu Bon River.',
+      opts:['in','on','at','by the'], a:1,
+      exp:'Thành phố nằm bên sông/đường/bờ biển → on a river / on the coast.' },
+    { id:'a8', sec:'A', type:'mcq', q:'He isn\'t up yet. He\'s still ______ bed.',
+      opts:['on','at','in','in the'], a:2,
+      exp:'Cụm cố định: in bed (không có "the").' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'There wasn\'t a single cloud ______ the sky.',
+      acc:['in'], ans:'in',
+      exp:'in the sky.' },
+    { id:'b2', sec:'B', type:'fill', q:'I work ______ the marketing department.',
+      acc:['in'], ans:'in',
+      exp:'in an office / in a department.' },
+    { id:'b3', sec:'B', type:'fill', q:'Is there anything vegetarian ______ the menu?',
+      acc:['on'], ans:'on',
+      exp:'on a menu / on a list / on a map.' },
+    { id:'b4', sec:'B', type:'fill', q:'We waited ______ a long queue for tickets.',
+      acc:['in'], ans:'in',
+      exp:'in a line / in a row / in a queue.' },
+    { id:'b5', sec:'B', type:'fill', q:'My grandparents grew up ______ a farm.',
+      acc:['on'], ans:'on',
+      exp:'on a farm.' },
+    { id:'b6', sec:'B', type:'fill', q:'The kids were sitting ______ the back of the car.',
+      acc:['in'], ans:'in',
+      exp:'Trong ô tô: in the front / in the back (of a car).' },
+    { id:'b7', sec:'B', type:'fill', q:'Our garden is ______ the back of the house.',
+      acc:['at'], ans:'at',
+      exp:'Phía sau toà nhà, nhà hát, nhóm người → at the back / at the front.' },
+    { id:'b8', sec:'B', type:'fill', q:'I read an interesting article ______ today\'s paper.',
+      acc:['in'], ans:'in',
+      exp:'in a newspaper / in a magazine / in a book.' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (I / like / to sit / in / the front / row)',
+      tokens:['I','like','to','sit','in','the','front','row'],
+      acc:['i like to sit in the front row'], ans:'I like to sit in the front row.',
+      exp:'in a row → in the front row.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (we / stopped / for coffee / on / the way / home)',
+      tokens:['We','stopped','for','coffee','on','the','way','home'],
+      acc:['we stopped for coffee on the way home'], ans:'We stopped for coffee on the way home.',
+      exp:'on the way (home / to work) = trên đường đi.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (the toilets / are / at / the end / of the corridor)',
+      tokens:['The','toilets','are','at','the','end','of','the','corridor'],
+      acc:['the toilets are at the end of the corridor'], ans:'The toilets are at the end of the corridor.',
+      exp:'at the end (of) = ở cuối (hành lang, con phố).' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (she / wrote / her number / on / the back / of the receipt)',
+      tokens:['She','wrote','her','number','on','the','back','of','the','receipt'],
+      acc:['she wrote her number on the back of the receipt'], ans:'She wrote her number on the back of the receipt.',
+      exp:'Mặt sau tờ giấy, lá thư, bức ảnh → on the back / on the front.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (what / is / the longest / river / in / the world)',
+      tokens:['What','is','the','longest','river','in','the','world'],
+      acc:['what is the longest river in the world'], ans:'What is the longest river in the world?',
+      exp:'in the world.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Excuse me, where\'s the lift?  B: It\'s ______ the left, next to the stairs.',
+      acc:['on'], ans:'on',
+      exp:'on the left / on the right.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Could you see the stage?  B: Not really. We were sitting ______ the back.',
+      acc:['at'], ans:'at',
+      exp:'Phía sau nhà hát/rạp → at the back.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Where do you live?  B: In a small town ______ the coast, near Nha Trang.',
+      acc:['on'], ans:'on',
+      exp:'on the coast = ven biển.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: I can\'t find your village ______ the map.  B: It\'s too small to be shown.',
+      acc:['on'], ans:'on',
+      exp:'on a map.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Mô tả nơi bạn sống: tầng mấy, bên trái hay phải, gần góc đường nào (3 câu).',
+      sample:'I live on the fifth floor of an apartment building. My flat is on the right as you come out of the lift. There\'s a supermarket at the corner of my street.',
+      exp:'on the ... floor; on the left/right; at/on the corner of a street.' },
+    { id:'e2', sec:'E', type:'self', q:'Mô tả một bức ảnh gia đình: ai ở đâu (in the front row, at the back, on the left...).',
+      sample:'In this photo, my grandparents are in the front row. My brother is standing at the back on the left.',
+      exp:'in a photo; in the front row; at the back; on the left.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu: một câu với in the corner (of a room), một câu với at/on the corner (of a street).',
+      sample:'There\'s a big plant in the corner of my bedroom. There\'s a pharmacy on the corner of Le Loi Street.',
+      exp:'Góc phòng (bên trong) → in; góc đường (bên ngoài) → at/on.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'Write the title ______ the top of the page.',
+      acc:['at'], ans:'at',
+      exp:'at the top (of).' },
+    { id:'f2', sec:'F', type:'fill', q:'I\'d prefer to live ______ the country, not in a big city.',
+      acc:['in'], ans:'in',
+      exp:'in the country / in the countryside = ở nông thôn.' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['My office is in the second floor.','My office is on the second floor.','My office is at the second floor.'], a:1,
+      exp:'Tầng → on the second floor.' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch: "Tôi thích ngồi ở hàng ghế sau." (I like sitting ...)',
+      acc:['i like sitting in the back row'], ans:'I like sitting in the back row.',
+      exp:'in a row → in the back row.' },
+    { id:'f5', sec:'F', type:'mcq', q:'Is your name ______ the guest list?',
+      opts:['in','on','at'], a:1,
+      exp:'on a list.' },
+    { id:'f6', sec:'F', type:'mcq', q:'The teacher stood ______ the front of the class.',
+      opts:['at','in','on'], a:0,
+      exp:'Phía trước một nhóm người/phòng học → at the front.' },
+    { id:'f7', sec:'F', type:'fill', q:'I always buy a bánh mì ______ the way to work.',
+      acc:['on'], ans:'on',
+      exp:'on the way to work.' },
+    { id:'f8', sec:'F', type:'mcq', q:'Hai câu nào ĐÚNG? (1) a cat in the corner of the room (2) a shop in the corner of the street',
+      opts:['Chỉ (1)','Chỉ (2)','Cả hai','Không câu nào'], a:0,
+      exp:'Góc phòng → in the corner; góc đường → at/on the corner, nên (2) sai.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'mcq', sub:'Bài 124.1 – Trả lời câu hỏi về tranh',
+      q:'Tranh: toà nhà nhiều tầng, căn hộ của Lan ở tầng 2. Where\'s her flat exactly?',
+      opts:['In the second floor.','On the second floor.','At the second floor.'], a:1,
+      exp:'Key: On the second floor.' },
+    { id:'h2', sec:'G', type:'mcq', sub:'Bài 124.1 – Trả lời câu hỏi về tranh',
+      q:'Tranh: người phụ nữ đứng ở góc phố, ngoài đường. Where is she standing?',
+      opts:['At the corner.','In the corner.'], a:0,
+      exp:'Góc phố → At (hoặc On) the corner.' },
+    { id:'h3', sec:'G', type:'mcq', sub:'Bài 124.1 – Trả lời câu hỏi về tranh',
+      q:'Tranh: người đàn ông đứng trong góc một căn phòng. Where is he standing?',
+      opts:['At the corner.','On the corner.','In the corner.'], a:2,
+      exp:'Góc bên trong phòng → In the corner.' },
+    { id:'h4', sec:'G', type:'mcq', sub:'Bài 124.1 – Trả lời câu hỏi về tranh',
+      q:'Tranh: con mèo nằm ở đầu cầu thang (bậc trên cùng). Where\'s the cat?',
+      opts:['At the top of the stairs.','On the top of the stairs.','In the top of the stairs.'], a:0,
+      exp:'at the top (of).' },
+    { id:'h5', sec:'G', type:'mcq', sub:'Bài 124.1 – Trả lời câu hỏi về tranh',
+      q:'Tranh: con chó ngồi ở ghế sau ô tô. Where\'s the dog?',
+      opts:['At the back of the car.','In the back of the car.','On the back of the car.'], a:1,
+      exp:'Trong xe ô tô → in the back.' },
+    { id:'h6', sec:'G', type:'mcq', sub:'Bài 124.1 – Trả lời câu hỏi về tranh',
+      q:'Tranh: Mai đứng ở hàng đầu một nhóm người. Where is she?',
+      opts:['In the front.','At the front.','On the front.'], a:1,
+      exp:'Phía trước một nhóm người → At the front.' },
+    { id:'h7', sec:'G', type:'mcq', sub:'Bài 124.1 – Trả lời câu hỏi về tranh',
+      q:'Tranh: bưu điện nằm bên trái con đường. Where\'s the post office?',
+      opts:['On the left.','In the left.','At the left.'], a:0,
+      exp:'On the left.' },
+    { id:'h8', sec:'G', type:'mcq', sub:'Bài 124.1 – Trả lời câu hỏi về tranh',
+      q:'Tranh: cô ấy làm việc ở một trang trại. Where does she work?',
+      opts:['In a farm.','At a farm.','On a farm.'], a:2,
+      exp:'Key: On a farm.' },
+
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 124.2 – Complete with in/at/on + cụm cho sẵn',
+      q:'In the UK, people drive ______. (the left)',
+      acc:['on the left'], ans:'on the left',
+      exp:'on the left / on the right.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 124.2 – Complete with in/at/on + cụm cho sẵn',
+      q:'Which is the highest mountain ______? (the world)',
+      acc:['in the world'], ans:'in the world',
+      exp:'in the world.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 124.2 – Complete with in/at/on + cụm cho sẵn',
+      q:'I often listen to podcasts ______. (the way to school)',
+      acc:['on the way to school'], ans:'on the way to school',
+      exp:'on the way to + nơi chốn.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 124.2 – Complete with in/at/on + cụm cho sẵn',
+      q:'Quy Nhon is ______ of Vietnam. (the central coast)',
+      acc:['on the central coast'], ans:'on the central coast',
+      exp:'on the coast.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 124.2 – Complete with in/at/on + cụm cho sẵn',
+      q:'We had great seats at the concert — ______. (the front row)',
+      acc:['in the front row'], ans:'in the front row',
+      exp:'in a row.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 124.2 – Complete with in/at/on + cụm cho sẵn',
+      q:'I couldn\'t read the board because I was sitting ______. (the back of the room)',
+      acc:['at the back of the room'], ans:'at the back of the room',
+      exp:'at the back (of a room/class).' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 124.2 – Complete with in/at/on + cụm cho sẵn',
+      q:'Please write your email address ______. (the back of this form)',
+      acc:['on the back of this form'], ans:'on the back of this form',
+      exp:'Mặt sau tờ giấy → on the back.' },
+
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'Is your brother ______ this picture? I can\'t see him.',
+      acc:['in'], ans:'in',
+      exp:'in a picture / photo.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'I had a fever, so I stayed ______ bed all day.',
+      acc:['in'], ans:'in',
+      exp:'in bed.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'The main entrance is closed, but there\'s another door ______ the back.',
+      acc:['at'], ans:'at',
+      exp:'at the back (of a building).' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'I checked the list of winners, but my name wasn\'t ______ it.',
+      acc:['on'], ans:'on',
+      exp:'on a list.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'______ the end of the road, turn right.',
+      acc:['at'], ans:'At',
+      exp:'at the end (of).' },
+    { id:'h21', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'When I take a taxi, I usually sit ______ the back.',
+      acc:['in'], ans:'in',
+      exp:'Trong xe ô tô → in the back / in the front.' },
+    { id:'h22', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'Linh works ______ the accounts department.',
+      acc:['in'], ans:'in',
+      exp:'in a department.' },
+    { id:'h23', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'London is ______ the River Thames.',
+      acc:['on'], ans:'on',
+      exp:'on a river.' },
+    { id:'h24', sec:'G', type:'fill', sub:'Bài 124.3 – Complete with in, at or on',
+      q:'My desk is ______ the top floor. It\'s ______ the right when you come up the stairs. (2 chỗ, cách nhau " / ")',
+      acc:['on / on','on on'], ans:'on / on',
+      exp:'on the top floor; on the right.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

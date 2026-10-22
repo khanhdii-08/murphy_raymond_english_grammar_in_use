@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 116 – As (As I walked along the street… / As I was hungry…) | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 116 – As (As I walked along the street… / As I was hungry…)</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">52 câu tính điểm + 4 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Liên từ <b>as</b> + mệnh đề có <b>hai nghĩa chính</b> mà người học phải phân biệt qua ngữ cảnh:</p>
+      <ul>
+        <li><b>as = trong khi / đúng lúc</b> (at the same time as) — hai việc xảy ra <b>cùng lúc</b>.</li>
+        <li><b>as = vì</b> (because) — nêu <b>lý do</b>, thường lý do người nghe đã biết hoặc hiển nhiên.</li>
+      </ul>
+      <div class="ex"><b class="en"><mark>As</mark> I was walking home, I saw an accident. (= while/đúng lúc)<br><mark>As</mark> I was tired, I went to bed early. (= because)</b></div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">As + S + V, S + V              (đồng thời)   As I walked in, everyone stood up.
+S + V(quá khứ đơn) + as + S + was/were V-ing  She fell as she was getting off the bus.
+just as + S + V                (đúng lúc đó) Just as I sat down, the phone rang.
+As + S + V, S + V              (vì)          As it was late, we took a taxi.
+Since + S + V, …               (= as = vì)   Since we have time, let's eat.</div>
+      <div class="scroll"><table>
+        <tr><th>Nghĩa</th><th>Dấu hiệu</th><th>Ví dụ</th></tr>
+        <tr><td>đồng thời</td><td>hành động đang diễn ra, V-ing, just as</td><td>He waved <b>as</b> the train left.</td></tr>
+        <tr><td>song song trong thời gian dài</td><td>thay đổi dần (got worse, more and more)</td><td><b>As</b> time went on, she relaxed.</td></tr>
+        <tr><td>vì</td><td>trạng thái/lý do (was hungry, don't have …)</td><td><b>As</b> I don't drive, I take the bus.</td></tr>
+      </table></div>
+
+      <h2>1.3 · A. As = cùng lúc</h2>
+      <ul>
+        <li><i>We all waved <b>as</b> the bus drove away.</i></li>
+        <li><i><b>As</b> I walked through the market, I looked at the fruit stalls.</i></li>
+        <li><i>Please close the window <b>as</b> you leave.</i></li>
+        <li>Một việc xảy ra <b>giữa lúc</b> đang làm việc khác: <i>Nam cut his finger <b>as</b> he was chopping vegetables.</i> (quá khứ tiếp diễn — Unit 6)</li>
+        <li><b>just as</b> = đúng vào khoảnh khắc đó: <i><b>Just as</b> I got in the shower, the doorbell rang.</i></li>
+        <li>Hai việc thay đổi song song: <i><b>As</b> the evening went on, it got colder.</i></li>
+      </ul>
+
+      <h2>1.4 · B. As vs when (thời gian)</h2>
+      <div class="scroll"><table>
+        <tr><th>as</th><th>when</th></tr>
+        <tr><td>hai việc <b>cùng lúc</b></td><td>một việc xảy ra <b>sau</b> việc kia, hoặc chỉ một <b>giai đoạn/thời điểm</b> trong đời</td></tr>
+        <tr><td><b>As</b> I drove to work, I listened to the radio.</td><td><b>When</b> I got to work, I made a coffee. (❌ As I got to work)</td></tr>
+        <tr><td></td><td><b>When</b> I was a child, I lived by the sea. (❌ As I was a child — nghe như "vì")</td></tr>
+      </table></div>
+
+      <h2>1.5 · C. As = because (và since)</h2>
+      <div class="ex"><b class="en"><mark>As</mark> we have plenty of time, let's walk. = <mark>Since</mark> we have plenty of time, …<br>We stayed in <mark>as</mark> it was raining.</b></div>
+      <p>So sánh <b>as (vì)</b> với <b>when (khi)</b>:</p>
+      <div class="scroll"><table>
+        <tr><th>as = because</th><th>when = at the time</th></tr>
+        <tr><td>I couldn't call Hoa <b>as</b> she was abroad.<br>(vì cô ấy ở nước ngoài)</td><td>Hoa lost her bag <b>when</b> she was abroad.<br>(trong thời gian ở nước ngoài)</td></tr>
+        <tr><td><b>As</b> they lived nearby, we saw them often. (vì sống gần)</td><td><b>When</b> they lived nearby, we saw them often. (hồi họ còn sống gần)</td></tr>
+      </table></div>
+
+      <h2>1.6 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">She got married as she was 25.</td><td class="yes">She got married <b>when</b> she was 25.</td></tr>
+        <tr><td class="no">As I arrived home, I had dinner.</td><td class="yes"><b>When</b> I arrived home, I had dinner.</td></tr>
+        <tr><td class="no">I lost my wallet as I was in Hue.</td><td class="yes">I lost my wallet <b>when</b> I was in Hue.</td></tr>
+        <tr><td class="no">As I was hungry, so I ate.</td><td class="yes">As I was hungry, I ate.</td></tr>
+        <tr><td class="no">Just when I sat down, the phone rang. (ý: đúng khoảnh khắc)</td><td class="yes"><b>Just as</b> I sat down, …</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 6</b> (quá khứ tiếp diễn) · <b>Unit 107</b> (as … as) · <b>Unit 117</b> (like và as) · <b>Unit 118</b> (as if).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">👋 <b class="en">We waved <mark>as</mark> the plane took off.</b> <span class="note">(đời sống — tiễn người thân)</span></div>
+      <div class="ex">🍳 <b class="en">I burnt my hand <mark>as</mark> I was taking the pan off the stove.</b> <span class="note">(kể chuyện — tai nạn nhỏ)</span></div>
+      <div class="ex">📞 <b class="en"><mark>Just as</mark> I left the office, my boss called.</b> <span class="note">(công việc — đúng lúc)</span></div>
+      <div class="ex">📈 <b class="en"><mark>As</mark> the city grew, traffic became worse.</b> <span class="note">(IELTS Writing — thay đổi song song)</span></div>
+      <div class="ex">🍜 <b class="en"><mark>As</mark> I was hungry, I stopped for some pho.</b> <span class="note">(đời sống — lý do)</span></div>
+      <div class="ex">🏖️ <b class="en"><mark>As</mark> tomorrow is a holiday, the office will be closed.</b> <span class="note">(thông báo — lý do)</span></div>
+      <div class="ex">⏰ <b class="en"><mark>Since</mark> we've got time, let's grab a coffee.</b> <span class="note">(giao tiếp — đề nghị)</span></div>
+      <div class="ex">🧒 <b class="en"><mark>When</mark> I was a child, I lived in Da Lat.</b> <span class="note">(so sánh — giai đoạn → when, không dùng as)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>as + hành động đang diễn ra</b> (V-ing, chuyển động) → nghĩa <b>"đúng lúc / trong khi"</b>.</li>
+        <li><b>as + trạng thái/lý do</b> (was tired, don't have, is a holiday) → nghĩa <b>"vì"</b>.</li>
+        <li><b>just as</b> = "vừa đúng lúc".</li>
+        <li><b>Mốc tuổi / giai đoạn đời / nơi ở</b> (when I was 22, when I was in London, when I was a child) → luôn dùng <b>when</b>.</li>
+        <li>Một việc <b>xong rồi</b> mới tới việc kia → <b>when</b> (When I got home, I ate).</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Bài "as nghĩa là gì?": thử thay bằng <b>because</b> và <b>while</b> — cái nào hợp nghĩa thì chọn.</li>
+        <li>Bài sửa as → when: tìm <b>tuổi, giai đoạn, ở đâu</b> hoặc <b>chuỗi trước-sau</b>.</li>
+        <li>Câu có <i>was/were + V-ing</i> sau as → gần như chắc chắn nghĩa "đúng lúc".</li>
+        <li>Không dùng thêm <b>so</b> khi mệnh đề đã có <b>as (= vì)</b>.</li>
+        <li><b>since</b> cũng có thể = because (không chỉ "từ khi").</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">As I was 18, I moved to Hanoi.</td><td class="yes"><b>When</b> I was 18, …</td><td class="why">mốc tuổi → when</td></tr>
+        <tr><td class="no">As I got home, I took a shower.</td><td class="yes"><b>When</b> I got home, …</td><td class="why">việc trước – việc sau → when</td></tr>
+        <tr><td class="no">As it was raining, so we stayed in.</td><td class="yes">As it was raining, we stayed in.</td><td class="why">không dùng cả as và so</td></tr>
+        <tr><td class="no">I fell as I got off the bus. (ý: đang bước xuống)</td><td class="yes">I fell as I <b>was getting</b> off the bus.</td><td class="why">đang làm thì xảy ra → quá khứ tiếp diễn</td></tr>
+        <tr><td class="no">I lived near the sea as I was young.</td><td class="yes">… <b>when</b> I was young.</td><td class="why">giai đoạn đời → when</td></tr>
+        <tr><td class="no">Just when I arrived, the bus left. (ý: đúng khoảnh khắc)</td><td class="yes"><b>Just as</b> I arrived, …</td><td class="why">just as = đúng lúc</td></tr>
+        <tr><td class="no">Because of I was tired, I slept.</td><td class="yes"><b>As</b> I was tired, … / Because I was tired, …</td><td class="why">because of + danh từ</td></tr>
+        <tr><td class="no">As the day went, it got hotter.</td><td class="yes">As the day <b>went on</b>, …</td><td class="why">go on = tiếp diễn</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Kể chuyện (IELTS Part 2):</b> <i>"As I was walking home, I noticed …"</i> — mở đầu câu chuyện tự nhiên.</li>
+        <li><b>Thông báo/email:</b> <i>"As the system is under maintenance, please use the backup link."</i></li>
+        <li><b>Mô tả thay đổi:</b> <i>"As I got older, I became more interested in history."</i></li>
+        <li><b>Đề nghị:</b> <i>"As/Since we're early, let's look around."</i></li>
+        <li><b>Quy tắc vàng:</b> mốc thời gian / giai đoạn → <b>when</b>; cùng lúc → <b>as</b>; lý do → <b>as/since/because</b>.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> ôn lại unit này sau 3/7/14 ngày, chú ý bài as/when. Liên quan: <b>Unit 6</b> (quá khứ tiếp diễn), <b>Unit 117</b> (like/as), <b>Unit 118</b> (as if).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit116.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 116 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 116 – As (= at the same time / because) | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit116.html';
+  var KEY = 'egu4_unit116_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Điền as / when / just as',  desc:'Điền từ hoặc dạng đúng của động từ vào chỗ trống.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 116.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 116 Exercises)', desc:'Bài 116.1 → 116.5 theo đúng dạng bài trong sách Murphy (câu đã được viết lại).' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'"As I was tired, I went to bed early." — as ở đây nghĩa là:',
+      opts:['at the same time as','because','like','when (sau đó)'], a:1,
+      exp:'Mệt là lý do đi ngủ sớm → as = because.' },
+    { id:'a2', sec:'A', type:'mcq', q:'"She slipped as she was getting out of the taxi." — as ở đây nghĩa là:',
+      opts:['because','at the same time as','although','until'], a:1,
+      exp:'Trượt ngã đúng lúc đang bước ra khỏi taxi → at the same time as.' },
+    { id:'a3', sec:'A', type:'mcq', q:'______ I was a student, I lived in a tiny room.',
+      opts:['As','When','Just as','Since'], a:1,
+      exp:'Giai đoạn trong đời (khi còn là sinh viên) → When. "As I was a student" dễ bị hiểu là "vì tôi là sinh viên".' },
+    { id:'a4', sec:'A', type:'mcq', q:'______ I opened the door, the cat ran out.',
+      opts:['Just as','Because','Unless','In case'], a:0,
+      exp:'Hai việc xảy ra đúng cùng một khoảnh khắc → Just as.' },
+    { id:'a5', sec:'A', type:'mcq', q:'______ I got to the station, I bought a ticket.',
+      opts:['As','When','Just as','While'], a:1,
+      exp:'Đến ga rồi mới mua vé (trước – sau) → When, không dùng as.' },
+    { id:'a6', sec:'A', type:'mcq', q:'I cut my finger as I ______ onions.',
+      opts:['chopped','was chopping','have chopped','chop'], a:1,
+      exp:'Việc xảy ra giữa lúc đang làm việc khác → as + quá khứ tiếp diễn: was chopping.' },
+    { id:'a7', sec:'A', type:'mcq', q:'______ we have plenty of time, let\'s walk to the restaurant.',
+      opts:['Since','When','Just as','Until'], a:0,
+      exp:'since có thể = because (= as): vì còn nhiều thời gian.' },
+    { id:'a8', sec:'A', type:'mcq', q:'______ the film went on, it became more and more boring.',
+      opts:['When','As','Because','Just as'], a:1,
+      exp:'Hai việc thay đổi song song trong một khoảng thời gian → As.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'We waved goodbye ______ the boat sailed away. (1 từ, cùng lúc)',
+      acc:['as'], ans:'as',
+      exp:'Vẫy tay đúng lúc thuyền rời đi → as.' },
+    { id:'b2', sec:'B', type:'fill', q:'My grandparents met ______ they were working in the same factory. (1 từ, giai đoạn)',
+      acc:['when','while'], ans:'when',
+      exp:'Giai đoạn cùng làm ở nhà máy → when (hoặc while).' },
+    { id:'b3', sec:'B', type:'fill', q:'______ I didn\'t have an umbrella, I got completely wet. (1 từ, vì)',
+      acc:['as','since','because'], ans:'As',
+      exp:'Lý do → As / Since / Because.' },
+    { id:'b4', sec:'B', type:'fill', q:'I dropped my phone as I ______ (get) off the motorbike.',
+      acc:['was getting'], ans:'was getting',
+      exp:'Đang xuống xe thì làm rơi → quá khứ tiếp diễn: was getting.' },
+    { id:'b5', sec:'B', type:'fill', q:'______ ______ I was about to fall asleep, the baby started crying. (2 từ, đúng lúc)',
+      acc:['just as'], ans:'Just as',
+      exp:'Đúng khoảnh khắc đó → Just as.' },
+    { id:'b6', sec:'B', type:'fill', q:'She moved to Australia ______ she was 30. (1 từ)',
+      acc:['when'], ans:'when',
+      exp:'Mốc tuổi → when, không dùng as.' },
+    { id:'b7', sec:'B', type:'fill', q:'______ I got used to the job, I started to enjoy it more. (1 từ, song song)',
+      acc:['as'], ans:'As',
+      exp:'Hai sự thay đổi diễn ra song song → As.' },
+    { id:'b8', sec:'B', type:'fill', q:'Please turn off the air conditioner ______ you leave the room. (1 từ)',
+      acc:['as','when'], ans:'as',
+      exp:'Tắt máy lạnh lúc bạn rời phòng → as (when cũng được chấp nhận).' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (as / Lan / walked / along the beach / she / collected / shells)',
+      tokens:['As','Lan','walked','along','the','beach','she','collected','shells'],
+      acc:['as lan walked along the beach she collected shells'], ans:'As Lan walked along the beach, she collected shells.',
+      exp:'As + mệnh đề hành động diễn ra cùng lúc với mệnh đề chính.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (as / it / was / late / we / took / a taxi)',
+      tokens:['As','it','was','late','we','took','a','taxi'],
+      acc:['as it was late we took a taxi'], ans:'As it was late, we took a taxi.',
+      exp:'As = because: vì muộn nên đi taxi.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (just as / we / sat down / the lights / went out)',
+      tokens:['Just','as','we','sat','down','the','lights','went','out'],
+      acc:['just as we sat down the lights went out'], ans:'Just as we sat down, the lights went out.',
+      exp:'Just as = đúng lúc đó.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (Tuan / fell / as / he / was / climbing / the stairs)',
+      tokens:['Tuan','fell','as','he','was','climbing','the','stairs'],
+      acc:['tuan fell as he was climbing the stairs'], ans:'Tuan fell as he was climbing the stairs.',
+      exp:'Quá khứ đơn + as + quá khứ tiếp diễn.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (as / the night / went on / it / got / colder)',
+      tokens:['As','the','night','went','on','it','got','colder'],
+      acc:['as the night went on it got colder'], ans:'As the night went on, it got colder.',
+      exp:'As + thay đổi song song.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: How did you hurt your knee?  B: I fell ______ I was running for the bus. (1 từ)',
+      acc:['as','while','when'], ans:'as',
+      exp:'Ngã đúng lúc đang chạy → as (while/when cũng chấp nhận).' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Why didn\'t you answer?  B: ______ my phone was on silent, I didn\'t hear it. (1 từ)',
+      acc:['as','since','because'], ans:'As',
+      exp:'Lý do → As / Since / Because.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: When did you start learning English?  B: ______ I was seven. (1 từ)',
+      acc:['when'], ans:'When',
+      exp:'Mốc tuổi → When.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Did you catch the train?  B: No! It left ______ ______ I reached the platform. (2 từ)',
+      acc:['just as'], ans:'just as',
+      exp:'Tàu chạy đúng lúc tôi tới → just as.' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Kể một sự cố nhỏ đã xảy ra với bạn, dùng as + quá khứ tiếp diễn.',
+      sample:'I spilled my coffee as I was getting into the car. I broke a glass as I was washing the dishes.',
+      exp:'Quá khứ đơn (sự cố) + as + was/were V-ing (việc đang làm).' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 2 câu với as = because để giải thích quyết định của bạn.',
+      sample:'As I live near the office, I usually walk to work. As the weather was nice, we had lunch outside.',
+      exp:'As + lý do, mệnh đề chính là quyết định. Không thêm so.' },
+    { id:'e3', sec:'E', type:'self', q:'Mô tả bạn thay đổi thế nào theo thời gian, dùng "As I got older, …".',
+      sample:'As I got older, I became more patient. As I travelled more, I learned to enjoy different food.',
+      exp:'As + thay đổi song song trong một khoảng thời gian.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'I lost my passport ______ I was in Bangkok.',
+      opts:['as','when'], a:1,
+      exp:'Trong thời gian ở Bangkok → when. "as I was in Bangkok" nghe như "vì tôi ở Bangkok".' },
+    { id:'f2', sec:'F', type:'mcq', q:'"As we don\'t use the car much, we\'ve decided to sell it." — as nghĩa là:',
+      opts:['because','at the same time as'], a:0,
+      exp:'Lý do bán xe → because.' },
+    { id:'f3', sec:'F', type:'fill', q:'The train slowed down ______ it came into the station. (1 từ, cùng lúc)',
+      acc:['as'], ans:'as',
+      exp:'Tàu giảm tốc đúng lúc vào ga → as.' },
+    { id:'f4', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['As I finished work, I went home.','When I finished work, I went home.'], a:1,
+      exp:'Làm xong rồi mới về (trước – sau) → When.' },
+    { id:'f5', sec:'F', type:'fill', q:'Dịch: "Vì hôm nay là ngày lễ, ngân hàng đóng cửa." → ______ today is a holiday, the bank is closed.',
+      acc:['as','since','because'], ans:'As',
+      exp:'Vì → As / Since / Because.' },
+    { id:'f6', sec:'F', type:'mcq', q:'"Unfortunately, as I was reversing, I hit a wall." — as nghĩa là:',
+      opts:['because','at the same time as'], a:1,
+      exp:'Đâm vào tường đúng lúc đang lùi xe → at the same time as.' },
+    { id:'f7', sec:'F', type:'fill', q:'The phone rang ______ ______ I was leaving the house. (2 từ, đúng lúc)',
+      acc:['just as'], ans:'just as',
+      exp:'just as + quá khứ tiếp diễn = vừa đúng lúc đang …' },
+    { id:'f8', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['As it was cold, so I wore a coat.','As it was cold, I wore a coat.'], a:1,
+      exp:'Không dùng cả as (= vì) và so.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 116.1 – Join sentences with as',
+      q:'I listened. / He told me about his trip. → ______',
+      acc:['i listened as he told me about his trip'], ans:'I listened as he told me about his trip.',
+      exp:'Hai việc cùng lúc → as.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 116.1 – Join sentences with as',
+      q:'I cut myself. / I was opening a can of beans. → ______',
+      acc:['i cut myself as i was opening a can of beans'], ans:'I cut myself as I was opening a can of beans.',
+      exp:'Việc xảy ra giữa lúc đang làm việc khác → as + quá khứ tiếp diễn.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 116.1 – Join sentences with as',
+      q:'The fans cheered. / The band came onto the stage. → ______',
+      acc:['the fans cheered as the band came onto the stage','the fans cheered as the band came on stage','the fans cheered as the band was coming onto the stage'],
+      ans:'The fans cheered as the band came onto the stage.',
+      exp:'Hai việc cùng lúc → as.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 116.1 – Join sentences with as',
+      q:'A cat ran across the road. / We were cycling home. → ______',
+      acc:['a cat ran across the road as we were cycling home'], ans:'A cat ran across the road as we were cycling home.',
+      exp:'Quá khứ đơn + as + quá khứ tiếp diễn.' },
+
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 116.2 – Begin each sentence with as',
+      q:'Tomorrow is a public holiday. / Most offices will be closed. → ______',
+      acc:['as tomorrow is a public holiday most offices will be closed'], ans:'As tomorrow is a public holiday, most offices will be closed.',
+      exp:'As = because, đứng đầu câu.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 116.2 – Begin each sentence with as',
+      q:'I didn\'t want to wake the baby. / I spoke very quietly. → ______',
+      acc:["as i didn't want to wake the baby i spoke very quietly","as i did not want to wake the baby i spoke very quietly"],
+      ans:'As I didn\'t want to wake the baby, I spoke very quietly.',
+      exp:'As + lý do, mệnh đề chính là kết quả.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 116.2 – Begin each sentence with as',
+      q:'I don\'t understand this form. / I need some help. → ______',
+      acc:["as i don't understand this form i need some help","as i do not understand this form i need some help"],
+      ans:'As I don\'t understand this form, I need some help.',
+      exp:'As = because.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 116.2 – Begin each sentence with as',
+      q:'Nobody had a map. / We got lost. → ______',
+      acc:['as nobody had a map we got lost'], ans:'As nobody had a map, we got lost.',
+      exp:'As = because.' },
+
+    { id:'h9', sec:'G', type:'mcq', sub:'Bài 116.3 – What does as mean?',
+      q:'As my sister lives nearby, I see her every weekend.',
+      opts:['because','at the same time as'], a:0,
+      exp:'Sống gần là lý do → because.' },
+    { id:'h10', sec:'G', type:'mcq', sub:'Bài 116.3 – What does as mean?',
+      q:'As I was feeling ill, I stayed at home.',
+      opts:['at the same time as','because'], a:1,
+      exp:'Ốm là lý do ở nhà → because.' },
+    { id:'h11', sec:'G', type:'mcq', sub:'Bài 116.3 – What does as mean?',
+      q:'As I was locking the door, I dropped my keys.',
+      opts:['because','at the same time as'], a:1,
+      exp:'Đánh rơi chìa đúng lúc đang khóa cửa → at the same time as.' },
+    { id:'h12', sec:'G', type:'mcq', sub:'Bài 116.3 – What does as mean?',
+      q:'As we walked up the mountain, the air got cooler.',
+      opts:['at the same time as','because'], a:0,
+      exp:'Thay đổi song song khi đi lên → at the same time as.' },
+    { id:'h13', sec:'G', type:'mcq', sub:'Bài 116.3 – What does as mean?',
+      q:'We ordered a pizza as there was nothing in the fridge.',
+      opts:['because','at the same time as'], a:0,
+      exp:'Tủ lạnh trống là lý do → because.' },
+
+    { id:'h14', sec:'G', type:'mcq', sub:'Bài 116.4 – as or when?',
+      q:'My father started his own business ______ he was 40.',
+      opts:['as','when'], a:1,
+      exp:'Mốc tuổi → when.' },
+    { id:'h15', sec:'G', type:'mcq', sub:'Bài 116.4 – as or when?',
+      q:'She burnt her hand ______ she was lifting the pot.',
+      opts:['as','when'], a:0,
+      exp:'Đúng lúc đang nhấc nồi → as (câu gốc dùng as là đúng).' },
+    { id:'h16', sec:'G', type:'mcq', sub:'Bài 116.4 – as or when?',
+      q:'I had my bike stolen ______ I was in Saigon.',
+      opts:['as','when'], a:1,
+      exp:'Trong thời gian ở Saigon → when.' },
+    { id:'h17', sec:'G', type:'mcq', sub:'Bài 116.4 – as or when?',
+      q:'______ I finished university, I wasn\'t sure what job to look for.',
+      opts:['As','When'], a:1,
+      exp:'Thời điểm tốt nghiệp (việc trước, cảm giác sau) → When.' },
+    { id:'h18', sec:'G', type:'mcq', sub:'Bài 116.4 – as or when?',
+      q:'The plane shook ______ it flew through the storm.',
+      opts:['as','when'], a:0,
+      exp:'Hai việc cùng lúc → as (câu đúng).' },
+    { id:'h19', sec:'G', type:'mcq', sub:'Bài 116.4 – as or when?',
+      q:'We used to go swimming every day ______ we lived by the sea.',
+      opts:['as','when'], a:1,
+      exp:'Giai đoạn sống gần biển → when.' },
+
+    { id:'h20', sec:'G', type:'self', sub:'Bài 116.5 – Use your own ideas',
+      q:'Hoàn thành theo ý bạn: (1) I saw you as … (2) It started to snow just as … (3) As I didn\'t have my phone, … (4) Just as I sent the email, …',
+      sample:'(1) … you were crossing the road. (2) … we left the hotel. (3) … I couldn\'t call a taxi. (4) … I noticed a mistake in it.',
+      exp:'as / just as + hành động đồng thời; As (đầu câu) + lý do → mệnh đề chính là kết quả.' }
+  ];
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

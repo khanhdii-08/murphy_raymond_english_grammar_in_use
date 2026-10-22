@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 80 – Noun + noun (a tennis ball / a headache) | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 80 – Noun + noun (a tennis ball / a headache)</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">60 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Tiếng Anh hay ghép <b>hai danh từ</b> đứng cạnh nhau: danh từ <b>thứ nhất</b> đóng vai trò <b>như một tính từ</b> (nói rõ loại gì, dùng để làm gì, ở đâu), danh từ <b>thứ hai</b> là vật chính. Ngược với tiếng Việt: "quả bóng tennis" → <b>a tennis ball</b>.</p>
+      <div class="ex"><b class="en">a <mark>tennis</mark> ball · a <mark>bank</mark> manager · a <mark>road</mark> accident · the <mark>city</mark> centre</b><br>Từ đứng trước = "loại nào?"; từ đứng sau = "cái gì?".</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">N1 (bổ nghĩa, thường SỐ ÍT) + N2 (vật chính)
+   a shoe shop       (không: a shoes shop)
+   car keys          (N2 số nhiều, N1 vẫn số ít)
+
+SỐ + N (có gạch nối, SỐ ÍT) + N2
+   a ten-pound note    a two-hour journey    a five-star hotel    a six-year-old girl
+   ↔  ten pounds       two hours             five stars           six years old   (không có N2)</div>
+      <div class="scroll"><table>
+        <tr><th>Tiếng Việt</th><th>Tiếng Anh</th><th>Lưu ý</th></tr>
+        <tr><td>trung tâm thành phố</td><td>the city centre</td><td>đảo trật tự</td></tr>
+        <tr><td>thuế thu nhập</td><td>income tax</td><td>N1 số ít</td></tr>
+        <tr><td>chìa khoá xe</td><td>car keys</td><td>chỉ N2 số nhiều</td></tr>
+        <tr><td>tai nạn giao thông</td><td>a road / traffic accident</td><td></td></tr>
+      </table></div>
+
+      <h2>1.3 · A. Danh từ thứ nhất như tính từ</h2>
+      <ul>
+        <li>Chất liệu/loại: <i>a gold ring, chocolate ice cream, a paper bag</i>.</li>
+        <li>Mục đích: <i>a shopping bag, running shoes, a swimming pool</i> (V-ing cũng đứng trước như danh từ).</li>
+        <li>Nơi chốn/bộ phận: <i>the kitchen window, the fridge door, a hotel room</i>.</li>
+        <li>Có thể ghép 3 danh từ: <i>a road improvement scheme, car factory workers</i>.</li>
+        <li>Một số viết liền thành 1 từ: <i>headache, toothpaste, weekend, bookshop</i>.</li>
+      </ul>
+
+      <h2>1.4 · B. So sánh: a coffee cup ↔ a cup of coffee</h2>
+      <div class="scroll"><table>
+        <tr><th>N + N</th><th>N of N</th></tr>
+        <tr><td><b>a coffee cup</b> = cái tách dùng uống cà phê (có thể rỗng)</td><td><b>a cup of coffee</b> = một tách đầy cà phê</td></tr>
+        <tr><td><b>a wine glass</b> = ly uống rượu</td><td><b>a glass of wine</b> = một ly rượu</td></tr>
+        <tr><td><b>a shopping bag</b> = túi đi chợ</td><td><b>a bag of shopping</b> = túi đầy đồ mua</td></tr>
+      </table></div>
+
+      <h2>1.5 · C. Số + danh từ (a ten-pound note)</h2>
+      <p>Khi cụm có số đứng <b>trước một danh từ khác</b>, danh từ đi kèm số giữ <b>số ít</b> và nối bằng gạch: <i>a fifteen-minute break, a twelve-storey building, a 24-hour service</i>. Khi không có danh từ theo sau → dùng số nhiều bình thường: <i>The break is fifteen minutes. She is six years old.</i></p>
+      <p class="note">📌 Riêng cách nói <i>two hours' walk / a week's holiday</i> (có -'s) xem <b>Unit 81</b>.</p>
+
+      <h2>1.6 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Dấu hiệu</th><th>→</th></tr>
+        <tr><td>số + đơn vị + <b>danh từ</b> (note, journey, hotel, boy)</td><td>gạch nối, đơn vị số ít</td></tr>
+        <tr><td>số + đơn vị đứng cuối câu / sau be</td><td>số nhiều, không gạch nối</td></tr>
+        <tr><td>"N for/of/about N" trong định nghĩa</td><td>đảo thành N + N</td></tr>
+      </table></div>
+
+      <h2>1.7 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>noun + noun (Unit 80)</th><th>-'s sở hữu (Unit 81)</th></tr>
+        <tr><td>Dùng cho</td><td>loại/kiểu vật</td><td>vật thuộc về người/động vật</td></tr>
+        <tr><td>Ví dụ</td><td>a <b>car</b> factory, the <b>kitchen</b> door</td><td><b>my sister's</b> car, <b>Tom's</b> room</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">a ball tennis</td><td class="yes">a <b>tennis ball</b></td></tr>
+        <tr><td class="no">a two-hours meeting</td><td class="yes">a <b>two-hour</b> meeting</td></tr>
+        <tr><td class="no">She is ten-year-old.</td><td class="yes">She is <b>ten years old</b>.</td></tr>
+        <tr><td class="no">a shoes shop</td><td class="yes">a <b>shoe</b> shop</td></tr>
+        <tr><td class="no">a cup of coffee (cái tách rỗng)</td><td class="yes">a <b>coffee cup</b></td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 79</b> (số ít/số nhiều) · <b>Unit 81</b> (-'s và of) · <b>Unit 98</b> (tính từ).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🔑 <b class="en">Have you seen my <mark>car keys</mark>?</b> <span class="note">(đời sống)</span></div>
+      <div class="ex">🏦 <b class="en">I have a meeting with the <mark>bank manager</mark> at ten.</b> <span class="note">(công việc)</span></div>
+      <div class="ex">🚶 <b class="en">The hotel is a <mark>five-minute walk</mark> from the beach.</b> <span class="note">(du lịch — đọc mô tả khách sạn)</span></div>
+      <div class="ex">💵 <b class="en">Do you have change for a <mark>fifty-dollar note</mark>?</b> <span class="note">(mua sắm)</span></div>
+      <div class="ex">✈️ <b class="en">Please show your <mark>boarding pass</mark> at the gate.</b> <span class="note">(sân bay)</span></div>
+      <div class="ex">📊 <b class="en">We have a <mark>budget meeting</mark> every Monday.</b> <span class="note">(công sở)</span></div>
+      <div class="ex">🧒 <b class="en">She has a <mark>six-year-old</mark> son. He is <mark>six years old</mark>.</b> <span class="note">(so sánh 2 dạng)</span></div>
+      <div class="ex">☕ <b class="en">Would you like <mark>a cup of coffee</mark>? — Sorry, I broke your <mark>coffee cup</mark>.</b> <span class="note">(phân biệt nghĩa)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Đọc ngược tiếng Việt":</b> bóng (2) tennis (1) → tennis (1) ball (2).</li>
+        <li><b>"Từ đứng trước không mang -s":</b> shoe shop, car keys, ten-pound note.</li>
+        <li><b>"Có gạch nối thì không có -s":</b> two-hour, five-star, ten-year-old.</li>
+        <li><b>"Cái chứa ↔ cái được chứa":</b> coffee cup (cái tách) vs cup of coffee (cà phê).</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Dạng "Which is correct?": nhìn ngay sau cụm số — có danh từ không? Có → gạch nối + số ít.</li>
+        <li>Dạng "What do we call…?": đảo cụm định nghĩa: <i>A race for horses</i> → <i>a horse race</i>; <i>a horse that races</i> → <i>a racehorse</i>.</li>
+        <li>Mạo từ a/an theo danh từ <b>đầu tiên</b>: <i>an <b>oil</b> company scandal, a <b>university</b> student</i>.</li>
+        <li>Đừng thêm -'s khi chỉ là "loại": <i>a car factory</i>, không phải <i>a car's factory</i>.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">the centre city</td><td class="yes">the <b>city centre</b></td><td class="why">N chính đứng sau</td></tr>
+        <tr><td class="no">a book shelf of me</td><td class="yes">my <b>bookshelf</b></td><td class="why">dùng sở hữu + N ghép</td></tr>
+        <tr><td class="no">a three-days trip</td><td class="yes">a <b>three-day</b> trip</td><td class="why">không -s khi đứng trước N</td></tr>
+        <tr><td class="no">My son is five-year-old.</td><td class="yes">My son is <b>five years old</b>.</td><td class="why">sau be, không có N</td></tr>
+        <tr><td class="no">I work in a computers company.</td><td class="yes">… a <b>computer</b> company.</td><td class="why">N1 số ít</td></tr>
+        <tr><td class="no">a ten thousand dong note</td><td class="yes">a <b>ten-thousand-dong</b> note</td><td class="why">nối các phần bằng gạch</td></tr>
+        <tr><td class="no">a glass wine</td><td class="yes"><b>a glass of wine</b></td><td class="why">muốn nói ly có rượu</td></tr>
+        <tr><td class="no">The traffic light are red.</td><td class="yes">The <b>traffic lights</b> are red.</td><td class="why">N2 chia số nhiều</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> mô tả đường đi làm: <i>"It's a twenty-minute ride by motorbike."</i></li>
+        <li><b>Viết email:</b> <i>"Please find attached the meeting notes and the sales report."</i></li>
+        <li><b>Quảng cáo/booking:</b> đọc kỹ <i>a three-night stay, a 24-hour reception, a ten-minute drive</i>.</li>
+        <li><b>Quy tắc vàng:</b> "loại + vật" → N + N; "số + đơn vị trước danh từ" → gạch nối, số ít.</li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3, 7 và 14 ngày; tập trung vào các câu sai đã lưu. Liên quan: <b>Unit 79</b> (số ít – số nhiều), <b>Unit 81</b> (-'s và of; two hours' walk).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit80.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 80 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 80 – Noun + noun (a tennis ball / a headache) | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit80.html';
+  var KEY = 'egu4_unit80_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn 1 đáp án đúng nhất trong các phương án.' },
+    { id:'B', title:'B. Tạo danh từ ghép (noun + noun)', desc:'Viết cụm danh từ ghép theo định nghĩa cho sẵn.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền cụm danh từ ghép còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 80.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 80 Exercises)', desc:'Bài 80.1 → 80.3 theo đúng dạng bài trong sách Murphy, kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'I need to buy a new ______.',
+      opts:['ball tennis','tennis ball','tennis\'s ball'], a:1,
+      exp:'noun + noun: danh từ thứ nhất bổ nghĩa cho danh từ thứ hai (như tính từ): a tennis ball = quả bóng tennis.' },
+    { id:'a2', sec:'A', type:'mcq', q:'I\'m thirsty. Can I have ______, please?',
+      opts:['a coffee cup','a cup of coffee'], a:1,
+      exp:'a cup of coffee = một tách CÓ cà phê (để uống). a coffee cup = cái tách dùng để uống cà phê (có thể rỗng).' },
+    { id:'a3', sec:'A', type:'mcq', q:'We stayed in a ______ hotel in Da Nang.',
+      opts:['five-stars','five stars','five-star'], a:2,
+      exp:'Số + danh từ đứng trước danh từ khác → gạch nối, danh từ ở số ít: a five-star hotel.' },
+    { id:'a4', sec:'A', type:'mcq', q:'It was a ______ journey by train.',
+      opts:['two-hour','two-hours','two hours'], a:0,
+      exp:'a two-hour journey (không thêm -s). So sánh: The journey took two hours.' },
+    { id:'a5', sec:'A', type:'mcq', q:'My father is a ______.',
+      opts:['manager bank','banks manager','bank manager'], a:2,
+      exp:'Người quản lý ngân hàng → a bank manager (danh từ chính đứng sau).' },
+    { id:'a6', sec:'A', type:'mcq', q:'They have a ______ daughter.',
+      opts:['ten-year-old','ten-years-old','ten years old'], a:0,
+      exp:'Đứng trước danh từ → a ten-year-old daughter (year số ít, có gạch nối). Sau be: She is ten years old.' },
+    { id:'a7', sec:'A', type:'mcq', q:'I woke up with a terrible ______.',
+      opts:['head ache','ache head','headache'], a:2,
+      exp:'Một số danh từ ghép viết liền thành một từ: headache, toothpaste, weekend.' },
+    { id:'a8', sec:'A', type:'mcq', q:'Someone dropped a ______ note on the floor.',
+      opts:['fifty-pounds','fifty pounds','fifty-pound'], a:2,
+      exp:'a fifty-pound note (pound số ít, có gạch nối).' },
+
+    /* ===== B. Tạo danh từ ghép ===== */
+    { id:'b1', sec:'B', type:'fill', q:'A ticket for a train is a ______.',
+      acc:['train ticket','a train ticket'], ans:'train ticket',
+      exp:'Danh từ phụ (train) + danh từ chính (ticket).' },
+    { id:'b2', sec:'B', type:'fill', q:'A shop that sells shoes is a ______.',
+      acc:['shoe shop','a shoe shop'], ans:'shoe shop',
+      exp:'Danh từ đứng trước thường ở số ít: a shoe shop (không phải shoes shop).' },
+    { id:'b3', sec:'B', type:'fill', q:'The manager of a hotel is a ______.',
+      acc:['hotel manager','a hotel manager'], ans:'hotel manager',
+      exp:'a hotel manager.' },
+    { id:'b4', sec:'B', type:'fill', q:'A course that lasts three weeks is a ______.',
+      acc:['three-week course','a three-week course','three week course','a three week course'], ans:'three-week course',
+      exp:'Số + danh từ đứng trước → số ít + gạch nối: a three-week course.' },
+    { id:'b5', sec:'B', type:'fill', q:'The keys of a car are the ______.',
+      acc:['car keys'], ans:'car keys',
+      exp:'Danh từ chính (keys) ở số nhiều; danh từ phụ (car) ở số ít.' },
+    { id:'b6', sec:'B', type:'fill', q:'A bag that you use for shopping is a ______.',
+      acc:['shopping bag','a shopping bag'], ans:'shopping bag',
+      exp:'V-ing cũng có thể đứng trước như danh từ: a shopping bag, a swimming pool.' },
+    { id:'b7', sec:'B', type:'fill', q:'A walk that takes ten minutes is a ______.',
+      acc:['ten-minute walk','a ten-minute walk','ten minute walk','a ten minute walk'], ans:'ten-minute walk',
+      exp:'a ten-minute walk (minute số ít).' },
+    { id:'b8', sec:'B', type:'fill', q:'A building with twenty floors is a ______.',
+      acc:['twenty-storey building','a twenty-storey building','twenty storey building','a twenty storey building','twenty-story building','a twenty-story building'], ans:'twenty-storey building',
+      exp:'a twenty-storey building (storey số ít; AmE: story).' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (I / lost / my / car / keys / yesterday)',
+      tokens:['I','lost','my','car','keys','yesterday'],
+      acc:['i lost my car keys yesterday'], ans:'I lost my car keys yesterday.',
+      exp:'car keys: car bổ nghĩa cho keys.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (she / works / as / a / hotel / receptionist)',
+      tokens:['She','works','as','a','hotel','receptionist'],
+      acc:['she works as a hotel receptionist'], ans:'She works as a hotel receptionist.',
+      exp:'a hotel receptionist = lễ tân khách sạn.' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (we / took / a / two-hour / flight)',
+      tokens:['We','took','a','two-hour','flight'],
+      acc:['we took a two-hour flight'], ans:'We took a two-hour flight.',
+      exp:'a two-hour flight — hour số ít, có gạch nối.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (where / is / the / bus / station)',
+      tokens:['Where','is','the','bus','station'],
+      acc:['where is the bus station'], ans:'Where is the bus station?',
+      exp:'bus station = bến xe buýt.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (he / is / a / ten-year-old / boy)',
+      tokens:['He','is','a','ten-year-old','boy'],
+      acc:['he is a ten-year-old boy'], ans:'He is a ten-year-old boy.',
+      exp:'ten-year-old đứng trước danh từ, không có -s.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: What do you do?  B: I\'m a ______ (giáo viên toán).',
+      acc:['maths teacher','math teacher'], ans:'maths teacher',
+      exp:'a maths teacher (maths bổ nghĩa cho teacher).' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Is the station far?  B: No, it\'s only a ______ (five / minute) walk.',
+      acc:['five-minute','five minute'], ans:'five-minute',
+      exp:'a five-minute walk — minute số ít khi đứng trước danh từ.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Have you got any change?  B: Sorry, I\'ve only got a ______ (fifty / pound) note.',
+      acc:['fifty-pound','fifty pound'], ans:'fifty-pound',
+      exp:'a fifty-pound note.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Where did you put the milk?  B: In the ______ (cửa tủ lạnh).',
+      acc:['fridge door'], ans:'fridge door',
+      exp:'the fridge door = cánh cửa của tủ lạnh (vật + bộ phận của nó).' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Kể 5 đồ vật trong phòng bạn dùng cấu trúc noun + noun.',
+      sample:'There is a coffee table, a desk lamp, a bookshelf, a phone charger and some tennis shoes in my room.',
+      exp:'Danh từ đứng trước thường ở số ít (shoe shop, tennis shoes, phone charger).' },
+    { id:'e2', sec:'E', type:'self', q:'Mô tả công việc/chuyến đi bằng cụm số + danh từ có gạch nối (a two-hour…, a five-day…).',
+      sample:'I have a forty-minute drive to work. Next month I\'m going on a five-day business trip.',
+      exp:'Số + danh từ đứng trước danh từ khác → gạch nối, không -s.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 1 cặp câu phân biệt "a coffee cup" và "a cup of coffee" (hoặc cặp tương tự).',
+      sample:'I broke a wine glass yesterday. Would you like a glass of wine?',
+      exp:'a wine glass = loại ly; a glass of wine = ly đựng rượu.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'fill', q:'Dịch sang tiếng Anh: "Tôi cần mua một cái bàn chải đánh răng."',
+      acc:['i need to buy a toothbrush','i need to buy a new toothbrush','i need to buy a tooth brush'], ans:'I need to buy a toothbrush.',
+      exp:'toothbrush thường viết liền (tooth + brush).' },
+    { id:'f2', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['It\'s a three-hours drive.','It\'s a three-hour drive.'], a:1,
+      exp:'a three-hour drive (hour số ít).' },
+    { id:'f3', sec:'F', type:'fill', q:'There are sixty ______ (minute) in an hour.',
+      acc:['minutes'], ans:'minutes',
+      exp:'Không đứng trước danh từ khác → dùng số nhiều bình thường: sixty minutes.' },
+    { id:'f4', sec:'F', type:'mcq', q:'Could you pass me ______? I\'m going to pour some wine.',
+      opts:['a wine glass','a glass of wine'], a:0,
+      exp:'Cái ly (chưa có rượu) → a wine glass.' },
+    { id:'f5', sec:'F', type:'fill', q:'My son is six ______ (year / old).',
+      acc:['years old'], ans:'years old',
+      exp:'Sau be → six years old (có -s, không gạch nối).' },
+    { id:'f6', sec:'F', type:'mcq', q:'You need two ______ for the visa application.',
+      opts:['passports photos','passport photos','passport photo\'s'], a:1,
+      exp:'Danh từ phụ ở số ít, danh từ chính ở số nhiều: passport photos.' },
+    { id:'f7', sec:'F', type:'fill', q:'A race for cars is a ______.',
+      acc:['car race','a car race'], ans:'car race',
+      exp:'a car race. So sánh: a race car / racing car = xe đua.' },
+    { id:'f8', sec:'F', type:'mcq', q:'Chọn câu SAI:',
+      opts:['I work five days a week.','We have a five-day week.','I work five-day a week.'], a:2,
+      exp:'Không có danh từ theo sau → five days (số nhiều, không gạch nối).' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'A ticket for a football match is a ______.', acc:['football ticket','a football ticket','match ticket','a match ticket','football match ticket','a football match ticket'], ans:'football ticket',
+      exp:'a football (match) ticket.' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'Problems with money are ______.', acc:['money problems'], ans:'money problems',
+      exp:'money problems (money số ít, problems số nhiều).' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'A meeting about the budget is a ______.', acc:['budget meeting','a budget meeting'], ans:'budget meeting',
+      exp:'a budget meeting.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'Photos taken at your wedding are your ______.', acc:['wedding photos','wedding photographs','wedding pictures'], ans:'wedding photos',
+      exp:'your wedding photos.' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'Ice cream made with chocolate is ______.', acc:['chocolate ice cream'], ans:'chocolate ice cream',
+      exp:'Chất liệu đứng trước: chocolate ice cream.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'A person whose job is to inspect schools is a ______.', acc:['school inspector','a school inspector'], ans:'school inspector',
+      exp:'a school inspector.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'Shoes for dancing are ______.', acc:['dancing shoes','dance shoes'], ans:'dancing shoes',
+      exp:'dancing shoes (giống running shoes).' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'The results of an election are the ______.', acc:['election results'], ans:'election results',
+      exp:'the election results.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'A trip that lasts three days is a ______.', acc:['three-day trip','a three-day trip','three day trip','a three day trip'], ans:'three-day trip',
+      exp:'a three-day trip (day số ít).' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 80.1 – Gọi tên người/vật bằng noun + noun',
+      q:'A woman who is forty years old is a ______.', acc:['forty-year-old woman','a forty-year-old woman','forty year old woman','a forty year old woman'], ans:'forty-year-old woman',
+      exp:'a forty-year-old woman.' },
+
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 80.2 – Ghép hai từ (alarm · bus · boarding · clock · lights · number · pass · paste · phone · stop · tooth · traffic)',
+      q:'This wakes you up in the morning. → an ______', acc:['alarm clock'], ans:'alarm clock',
+      exp:'an alarm clock.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 80.2 – Ghép hai từ (alarm · bus · boarding · clock · lights · number · pass · paste · phone · stop · tooth · traffic)',
+      q:'You wait here to catch a bus. → a ______', acc:['bus stop'], ans:'bus stop',
+      exp:'a bus stop.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 80.2 – Ghép hai từ (alarm · bus · boarding · clock · lights · number · pass · paste · phone · stop · tooth · traffic)',
+      q:'You need to know this to call someone. → their ______', acc:['phone number'], ans:'phone number',
+      exp:'their phone number.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 80.2 – Ghép hai từ (alarm · bus · boarding · clock · lights · number · pass · paste · phone · stop · tooth · traffic)',
+      q:'You put this on your toothbrush. → ______', acc:['toothpaste','tooth paste'], ans:'toothpaste',
+      exp:'toothpaste (viết liền).' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 80.2 – Ghép hai từ (alarm · bus · boarding · clock · lights · number · pass · paste · phone · stop · tooth · traffic)',
+      q:'Cars must stop when these are red. → the ______', acc:['traffic lights'], ans:'traffic lights',
+      exp:'the traffic lights.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 80.2 – Ghép hai từ (alarm · bus · boarding · clock · lights · number · pass · paste · phone · stop · tooth · traffic)',
+      q:'You show this before you get on a plane. → a ______', acc:['boarding pass'], ans:'boarding pass',
+      exp:'a boarding pass.' },
+
+    { id:'h17', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'I didn\'t have any change. I only had a ______ note.', opts:['twenty-dollar','twenty dollars'], a:0,
+      exp:'Đứng trước note → twenty-dollar (số ít, gạch nối).' },
+    { id:'h18', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'There were two ______ notes in his wallet.', opts:['ten dollars','ten-dollar'], a:1,
+      exp:'ten-dollar notes — notes số nhiều, dollar vẫn số ít.' },
+    { id:'h19', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'At work we have a ______ break at 10.30.', opts:['20 minutes','20-minute'], a:1,
+      exp:'a 20-minute break.' },
+    { id:'h20', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'There are 24 ______ in a day.', opts:['hours','hour'], a:0,
+      exp:'Không đứng trước danh từ → hours (số nhiều).' },
+    { id:'h21', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'It\'s a ______ flight from Hanoi to Bangkok.', opts:['two-hour','two hours'], a:0,
+      exp:'a two-hour flight.' },
+    { id:'h22', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'We live on the top floor of a ______ building.', opts:['thirty-storeys','thirty-storey'], a:1,
+      exp:'a thirty-storey building.' },
+    { id:'h23', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'She works ______ a week. Fridays are free.', opts:['four-day','four days'], a:1,
+      exp:'Không có danh từ theo sau → four days.' },
+    { id:'h24', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'______ restaurants are usually very expensive.', opts:['Five-star','Five-stars'], a:0,
+      exp:'Five-star restaurants.' },
+    { id:'h25', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'My niece is ______.', opts:['eight-year-old','eight years old'], a:1,
+      exp:'Sau be, không có danh từ → eight years old.' },
+    { id:'h26', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'They live in a ______ house.', opts:['300-years-old','300-year-old'], a:1,
+      exp:'a 300-year-old house.' },
+    { id:'h27', sec:'G', type:'mcq', sub:'Bài 80.3 – Chọn dạng đúng (a ten-pound note / ten pounds)',
+      q:'Do you prefer the ______ clock or the 24-hour clock?', opts:['12-hours','12-hour'], a:1,
+      exp:'the 12-hour clock.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

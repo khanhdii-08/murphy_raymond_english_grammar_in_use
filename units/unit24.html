@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 24 – Will be doing and will have done | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 24 – Will be doing and will have done</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">52 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Unit này giới thiệu hai thì tương lai "nâng cao": <b>tương lai tiếp diễn</b> (<i>will be doing</i>) — <b>đang làm dở</b> tại một thời điểm trong tương lai, và <b>tương lai hoàn thành</b> (<i>will have done</i>) — <b>đã xong</b> trước một thời điểm trong tương lai. Hãy hình dung bạn "đứng" ở một mốc tương lai rồi nhìn xem việc đang diễn ra hay đã kết thúc.</p>
+      <div class="ex"><b class="en">Half an hour from now, everyone <mark>will be watching</mark> the film.</b> → đang xem dở.<br><b class="en">Three hours from now, the film <mark>will have finished</mark>. Everyone <mark>will have gone</mark> home.</b> → đã xong trước mốc đó.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">Future continuous:   S + will be + V-ing         I'll be working at 10.
+                     S + won't be + V-ing        She won't be playing.
+                     Will + S + be + V-ing?      Will you be going away?
+
+Future perfect:      S + will have + V3/-ed      I'll have finished by 6.
+                     S + won't have + V3         He won't have arrived.
+                     Will + S + have + V3?       Will they have left?</div>
+      <div class="scroll"><table>
+        <tr><th>Thì</th><th>Ý nghĩa</th><th>Ví dụ</th></tr>
+        <tr><td>will + V</td><td>sự việc xảy ra (quyết định, dự đoán)</td><td>Then we'll have dinner.</td></tr>
+        <tr><td>will be + V-ing</td><td>đang ở giữa việc đó tại mốc tương lai</td><td>Don't call at 7. We'll be having dinner.</td></tr>
+        <tr><td>will have + V3</td><td>đã hoàn tất trước mốc tương lai</td><td>Call after 8. We'll have finished dinner.</td></tr>
+      </table></div>
+
+      <h2>1.3 · A. Will be doing = đang làm dở tại một thời điểm tương lai</h2>
+      <ul>
+        <li><i>This time next week I<b>'ll be lying</b> on a beach.</i></li>
+        <li><i>You<b>'ll be wasting</b> your time if you apply for that job.</i></li>
+      </ul>
+      <div class="formula">Past:     At 10 yesterday, Sally was working.
+Present:  It's 10 now. Sally is working.
+Future:   At 10 tomorrow, Sally will be working.</div>
+
+      <h2>1.4 · B. Will be doing cho việc tương lai "đã định sẵn"</h2>
+      <p>Will be -ing còn dùng để nói về hành động tương lai <b>trọn vẹn</b> theo lịch / dự kiến, nghĩa gần với <b>going to</b>, giọng lịch sự, trung tính:</p>
+      <ul>
+        <li><i>The government <b>will be making</b> a statement later today.</i></li>
+        <li><i><b>Will you be going</b> away this summer?</i> (hỏi lịch sự về kế hoạch)</li>
+        <li><i>Our best player is injured and <b>won't be playing</b> on Saturday.</i></li>
+      </ul>
+
+      <h2>1.5 · C. Will have done = đã xong trước một mốc tương lai</h2>
+      <ul>
+        <li><i>Sally leaves for work at 8.30. At 9 she won't be at home — she<b>'ll have gone</b> to work.</i></li>
+        <li><i>We're late. The film <b>will already have started</b> by the time we get there.</i></li>
+      </ul>
+      <div class="formula">Present perfect:  They have been married for 24 years.
+Future perfect:   Next year they will have been married for 25 years.
+Past perfect:     When their son was born, they had been married for 3 years.</div>
+
+      <h2>1.6 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Dấu hiệu</th><th>Chọn</th></tr>
+        <tr><td>at this time tomorrow, this time next week, at 4 o'clock tomorrow, between 7 and 8</td><td>will be + V-ing</td></tr>
+        <tr><td>by then, by the time…, by the end of…, by 2030, before…</td><td>will have + V3</td></tr>
+        <tr><td>Hỏi lịch sự về kế hoạch: Will you be…?</td><td>will be + V-ing</td></tr>
+        <tr><td>Next year … for 10 years (đếm mốc tương lai)</td><td>will have been</td></tr>
+      </table></div>
+
+      <h2>1.7 · So sánh &amp; lỗi hay gặp</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">Don't phone at 7. We'll have dinner.</td><td class="yes">We<b>'ll be having</b> dinner.</td></tr>
+        <tr><td class="no">Phone after 8. We'll be finishing dinner by then.</td><td class="yes">We<b>'ll have finished</b> dinner by then.</td></tr>
+        <tr><td class="no">By 2030, I will finish my degree.</td><td class="yes">By 2030, I <b>will have finished</b> my degree.</td></tr>
+        <tr><td class="no">At 9 tomorrow I will working.</td><td class="yes">At 9 tomorrow I will <b>be</b> working.</td></tr>
+        <tr><td class="no">She'll have travel 3,000 miles.</td><td class="yes">She'll have <b>travelled</b> 3,000 miles.</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Units 21–22</b> (Will) · <b>Unit 120</b> (by then / by the time) · <b>Appendix 3</b> (tương lai).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🏖️ <b class="en">This time next week I<mark>'ll be lying</mark> on the beach in Nha Trang.</b> <span class="note">(mơ về kỳ nghỉ)</span></div>
+      <div class="ex">🍲 <b class="en">Don't call between 7 and 8. We<mark>'ll be having</mark> dinner.</b> <span class="note">(dặn người thân)</span></div>
+      <div class="ex">✈️ <b class="en">By the time you wake up, I<mark>'ll have landed</mark> in Tokyo.</b> <span class="note">(nhắn tin trước chuyến bay)</span></div>
+      <div class="ex">💼 <b class="en"><mark>Will you be using</mark> the meeting room this afternoon?</b> <span class="note">(văn phòng — hỏi lịch sự)</span></div>
+      <div class="ex">📚 <b class="en">By June, I<mark>'ll have finished</mark> all 145 units of this book.</b> <span class="note">(đặt mục tiêu học tập)</span></div>
+      <div class="ex">⚽ <b class="en">Our captain is injured, so he <mark>won't be playing</mark> on Saturday.</b> <span class="note">(tin thể thao)</span></div>
+      <div class="ex">💍 <b class="en">Next month my parents <mark>will have been</mark> married for 30 years.</b> <span class="note">(kỷ niệm ngày cưới)</span></div>
+      <div class="ex">📺 <b class="en">Later in the programme, we<mark>'ll be talking</mark> to a famous chef.</b> <span class="note">(dẫn chương trình — IELTS Listening)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Chụp ảnh tương lai" 📸</b>: tại mốc đó người ta <b>đang làm</b> → will be V-ing.</li>
+        <li><b>"Nhìn lại từ tương lai" ✅</b>: tại mốc đó việc <b>đã xong</b> → will have V3.</li>
+        <li><b>by = trước hoặc muộn nhất là</b> → thấy <i>by then / by the time / by Friday</i> là nghĩ ngay tới will have done.</li>
+        <li>Will be -ing giống was -ing / is -ing, chỉ dịch sang tương lai.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Vẽ nhanh <b>trục thời gian</b>: đặt mốc giờ trong câu, so với giờ bắt đầu/kết thúc của hành động.</li>
+        <li>Mốc nằm <b>giữa</b> khoảng hành động → will be -ing; mốc nằm <b>sau</b> khi kết thúc → will have done.</li>
+        <li>Đừng quên <b>be</b> (will be working) và <b>V3</b> (will have gone, not will have went).</li>
+        <li>"Will you be seeing X tomorrow?" là câu hỏi tự nhiên khi muốn nhờ vả — chọn đáp án tiếp diễn.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">At 8 tomorrow I will working.</td><td class="yes">I <b>will be working</b>.</td><td class="why">thiếu be</td></tr>
+        <tr><td class="no">By Friday I will finish the report.</td><td class="yes">I <b>will have finished</b> the report.</td><td class="why">by + mốc → hoàn thành</td></tr>
+        <tr><td class="no">He will have went home.</td><td class="yes">He will have <b>gone</b> home.</td><td class="why">sau have → V3</td></tr>
+        <tr><td class="no">Don't come at 3. I will study.</td><td class="yes">I<b>'ll be studying</b>.</td><td class="why">đang dở tại mốc đó</td></tr>
+        <tr><td class="no">Next year I will work here for 5 years.</td><td class="yes">I <b>will have worked</b> here for 5 years.</td><td class="why">tính khoảng thời gian tới mốc</td></tr>
+        <tr><td class="no">The film will start by the time we arrive.</td><td class="yes">The film <b>will have started</b>.</td><td class="why">bắt đầu trước khi tới</td></tr>
+        <tr><td class="no">Will you see Lan tomorrow? (muốn nhờ gửi đồ)</td><td class="yes"><b>Will you be seeing</b> Lan tomorrow?</td><td class="why">hỏi lịch sự về lịch sẵn có</td></tr>
+        <tr><td class="no">By the time we will get there…</td><td class="yes">By the time we <b>get</b> there…</td><td class="why">sau by the time dùng hiện tại (Unit 25)</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> trả lời "What will you be doing at 9 tomorrow?" bằng câu tiếp diễn tương lai.</li>
+        <li><b>Viết mục tiêu:</b> <i>"By the end of this year, I'll have read 20 books and I'll have saved 50 million dong."</i></li>
+        <li><b>IELTS Speaking Part 3:</b> <i>"In 20 years, people will be working from home and robots will have replaced many jobs."</i></li>
+        <li><b>Email:</b> <i>"I'll be travelling next week, so I won't be checking my emails."</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3 ngày, 7 ngày và 14 ngày. Liên quan: <b>Units 21–22</b> (will), <b>Unit 15</b> (quá khứ hoàn thành), <b>Unit 25</b> (when / by the time + hiện tại).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit24.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 24 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 24 – Will be doing and will have done | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit24.html';
+  var KEY = 'egu4_unit24_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn will do / will be doing / will have done cho đúng.' },
+    { id:'B', title:'B. Điền từ / chia động từ',    desc:'Chia động từ trong ngoặc ở tương lai tiếp diễn hoặc tương lai hoàn thành.' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền từ còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 24.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 24 Exercises)', desc:'Bài 24.1 → 24.2 theo đúng dạng bài trong sách Murphy, câu đã viết lại.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'Don\'t phone me between 2 and 3. I ______ an exam.',
+      opts:['\'ll do','\'ll be doing','\'ll have done','do'], a:1,
+      exp:'Trong khoảng 2–3 giờ, người nói đang làm bài dở → will be doing.' },
+    { id:'a2', sec:'A', type:'mcq', q:'Phone me after 5. I ______ work by then.',
+      opts:['\'ll finish','\'ll be finishing','\'ll have finished','finished'], a:2,
+      exp:'by then → việc đã xong trước mốc đó → will have finished.' },
+    { id:'a3', sec:'A', type:'mcq', q:'This time tomorrow we ______ over the Pacific.',
+      opts:['will fly','will be flying','will have flown','fly'], a:1,
+      exp:'this time tomorrow = một thời điểm cụ thể, đang bay dở → will be flying.' },
+    { id:'a4', sec:'A', type:'mcq', q:'We\'re very late. The concert ______ by the time we arrive.',
+      opts:['will already have started','will already start','will be already starting'], a:0,
+      exp:'Bắt đầu TRƯỚC khi mình tới → will have started.' },
+    { id:'a5', sec:'A', type:'mcq', q:'Next year my grandparents ______ married for 50 years.',
+      opts:['will be','will have been','have been','are being'], a:1,
+      exp:'Tính khoảng thời gian tới một mốc tương lai → will have been married for…' },
+    { id:'a6', sec:'A', type:'mcq', q:'Let\'s wait for Hung to arrive and then we ______ lunch.',
+      opts:['\'ll have','\'ll be having','\'ll have had'], a:0,
+      exp:'Chỉ nói việc sẽ xảy ra sau đó (không phải đang dở hay đã xong tại mốc) → will have (will + V).' },
+    { id:'a7', sec:'A', type:'mcq', q:'______ the car this evening? If not, can I borrow it?',
+      opts:['Will you use','Will you be using','Will you have used'], a:1,
+      exp:'Hỏi lịch sự về kế hoạch của người khác trước khi nhờ → Will you be using…?' },
+    { id:'a8', sec:'A', type:'mcq', q:'Our goalkeeper is injured, so he ______ in the final.',
+      opts:['won\'t have played','won\'t be playing','isn\'t play'], a:1,
+      exp:'will be -ing cho việc tương lai đã dự kiến (giống going to) → won\'t be playing.' },
+
+    /* ===== B. Điền từ ===== */
+    { id:'b1', sec:'B', type:'fill', q:'At 10 o\'clock tomorrow, Sally will be in her office. She ______ (work).',
+      acc:['will be working','\'ll be working'], ans:'will be working',
+      exp:'Đang làm dở tại 10 giờ ngày mai → will be working.' },
+    { id:'b2', sec:'B', type:'fill', q:'By the end of this year, I ______ (save) enough money for a new laptop.',
+      acc:['will have saved','\'ll have saved'], ans:'will have saved',
+      exp:'by the end of… → đã hoàn thành trước mốc → will have saved.' },
+    { id:'b3', sec:'B', type:'fill', q:'Sally leaves home at 8.30. At 9 she won\'t be at home — she ______ (go) to work.',
+      acc:['will have gone','\'ll have gone'], ans:'\'ll have gone',
+      exp:'Đã đi trước 9 giờ → will have gone (V3 của go = gone).' },
+    { id:'b4', sec:'B', type:'fill', q:'You ______ (waste) your time if you try to persuade him.',
+      acc:['will be wasting','\'ll be wasting'], ans:'\'ll be wasting',
+      exp:'Trong lúc làm việc đó, bạn sẽ đang lãng phí thời gian → will be wasting.' },
+    { id:'b5', sec:'B', type:'fill', q:'The government ______ (make) a statement later today.',
+      acc:['will be making','\'ll be making'], ans:'will be making',
+      exp:'Hành động tương lai theo dự kiến, giọng trung tính → will be making.' },
+    { id:'b6', sec:'B', type:'fill', q:'By the time you get home, I ______ (cook) dinner.',
+      acc:['will have cooked','\'ll have cooked','will have made','\'ll have made'], ans:'will have cooked',
+      exp:'by the time… → nấu xong trước khi bạn về → will have cooked.' },
+    { id:'b7', sec:'B', type:'fill', q:'In 2030 this company ______ (exist) for 100 years.',
+      acc:['will have existed','\'ll have existed','will have been existing'], ans:'will have existed',
+      exp:'Khoảng thời gian tính tới mốc tương lai → will have existed.' },
+    { id:'b8', sec:'B', type:'fill', q:'I can\'t meet you at 6. I ______ (still / work) then.',
+      acc:['will still be working','\'ll still be working'], ans:'will still be working',
+      exp:'Vẫn đang làm dở tại 6 giờ → will still be working (still đứng sau will).' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (this time / next week / I\'ll / be / lying / on a beach)',
+      tokens:['This','time','next','week',"I'll",'be','lying','on','a','beach'],
+      acc:["this time next week i'll be lying on a beach"], ans:'This time next week I\'ll be lying on a beach.',
+      exp:'Mốc tương lai + will be V-ing → đang làm dở.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (the film / will / have / started / by now)',
+      tokens:['The','film','will','have','started','by','now'],
+      acc:['the film will have started by now'], ans:'The film will have started by now.',
+      exp:'will have + V3: đoán việc đã xảy ra rồi (by now).' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (will / you / be / going / away / this summer)',
+      tokens:['Will','you','be','going','away','this','summer'],
+      acc:['will you be going away this summer'], ans:'Will you be going away this summer?',
+      exp:'Câu hỏi lịch sự về kế hoạch: Will + S + be + V-ing?' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (by Friday / we / will / have / finished / the project)',
+      tokens:['By','Friday','we','will','have','finished','the','project'],
+      acc:['by friday we will have finished the project'], ans:'By Friday we will have finished the project.',
+      exp:'by + mốc → will have + V3.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (he / won\'t / be / playing / on Saturday)',
+      tokens:['He',"won't",'be','playing','on','Saturday'],
+      acc:["he won't be playing on saturday"], ans:'He won\'t be playing on Saturday.',
+      exp:'Phủ định: won\'t be + V-ing.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: Can I call you tonight?  B: Yes, but not before 9. ______ (I / study) until then.',
+      acc:['i\'ll be studying','i will be studying'], ans:'I\'ll be studying',
+      exp:'Đang học dở trong khoảng thời gian đó → I\'ll be studying.' },
+    { id:'d2', sec:'D', type:'fill', q:'A: Will the meeting still be going on at 4?  B: No, ______ (it / end) by then.',
+      acc:['it\'ll have ended','it will have ended','it\'ll have finished','it will have finished'], ans:'it\'ll have ended',
+      exp:'by then → đã kết thúc → will have ended.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: ______ (you / see) Nga tomorrow?  B: Probably. Why?  A: Can you give her this book?',
+      acc:['will you be seeing'], ans:'Will you be seeing',
+      exp:'Hỏi lịch sự về kế hoạch trước khi nhờ → Will you be seeing…?' },
+    { id:'d4', sec:'D', type:'fill', q:'A: How\'s your book going?  B: Well, by next month ______ (I / write) half of it.',
+      acc:['i\'ll have written','i will have written'], ans:'I\'ll have written',
+      exp:'by next month → will have written (V3 của write).' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu: bạn sẽ đang làm gì vào (1) 7 giờ sáng mai, (2) 3 giờ chiều thứ Bảy, (3) giờ này năm sau.',
+      sample:'At 7 tomorrow morning I\'ll be having breakfast. At 3 on Saturday I\'ll be playing badminton. This time next year I\'ll be studying in Australia.',
+      exp:'Mốc thời gian cụ thể + đang làm dở → will be V-ing.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 3 mục tiêu bạn sẽ hoàn thành trước cuối năm (By the end of the year, I\'ll have…).',
+      sample:'By the end of the year, I\'ll have passed IELTS. I\'ll have saved 30 million dong. I\'ll have finished 60 units of this book.',
+      exp:'by + mốc → will have + V3. Kiểm tra lại dạng V3 của động từ bất quy tắc.' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu hỏi lịch sự với Will you be…-ing? để nhờ ai đó việc nhỏ.',
+      sample:'Will you be going to the post office later? Will you be using your laptop this afternoon?',
+      exp:'Will you be V-ing…? hỏi về kế hoạch một cách nhẹ nhàng, không gây áp lực.' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'Don\'t come at 8. The children ______ their bath then.',
+      opts:['will have','will be having','will have had'], a:1,
+      exp:'Đúng lúc 8 giờ bọn trẻ đang tắm dở → will be having (lý do không nên đến).' },
+    { id:'f2', sec:'F', type:'fill', q:'By 2035, scientists ______ (find) a cure for this disease, I hope.',
+      acc:['will have found','\'ll have found'], ans:'will have found',
+      exp:'by + năm → will have found.' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['At 9 tomorrow I will working.','At 9 tomorrow I will be working.'], a:1,
+      exp:'Tương lai tiếp diễn cần đủ will + be + V-ing.' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch: "Đến lúc bạn tới, chúng tôi sẽ ăn xong rồi."',
+      acc:['by the time you arrive we\'ll have eaten','by the time you arrive we will have eaten','by the time you arrive we\'ll have finished eating','by the time you arrive we will have finished eating','by the time you get here we\'ll have eaten','by the time you get here we will have eaten'],
+      ans:'By the time you arrive, we\'ll have eaten.',
+      exp:'By the time + hiện tại đơn, S + will have + V3.' },
+    { id:'f5', sec:'F', type:'mcq', q:'Tom started work at 8. It\'s a 4-hour shift. At 1 o\'clock he ______.',
+      opts:['will be working','will have finished','will start'], a:1,
+      exp:'8 + 4 = 12 giờ xong ca. Lúc 1 giờ → đã xong: will have finished.' },
+    { id:'f6', sec:'F', type:'fill', q:'If he keeps spending like this, he ______ (spend) all his money by Sunday.',
+      acc:['will have spent','\'ll have spent'], ans:'will have spent',
+      exp:'Trước mốc Chủ nhật đã tiêu hết → will have spent.' },
+    { id:'f7', sec:'F', type:'mcq', q:'"I\'ll be staying at the Rex Hotel until Friday." nghĩa là:',
+      opts:['Tôi đã ở khách sạn xong trước thứ Sáu.','Tôi sẽ đang ở khách sạn Rex cho đến thứ Sáu.','Tôi định đặt khách sạn vào thứ Sáu.'], a:1,
+      exp:'will be staying = sẽ đang ở (trong suốt khoảng thời gian đó).' },
+    { id:'f8', sec:'F', type:'fill', q:'Do you think you ______ (still / live) here in ten years?',
+      acc:['will still be living','\'ll still be living'], ans:'will still be living',
+      exp:'Vẫn đang sống ở đó tại mốc 10 năm sau → will still be living.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'mcq', sub:'Bài 24.1 – Đọc lịch trình rồi chọn câu đúng',
+      q:'Lịch hằng ngày của Chi: ăn sáng 6.45–7.15, rời nhà 7.30, đến công ty 8.15, làm việc tới 12.00, ăn trưa 12.00–12.45, làm tiếp 1.00–5.00. Ngày mai cũng vậy. — At 7.00 tomorrow…',
+      opts:['she\'ll have left home','she\'ll be having breakfast','she\'ll be arriving at work'], a:1,
+      exp:'7.00 nằm giữa 6.45–7.15 → đang ăn sáng: she\'ll be having breakfast.' },
+    { id:'h2', sec:'G', type:'mcq', sub:'Bài 24.1 – Đọc lịch trình rồi chọn câu đúng',
+      q:'(Lịch của Chi như trên) — At 7.45 tomorrow…',
+      opts:['she\'ll have left home','she\'ll be leaving home','she\'ll have arrived at work'], a:0,
+      exp:'Rời nhà lúc 7.30, đến nơi 8.15 → lúc 7.45 đã rời nhà nhưng chưa tới: she\'ll have left home.' },
+    { id:'h3', sec:'G', type:'mcq', sub:'Bài 24.1 – Đọc lịch trình rồi chọn câu đúng',
+      q:'(Lịch của Chi như trên) — At 10.00 tomorrow…',
+      opts:['she\'ll start work','she\'ll be working','she\'ll be arriving at work'], a:1,
+      exp:'10.00 nằm giữa 8.15–12.00 → đang làm: she\'ll be working.' },
+    { id:'h4', sec:'G', type:'mcq', sub:'Bài 24.1 – Đọc lịch trình rồi chọn câu đúng',
+      q:'(Lịch của Chi như trên) — At 12.30 tomorrow…',
+      opts:['she\'ll have finished her lunch','she\'ll be having lunch','she\'ll have lunch'], a:1,
+      exp:'12.30 nằm giữa 12.00–12.45 → đang ăn trưa.' },
+    { id:'h5', sec:'G', type:'mcq', sub:'Bài 24.1 – Đọc lịch trình rồi chọn câu đúng',
+      q:'(Lịch của Chi như trên) — At 4.00 tomorrow…',
+      opts:['she\'ll have finished work','she won\'t have finished work','she\'ll finish work'], a:1,
+      exp:'Làm tới 5.00 → lúc 4.00 chưa xong: she won\'t have finished work (và she\'ll be working).' },
+    { id:'h6', sec:'G', type:'mcq', sub:'Bài 24.1 – Đọc lịch trình rồi chọn câu đúng',
+      q:'(Lịch của Chi như trên) — At 5.30 tomorrow…',
+      opts:['she\'ll be leaving work','she\'ll leave work','she\'ll have left work'], a:2,
+      exp:'Tan làm lúc 5.00 → lúc 5.30 đã rời công ty: she\'ll have left work.' },
+
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'Text me after 9. ______ (we / finish) the meeting by then.',
+      acc:['we\'ll have finished','we will have finished'], ans:'We\'ll have finished',
+      exp:'by then → will have finished.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'We\'re playing football from 5 until 6.30 tomorrow. So at 6, ______ (we / play) football.',
+      acc:['we\'ll be playing','we will be playing'], ans:'we\'ll be playing',
+      exp:'6 giờ nằm trong khoảng 5–6.30 → đang chơi.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'A: Can we meet tomorrow morning?  B: Sorry, not in the morning. ______ (I / teach).',
+      acc:['i\'ll be teaching','i will be teaching'], ans:'I\'ll be teaching',
+      exp:'Đang dạy suốt buổi sáng → will be teaching.' },
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'The class starts at 2 and lasts 90 minutes. A: Are you free at 4?  B: Yes, ______ (the class / end) by then.',
+      acc:['the class will have ended','the class\'ll have ended','the class will have finished'], ans:'the class will have ended',
+      exp:'Lớp kết thúc 3.30 → tới 4 giờ đã xong: will have ended.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'Mai is shopping a lot on holiday. If she continues like this, ______ (she / spend) all her savings before she gets home.',
+      acc:['she\'ll have spent','she will have spent'], ans:'she\'ll have spent',
+      exp:'Trước khi về nhà đã tiêu hết → will have spent.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'Do you think ______ (you / still / work) for this company in five years?',
+      acc:['you\'ll still be working','you will still be working'], ans:'you\'ll still be working',
+      exp:'Vẫn đang làm tại mốc 5 năm sau → will still be working.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'Khoa is cycling across Vietnam. So far he has cycled 800 km. By the end of the trip, ______ (he / cycle) more than 2,000 km.',
+      acc:['he\'ll have cycled','he will have cycled'], ans:'he\'ll have cycled',
+      exp:'Tổng quãng đường tính tới cuối chuyến → will have cycled.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'If you need me, ______ (I / stay) at my aunt\'s house until Sunday.',
+      acc:['i\'ll be staying','i will be staying'], ans:'I\'ll be staying',
+      exp:'Sẽ đang ở đó trong suốt khoảng thời gian → will be staying.' },
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'A: ______ (you / see) your brother this weekend?  B: Yes, I think so. Why?  A: Can you give him this charger?',
+      acc:['will you be seeing'], ans:'Will you be seeing',
+      exp:'Hỏi lịch sự về kế hoạch trước khi nhờ → Will you be seeing…?' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'Don\'t call between 6 and 7. ______ (we / have) dinner then.',
+      acc:['we\'ll be having','we will be having','we\'ll be eating','we will be eating'], ans:'We\'ll be having',
+      exp:'Đang ăn tối dở trong khoảng đó → will be having.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'Hurry up! By the time we get to the station, ______ (the train / leave).',
+      acc:['the train will have left','the train\'ll have left'], ans:'the train will have left',
+      exp:'Tàu rời đi TRƯỚC khi mình tới → will have left.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'Don\'t message me at midnight. ______ (I / sleep).',
+      acc:['i\'ll be sleeping','i will be sleeping'], ans:'I\'ll be sleeping',
+      exp:'Lúc nửa đêm đang ngủ → will be sleeping.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 24.2 – will be (do)ing or will have (done)',
+      q:'Lan and Duc got married in 2021. In 2031 ______ (they / be) married for ten years.',
+      acc:['they\'ll have been','they will have been'], ans:'they\'ll have been',
+      exp:'Khoảng thời gian tính tới mốc tương lai → will have been.' }
+  ];
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>

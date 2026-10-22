@@ -43,6 +43,14 @@ h2{font-size:1.15rem;color:var(--primary-2);margin:26px 0 12px}
 .unit.soon{opacity:.62;pointer-events:none}
 .unit.soon .num{background:#94a3b8}
 
+.group{font-size:1rem;margin:22px 0 10px;color:var(--ink)}
+.group small{color:var(--muted);font-weight:500;font-size:.8rem;margin-left:6px}
+.search{width:100%;padding:11px 14px;border:1px solid var(--line);border-radius:12px;font-size:1rem;
+  background:var(--card);color:var(--ink);margin-bottom:4px}
+.search:focus{outline:2px solid var(--primary);border-color:transparent}
+.nohit{color:var(--muted);text-align:center}
+[hidden]{display:none!important}
+
 /* Guide */
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;margin-bottom:14px}
 .card h2:first-child{margin-top:0}
@@ -106,11 +114,14 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px
     <p>Học theo unit: lý thuyết cô đọng → ví dụ đời sống → mẹo &amp; lỗi người Việt → bài tập đa dạng
        → kiểm tra nhiều lần. Hoàn toàn offline, tiến độ lưu ngay trên máy bạn.</p>
     <div class="badges">
-      <span>2 / 145 unit</span><span>120 câu hỏi có giải thích</span><span>2 chế độ: Học · Kiểm tra</span><span>Trả lời offline</span>
+      <span id="bUnits">145 / 145 unit</span><span id="bQs">8,562 câu hỏi có giải thích</span><span>2 chế độ: Học · Kiểm tra</span><span>Trả lời offline</span>
     </div>
   </header>
 
   <h2>📚 Danh sách unit</h2>
+  <input id="q" class="search no-print" type="search" placeholder="🔎 Tìm unit: số, tên chủ đề (vd: 25, passive, wish)…" autocomplete="off">
+  <!-- UNITS:START -->
+  <h3 class="group">Present and past <small>Unit 1–6</small></h3>
   <div class="grid">
     <a class="unit" href="units/unit1.html">
       <span class="num">UNIT 1</span>
@@ -124,19 +135,912 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px
       <p>Thì hiện tại đơn: -s/-es, do/does, trạng từ tần suất, <i>I promise / I suggest</i>…</p>
       <div class="meta"><b>65 câu</b><b>62 điểm</b><b>Bài 2.1–2.5 trong sách</b></div>
     </a>
-    <div class="unit soon">
+    <a class="unit" href="units/unit3.html">
       <span class="num">UNIT 3</span>
-      <h3>Present continuous and present simple 1</h3>
-      <p>Phân biệt hai thì — sẽ có sau khi bạn hoàn thành Units 1–2.</p>
-      <div class="meta"><b>Sắp ra mắt</b></div>
-    </div>
-    <div class="unit soon">
+      <h3>Present continuous and present simple 1 (I am doing and I do)</h3>
+      <p>Phân biệt hiện tại tiếp diễn và hiện tại đơn: đang xảy ra/tạm thời vs thói quen/lâu dài; always + -ing.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 3.1–3.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit4.html">
       <span class="num">UNIT 4</span>
-      <h3>Present continuous and present simple 2</h3>
-      <p>Thay đổi ý định, trạng từ tần suất với hai thì.</p>
-      <div class="meta"><b>Sắp ra mắt</b></div>
-    </div>
+      <h3>Present continuous and present simple 2 (I am doing and I do)</h3>
+      <p>Động từ trạng thái (know, want, belong…), think/see/look/feel và cách dùng he is vs he is being.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 4.1–4.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit5.html">
+      <span class="num">UNIT 5</span>
+      <h3>Past simple (I did)</h3>
+      <p>Thì quá khứ đơn: động từ có quy tắc/bất quy tắc, did trong câu hỏi – phủ định, và was/were.</p>
+      <div class="meta"><b>61 câu</b><b>58 điểm</b><b>Bài 5.1–5.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit6.html">
+      <span class="num">UNIT 6</span>
+      <h3>Past continuous (I was doing)</h3>
+      <p>Thì quá khứ tiếp diễn: việc đang diễn ra tại một thời điểm quá khứ, và kết hợp với quá khứ đơn (when/while).</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 6.1–6.4 trong sách</b></div>
+    </a>
   </div>
+  <h3 class="group">Present perfect and past <small>Unit 7–18</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit7.html">
+      <span class="num">UNIT 7</span>
+      <h3>Present perfect 1 (I have done)</h3>
+      <p>Hiện tại hoàn thành: việc vừa xảy ra có kết quả ở hiện tại, been vs gone, just / already / yet.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 7.1–7.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit8.html">
+      <span class="num">UNIT 8</span>
+      <h3>Present perfect 2 (I have done)</h3>
+      <p>Hiện tại hoàn thành cho khoảng thời gian đến nay: ever/never, so far, today/this week, It's the first time…</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 8.1–8.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit9.html">
+      <span class="num">UNIT 9</span>
+      <h3>Present perfect continuous (I have been doing)</h3>
+      <p>Hiện tại hoàn thành tiếp diễn: hoạt động vừa dừng còn dấu vết, hoặc kéo dài đến nay với how long/for/since.</p>
+      <div class="meta"><b>55 câu</b><b>52 điểm</b><b>Bài 9.1–9.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit10.html">
+      <span class="num">UNIT 10</span>
+      <h3>Present perfect continuous and simple (I have been doing and I have done)</h3>
+      <p>Phân biệt have been doing (quá trình, how long) và have done (kết quả, how much / how many).</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 10.1–10.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit11.html">
+      <span class="num">UNIT 11</span>
+      <h3>How long have you (been)… ?</h3>
+      <p>Dùng hiện tại hoàn thành (không dùng hiện tại) cho việc bắt đầu trong quá khứ và còn tiếp diễn: How long…?</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 11.1–11.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit12.html">
+      <span class="num">UNIT 12</span>
+      <h3>For and since, When ... ? and How long ... ?</h3>
+      <p>Phân biệt for (khoảng thời gian) và since (mốc bắt đầu), câu hỏi When…? / How long…? và It's … since.</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 12.1–12.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit13.html">
+      <span class="num">UNIT 13</span>
+      <h3>Present perfect and past 1 (I have done and I did)</h3>
+      <p>Hiện tại hoàn thành (kết quả còn ở hiện tại, tin mới) vs quá khứ đơn (chuyện đã qua, kể tiếp chi tiết).</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 13.1–13.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit14.html">
+      <span class="num">UNIT 14</span>
+      <h3>Present perfect and past 2 (I have done and I did)</h3>
+      <p>Thời gian đã kết thúc (yesterday, ago, in 2010) → quá khứ đơn; khoảng chưa kết thúc (today, this week) → hiện tại hoàn thành.</p>
+      <div class="meta"><b>65 câu</b><b>62 điểm</b><b>Bài 14.1–14.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit15.html">
+      <span class="num">UNIT 15</span>
+      <h3>Past perfect (I had done)</h3>
+      <p>Quá khứ hoàn thành had + V3: việc xảy ra TRƯỚC một mốc trong quá khứ; so sánh với quá khứ đơn và hiện tại hoàn thành.</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 15.1–15.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit16.html">
+      <span class="num">UNIT 16</span>
+      <h3>Past perfect continuous (I had been doing)</h3>
+      <p>had been + V-ing: việc kéo dài trước một mốc quá khứ, để lại dấu vết; so sánh với was doing và had done.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 16.1–16.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit17.html">
+      <span class="num">UNIT 17</span>
+      <h3>Have and have got</h3>
+      <p>have / have got cho sở hữu, quan hệ, bệnh; have cho hành động (have breakfast, a shower, a good time) và câu hỏi/phủ định.</p>
+      <div class="meta"><b>64 câu</b><b>61 điểm</b><b>Bài 17.1–17.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit18.html">
+      <span class="num">UNIT 18</span>
+      <h3>Used to (do)</h3>
+      <p>used to + V: thói quen/sự thật trong quá khứ nay không còn; did you use to…?, didn't use to; phân biệt be used to -ing.</p>
+      <div class="meta"><b>55 câu</b><b>52 điểm</b><b>Bài 18.1–18.3 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Future <small>Unit 19–25</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit19.html">
+      <span class="num">UNIT 19</span>
+      <h3>Present tenses (I am doing / I do) for the future</h3>
+      <p>Hiện tại tiếp diễn cho kế hoạch đã sắp xếp; hiện tại đơn cho lịch trình, thời gian biểu cố định trong tương lai.</p>
+      <div class="meta"><b>55 câu</b><b>52 điểm</b><b>Bài 19.1–19.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit20.html">
+      <span class="num">UNIT 20</span>
+      <h3>(I'm) going to (do)</h3>
+      <p>going to: dự định đã quyết, dự đoán dựa trên dấu hiệu hiện tại; was going to: định làm nhưng không làm.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 20.1–20.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit21.html">
+      <span class="num">UNIT 21</span>
+      <h3>Will/shall 1</h3>
+      <p>I'll cho quyết định tức thời: đề nghị, đồng ý, hứa, nhờ vả; Shall I/we…? để hỏi ý kiến.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 21.1–21.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit22.html">
+      <span class="num">UNIT 22</span>
+      <h3>Will/shall 2</h3>
+      <p>Will/won't để dự đoán tương lai (I think, I'm sure, probably), I hope + hiện tại, I shall/we shall.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 22.1–22.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit23.html">
+      <span class="num">UNIT 23</span>
+      <h3>I will and I'm going to</h3>
+      <p>Phân biệt will (quyết định lúc nói) và going to (đã quyết định, có dấu hiệu) khi nói về tương lai.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 23.1–23.2 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit24.html">
+      <span class="num">UNIT 24</span>
+      <h3>Will be doing and will have done</h3>
+      <p>Tương lai tiếp diễn (đang làm dở tại một mốc) và tương lai hoàn thành (đã xong trước một mốc).</p>
+      <div class="meta"><b>55 câu</b><b>52 điểm</b><b>Bài 24.1–24.2 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit25.html">
+      <span class="num">UNIT 25</span>
+      <h3>When I do / When I've done · When and if</h3>
+      <p>Sau when/if/before/until/as soon as dùng hiện tại (không dùng will); phân biệt when và if.</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 25.1–25.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Modals <small>Unit 26–37</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit26.html">
+      <span class="num">UNIT 26</span>
+      <h3>Can, could and (be) able to</h3>
+      <p>Can/could chỉ khả năng, cho phép; khi nào phải dùng be able to; could khác was able to/managed to.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 26.1–26.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit27.html">
+      <span class="num">UNIT 27</span>
+      <h3>Could (do) and could have (done)</h3>
+      <p>Could để gợi ý, nói điều không thực tế hoặc có thể xảy ra; could have done cho điều đã không xảy ra.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 27.1–27.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit28.html">
+      <span class="num">UNIT 28</span>
+      <h3>Must and can't</h3>
+      <p>Must/can't để suy luận chắc chắn đúng/không thể ở hiện tại; must have/can't have done cho quá khứ.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 28.1–28.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit29.html">
+      <span class="num">UNIT 29</span>
+      <h3>May and might 1</h3>
+      <p>May/might để nói điều có thể đúng ở hiện tại; may/might have done cho quá khứ; might not have vs couldn't have.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 29.1–29.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit30.html">
+      <span class="num">UNIT 30</span>
+      <h3>May and might 2</h3>
+      <p>May/might nói khả năng trong tương lai, might be able to/have to, might be -ing và might as well.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 30.1–30.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit31.html">
+      <span class="num">UNIT 31</span>
+      <h3>Have to and must</h3>
+      <p>Have to và must diễn tả sự bắt buộc; phân biệt mustn't với don't have to; have got to.</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 31.1–31.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit32.html">
+      <span class="num">UNIT 32</span>
+      <h3>Must, mustn't, needn't</h3>
+      <p>Must/mustn't, needn't/don't need to, phân biệt needn't have done với didn't need to.</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 32.1–32.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit33.html">
+      <span class="num">UNIT 33</span>
+      <h3>Should 1</h3>
+      <p>Should để khuyên, nói điều kỳ vọng; should have done cho quá khứ; ought to.</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 33.1–33.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit34.html">
+      <span class="num">UNIT 34</span>
+      <h3>Should 2</h3>
+      <p>Should sau suggest/insist/recommend, thể giả định, It's strange that … should, If … should, I should.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 34.1–34.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit35.html">
+      <span class="num">UNIT 35</span>
+      <h3>Had better, It's time …</h3>
+      <p>Had better (nên làm kẻo gặp rắc rối), so sánh với should, và It's time + quá khứ để phàn nàn.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 35.1–35.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit36.html">
+      <span class="num">UNIT 36</span>
+      <h3>Would</h3>
+      <p>Would để tưởng tượng, would have done, will vs would, would = quá khứ của will, thói quen quá khứ.</p>
+      <div class="meta"><b>55 câu</b><b>57 điểm</b><b>Bài 36.1–36.6 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit37.html">
+      <span class="num">UNIT 37</span>
+      <h3>Can/Could/Would you … ? etc. (Requests, offers, permission and invitations)</h3>
+      <p>Nhờ vả, xin thứ gì, xin phép, đề nghị giúp và mời: Can/Could you…?, May I…?, Do you mind if…?, Would you like…?</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 37.1–37.3 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">If and wish <small>Unit 38–41</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit38.html">
+      <span class="num">UNIT 38</span>
+      <h3>If I do … and If I did …</h3>
+      <p>Phân biệt If I do (có thể xảy ra) và If I did (tưởng tượng); không dùng would trong vế if.</p>
+      <div class="meta"><b>55 câu</b><b>52 điểm</b><b>Bài 38.1–38.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit39.html">
+      <span class="num">UNIT 39</span>
+      <h3>If I knew ... I wish I knew ...</h3>
+      <p>Câu điều kiện không có thật ở hiện tại (if + quá khứ) và wish + quá khứ để nói điều tiếc nuối.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 39.1–39.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit40.html">
+      <span class="num">UNIT 40</span>
+      <h3>If I had known ... I wish I had known ...</h3>
+      <p>Câu điều kiện loại 3 (if + had done → would have done) và wish + had done để tiếc về quá khứ.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 40.1–40.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit41.html">
+      <span class="num">UNIT 41</span>
+      <h3>Wish</h3>
+      <p>Phân biệt wish và hope; wish + quá khứ / had done / could; wish ... would để phàn nàn, mong thay đổi.</p>
+      <div class="meta"><b>65 câu</b><b>62 điểm</b><b>Bài 41.1–41.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Passive <small>Unit 42–46</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit42.html">
+      <span class="num">UNIT 42</span>
+      <h3>Passive 1 (is done / was done)</h3>
+      <p>Câu bị động thì hiện tại đơn và quá khứ đơn: am/is/are/was/were + V3, khi nào dùng by.</p>
+      <div class="meta"><b>64 câu</b><b>61 điểm</b><b>Bài 42.1–42.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit43.html">
+      <span class="num">UNIT 43</span>
+      <h3>Passive 2 (be done / been done / being done)</h3>
+      <p>Bị động với động từ khuyết thiếu, hoàn thành và tiếp diễn: can be done, has been done, is being done.</p>
+      <div class="meta"><b>63 câu</b><b>60 điểm</b><b>Bài 43.1–43.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit44.html">
+      <span class="num">UNIT 44</span>
+      <h3>Passive 3</h3>
+      <p>Bị động với động từ hai tân ngữ (I was given…), being done, I was born và bị động với get.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 44.1–44.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit45.html">
+      <span class="num">UNIT 45</span>
+      <h3>It is said that ... He is said to ... He is supposed to ...</h3>
+      <p>Bị động tường thuật (it is said that / he is said to) và hai nghĩa của be supposed to.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 45.1–45.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit46.html">
+      <span class="num">UNIT 46</span>
+      <h3>Have something done</h3>
+      <p>Nhờ/thuê người khác làm việc cho mình (have/get something done) và nghĩa 'bị' (had my bag stolen).</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 46.1–46.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Reported speech <small>Unit 47–48</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit47.html">
+      <span class="num">UNIT 47</span>
+      <h3>Reported speech 1 (He said that ...)</h3>
+      <p>Câu tường thuật: chuyển lời nói trực tiếp sang He said (that)… và quy tắc lùi thì.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 47.1–47.2 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit48.html">
+      <span class="num">UNIT 48</span>
+      <h3>Reported speech 2</h3>
+      <p>Khi nào giữ/lùi thì trong câu tường thuật, say vs tell, tell/ask somebody to do something.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 48.1–48.3 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Questions and auxiliary verbs <small>Unit 49–52</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit49.html">
+      <span class="num">UNIT 49</span>
+      <h3>Questions 1</h3>
+      <p>Trật tự câu hỏi, do/does/did, Who phoned? vs Who did you phone?, câu hỏi phủ định.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 49.1–49.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit50.html">
+      <span class="num">UNIT 50</span>
+      <h3>Questions 2 (Do you know where ... ? / He asked me where ...)</h3>
+      <p>Câu hỏi gián tiếp (Do you know where…?), if/whether và tường thuật câu hỏi (He asked me…).</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 50.1–50.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit51.html">
+      <span class="num">UNIT 51</span>
+      <h3>Auxiliary verbs (have/do/can etc.) I think so / I hope so etc.</h3>
+      <p>Trợ động từ trong câu đáp ngắn, phản bác, Have you?, So/Neither do I, I think so / I hope not.</p>
+      <div class="meta"><b>61 câu</b><b>58 điểm</b><b>Bài 51.1–51.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit52.html">
+      <span class="num">UNIT 52</span>
+      <h3>Question tags (do you? isn't it? etc.)</h3>
+      <p>Câu hỏi đuôi: chọn trợ động từ, đảo khẳng/phủ định, ngữ điệu, Let's…shall we?, I'm…aren't I?</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 52.1–52.3 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">-ing and to … <small>Unit 53–68</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit53.html">
+      <span class="num">UNIT 53</span>
+      <h3>Verb + -ing (enjoy doing / stop doing etc.)</h3>
+      <p>Các động từ luôn đi với -ing: enjoy, mind, suggest, avoid, deny, give up, keep, being/having done.</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 53.1–53.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit54.html">
+      <span class="num">UNIT 54</span>
+      <h3>Verb + to ... (decide to ... / forget to ... etc.)</h3>
+      <p>Động từ + to V (decide, agree, manage, afford…), seem/appear to, dare, what/how/where to….</p>
+      <div class="meta"><b>63 câu</b><b>60 điểm</b><b>Bài 54.1–54.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit55.html">
+      <span class="num">UNIT 55</span>
+      <h3>Verb (+ object) + to ... (I want you to ... etc.)</h3>
+      <p>want/tell/remind/persuade somebody to…, advise/allow hai cấu trúc, make/let + V không to.</p>
+      <div class="meta"><b>61 câu</b><b>58 điểm</b><b>Bài 55.1–55.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit56.html">
+      <span class="num">UNIT 56</span>
+      <h3>Verb + -ing or to ... 1 (remember/regret etc.)</h3>
+      <p>Tổng hợp động từ + -ing / to; remember, regret, go on đổi nghĩa; begin/start/continue không đổi nghĩa.</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 56.1–56.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit57.html">
+      <span class="num">UNIT 57</span>
+      <h3>Verb + -ing or to ... 2 (try/need/help)</h3>
+      <p>Phân biệt try to/try -ing, need to/needs -ing, help (to) do và can't help -ing.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 57.1–57.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit58.html">
+      <span class="num">UNIT 58</span>
+      <h3>Verb + -ing or to ... 3 (like / would like etc.)</h3>
+      <p>like/love/hate + -ing hay to, would like/love + to, would mind + -ing và would like to have done.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 58.1–58.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit59.html">
+      <span class="num">UNIT 59</span>
+      <h3>Prefer and would rather</h3>
+      <p>prefer A to B, prefer to do rather than, would prefer to, would rather do và I'd rather you did.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 59.1–59.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit60.html">
+      <span class="num">UNIT 60</span>
+      <h3>Preposition (in/for/about etc.) + -ing</h3>
+      <p>Sau giới từ dùng V-ing: before/after/by/without -ing, instead of, và to là giới từ (look forward to -ing).</p>
+      <div class="meta"><b>61 câu</b><b>58 điểm</b><b>Bài 60.1–60.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit61.html">
+      <span class="num">UNIT 61</span>
+      <h3>Be/get used to something (I'm used to ...)</h3>
+      <p>be used to / get used to + N hoặc V-ing (quen với) và phân biệt với used to do (thói quen cũ).</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 61.1–61.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit62.html">
+      <span class="num">UNIT 62</span>
+      <h3>Verb + preposition + -ing (succeed in -ing / accuse somebody of -ing etc.)</h3>
+      <p>Động từ + giới từ + V-ing (insist on, succeed in…) và accuse sb of, thank sb for, prevent sb from -ing.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 62.1–62.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit63.html">
+      <span class="num">UNIT 63</span>
+      <h3>Expressions + -ing</h3>
+      <p>Các cụm + V-ing: it's no use, there's no point in, it's worth, have difficulty, spend time, go swimming…</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 63.1–63.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit64.html">
+      <span class="num">UNIT 64</span>
+      <h3>To ..., for ... and so that ...</h3>
+      <p>Diễn tả mục đích: to + V, for + N, a place to park, so that + can/could/won't/wouldn't.</p>
+      <div class="meta"><b>61 câu</b><b>58 điểm</b><b>Bài 64.1–64.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit65.html">
+      <span class="num">UNIT 65</span>
+      <h3>Adjective + to ...</h3>
+      <p>difficult to understand, nice of you to…, sorry/glad to…, the first/last/only to…, bound/likely to.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 65.1–65.6 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit66.html">
+      <span class="num">UNIT 66</span>
+      <h3>To ... (afraid to do) and preposition + -ing (afraid of -ing)</h3>
+      <p>Phân biệt afraid to/of, interested in/to, sorry to/for và các cặp to-V ↔ giới từ + -ing.</p>
+      <div class="meta"><b>61 câu</b><b>58 điểm</b><b>Bài 66.1–66.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit67.html">
+      <span class="num">UNIT 67</span>
+      <h3>See somebody do and see somebody doing</h3>
+      <p>see/hear/feel + O + V (thấy trọn hành động) và + V-ing (thấy đang diễn ra); bị động be seen to.</p>
+      <div class="meta"><b>55 câu</b><b>52 điểm</b><b>Bài 67.1–67.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit68.html">
+      <span class="num">UNIT 68</span>
+      <h3>-ing clauses (Feeling tired, I went to bed early.)</h3>
+      <p>Mệnh đề -ing: hành động đồng thời, xen giữa, Having done (xảy ra trước) và -ing chỉ lý do.</p>
+      <div class="meta"><b>55 câu</b><b>52 điểm</b><b>Bài 68.1–68.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Articles and nouns <small>Unit 69–81</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit69.html">
+      <span class="num">UNIT 69</span>
+      <h3>Countable and uncountable 1</h3>
+      <p>Danh từ đếm được và không đếm được: a/an, số nhiều, some/any, many/much, few/little.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 69.1–69.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit70.html">
+      <span class="num">UNIT 70</span>
+      <h3>Countable and uncountable 2</h3>
+      <p>Danh từ vừa đếm được vừa không (paper, hair, room…) và nhóm luôn không đếm được: advice, news…</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 70.1–70.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit71.html">
+      <span class="num">UNIT 71</span>
+      <h3>Countable nouns with a/an and some</h3>
+      <p>Dùng a/an với danh từ đếm được số ít (nghề nghiệp, loại người/vật) và hai nghĩa của some.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 71.1–71.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit72.html">
+      <span class="num">UNIT 72</span>
+      <h3>A/an and the</h3>
+      <p>Phân biệt a/an (lần đầu, không cụ thể) và the (đã biết, rõ ràng là cái nào); once a week, a kilo.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 72.1–72.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit73.html">
+      <span class="num">UNIT 73</span>
+      <h3>The 1</h3>
+      <p>Dùng the với vật duy nhất (the sun, the sky), the same, the cinema/radio; không the với TV, bữa ăn, Gate 5.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 73.1–73.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit74.html">
+      <span class="num">UNIT 74</span>
+      <h3>The 2 (school / the school etc.)</h3>
+      <p>school/hospital/prison/church có hoặc không the; go to bed, go to work, go home, at sea.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 74.1–74.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit75.html">
+      <span class="num">UNIT 75</span>
+      <h3>The 3 (children / the children)</h3>
+      <p>Khi nào bỏ the để nói chung (children, music) và khi nào dùng the để chỉ cái cụ thể.</p>
+      <div class="meta"><b>64 câu</b><b>61 điểm</b><b>Bài 75.1–75.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit76.html">
+      <span class="num">UNIT 76</span>
+      <h3>The 4 (the giraffe / the telephone / the piano etc., the + adjective)</h3>
+      <p>The cho loài vật, phát minh, nhạc cụ; the + tính từ (the rich) và the + quốc tịch (the French).</p>
+      <div class="meta"><b>64 câu</b><b>61 điểm</b><b>Bài 76.1–76.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit77.html">
+      <span class="num">UNIT 77</span>
+      <h3>Names with and without the 1</h3>
+      <p>Tên người, châu lục, nước, núi, hồ không có the; đại dương, sông, sa mạc, tên số nhiều có the.</p>
+      <div class="meta"><b>64 câu</b><b>61 điểm</b><b>Bài 77.1–77.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit78.html">
+      <span class="num">UNIT 78</span>
+      <h3>Names with and without the 2</h3>
+      <p>Tên đường, sân bay, đại học không the; khách sạn, bảo tàng, báo, tên có of thì có the.</p>
+      <div class="meta"><b>64 câu</b><b>61 điểm</b><b>Bài 78.1–78.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit79.html">
+      <span class="num">UNIT 79</span>
+      <h3>Singular and plural</h3>
+      <p>Danh từ luôn số nhiều (jeans, scissors), -ics số ít, police số nhiều, the government has/have.</p>
+      <div class="meta"><b>66 câu</b><b>63 điểm</b><b>Bài 79.1–79.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit80.html">
+      <span class="num">UNIT 80</span>
+      <h3>Noun + noun (a tennis ball / a headache)</h3>
+      <p>Danh từ ghép noun + noun (a tennis ball) và cấu trúc a ten-pound note, a two-hour journey.</p>
+      <div class="meta"><b>63 câu</b><b>60 điểm</b><b>Bài 80.1–80.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit81.html">
+      <span class="num">UNIT 81</span>
+      <h3>-'s (your sister's name) and of ... (the name of the book)</h3>
+      <p>Sở hữu -'s/-s' cho người, of cho vật; today's news, two hours' walk.</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 81.1–81.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Pronouns and determiners <small>Unit 82–91</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit82.html">
+      <span class="num">UNIT 82</span>
+      <h3>Myself/yourself/themselves etc.</h3>
+      <p>Đại từ phản thân myself… khi chủ ngữ = tân ngữ, động từ không dùng -self, themselves vs each other.</p>
+      <div class="meta"><b>66 câu</b><b>63 điểm</b><b>Bài 82.1–82.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit83.html">
+      <span class="num">UNIT 83</span>
+      <h3>A friend of mine / My own house / On my own / By myself</h3>
+      <p>A friend of mine, my own house, on my own / by myself (một mình, tự làm).</p>
+      <div class="meta"><b>66 câu</b><b>63 điểm</b><b>Bài 83.1–83.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit84.html">
+      <span class="num">UNIT 84</span>
+      <h3>There ... and it ...</h3>
+      <p>Phân biệt there is/was (nói sự tồn tại) và it (chỉ vật/việc cụ thể, thời tiết, khoảng cách).</p>
+      <div class="meta"><b>64 câu</b><b>61 điểm</b><b>Bài 84.1–84.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit85.html">
+      <span class="num">UNIT 85</span>
+      <h3>Some and any</h3>
+      <p>Dùng some/any và somebody/anything/anywhere… trong câu khẳng định, phủ định, câu hỏi, sau if.</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 85.1–85.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit86.html">
+      <span class="num">UNIT 86</span>
+      <h3>No/none/any, Nothing/nobody etc.</h3>
+      <p>Phân biệt no + danh từ, none (of), nothing/nobody/nowhere và cách tránh hai phủ định.</p>
+      <div class="meta"><b>63 câu</b><b>60 điểm</b><b>Bài 86.1–86.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit87.html">
+      <span class="num">UNIT 87</span>
+      <h3>Much, many, little, few, a lot, plenty</h3>
+      <p>Dùng much/many, a lot of, plenty of và phân biệt little/a little, few/a few.</p>
+      <div class="meta"><b>63 câu</b><b>60 điểm</b><b>Bài 87.1–87.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit88.html">
+      <span class="num">UNIT 88</span>
+      <h3>All / all of, most / most of, no / none of etc.</h3>
+      <p>Khi nào dùng all/most/some + danh từ, khi nào cần of (most of the…, all of them…).</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 88.1–88.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit89.html">
+      <span class="num">UNIT 89</span>
+      <h3>Both / both of, neither / neither of, either / either of</h3>
+      <p>Nói về hai người/vật với both, neither, either (of) và both…and, neither…nor, either…or.</p>
+      <div class="meta"><b>61 câu</b><b>58 điểm</b><b>Bài 89.1–89.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit90.html">
+      <span class="num">UNIT 90</span>
+      <h3>All, every and whole</h3>
+      <p>Phân biệt all/everybody/everything, whole và every/all với từ chỉ thời gian (every day, all day).</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 90.1–90.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit91.html">
+      <span class="num">UNIT 91</span>
+      <h3>Each and every</h3>
+      <p>Phân biệt each (từng cái riêng lẻ, cả với 2) và every (cả nhóm, tần suất); everyone vs every one.</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 91.1–91.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Relative clauses <small>Unit 92–97</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit92.html">
+      <span class="num">UNIT 92</span>
+      <h3>Relative clauses 1: clauses with who/that/which</h3>
+      <p>Mệnh đề quan hệ với who (người), that/which (vật); không lặp he/it; phân biệt what và that.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 92.1–92.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit93.html">
+      <span class="num">UNIT 93</span>
+      <h3>Relative clauses 2: clauses with and without who/that/which</h3>
+      <p>Khi nào được bỏ who/that/which, vị trí giới từ trong mệnh đề quan hệ, that vs what.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 93.1–93.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit94.html">
+      <span class="num">UNIT 94</span>
+      <h3>Relative clauses 3: whose/whom/where</h3>
+      <p>Dùng whose (của người đó), whom (trang trọng), where (nơi), the day/time/reason (that/why).</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 94.1–94.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit95.html">
+      <span class="num">UNIT 95</span>
+      <h3>Relative clauses 4: extra information clauses (1)</h3>
+      <p>Hai loại mệnh đề quan hệ: xác định (không phẩy) và bổ sung thông tin (có phẩy, không dùng that).</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 95.1–95.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit96.html">
+      <span class="num">UNIT 96</span>
+      <h3>Relative clauses 5: extra information clauses (2)</h3>
+      <p>Giới từ + whom/which, all of whom / most of which, và which thay cho cả mệnh đề.</p>
+      <div class="meta"><b>55 câu</b><b>57 điểm</b><b>Bài 96.1–96.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit97.html">
+      <span class="num">UNIT 97</span>
+      <h3>-ing and -ed clauses (the woman talking to Tom, the boy injured in the accident)</h3>
+      <p>Rút gọn mệnh đề quan hệ bằng V-ing (chủ động) và V-ed/V3 (bị động); there is + V-ing/V3.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 97.1–97.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Adjectives and adverbs <small>Unit 98–112</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit98.html">
+      <span class="num">UNIT 98</span>
+      <h3>Adjectives ending in -ing and -ed (boring/bored etc.)</h3>
+      <p>Phân biệt tính từ -ing (tính chất gây ra cảm xúc) và -ed (cảm xúc của người): boring/bored...</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 98.1–98.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit99.html">
+      <span class="num">UNIT 99</span>
+      <h3>Adjectives: a nice new house, you look tired</h3>
+      <p>Trật tự nhiều tính từ trước danh từ, tính từ sau be/look/feel/sound, the first two days...</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 99.1–99.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit100.html">
+      <span class="num">UNIT 100</span>
+      <h3>Adjectives and adverbs 1 (quick/quickly)</h3>
+      <p>Phân biệt tính từ (bổ nghĩa danh từ) và trạng từ -ly (bổ nghĩa động từ, tính từ, trạng từ khác).</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 100.1–100.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit101.html">
+      <span class="num">UNIT 101</span>
+      <h3>Adjectives and adverbs 2 (well/fast/late, hard/hardly)</h3>
+      <p>good/well, well-known; fast/hard/late vừa là tính từ vừa là trạng từ; hardly, hardly any, hardly ever.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 101.1–101.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit102.html">
+      <span class="num">UNIT 102</span>
+      <h3>So and such</h3>
+      <p>Phân biệt so + tính từ/trạng từ với such (a) + danh từ; cấu trúc so/such ... that.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 102.1–102.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit103.html">
+      <span class="num">UNIT 103</span>
+      <h3>Enough and too</h3>
+      <p>Vị trí của enough (sau tính từ, trước danh từ), too/too much/too many và cấu trúc too ... to.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 103.1–103.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit104.html">
+      <span class="num">UNIT 104</span>
+      <h3>Quite, pretty, rather and fairly</h3>
+      <p>Sắc thái và vị trí của quite, pretty, rather, fairly; quite mang nghĩa completely.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 104.1–104.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit105.html">
+      <span class="num">UNIT 105</span>
+      <h3>Comparison 1 (cheaper, more expensive etc.)</h3>
+      <p>Cách tạo so sánh hơn: -er hay more ...; dạng bất quy tắc better, worse, further.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 105.1–105.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit106.html">
+      <span class="num">UNIT 106</span>
+      <h3>Comparison 2 (much better / any better / better and better / the sooner the better)</h3>
+      <p>much/a bit + so sánh hơn, any/no + so sánh hơn, better and better, the ... the ..., older/elder.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 106.1–106.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit107.html">
+      <span class="num">UNIT 107</span>
+      <h3>Comparison 3 (as ... as / than)</h3>
+      <p>So sánh bằng as ... as, not as ... as, less ... than, twice as ... as, the same as, than me/than I am.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 107.1–107.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit108.html">
+      <span class="num">UNIT 108</span>
+      <h3>Superlatives (the longest, the most enjoyable etc.)</h3>
+      <p>So sánh nhất the -est / the most, in hay of, oldest/eldest, the best ... I've ever ...</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 108.1–108.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit109.html">
+      <span class="num">UNIT 109</span>
+      <h3>Word order 1: verb + object; place and time</h3>
+      <p>Động từ và tân ngữ đi liền nhau; nơi chốn đứng trước thời gian trong câu.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 109.1–109.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit110.html">
+      <span class="num">UNIT 110</span>
+      <h3>Word order 2: adverbs with the verb</h3>
+      <p>Vị trí của always, also, probably, all, both… trước động từ thường, sau be, sau trợ động từ.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 110.1–110.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit111.html">
+      <span class="num">UNIT 111</span>
+      <h3>Still, yet and already; Any more / any longer / no longer</h3>
+      <p>Phân biệt still, yet, already và not … any more / any longer / no longer khi nói về thay đổi.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 111.1–111.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit112.html">
+      <span class="num">UNIT 112</span>
+      <h3>Even</h3>
+      <p>Dùng even (ngay cả), not even, even + so sánh hơn và even though / even if / even when.</p>
+      <div class="meta"><b>62 câu</b><b>59 điểm</b><b>Bài 112.1–112.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Conjunctions and prepositions <small>Unit 113–120</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit113.html">
+      <span class="num">UNIT 113</span>
+      <h3>Although / though / even though; In spite of / despite</h3>
+      <p>Diễn tả sự tương phản: although/though + mệnh đề, in spite of/despite + danh từ hoặc -ing.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 113.1–113.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit114.html">
+      <span class="num">UNIT 114</span>
+      <h3>In case</h3>
+      <p>Dùng in case (phòng khi), just in case, in case + quá khứ; phân biệt in case với if và in case of.</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 114.1–114.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit115.html">
+      <span class="num">UNIT 115</span>
+      <h3>Unless; As long as; Provided/providing</h3>
+      <p>Unless (= trừ khi), as long as / provided / providing (= miễn là), không dùng will sau các từ này.</p>
+      <div class="meta"><b>56 câu</b><b>52 điểm</b><b>Bài 115.1–115.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit116.html">
+      <span class="num">UNIT 116</span>
+      <h3>As (As I walked along the street… / As I was hungry…)</h3>
+      <p>Hai nghĩa của as: đồng thời (khi đang) và vì (because); phân biệt as với when.</p>
+      <div class="meta"><b>56 câu</b><b>52 điểm</b><b>Bài 116.1–116.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit117.html">
+      <span class="num">UNIT 117</span>
+      <h3>Like and as</h3>
+      <p>Phân biệt like (giống như) và as (với vai trò là, như cách…), as usual, as you know, such as.</p>
+      <div class="meta"><b>61 câu</b><b>58 điểm</b><b>Bài 117.1–117.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit118.html">
+      <span class="num">UNIT 118</span>
+      <h3>Like / as if / as though</h3>
+      <p>Dùng look/sound/feel like, it looks as if…, và as if + quá khứ cho điều không có thật.</p>
+      <div class="meta"><b>56 câu</b><b>53 điểm</b><b>Bài 118.1–118.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit119.html">
+      <span class="num">UNIT 119</span>
+      <h3>For, during and while</h3>
+      <p>Phân biệt for (bao lâu), during (+ danh từ, khi nào) và while (+ mệnh đề).</p>
+      <div class="meta"><b>58 câu</b><b>54 điểm</b><b>Bài 119.1–119.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit120.html">
+      <span class="num">UNIT 120</span>
+      <h3>By and until · By the time...</h3>
+      <p>Phân biệt by (hạn chót, không muộn hơn) và until (kéo dài đến); cấu trúc by the time / by then.</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 120.1–120.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Prepositions <small>Unit 121–136</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit121.html">
+      <span class="num">UNIT 121</span>
+      <h3>At/on/in (time)</h3>
+      <p>Giới từ chỉ thời gian at/on/in: giờ, ngày, tháng/năm; at night, in the morning, in a few minutes.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 121.1–121.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit122.html">
+      <span class="num">UNIT 122</span>
+      <h3>On time and in time · At the end and in the end</h3>
+      <p>Phân biệt on time (đúng giờ) với in time (kịp), at the end of (vào cuối) với in the end (cuối cùng thì).</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 122.1–122.5 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit123.html">
+      <span class="num">UNIT 123</span>
+      <h3>In/at/on (position) 1</h3>
+      <p>Giới từ chỉ vị trí: in (bên trong), at (tại một điểm), on (trên bề mặt) và cách phân biệt.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 123.1–123.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit124.html">
+      <span class="num">UNIT 124</span>
+      <h3>In/at/on (position) 2</h3>
+      <p>Cụm cố định chỉ vị trí: in a photo, on the second floor, on the left, at the top, in/at the corner.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 124.1–124.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit125.html">
+      <span class="num">UNIT 125</span>
+      <h3>In/at/on (position) 3</h3>
+      <p>in hospital, at work, at a party; in hay at với toà nhà, thành phố; on a bus nhưng in a car.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 125.1–125.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit126.html">
+      <span class="num">UNIT 126</span>
+      <h3>To/at/in/into</h3>
+      <p>go to (chuyển động) vs in/at (vị trí); been to, get to, arrive in/at, go home; into, get on/off.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 126.1–126.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit127.html">
+      <span class="num">UNIT 127</span>
+      <h3>In/on/at (other uses)</h3>
+      <p>Cụm cố định: in the rain, in my opinion; on TV, on purpose, on holiday; at the age of, at 100 degrees.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 127.1–127.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit128.html">
+      <span class="num">UNIT 128</span>
+      <h3>By</h3>
+      <p>Các nghĩa của by: by card/by chance, by car (nhưng in my car, on foot), bị động, tác giả, bên cạnh, mức chênh.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 128.1–128.6 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit129.html">
+      <span class="num">UNIT 129</span>
+      <h3>Noun + preposition (reason for, cause of etc.)</h3>
+      <p>Danh từ + giới từ cố định: reason for, cause of, increase in, solution to, relationship with…</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 129.1–129.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit130.html">
+      <span class="num">UNIT 130</span>
+      <h3>Adjective + preposition 1</h3>
+      <p>Tính từ + giới từ: nice of/to, angry with/about, surprised at/by, tired of, sorry about/for.</p>
+      <div class="meta"><b>58 câu</b><b>55 điểm</b><b>Bài 130.1–130.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit131.html">
+      <span class="num">UNIT 131</span>
+      <h3>Adjective + preposition 2</h3>
+      <p>Tính từ + giới từ: afraid of, good at, married to, interested in, keen on, famous for…</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 131.1–131.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit132.html">
+      <span class="num">UNIT 132</span>
+      <h3>Verb + preposition 1 (to and at)</h3>
+      <p>Động từ + to/at: listen to, explain to, look at, shout at/to; phone, answer, ask không có to.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 132.1–132.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit133.html">
+      <span class="num">UNIT 133</span>
+      <h3>Verb + preposition 2 (about/for/of/after)</h3>
+      <p>Động từ + about/for/of/after: talk about, discuss (∅), ask for, wait for, care about/for, look for/after.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 133.1–133.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit134.html">
+      <span class="num">UNIT 134</span>
+      <h3>Verb + preposition 3 (about and of)</h3>
+      <p>about hay of: hear about/of/from, think about/of, dream, complain, remind, warn.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 134.1–134.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit135.html">
+      <span class="num">UNIT 135</span>
+      <h3>Verb + preposition 4 (of/for/from/on)</h3>
+      <p>Động từ + of/for/from/on: accuse of, pay for, blame for/on, suffer from, depend on, congratulate on.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 135.1–135.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit136.html">
+      <span class="num">UNIT 136</span>
+      <h3>Verb + preposition 5 (in/into/with/to/on)</h3>
+      <p>Động từ + in/into/with/to/on: believe in, crash into, provide with, prefer to, spend on, insist on.</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 136.1–136.4 trong sách</b></div>
+    </a>
+  </div>
+  <h3 class="group">Phrasal verbs <small>Unit 137–145</small></h3>
+  <div class="grid">
+    <a class="unit" href="units/unit137.html">
+      <span class="num">UNIT 137</span>
+      <h3>Phrasal verbs 1 (General points)</h3>
+      <p>Cụm động từ: nghĩa đặc biệt (break down, get by), + giới từ (look forward to), vị trí tân ngữ (turn it on).</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 137.1–137.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit138.html">
+      <span class="num">UNIT 138</span>
+      <h3>Phrasal verbs 2: in/out</h3>
+      <p>Cụm động từ với in/out: move in/out, check in/out, drop out, fill in, eat out, leave out…</p>
+      <div class="meta"><b>60 câu</b><b>57 điểm</b><b>Bài 138.1–138.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit139.html">
+      <span class="num">UNIT 139</span>
+      <h3>Phrasal verbs 3: out</h3>
+      <p>Cụm động từ với out: go/put out, work out, find out, run out of, sort out, turn out, try out…</p>
+      <div class="meta"><b>56 câu</b><b>58 điểm</b><b>Bài 139.1–139.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit140.html">
+      <span class="num">UNIT 140</span>
+      <h3>Phrasal verbs 4: on/off (1)</h3>
+      <p>Cụm động từ on/off: bật/tắt máy, put on/take off, call off, put off, set off, see sb off…</p>
+      <div class="meta"><b>55 câu</b><b>52 điểm</b><b>Bài 140.1–140.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit141.html">
+      <span class="num">UNIT 141</span>
+      <h3>Phrasal verbs 5: on/off (2)</h3>
+      <p>on = tiếp tục (go on, carry on, keep on), get on; off: doze off, go off, show off, tell off…</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 141.1–141.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit142.html">
+      <span class="num">UNIT 142</span>
+      <h3>Phrasal verbs 6: up/down</h3>
+      <p>Cụm động từ up/down: pick up, turn up/down, knock down, slow down, break down, let sb down…</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 142.1–142.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit143.html">
+      <span class="num">UNIT 143</span>
+      <h3>Phrasal verbs 7: up (1)</h3>
+      <p>Cụm động từ với up: catch up, keep up, set up, take up, grow up, give up, end up, turn up…</p>
+      <div class="meta"><b>57 câu</b><b>54 điểm</b><b>Bài 143.1–143.3 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit144.html">
+      <span class="num">UNIT 144</span>
+      <h3>Phrasal verbs 8: up (2)</h3>
+      <p>Cụm với up (2): bring up, come up with, make up, cheer up, save up, break up, look up, put up with…</p>
+      <div class="meta"><b>55 câu</b><b>57 điểm</b><b>Bài 144.1–144.4 trong sách</b></div>
+    </a>
+    <a class="unit" href="units/unit145.html">
+      <span class="num">UNIT 145</span>
+      <h3>Phrasal verbs 9: away/back</h3>
+      <p>Cụm động từ away/back: go away, get away with, throw away, call back, pay back, look back…</p>
+      <div class="meta"><b>59 câu</b><b>56 điểm</b><b>Bài 145.1–145.4 trong sách</b></div>
+    </a>
+  </div>
+  <!-- UNITS:END -->
+  <p id="noHit" class="nohit" hidden>Không tìm thấy unit phù hợp.</p>
 
   <div class="card">
     <h2>🧭 Cách học hiệu quả nhất</h2>
@@ -158,5 +1062,24 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px
     không cần internet
   </footer>
 </div>
+<script>
+/* Lọc unit theo số hoặc từ khoá */
+(function(){
+  var q=document.getElementById('q'); if(!q) return;
+  q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase(), hits=0;
+    document.querySelectorAll('.grid').forEach(function(g){
+      var any=0;
+      g.querySelectorAll('.unit').forEach(function(u){
+        var num=(u.querySelector('.num')||{}).textContent||'';
+        var ok=!v||(/^\d+$/.test(v)?num.replace(/\D/g,'')===v:u.textContent.toLowerCase().indexOf(v)>-1);
+        u.hidden=!ok; if(ok){any++;hits++;}
+      });
+      g.hidden=!any; var h=g.previousElementSibling; if(h&&h.classList.contains('group')) h.hidden=!any;
+    });
+    document.getElementById('noHit').hidden=hits>0;
+  });
+})();
+</script>
 </body>
 </html>

@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unit 84 – There ... and it ... | English Grammar in Use 4e</title>
+<style>
+/* ===== Giao diện tổng ===== */
+:root{
+  --bg:#f4f6fb; --card:#ffffff; --ink:#111827; --muted:#6b7280;
+  --primary:#4f46e5; --primary-2:#4338ca; --violet:#7c3aed;
+  --ok:#16a34a; --ok-bg:#ecfdf5;
+  --bad:#dc2626; --bad-bg:#fef2f2;
+  --warn:#d97706; --line:#e5e7eb; --r:14px;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px}
+.wrap{max-width:980px;margin:0 auto;padding:14px}
+h1,h2,h3,h4{line-height:1.3;margin:0 0 .5em}
+a{color:var(--primary)}
+
+/* ===== Header ===== */
+.hero{background:linear-gradient(135deg,var(--primary) 0%,var(--violet) 100%);color:#fff;
+  border-radius:var(--r);padding:20px 22px;margin-bottom:14px;box-shadow:0 8px 24px rgba(79,70,229,.25)}
+.hero .kicker{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85}
+.hero h1{font-size:1.55rem;margin:.2em 0 .1em}
+.hero .sub{opacity:.9;font-size:.92rem}
+.hero .stats{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;font-size:.86rem}
+.hero .stats span{background:rgba(255,255,255,.16);padding:4px 10px;border-radius:999px}
+
+/* ===== Tabs ===== */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.tab{flex:1 1 auto;min-width:120px;text-align:center;padding:11px 14px;border-radius:12px;cursor:pointer;
+  background:var(--card);border:1px solid var(--line);font-weight:600;color:var(--muted);user-select:none}
+.tab.active{background:var(--primary);border-color:var(--primary);color:#fff;box-shadow:0 6px 16px rgba(79,70,229,.3)}
+.tabpanel[hidden]{display:none}
+
+/* ===== Card & nội dung ===== */
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px;margin-bottom:14px}
+.card h2{font-size:1.2rem;color:var(--primary-2)}
+.card h3{font-size:1.05rem;margin-top:1.2em}
+.formula{background:#eef2ff;border:1px solid #c7d2fe;border-radius:12px;padding:12px 14px;margin:10px 0;
+  font-family:var(--mono);font-size:.94rem;overflow-x:auto;white-space:pre-wrap}
+.chip{display:inline-block;background:#eef2ff;color:var(--primary-2);border-radius:999px;padding:2px 10px;
+  font-size:.82rem;font-weight:600;margin:2px 4px 2px 0}
+.chip.ok{background:var(--ok-bg);color:#15803d}
+table{width:100%;border-collapse:collapse;margin:10px 0;font-size:.94rem}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:700}
+.scroll{overflow-x:auto}
+ul{padding-left:20px} li{margin:4px 0}
+mark{background:#fef08a;padding:0 3px;border-radius:4px}
+.ex{background:#f9fafb;border-left:4px solid var(--primary);padding:8px 12px;margin:8px 0;border-radius:0 8px 8px 0}
+.ex b.en{font-family:var(--mono);font-size:.95rem}
+
+/* ===== Bảng lỗi người Việt ===== */
+.mistakes td.no{background:var(--bad-bg);color:#991b1b}
+.mistakes td.yes{background:var(--ok-bg);color:#14532d}
+.mistakes td.why{background:#fffbeb;color:#78350f}
+
+/* ===== Toolbar ===== */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:12px}
+.btn{border:0;border-radius:10px;padding:9px 14px;font-weight:600;cursor:pointer;font-size:.9rem;
+  background:#e5e7eb;color:#111827;transition:.15s;white-space:nowrap}
+.btn:hover{filter:brightness(.96)}
+.btn.primary{background:var(--primary);color:#fff}
+.btn.primary:hover{background:var(--primary-2)}
+.btn.okb{background:var(--ok);color:#fff}
+.btn.badb{background:var(--bad);color:#fff}
+.btn.ghost{background:#fff;border:1px solid var(--line)}
+.btn-mini{border:1px solid var(--line);background:#fff;border-radius:8px;padding:5px 10px;font-size:.8rem;
+  cursor:pointer;font-weight:600;color:var(--muted)}
+.btn-mini:hover{border-color:var(--primary);color:var(--primary)}
+.clock{font-family:var(--mono);background:#111827;color:#4ade80;border-radius:8px;padding:6px 12px;font-size:.9rem}
+.mode-pill{display:flex;background:#e5e7eb;border-radius:10px;padding:3px;gap:3px}
+.mode-pill button{border:0;background:transparent;padding:7px 13px;border-radius:8px;cursor:pointer;
+  font-weight:700;font-size:.85rem;color:var(--muted)}
+.mode-pill button.on{background:#fff;color:var(--primary);box-shadow:0 2px 6px rgba(0,0,0,.12)}
+
+/* ===== Câu hỏi ===== */
+.sec{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px;margin-bottom:14px}
+.sec h3{color:var(--primary-2);border-bottom:2px solid var(--line);padding-bottom:8px}
+.sec-desc{color:var(--muted);font-size:.88rem;margin:-6px 0 12px}
+.sub{background:#f1f5f9;padding:6px 10px;border-radius:8px;font-size:.88rem;color:#334155;margin:14px 0 8px}
+.qcard{border:1px solid var(--line);border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
+.qcard.ok{border-color:var(--ok);background:var(--ok-bg)}
+.qcard.bad{border-color:var(--bad);background:var(--bad-bg)}
+.qhead{display:flex;gap:8px;align-items:center;margin-bottom:8px;flex-wrap:wrap}
+.qno{background:var(--primary);color:#fff;border-radius:8px;font-size:.78rem;font-weight:700;padding:2px 8px}
+.qtype{font-size:.72rem;background:#f1f5f9;color:#475569;border-radius:999px;padding:2px 9px}
+.qtext{font-weight:600;margin:0 0 8px}
+.opt{display:flex;gap:10px;align-items:flex-start;padding:9px 12px;border:1px solid var(--line);border-radius:10px;
+  margin:6px 0;cursor:pointer;background:#fff}
+.opt:hover{border-color:#c7d2fe;background:#f8faff}
+.opt input{margin-top:4px;accent-color:var(--primary)}
+.opt.correct{border-color:var(--ok);background:var(--ok-bg)}
+.opt.wrongpick{border-color:var(--bad);background:var(--bad-bg)}
+.ans-input,.self-text{width:100%;padding:10px 12px;border:1px solid #cbd5e1;border-radius:10px;font-size:1rem;
+  font-family:inherit;background:#fff}
+.ans-input:focus,.self-text:focus{outline:2px solid #c7d2fe;border-color:var(--primary)}
+.self-text{resize:vertical}
+.self-btns{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap}
+.self-btns button.on-ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+.self-btns button.on-bad{background:var(--warn);color:#fff;border-color:var(--warn)}
+/* sắp xếp từ */
+.line{min-height:46px;border:2px dashed #c7d2fe;border-radius:10px;padding:7px;background:#f8faff;
+  display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+.line:empty::after{content:"Bấm các từ bên dưới để xếp thành câu \2192";color:#94a3b8;font-size:.85rem}
+.pool{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px}
+.tok{border:1px solid #cbd5e1;background:#fff;border-radius:8px;padding:6px 11px;cursor:pointer;font-size:.95rem;
+  font-family:var(--mono);font-weight:600}
+.tok:hover{border-color:var(--primary);color:var(--primary)}
+.line .tok{background:#eef2ff;border-color:#c7d2fe}
+/* nối câu */
+.mrow{display:flex;gap:10px;align-items:center;margin:7px 0;flex-wrap:wrap}
+.mleft{flex:1 1 260px;font-size:.93rem}
+.msel{flex:0 0 260px;max-width:100%;padding:7px 9px;border:1px solid #cbd5e1;border-radius:9px;background:#fff;font-size:.88rem}
+/* đáp án & giải thích */
+.answer-box{display:none;margin-top:10px;background:var(--ok-bg);border-left:4px solid var(--ok);
+  border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
+.answer-box .ab-title{color:#14532d}
+.answer-box .ab-exp{color:#166534;margin-top:4px}
+body[data-mode="study"] .answer-box{display:block}
+body.revealed .answer-box{display:block}
+body[data-mode="test"] .check-one{display:none}
+.qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
+.vtag{font-weight:700;font-size:.85rem}
+.vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
+
+/* ===== Kết quả ===== */
+.result{text-align:center;border:2px solid var(--line)}
+.result .big{font-size:2.6rem;font-weight:800;line-height:1}
+.result .big.ok{color:var(--ok)} .result .big.bad{color:var(--bad)} .result .big.mid{color:var(--warn)}
+.result .meta{color:var(--muted);font-size:.92rem;margin-top:6px}
+.result .wrong{margin-top:10px;font-size:.9rem;background:var(--bad-bg);color:#991b1b;border-radius:10px;padding:8px 10px}
+.result .acts{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+.selfscore{margin-top:8px;font-size:.9rem;color:var(--primary-2);font-weight:600}
+.note{font-size:.85rem;color:var(--muted)}
+
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px}
+
+/* ===== Responsive ===== */
+@media (max-width:640px){
+  .hero h1{font-size:1.25rem}
+  .tab{min-width:0;padding:9px 8px;font-size:.85rem}
+  .toolbar .btn{flex:1 1 auto}
+  .msel{flex:1 1 100%}
+  .result .big{font-size:2.1rem}
+  table{font-size:.86rem}
+  th,td{padding:6px 7px}
+}
+/* ===== In / Xuất PDF ===== */
+@media print{
+  [hidden]{display:block!important}
+  .no-print{display:none!important}
+  .answer-box{display:block!important}
+  body{background:#fff;font-size:12pt}
+  .card,.sec,.qcard{border:1px solid #bbb;box-shadow:none;break-inside:avoid}
+  .hero{background:#4f46e5!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .qcard.ok,.qcard.bad{background:#fff!important}
+  .tab{display:none!important}
+}
+
+/* ===== Dark mode ===== */
+.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
+  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,.18)}
+@media print{.theme-toggle{display:none!important}}
+@media screen{
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0b1120; --card:#161e2e; --ink:#e5e7eb; --muted:#9ca3af;
+  --primary:#6366f1; --primary-2:#a5b4fc; --violet:#7c3aed;
+  --ok:#22c55e; --ok-bg:#0f2a1c; --line:#2b3546}
+[data-theme="dark"] a{color:#a5b4fc}
+[data-theme="dark"] th{background:#1c2536}
+[data-theme="dark"] .hero{box-shadow:0 10px 30px rgba(0,0,0,.4)}
+[data-theme="dark"] .ok{color:#86efac}
+:root[data-theme="dark"]{--bad:#f87171; --bad-bg:#2e1414; --warn:#f59e0b}
+[data-theme="dark"] .formula{background:#1a1b3a;border-color:#3730a3}
+[data-theme="dark"] .chip{background:#26285a}
+[data-theme="dark"] .chip.ok{background:var(--ok-bg);color:#86efac}
+[data-theme="dark"] mark{background:#854d0e;color:#fef9c3}
+[data-theme="dark"] .ex{background:#1c2536}
+[data-theme="dark"] .mistakes td.no{color:#fca5a5}
+[data-theme="dark"] .mistakes td.yes{color:#86efac}
+[data-theme="dark"] .mistakes td.why{background:#2b210b;color:#fcd34d}
+[data-theme="dark"] .btn{background:#2b3546;color:var(--ink)}
+[data-theme="dark"] .btn.primary,[data-theme="dark"] .btn.okb,[data-theme="dark"] .btn.badb{color:#fff}
+[data-theme="dark"] .btn.primary{background:var(--primary)}
+[data-theme="dark"] .btn.primary:hover{background:#4f46e5}
+[data-theme="dark"] .btn.okb{background:#16a34a}
+[data-theme="dark"] .btn.badb{background:#dc2626}
+[data-theme="dark"] .btn.ghost,[data-theme="dark"] .btn-mini{background:var(--card)}
+[data-theme="dark"] .btn-mini:hover{color:#a5b4fc;border-color:#a5b4fc}
+[data-theme="dark"] .clock{background:#020617}
+[data-theme="dark"] .mode-pill{background:#0b1120}
+[data-theme="dark"] .mode-pill button.on{background:#2b3546;color:#c7d2fe}
+[data-theme="dark"] .sub{background:#1c2536;color:#cbd5e1}
+[data-theme="dark"] .hero .sub{background:transparent;color:#fff}
+[data-theme="dark"] .qcard,[data-theme="dark"] .opt{background:var(--card)}
+[data-theme="dark"] .qcard.ok,[data-theme="dark"] .opt.correct{background:var(--ok-bg)}
+[data-theme="dark"] .qcard.bad,[data-theme="dark"] .opt.wrongpick{background:var(--bad-bg)}
+[data-theme="dark"] .opt:hover{background:#1c2536;border-color:#4338ca}
+[data-theme="dark"] .qtype{background:#0b1120;color:#9ca3af}
+[data-theme="dark"] .ans-input,[data-theme="dark"] .self-text,[data-theme="dark"] .msel{
+  background:#0b1120;border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .ans-input:focus,[data-theme="dark"] .self-text:focus{outline-color:#4338ca}
+[data-theme="dark"] .line{background:#111827;border-color:#3730a3}
+[data-theme="dark"] .line:empty::after{color:#64748b}
+[data-theme="dark"] .tok{background:var(--card);border-color:#3b475b;color:var(--ink)}
+[data-theme="dark"] .tok:hover{border-color:#a5b4fc;color:#a5b4fc}
+[data-theme="dark"] .line .tok{background:#26285a;border-color:#4338ca}
+[data-theme="dark"] .answer-box .ab-title{color:#86efac}
+[data-theme="dark"] .answer-box .ab-exp{color:#bbf7d0}
+[data-theme="dark"] .result .wrong{color:#fca5a5}
+[data-theme="dark"] .selfscore{color:#a5b4fc}
+}
+</style>
+<script data-theme-init>
+/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+(function(){
+  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
+  function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
+    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+  apply(saved()||(mq&&mq.matches?'dark':'light'));
+  if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
+  document.addEventListener('DOMContentLoaded',function(){
+    var b=document.createElement('button');b.id='themeToggle';b.type='button';b.className='theme-toggle no-print';
+    b.setAttribute('aria-label','Đổi giao diện sáng/tối');
+    b.onclick=function(){var t=root.getAttribute('data-theme')==='dark'?'light':'dark';try{localStorage.setItem(K,t)}catch(e){}apply(t)};
+    document.body.appendChild(b);apply(root.getAttribute('data-theme'));
+  });
+})();
+</script>
+</head>
+<body data-mode="study">
+<div class="wrap">
+
+  <!-- ===== HEADER ===== -->
+  <header class="hero">
+    <div class="kicker">English Grammar in Use · Raymond Murphy · 4th Edition</div>
+    <h1>UNIT 84 – There ... and it ...</h1>
+    <div class="sub">Tự học lý thuyết · Luyện tập đa dạng · Kiểm tra nhiều lần</div>
+    <div class="stats">
+      <span id="stAttempts">Đã làm: 0 lần</span>
+      <span id="stBest">Điểm cao nhất: –</span>
+      <span id="stWrong">Câu sai đang lưu: 0</span>
+      <span id="stScored">61 câu tính điểm + 3 câu tự viết</span>
+    </div>
+  </header>
+
+  <!-- ===== TABS ===== -->
+  <nav class="tabs no-print">
+    <div class="tab active" data-tab="theory">📘 1. Lý thuyết</div>
+    <div class="tab" data-tab="tips">💡 2. Ví dụ &amp; Mẹo</div>
+    <div class="tab" data-tab="practice">✍️ 3. Bài tập &amp; Test</div>
+  </nav>
+
+  <!-- ===== TAB 1: LÝ THUYẾT ===== -->
+  <section class="tabpanel" id="tab-theory">
+    <div class="card">
+      <h2>1.1 · Mục tiêu &amp; bản chất</h2>
+      <p>Tiếng Việt chỉ có một chữ <b>"có"</b> (<i>"Có một nhà hàng mới ở phố Hill"</i>), nhưng tiếng Anh tách làm hai việc: <b>there</b> để <b>giới thiệu sự tồn tại</b> của một thứ lần đầu được nhắc đến, còn <b>it</b> để <b>chỉ lại một thứ/việc cụ thể</b> đã biết, hoặc làm chủ ngữ "giả" cho thời tiết, thời gian, khoảng cách và các câu kiểu <i>It's dangerous to ...</i>.</p>
+      <div class="ex"><b class="en"><mark>There's</mark> a new café near the station. — Yes, I've been there. <mark>It's</mark> really nice.</b><br>Câu 1 giới thiệu quán (lần đầu) → <u>there</u>. Câu 2 nói về chính quán đó → <u>it</u>.</div>
+
+      <h2>1.2 · Công thức cốt lõi</h2>
+      <div class="formula">THERE + be + danh từ (+ nơi chốn/thời gian)   → "có cái gì đó tồn tại"
+   There is a problem.      There were a lot of people.      Is there a bank near here?
+
+IT + be + tính từ / danh từ                  → "nó" = vật/việc cụ thể đã biết
+   It's very good.   It was a surprise.
+
+IT + be + adj + to V / that ...              → chủ ngữ giả
+   It's dangerous to walk in the road.   It's a shame (that) you can't come.</div>
+      <div class="scroll"><table>
+        <tr><th>Dạng</th><th>THERE</th><th>IT</th></tr>
+        <tr><td>Hiện tại</td><td>There is / There are</td><td>It is</td></tr>
+        <tr><td>Quá khứ</td><td>There was / There were</td><td>It was</td></tr>
+        <tr><td>Hoàn thành</td><td>There has been / There have been</td><td>It has been</td></tr>
+        <tr><td>Modal</td><td>There will / might / must / should be</td><td>It will / might / must be</td></tr>
+        <tr><td>Modal hoàn thành</td><td>There must have been</td><td>It must have been</td></tr>
+        <tr><td>used to</td><td>There used to be</td><td>It used to be</td></tr>
+      </table></div>
+      <p class="note">⚠️ Với <b>there</b>, động từ <b>be chia theo danh từ phía sau</b>: <i>There <b>is</b> a car</i> / <i>There <b>are</b> two cars</i>. Với <b>it</b>, luôn là số ít.</p>
+
+      <h2>1.3 · A. There ... = nói một thứ TỒN TẠI (lần đầu nhắc)</h2>
+      <ul>
+        <li><i><b>There's</b> a new restaurant in Hill Street.</i> — không nói <s>A new restaurant is in Hill Street</s>.</li>
+        <li><i>Sorry I'm late. <b>There was</b> a lot of traffic.</i> — không nói <s>It was a lot of traffic</s>.</li>
+        <li><i><b>There has been</b> a big rise in prices.</i> (hoàn thành vẫn dùng there)</li>
+        <li><b>It</b> = thứ cụ thể: <i>We went to the new restaurant. <b>It's</b> very good.</i> (it = nhà hàng) · <i>They came without calling. <b>It</b> was a complete surprise.</i> (it = việc họ đến)</li>
+        <li>So sánh trong cùng 1 câu: <i>I don't like this town. <b>There's</b> nothing to do here. <b>It's</b> a boring place.</i></li>
+        <li><b>there</b> còn có nghĩa "ở đó": <i>When we arrived, there were already a lot of people <b>there</b>.</i></li>
+      </ul>
+
+      <h2>1.4 · B. There will be / there must be / there used to be ...</h2>
+      <ul>
+        <li><i>Will <b>there be</b> much to do tomorrow?</i></li>
+        <li><i>'Is there a flight to Rome tonight?' '<b>There might be</b>. I'll check.'</i></li>
+        <li><i>If people drove more carefully, <b>there wouldn't be</b> so many accidents.</i></li>
+        <li><i>I heard music from the house. <b>There must have been</b> somebody at home.</i></li>
+      </ul>
+      <div class="formula">They live on a busy road.  There must be a lot of noise.   (có nhiều tiếng ồn)
+They live on a busy road.  It must be very noisy.          (nơi đó ồn)
+There used to be a cinema here, but it closed.             (từng có rạp)
+That building is a supermarket now. It used to be a cinema. (nó từng là rạp)</div>
+      <p class="note">💡 <b>There's sure / bound / likely to be ...</b> = chắc chắn sẽ có: <i>There's bound to be a car park somewhere.</i> So với <i>There's a flight tonight, but <b>it's</b> sure to be full</i> (it = chuyến bay đó).</p>
+
+      <h2>1.5 · C. It làm chủ ngữ giả</h2>
+      <ul>
+        <li><b>It + adj + to V</b>: <i>It's dangerous to walk in the road.</i> (tự nhiên hơn <i>To walk in the road is dangerous</i>)</li>
+        <li><i>It didn't take us long to get here. · It's a shame (that) you can't come. · It's not worth waiting.</i></li>
+        <li><b>Khoảng cách:</b> <i>How far is it from here to the airport?</i></li>
+        <li><b>Thời gian/ngày:</b> <i>What day is it today? It's a long time since we last met.</i></li>
+        <li><b>Thời tiết:</b> <i>It was windy yesterday.</i> — nhưng <i><b>There was</b> a cold wind.</i> (có danh từ "a wind" → there)</li>
+      </ul>
+
+      <h2>1.6 · Dấu hiệu nhận biết</h2>
+      <div class="scroll"><table>
+        <tr><th>Dấu hiệu</th><th>Chọn</th><th>Ví dụ</th></tr>
+        <tr><td>Sau chỗ trống là <b>danh từ</b> mới (a/some/a lot of/no/any + N)</td><td>there</td><td><b>There's</b> a lot of salt in this soup.</td></tr>
+        <tr><td>Sau chỗ trống là <b>tính từ</b> mô tả thứ đã nhắc</td><td>it</td><td>The soup? <b>It's</b> too salty.</td></tr>
+        <tr><td>Thời tiết bằng tính từ (cold, windy, sunny)</td><td>it</td><td><b>It's</b> windy.</td></tr>
+        <tr><td>Thời tiết bằng danh từ (a storm, snow, wind)</td><td>there</td><td><b>There was</b> a storm.</td></tr>
+        <tr><td>Khoảng cách, giờ, ngày, "since"</td><td>it</td><td><b>It's</b> two years since ...</td></tr>
+        <tr><td>adj + to V / that-clause</td><td>it</td><td><b>It's</b> hard to find a job.</td></tr>
+      </table></div>
+
+      <h2>1.7 · So sánh với cấu trúc dễ nhầm</h2>
+      <div class="scroll"><table>
+        <tr><th></th><th>There is/are</th><th>It is</th><th>Have/has</th></tr>
+        <tr><td>Ý nghĩa</td><td>có (tồn tại ở đâu đó)</td><td>nó là / trời / chủ ngữ giả</td><td>(ai đó) sở hữu</td></tr>
+        <tr><td>Ví dụ</td><td><b>There's</b> a pool in the hotel.</td><td><b>It's</b> a big pool.</td><td>The hotel <b>has</b> a pool.</td></tr>
+      </table></div>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Sai</th><th>✅ Đúng</th></tr>
+        <tr><td class="no">It was a lot of traffic.</td><td class="yes"><b>There was</b> a lot of traffic.</td></tr>
+        <tr><td class="no">Have a bank near here?</td><td class="yes"><b>Is there</b> a bank near here?</td></tr>
+        <tr><td class="no">There is two shops.</td><td class="yes">There <b>are</b> two shops.</td></tr>
+        <tr><td class="no">It will be an opportunity to ask questions.</td><td class="yes"><b>There will be</b> an opportunity ...</td></tr>
+        <tr><td class="no">Is very cold today.</td><td class="yes"><b>It</b> is very cold today.</td></tr>
+        <tr><td class="no">To learn English is not easy.</td><td class="yes"><b>It</b>'s not easy to learn English. (tự nhiên hơn)</td></tr>
+      </table></div>
+      <p class="note">Liên kết trong sách: <b>Unit 63</b> (It's worth / it's no use / there's no point) · <b>Unit 65E</b> (sure to / bound to) · <b>Unit 97</b> (there is + -ing / -ed).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 2: VÍ DỤ & MẸO ===== -->
+  <section class="tabpanel" id="tab-tips" hidden>
+    <div class="card">
+      <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
+      <div class="ex">🚗 <b class="en">Sorry I'm late. <mark>There was</mark> an accident on the bridge.</b> <span class="note">(đời sống — xin lỗi đến muộn)</span></div>
+      <div class="ex">🏨 <b class="en"><mark>Is there</mark> a pharmacy near the hotel?</b> <span class="note">(du lịch — hỏi đường)</span></div>
+      <div class="ex">🍜 <b class="en">We tried the new noodle bar. <mark>It</mark> was excellent.</b> <span class="note">(đời sống — nhận xét)</span></div>
+      <div class="ex">🌧️ <b class="en"><mark>It</mark>'s cold and <mark>there's</mark> a strong wind today.</b> <span class="note">(thời tiết — tính từ vs danh từ)</span></div>
+      <div class="ex">📈 <b class="en"><mark>There has been</mark> a sharp increase in house prices.</b> <span class="note">(IELTS Writing Task 1)</span></div>
+      <div class="ex">💼 <b class="en"><mark>There will be</mark> a short meeting at 3 p.m.</b> <span class="note">(công việc — thông báo)</span></div>
+      <div class="ex">🏙️ <b class="en"><mark>There used to be</mark> a market here. Now <mark>it</mark>'s a car park.</b> <span class="note">(kể chuyện thay đổi)</span></div>
+      <div class="ex">🎓 <b class="en"><mark>It</mark>'s important to read the instructions carefully.</b> <span class="note">(thi cử — chủ ngữ giả)</span></div>
+
+      <h2>2.2 · Mẹo ghi nhớ 🧠</h2>
+      <ul>
+        <li><b>"Có" + danh từ mới → THERE.</b> Nếu dịch được là "có một/nhiều ..." → gần như chắc chắn là <i>there</i>.</li>
+        <li><b>"Nó" / thứ đã biết → IT.</b> Thử thay bằng danh từ cụ thể (the restaurant, the trip...) — thay được → <i>it</i>.</li>
+        <li><b>Mẹo nhìn sau chỗ trống:</b> danh từ → there; tính từ → it. <i>There's a lot of noise</i> / <i>It's noisy</i>.</li>
+        <li><b>Trời ơi là IT:</b> thời tiết, giờ giấc, ngày tháng, khoảng cách luôn bắt đầu bằng <i>It</i>.</li>
+        <li><b>Người Việt hay "Have"</b> — nhớ: tiếng Anh không dùng <i>have</i> để nói "có ở đâu đó"; dùng <i>there is</i>.</li>
+      </ul>
+
+      <h2>2.3 · Mẹo làm bài thi 🎯</h2>
+      <ul>
+        <li>Dạng đúng/sai: thấy <i>It + be + a/an/some/no + danh từ</i> mà danh từ đó chưa được nhắc trước → thường phải sửa thành <i>There</i>.</li>
+        <li>Nhớ chia <b>be</b> theo danh từ phía sau there: <i>There <b>were</b> a lot of people</i>.</li>
+        <li>Đổi thì vẫn giữ there: <i>there has been / there will be / there must have been / there used to be</i>.</li>
+        <li>Câu hỏi: đảo <b>be</b> lên trước there: <i>Is there ...? Will there be ...? Was there ...?</i></li>
+        <li>Bẫy <i>It's a long way from ... to ...</i> và <i>It's three years since ...</i> — câu ĐÚNG, không sửa thành there.</li>
+      </ul>
+
+      <h2>2.4 · Lỗi thường gặp của người Việt ❌/✅</h2>
+      <div class="scroll"><table class="mistakes">
+        <tr><th>❌ Người Việt hay nói</th><th>✅ Đúng</th><th>🔎 Vì sao</th></tr>
+        <tr><td class="no">In my town have a big park.</td><td class="yes"><b>There is</b> a big park in my town.</td><td class="why">"có" tồn tại → there is, không phải have</td></tr>
+        <tr><td class="no">It was a lot of people at the party.</td><td class="yes"><b>There were</b> a lot of people ...</td><td class="why">giới thiệu danh từ mới → there; people số nhiều → were</td></tr>
+        <tr><td class="no">There is many problems.</td><td class="yes">There <b>are</b> many problems.</td><td class="why">be chia theo danh từ số nhiều</td></tr>
+        <tr><td class="no">Is raining.</td><td class="yes"><b>It</b>'s raining.</td><td class="why">tiếng Anh luôn cần chủ ngữ (it giả)</td></tr>
+        <tr><td class="no">Have any questions?</td><td class="yes"><b>Are there</b> any questions?</td><td class="why">hỏi sự tồn tại → đảo be + there</td></tr>
+        <tr><td class="no">It has a lot of traffic today.</td><td class="yes"><b>There's</b> a lot of traffic today.</td><td class="why">dịch máy móc "có"</td></tr>
+        <tr><td class="no">From here to the airport is far.</td><td class="yes"><b>It</b>'s a long way from here to the airport.</td><td class="why">khoảng cách → it</td></tr>
+        <tr><td class="no">There will be very crowded.</td><td class="yes"><b>It</b> will be very crowded.</td><td class="why">sau là tính từ → it</td></tr>
+        <tr><td class="no">It used to be a cinema here.</td><td class="yes"><b>There</b> used to be a cinema here.</td><td class="why">"từng có" → there used to be</td></tr>
+      </table></div>
+
+      <h2>2.5 · Áp dụng vào nói &amp; viết hàng ngày ✍️</h2>
+      <ul>
+        <li><b>Nói:</b> giới thiệu khu bạn sống trong 1 phút: <i>"There's a market near my house. It's busy in the morning. There are lots of cafés..."</i></li>
+        <li><b>Viết:</b> tả một bức tranh/biểu đồ bằng <i>There is/are ... + It shows ...</i>.</li>
+        <li><b>Công việc:</b> thông báo: <i>"There'll be a system update tonight. It'll take about an hour."</i></li>
+        <li><b>Kể chuyện thay đổi:</b> <i>"There used to be ... but now ..."</i> — rất hữu ích cho IELTS Speaking Part 2/3.</li>
+        <li><b>Quy tắc vàng:</b> trước khi nói "có", tự hỏi: <i>đang giới thiệu cái mới (there) hay nói về cái đã biết (it)?</i></li>
+      </ul>
+      <p class="note">🔁 <b>Ôn tập cách quãng:</b> làm lại phần bài tập sau 3 ngày, 7 ngày và 14 ngày; ưu tiên nút "Làm lại câu sai". Liên quan: <b>Unit 63</b> (it's worth / there's no point), <b>Unit 65</b> (sure to / bound to), <b>Unit 97</b> (there is + -ing/-ed).</p>
+    </div>
+  </section>
+
+  <!-- ===== TAB 3: BÀI TẬP ===== -->
+  <section class="tabpanel" id="tab-practice" hidden>
+    <div class="toolbar no-print">
+      <div class="mode-pill">
+        <button id="mStudy" class="on" type="button">📘 Chế độ Học</button>
+        <button id="mTest" type="button">⏱️ Chế độ Kiểm tra</button>
+      </div>
+      <button class="btn primary" id="btnSubmit" type="button">Nộp bài</button>
+      <button class="btn ghost" id="btnReveal" type="button">Xem đáp án</button>
+      <button class="btn ghost" id="btnAgain" type="button">Làm lại</button>
+      <button class="btn ghost" id="btnWrong" type="button">Làm lại câu sai</button>
+      <button class="btn badb" id="btnReset" type="button">Reset toàn bộ</button>
+      <button class="btn ghost" id="btnPrint" type="button">🖨️ In / PDF</button>
+      <button class="btn ghost" id="btnSave" type="button">💾 Tải unit84.html</button>
+      <span class="clock" id="clock">00:00</span>
+    </div>
+
+    <div class="card result" id="result" hidden>
+      <div class="big" id="rPct">0%</div>
+      <div class="meta" id="rMeta"></div>
+      <div class="selfscore" id="rSelf"></div>
+      <div class="wrong" id="rWrong" hidden></div>
+      <div class="acts no-print">
+        <button class="btn primary" id="rAgain" type="button">🔁 Làm lại (trộn mới)</button>
+        <button class="btn okb" id="rWrongBtn" type="button">🎯 Làm lại câu sai</button>
+        <button class="btn ghost" id="rReveal" type="button">👀 Xem đáp án</button>
+      </div>
+    </div>
+
+    <p class="note no-print" id="modeHint"></p>
+    <div id="quiz"></div>
+
+    <div class="card no-print" id="submitBar">
+      <div class="toolbar" style="margin:0">
+        <button class="btn primary" id="btnSubmit2" type="button">✅ Nộp bài &amp; chấm điểm</button>
+        <button class="btn ghost" id="btnReveal2" type="button">👀 Xem đáp án</button>
+        <span class="note">Chế độ <b id="modeName">Học</b> — đáp án &amp; giải thích hiển thị ngay sau mỗi câu.</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    English Grammar in Use – Raymond Murphy, 4th Edition · Unit 84 · File tự học offline ·
+    Tiến độ lưu ngay trên máy bạn (localStorage)
+  </footer>
+</div>
+
+<script>
+/* ============================================================
+   UNIT 84 – There ... and it ... | Engine bài tập self-contained
+   - 2 chế độ: Học (đáp án hiện ngay) / Kiểm tra (chấm sau khi nộp)
+   - Trộn câu + đáp án, localStorage, làm lại câu sai, in/PDF
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var FILENAME = 'unit84.html';
+  var KEY = 'egu4_unit84_progress';
+
+  /* ---------- Các phần bài tập ---------- */
+  var SECTIONS = [
+    { id:'A', title:'A. Trắc nghiệm (MCQ)',        desc:'Chọn there hay it (và dạng đúng của be).' },
+    { id:'B', title:'B. Điền there / it + be',      desc:'Điền there is/was, it is/was… theo ngữ cảnh (có thể là câu hỏi, phủ định).' },
+    { id:'C', title:'C. Sắp xếp từ thành câu',     desc:'Bấm các từ để xếp thành câu đúng rồi so đáp án.' },
+    { id:'D', title:'D. Hội thoại điền khuyết',     desc:'Dựa vào ngữ cảnh, điền phần còn thiếu.' },
+    { id:'E', title:'E. Tình huống tự viết (tự chấm)', desc:'Viết câu của riêng bạn, đối chiếu mẫu rồi tự chấm. Không tính điểm tự động.' },
+    { id:'F', title:'F. Quiz cuối unit (8 câu)',    desc:'Kiểm tra nhanh toàn bộ kiến thức Unit 84.' },
+    { id:'G', title:'G. Bài tập trong sách (Unit 84 Exercises)', desc:'Bài 84.1 → 84.4 theo đúng dạng bài của sách Murphy, câu đã viết lại, kèm key.' }
+  ];
+
+  var TYPE_LABEL = { mcq:'Trắc nghiệm', fill:'Điền từ', order:'Sắp xếp',
+                     self:'Tự viết', match:'Nối câu' };
+
+  var QUESTIONS = [
+
+    /* ===== A. MCQ ===== */
+    { id:'a1', sec:'A', type:'mcq', q:'Sorry we\'re late. ______ a lot of traffic on the motorway.',
+      opts:['There was','It was','It had','There were'], a:0,
+      exp:'Giới thiệu một thứ tồn tại (a lot of traffic) → there. Traffic không đếm được → was. "It was a lot of traffic" là lỗi điển hình.' },
+    { id:'a2', sec:'A', type:'mcq', q:'We went to the new museum yesterday. ______ really interesting.',
+      opts:['There was','It was','There\'s','It had'], a:1,
+      exp:'Nói về chính bảo tàng đã nhắc (cụ thể) + tính từ interesting → it was.' },
+    { id:'a3', sec:'A', type:'mcq', q:'______ a cash machine near here?',
+      opts:['Is it','Has it','Is there','There is'], a:2,
+      exp:'Hỏi sự tồn tại → đảo be lên trước there: Is there ...? Không dùng "Has it" để nói "có".' },
+    { id:'a4', sec:'A', type:'mcq', q:'How far ______ from the station to your office?',
+      opts:['there is','is there','it is','is it'], a:3,
+      exp:'Khoảng cách luôn dùng it: How far is it from A to B? Câu hỏi → đảo is lên trước it.' },
+    { id:'a5', sec:'A', type:'mcq', q:'That shop sells phones now, but ______ a bookshop.',
+      opts:['it used to be','there used to be','it was used to be','there used'], a:0,
+      exp:'Nói về chính cửa hàng đó (nó từng là hiệu sách) → it used to be. "There used to be" = từng có (một thứ) ở đâu đó.' },
+    { id:'a6', sec:'A', type:'mcq', q:'Don\'t worry about food. ______ plenty of restaurants in the town centre.',
+      opts:['It\'s bound to be','There are bound to be','It\'s bound to have','There is bound to be'], a:1,
+      exp:'there\'s/there are bound to be = chắc chắn sẽ có. Restaurants số nhiều → There are bound to be.' },
+    { id:'a7', sec:'A', type:'mcq', q:'______ dangerous to swim in this river.',
+      opts:['There\'s','This is','It\'s','Is'], a:2,
+      exp:'Chủ ngữ giả: It + be + adj + to V. Tiếng Anh thường mở đầu bằng It thay vì "To swim in this river is dangerous".' },
+    { id:'a8', sec:'A', type:'mcq', q:'It was cold yesterday and ______ a strong wind.',
+      opts:['it was','it had','there were','there was'], a:3,
+      exp:'Thời tiết dùng tính từ → it (It was cold). Nhưng có danh từ "a strong wind" → there was.' },
+
+    /* ===== B. Điền ===== */
+    { id:'b1', sec:'B', type:'fill', q:'______ (there / be – quá khứ) nobody at home when I called.',
+      acc:['there was'], ans:'There was',
+      exp:'Nobody là chủ ngữ số ít, nói về sự tồn tại trong quá khứ → There was nobody ...' },
+    { id:'b2', sec:'B', type:'fill', q:'I read the report last night. ______ (be – quá khứ) very long but useful.',
+      acc:['it was'], ans:'It was',
+      exp:'Nói về chính bản báo cáo (cụ thể) + tính từ → It was.' },
+    { id:'b3', sec:'B', type:'fill', q:'______ (there / be – hiện tại) two bus stops on this street.',
+      acc:['there are',"there're"], ans:'There are',
+      exp:'Be chia theo danh từ phía sau: two bus stops (số nhiều) → There are.' },
+    { id:'b4', sec:'B', type:'fill', q:'What day ______ today? (be)',
+      acc:['is it'], ans:'is it',
+      exp:'Ngày/giờ dùng it: What day is it today?' },
+    { id:'b5', sec:'B', type:'fill', q:'Prices keep going up. ______ (there / be – present perfect) a big rise in rents this year.',
+      acc:['there has been',"there's been"], ans:'There has been',
+      exp:'Thì hoàn thành của there is → There has been (rút gọn: There\'s been).' },
+    { id:'b6', sec:'B', type:'fill', q:'The lights are on. ______ (must / be) somebody in the office.',
+      acc:['there must be'], ans:'There must be',
+      exp:'Suy luận có người tồn tại → there must be + danh từ.' },
+    { id:'b7', sec:'B', type:'fill', q:'______ (be – hiện tại) a long time since I last saw you.',
+      acc:["it's",'it is'], ans:"It's",
+      exp:'Cấu trúc thời gian: It\'s + khoảng thời gian + since ... → luôn dùng it.' },
+    { id:'b8', sec:'B', type:'fill', q:'If we left now, ______ (would / not / be) any problem with parking.',
+      acc:["there wouldn't be",'there would not be'], ans:"there wouldn't be",
+      exp:'Câu điều kiện loại 2 với sự tồn tại → there wouldn\'t be + danh từ (any problem).' },
+
+    /* ===== C. Sắp xếp ===== */
+    { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (there / a / lot / of / noise / is / outside)',
+      tokens:['There','is','a','lot','of','noise','outside'],
+      acc:['there is a lot of noise outside'], ans:'There is a lot of noise outside.',
+      exp:'There + is + danh từ (a lot of noise) + nơi chốn.' },
+    { id:'c2', sec:'C', type:'order', q:'Sắp xếp thành CÂU HỎI: (be / will / there / time / enough)',
+      tokens:['Will','there','be','enough','time'],
+      acc:['will there be enough time'], ans:'Will there be enough time?',
+      exp:'Câu hỏi tương lai: Will + there + be + danh từ?' },
+    { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (it / to / is / difficult / get / a ticket)',
+      tokens:['It','is','difficult','to','get','a','ticket'],
+      acc:['it is difficult to get a ticket'], ans:'It is difficult to get a ticket.',
+      exp:'Chủ ngữ giả: It + be + adj + to V.' },
+    { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (used / there / to / a cinema / be / here)',
+      tokens:['There','used','to','be','a','cinema','here'],
+      acc:['there used to be a cinema here'], ans:'There used to be a cinema here.',
+      exp:'There used to be + danh từ = trước đây từng có.' },
+    { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (must / there / been / have / a mistake)',
+      tokens:['There','must','have','been','a','mistake'],
+      acc:['there must have been a mistake'], ans:'There must have been a mistake.',
+      exp:'Suy luận về quá khứ: There must have been + danh từ.' },
+
+    /* ===== D. Hội thoại ===== */
+    { id:'d1', sec:'D', type:'fill', q:'A: ______ a post office in this village?  B: No, but there\'s one in the next village.',
+      acc:['is there'], ans:'Is there',
+      exp:'Hỏi có tồn tại hay không → Is there ...?' },
+    { id:'d2', sec:'D', type:'fill', q:'A: How was the concert?  B: ______ fantastic! The band played for three hours.',
+      acc:['it was'], ans:'It was',
+      exp:'Nói về chính buổi hòa nhạc + tính từ → It was.' },
+    { id:'d3', sec:'D', type:'fill', q:'A: Is there a train to Hue tonight?  B: ______ (might). I\'ll check the timetable.',
+      acc:['there might be'], ans:'There might be',
+      exp:'Trả lời ngắn về sự tồn tại không chắc chắn → There might be.' },
+    { id:'d4', sec:'D', type:'fill', q:'A: Why didn\'t you buy anything?  B: ______ (be – quá khứ, phủ định) anything I liked.',
+      acc:["there wasn't",'there was not'], ans:"There wasn't",
+      exp:'Phủ định của there was → There wasn\'t anything ...' },
+
+    /* ===== E. Tự viết ===== */
+    { id:'e1', sec:'E', type:'self', q:'Viết 3 câu mô tả khu phố của bạn: 2 câu dùng There is/are, 1 câu dùng It.',
+      sample:'There\'s a big market near my house. There are a lot of small cafés too. It\'s a lively area.',
+      exp:'Dùng there để giới thiệu cái gì có ở đó; dùng it để nhận xét về khu phố (thứ đã biết). Kiểm tra be có chia theo danh từ sau there chưa.' },
+    { id:'e2', sec:'E', type:'self', q:'Viết 2 câu về một nơi đã thay đổi, dùng "There used to be ..." và "It used to be ...".',
+      sample:'There used to be a cinema in the town centre. That building is a gym now — it used to be a cinema.',
+      exp:'There used to be = từng có (sự tồn tại). It used to be = nó từng là (nói về chính tòa nhà đó).' },
+    { id:'e3', sec:'E', type:'self', q:'Viết 2 câu về thời tiết hôm nay: 1 câu It + tính từ, 1 câu There + danh từ.',
+      sample:'It\'s hot and humid today. There\'s a chance of rain in the evening.',
+      exp:'Tính từ (hot, windy, cold) → It\'s ... Danh từ (a storm, a strong wind, a chance of rain) → There\'s ...' },
+
+    /* ===== F. Quiz cuối unit ===== */
+    { id:'f1', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['There was a big storm last night.','It was a big storm last night.'], a:0,
+      exp:'"a big storm" là danh từ giới thiệu lần đầu → There was.' },
+    { id:'f2', sec:'F', type:'fill', q:'______ (be) a long way from here to the beach. Let\'s take a taxi.',
+      acc:["it's",'it is'], ans:"It's",
+      exp:'Khoảng cách → It\'s a long way from A to B.' },
+    { id:'f3', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['There are a lot of shops in this street.','There is a lot of shops in this street.','It has a lot of shops in this street.'], a:0,
+      exp:'shops số nhiều → There are. Không dùng "It has" để nói "có".' },
+    { id:'f4', sec:'F', type:'fill', q:'Dịch: "Ở trường tôi có một thư viện lớn."',
+      acc:['there is a big library in my school',"there's a big library in my school",'there is a large library in my school',"there's a large library in my school",'my school has a big library','my school has a large library'],
+      ans:'There\'s a big library in my school.',
+      exp:'"Có" (tồn tại ở đâu) → There is + danh từ + nơi chốn. Cũng có thể nói My school has a big library, nhưng KHÔNG nói "In my school has ...".' },
+    { id:'f5', sec:'F', type:'fill', q:'The roads were empty. ______ (be – quá khứ, phủ định) much traffic.',
+      acc:["there wasn't",'there was not'], ans:"There wasn't",
+      exp:'traffic không đếm được + phủ định quá khứ → There wasn\'t much traffic.' },
+    { id:'f6', sec:'F', type:'mcq', q:'They live next to the airport. ______ very noisy.',
+      opts:['There must be','There must have','It must be','It must have'], a:2,
+      exp:'Sau chỗ trống là tính từ noisy → it. (So sánh: There must be a lot of noise.)' },
+    { id:'f7', sec:'F', type:'fill', q:'There\'s a flight at 9, but ______ (sure / be) full — it\'s a holiday.',
+      acc:["it's sure to be",'it is sure to be'], ans:"it's sure to be",
+      exp:'it = chuyến bay đó (đã nhắc) → it\'s sure to be full. Nếu nói về việc có chuyến bay hay không thì mới dùng There\'s sure to be a flight.' },
+    { id:'f8', sec:'F', type:'mcq', q:'Chọn câu ĐÚNG:',
+      opts:['It\'s no change in the situation.','It has been no change in the situation.','There has been no change in the situation.'], a:2,
+      exp:'no change là danh từ → there. Thì hoàn thành → There has been no change.' },
+
+    /* ===== G. Bài tập trong sách ===== */
+    { id:'h1', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'I\'ve heard about that new hotel. What\'s it like? ______ comfortable?', acc:['is it'], ans:'Is it',
+      exp:'Hỏi về chính khách sạn đã nhắc + tính từ → Is it comfortable?' },
+    { id:'h2', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'______ a problem with my phone. Can you have a look at it?', acc:["there's",'there is'], ans:"There's",
+      exp:'Giới thiệu một vấn đề (danh từ mới) → There\'s a problem.' },
+    { id:'h3', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'I wanted to finish the report, but ______ (phủ định) enough time.', acc:["there wasn't",'there was not'], ans:"there wasn't",
+      exp:'Phủ định sự tồn tại trong quá khứ: there wasn\'t enough time.' },
+    { id:'h4', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'How do we get to the island? ______ a ferry?', acc:['is there'], ans:'Is there',
+      exp:'Hỏi có phà hay không → Is there a ferry?' },
+    { id:'h5', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'Last week ______ a fire in the factory, which destroyed two buildings.', acc:['there was'], ans:'there was',
+      exp:'Giới thiệu sự kiện (a fire) lần đầu → there was.' },
+    { id:'h6', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'Where\'s my phone? ______ (phủ định) on the desk — I\'ve just looked.', acc:["it isn't","it's not",'it is not'], ans:"It isn't",
+      exp:'Nói về chính vật cụ thể đã biết (my phone) → it. Không dùng there vì không phải câu giới thiệu thứ mới.' },
+    { id:'h7', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'It\'s often windy here, but ______ (phủ định) much rain.', acc:["there isn't",'there is not',"there's not"], ans:"there isn't",
+      exp:'much rain = danh từ → there isn\'t much rain.' },
+    { id:'h8', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'When we arrived, ______ a crowd at the gate. ______ a huge crowd, so we went home.', acc:["there was ... it was",'there was it was','there was / it was','there was...it was'], ans:'there was ... It was',
+      exp:'Câu 1 giới thiệu đám đông → there was. Câu 2 nói về chính đám đông đó → It was.' },
+    { id:'h9', sec:'G', type:'fill', sub:'Bài 84.1 – there is/was hay it is/was',
+      q:'______ hard to find a flat in the city centre. ______ a lot of demand.', acc:["it's ... there's",'it is ... there is',"it's there's",'it is there is',"it's / there's",'it is / there is',"it's...there's"], ans:"It's ... There's",
+      exp:'Câu 1: chủ ngữ giả It + adj + to V. Câu 2: giới thiệu danh từ (a lot of demand) → There\'s.' },
+
+    { id:'h10', sec:'G', type:'fill', sub:'Bài 84.2 – Viết câu bắt đầu bằng There ...',
+      q:'This coffee is very sweet. → There ______ in this coffee.', acc:['is a lot of sugar',"'s a lot of sugar",'is too much sugar',"'s too much sugar"], ans:'There is a lot of sugar in this coffee.',
+      exp:'Tính từ sweet → chuyển thành danh từ sugar: There\'s a lot of / too much sugar.' },
+    { id:'h11', sec:'G', type:'fill', sub:'Bài 84.2 – Viết câu bắt đầu bằng There ...',
+      q:'The fridge was empty. → There ______ in the fridge.', acc:['was nothing',"wasn't anything",'was not anything'], ans:'There was nothing in the fridge.',
+      exp:'empty → there was nothing / there wasn\'t anything.' },
+    { id:'h12', sec:'G', type:'fill', sub:'Bài 84.2 – Viết câu bắt đầu bằng There ...',
+      q:'The beach was crowded. → There ______ on the beach.', acc:['were a lot of people','were lots of people','were many people'], ans:'There were a lot of people on the beach.',
+      exp:'crowded → a lot of people (số nhiều) → There were.' },
+    { id:'h13', sec:'G', type:'fill', sub:'Bài 84.2 – Viết câu bắt đầu bằng There ...',
+      q:'The game was very violent. → There ______ in the game.', acc:['is a lot of violence',"'s a lot of violence",'was a lot of violence'], ans:'There was a lot of violence in the game.',
+      exp:'violent (adj) → violence (n) không đếm được → There was/is a lot of violence.' },
+    { id:'h14', sec:'G', type:'fill', sub:'Bài 84.2 – Viết câu bắt đầu bằng There ...',
+      q:'I like this city — it\'s lively. → There ______ in this city.', acc:['is a lot to do',"'s a lot to do",'is a lot happening',"'s a lot happening",'is plenty to do',"'s plenty to do"], ans:'There is a lot to do in this city.',
+      exp:'lively → There\'s a lot to do / a lot happening.' },
+
+    { id:'h15', sec:'G', type:'fill', sub:'Bài 84.3 – there will be / there would be ...',
+      q:'\'Is there any milk?\' \'I\'m not sure. ______ some in the fridge.\' (may)', acc:['there may be'], ans:'There may be',
+      exp:'Không chắc chắn → There may be.' },
+    { id:'h16', sec:'G', type:'fill', sub:'Bài 84.3 – there will be / there would be ...',
+      q:'Look at those black clouds. ______ a storm. (going to)', acc:["there's going to be",'there is going to be'], ans:"There's going to be",
+      exp:'Dự đoán dựa vào dấu hiệu hiện tại → There\'s going to be.' },
+    { id:'h17', sec:'G', type:'fill', sub:'Bài 84.3 – there will be / there would be ...',
+      q:'\'Is there a cinema in the town?\' \'Not now. ______ one, but it closed.\' (used to)', acc:['there used to be'], ans:'There used to be',
+      exp:'Trước đây có, giờ không → There used to be.' },
+    { id:'h18', sec:'G', type:'fill', sub:'Bài 84.3 – there will be / there would be ...',
+      q:'Cars go too fast past the school. I think ______ a speed limit. (should)', acc:['there should be'], ans:'there should be',
+      exp:'Ý kiến/khuyên nên → there should be.' },
+    { id:'h19', sec:'G', type:'fill', sub:'Bài 84.3 – there will be / there would be ...',
+      q:'If everybody recycled, ______ so much rubbish. (wouldn\'t)', acc:["there wouldn't be",'there would not be'], ans:"there wouldn't be",
+      exp:'Điều kiện loại 2 → there wouldn\'t be.' },
+    { id:'h20', sec:'G', type:'fill', sub:'Bài 84.3 – there will be / there would be ...',
+      q:'I\'m sure the trip will go well. I don\'t think ______ any delays. (will)', acc:['there will be',"there'll be"], ans:'there will be',
+      exp:'Dự đoán tương lai → there will be (sau I don\'t think dùng khẳng định).' },
+
+    { id:'h21', sec:'G', type:'mcq', sub:'Bài 84.4 – Đúng hay sai? Sửa it → there khi cần',
+      q:'"After the talk it will be a chance to ask questions."',
+      opts:['Sửa: After the talk there will be a chance to ask questions.','Câu đúng, giữ nguyên.'], a:0,
+      exp:'a chance là danh từ được giới thiệu → there will be.' },
+    { id:'h22', sec:'G', type:'mcq', sub:'Bài 84.4 – Đúng hay sai? Sửa it → there khi cần',
+      q:'"It\'s two years since I last visited my grandparents."',
+      opts:['Sửa: There\'s two years since ...','Câu đúng, giữ nguyên.'], a:1,
+      exp:'It\'s + thời gian + since ... → dùng it là đúng.' },
+    { id:'h23', sec:'G', type:'mcq', sub:'Bài 84.4 – Đúng hay sai? Sửa it → there khi cần',
+      q:'"He looked very upset. It must have been a reason."',
+      opts:['Sửa: There must have been a reason.','Câu đúng, giữ nguyên.'], a:0,
+      exp:'a reason là danh từ (sự tồn tại của một lý do) → There must have been a reason.' },
+    { id:'h24', sec:'G', type:'mcq', sub:'Bài 84.4 – Đúng hay sai? Sửa it → there khi cần',
+      q:'"It\'s a long way from the hotel to the beach."',
+      opts:['Sửa: There\'s a long way from ...','Câu đúng, giữ nguyên.'], a:1,
+      exp:'Khoảng cách → It\'s a long way from A to B. Câu đúng.' },
+    { id:'h25', sec:'G', type:'mcq', sub:'Bài 84.4 – Đúng hay sai? Sửa it → there khi cần',
+      q:'"Nothing is different. It has been no progress."',
+      opts:['Sửa: There has been no progress.','Câu đúng, giữ nguyên.'], a:0,
+      exp:'no progress là danh từ → There has been no progress.' },
+    { id:'h26', sec:'G', type:'mcq', sub:'Bài 84.4 – Đúng hay sai? Sửa it → there khi cần',
+      q:'"It used to be a bakery on this corner, but it closed."',
+      opts:['Câu đúng, giữ nguyên.','Sửa: There used to be a bakery on this corner, but it closed.'], a:1,
+      exp:'Từng có (tồn tại) → There used to be. Vế sau "it closed" vẫn đúng (it = tiệm bánh đó).' },
+    { id:'h27', sec:'G', type:'mcq', sub:'Bài 84.4 – Đúng hay sai? Sửa it → there khi cần',
+      q:'"I don\'t know who\'ll win, but it\'s sure to be an exciting match."',
+      opts:['Câu đúng, giữ nguyên.','Sửa: there\'s sure to be an exciting match.'], a:0,
+      exp:'it = trận đấu đã biết (trận sắp diễn ra) → it\'s sure to be exciting. Câu đúng.' },
+    { id:'h28', sec:'G', type:'mcq', sub:'Bài 84.4 – Đúng hay sai? Sửa it → there khi cần',
+      q:'"They said it would be someone to meet us at the airport, but it wasn\'t anyone."',
+      opts:['Câu đúng, giữ nguyên.','Sửa: ... there would be someone ..., but there wasn\'t anyone.'], a:1,
+      exp:'Cả hai vế nói về sự tồn tại của người (someone / anyone) → there would be ... there wasn\'t.' }
+  ];
+
+  /* =========================================================
+     CÁC HÀM TIỆN ÍCH
+     ========================================================= */
+  function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  function norm(s){return String(s==null?'':s).toLowerCase()
+    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+  function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
+    var t=a[i];a[i]=a[j];a[j]=t;}return a;}
+  function $(id){return document.getElementById(id);}
+  function findCard(id){return document.querySelector('[data-card="'+id+'"]');}
+
+  /* Đánh số câu theo phần: a1 → A1, g11 → G1... */
+  (function(){var c={};QUESTIONS.forEach(function(q){c[q.sec]=(c[q.sec]||0)+1;q.no=q.sec+c[q.sec];});})();
+
+  /* =========================================================
+     LƯU TIẾN ĐỘ (localStorage)
+     ========================================================= */
+  function defProgress(){return {attempts:0,best:0,wrong:[],hist:[]};}
+  var progress;
+  try{ progress = JSON.parse(localStorage.getItem(KEY)) || defProgress(); }
+  catch(e){ progress = defProgress(); }
+  if(!progress.wrong) progress.wrong=[];
+  if(!progress.hist) progress.hist=[];
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(progress)); }catch(e){} }
+  function updateStats(){
+    $('stAttempts').textContent='Đã làm: '+progress.attempts+' lần';
+    $('stBest').textContent='Điểm cao nhất: '+(progress.best?progress.best+'%':'–');
+    $('stWrong').textContent='Câu sai đang lưu: '+progress.wrong.length;
+  }
+
+  /* =========================================================
+     TRẠNG THÁI
+     ========================================================= */
+  var mode='study', current=[], submitted=false, t0=0, tick=null;
+  function fmt(ms){var s=Math.floor(ms/1000),m=Math.floor(s/60);s=s%60;
+    return (m<10?'0':'')+m+':'+(s<10?'0':'')+s;}
+  function startTimer(){ stopTimer(); t0=Date.now();
+    tick=setInterval(function(){$('clock').textContent=fmt(Date.now()-t0);},300); }
+  function stopTimer(){ if(tick){clearInterval(tick);tick=null;} }
+
+  /* =========================================================
+     RENDER BÀI TẬP
+     ========================================================= */
+  function prep(q){
+    var c={}; for(var k in q){ if(Object.prototype.hasOwnProperty.call(q,k)) c[k]=q[k]; }
+    if(c.type==='mcq') c._opts=shuffle(c.opts.map(function(t,i){return {t:t,ok:i===c.a};}));
+    if(c.type==='match') c._opts=shuffle(c.items.map(function(it){return {letter:it.letter,t:it.o};}));
+    if(c.type==='order') c._toks=shuffle(c.tokens);
+    return c;
+  }
+  function answerBox(q){
+    var right;
+    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
+    else if(q.type==='self') right=q.sample;
+    else right=q.ans;
+    var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
+    return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
+      '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  function renderQ(q,n){
+    var body='';
+    if(q.type==='mcq'){
+      body=q._opts.map(function(o,i){
+        return '<label class="opt"><input type="radio" name="q_'+q.id+'" value="'+i+'"><span>'+esc(o.t)+'</span></label>';
+      }).join('');
+    }else if(q.type==='fill'){
+      body='<input class="ans-input" type="text" autocomplete="off" spellcheck="false" placeholder="Nhập đáp án của bạn...">';
+    }else if(q.type==='order'){
+      body='<div class="line"></div><div class="pool">'+q._toks.map(function(w){
+        return '<button type="button" class="tok" data-w="'+esc(w)+'">'+esc(w)+'</button>';}).join('')+
+        '</div><button type="button" class="btn-mini clr">Xóa</button>';
+    }else if(q.type==='match'){
+      body='<div>'+q.items.map(function(it,i){
+        return '<div class="mrow"><span class="mleft">'+(i+1)+'. '+esc(it.t)+'</span>'+
+          '<select class="msel"><option value="">— chọn —</option>'+
+          q._opts.map(function(o,j){return '<option value="'+j+'">'+o.letter+'. '+esc(o.t)+'</option>';}).join('')+
+          '</select></div>';}).join('')+'</div>';
+    }else if(q.type==='self'){
+      body='<textarea class="self-text" rows="3" placeholder="Viết câu trả lời của bạn ở đây..."></textarea>'+
+        '<div class="self-btns"><button type="button" class="btn-mini sk" data-v="ok">✓ Tôi làm đúng</button>'+
+        '<button type="button" class="btn-mini sb" data-v="bad">✎ Cần cải thiện</button></div>';
+    }
+    return '<div class="qcard" data-card="'+q.id+'">'+
+      '<div class="qhead"><span class="qno">'+q.no+'</span><span class="qtype">'+
+      (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
+      '<p class="qtext">'+esc(q.q)+'</p>'+body+
+      '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
+      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+  }
+  function render(wrongOnly){
+    var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
+    if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
+    current=shuffle(pool).map(prep);
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    var html='',sub='';
+    SECTIONS.forEach(function(sec){
+      var items=current.filter(function(q){return q.sec===sec.id;});
+      if(!items.length) return;
+      html+='<div class="sec"><h3>'+sec.title+'</h3><p class="sec-desc">'+sec.desc+'</p>';
+      sub='';
+      items.forEach(function(q){
+        if(q.sub&&q.sub!==sub){sub=q.sub;html+='<div class="sub">'+sub+'</div>';}
+        html+=renderQ(q);
+      });
+      html+='</div>';
+    });
+    $('quiz').innerHTML=html;
+    return true;
+  }
+
+  /* =========================================================
+     CHẤM ĐIỂM
+     ========================================================= */
+  function getRes(q,card){
+    if(q.type==='mcq'){
+      var c=card.querySelector('input[type=radio]:checked');
+      if(!c) return {v:'',ok:false,empty:true};
+      var o=q._opts[+c.value];
+      return {v:o.t,ok:!!o.ok,empty:false};
+    }
+    if(q.type==='fill'){
+      var inp=card.querySelector('.ans-input'),v=inp.value;
+      if(!norm(v)) return {v:'',ok:false,empty:true};
+      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+    }
+    if(q.type==='order'){
+      var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
+      if(!toks.length) return {v:'',ok:false,empty:true};
+      var s=toks.join(' ');
+      return {v:s,ok:q.acc.some(function(a){return norm(a)===norm(s);}),empty:false};
+    }
+    if(q.type==='match'){
+      var sels=card.querySelectorAll('.msel'),score=0;
+      for(var i=0;i<sels.length;i++){
+        if(sels[i].value==='') continue;
+        var pick=q._opts[+sels[i].value];
+        if(pick&&pick.letter===q.items[i].letter) score++;
+      }
+      return {v:score+'/'+q.w,score:score,total:q.w,ok:score===q.w,empty:false};
+    }
+    if(q.type==='self'){
+      var g=card.getAttribute('data-self')||'';
+      return {v:card.querySelector('textarea').value,self:true,graded:g!=='',ok:g==='ok'};
+    }
+    return {v:'',ok:false,empty:true};
+  }
+  function gradeOne(q){
+    var card=findCard(q.id); if(!card) return null;
+    var res=getRes(q,card);
+    card.classList.remove('ok','bad');
+    var tag=card.querySelector('.vtag');
+    if(res.self){
+      if(res.graded){
+        card.classList.add(res.ok?'ok':'bad');
+        tag.className='vtag '+(res.ok?'ok':'bad');
+        tag.textContent=res.ok?'✓ Tự chấm: đúng':'✎ Tự chấm: cần cải thiện';
+      }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
+      return res;
+    }
+    if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
+    if(q.type==='mcq'){
+      var labels=card.querySelectorAll('.opt');
+      q._opts.forEach(function(o,i){
+        labels[i].classList.remove('correct','wrongpick');
+        if(o.ok) labels[i].classList.add('correct');
+      });
+      var checked=card.querySelector('input:checked');
+      if(checked&&!res.ok) labels[+checked.value].classList.add('wrongpick');
+    }
+    tag.className='vtag '+(res.ok?'ok':'bad');
+    tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
+    return res;
+  }
+  function gradeAll(){
+    stopTimer(); submitted=true;
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+    current.forEach(function(q){
+      var res=gradeOne(q); if(!res) return;
+      attempted.push(q.id);
+      if(res.self){
+        selfAll++;
+        if(res.graded&&res.ok) selfOk++;
+        if(res.graded&&!res.ok) wrongIds.push(q.id);
+        return;
+      }
+      var w=(q.type==='match')?q.w:1;
+      total+=w; score+=res.ok?w:0;
+      if(!res.ok) wrongIds.push(q.id);
+    });
+    document.body.classList.add('revealed');
+    /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
+    var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
+    progress.wrong=remain.concat(wrongIds);
+    progress.attempts++;
+    var pct=total?Math.round(score/total*100):0;
+    if(pct>progress.best) progress.best=pct;
+    var secs=t0?Math.round((Date.now()-t0)/1000):0;
+    progress.hist.push({pct:pct,sec:secs});
+    if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    save(); updateStats();
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+  }
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+    var big=$('rPct');
+    big.textContent=pct+'%';
+    big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
+    var m=Math.floor(secs/60),s=secs%60;
+    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+      ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
+      ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
+    $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
+    var rw=$('rWrong');
+    if(wrongIds.length){
+      var labels=wrongIds.map(function(id){
+        var q=QUESTIONS.filter(function(x){return x.id===id;})[0];
+        return q?q.no:id;});
+      rw.hidden=false;
+      rw.innerHTML='🎯 Câu sai ('+wrongIds.length+'): <b>'+labels.join(', ')+
+        '</b> — bấm "Làm lại câu sai" để luyện riêng phần này.';
+    }else{ rw.hidden=true; rw.innerHTML=''; }
+    $('result').hidden=false;
+    if($('result').scrollIntoView) $('result').scrollIntoView({behavior:'smooth',block:'center'});
+  }
+
+  /* =========================================================
+     CHẾ ĐỘ & NÚT BẤM
+     ========================================================= */
+  function clearAnswers(){
+    document.body.classList.remove('revealed');
+    $('result').hidden=true;
+    current.forEach(function(q){
+      var card=findCard(q.id); if(!card) return;
+      card.classList.remove('ok','bad');
+      var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
+      if(q.type==='mcq'){
+        [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
+        [].forEach.call(card.querySelectorAll('.opt'),function(l){l.classList.remove('correct','wrongpick');});
+      }
+      if(q.type==='fill') card.querySelector('.ans-input').value='';
+      if(q.type==='order'){
+        var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+        [].forEach.call(line.querySelectorAll('.tok'),function(t){pool.appendChild(t);});
+      }
+      if(q.type==='match'){
+        [].forEach.call(card.querySelectorAll('.msel'),function(sel){sel.value='';});
+      }
+      if(q.type==='self'){
+        card.removeAttribute('data-self');
+        card.querySelector('textarea').value='';
+        syncSelf(card);
+      }
+    });
+    $('clock').textContent='00:00'; t0=0;
+  }
+  function syncSelf(card){
+    var g=card.getAttribute('data-self')||'';
+    var ok=card.querySelector('.sk'),bad=card.querySelector('.sb');
+    if(ok) ok.className='btn-mini sk'+(g==='ok'?' on-ok':'');
+    if(bad) bad.className='btn-mini sb'+(g==='bad'?' on-bad':'');
+  }
+  function setMode(m){
+    mode=m;
+    document.body.setAttribute('data-mode',m);
+    $('mStudy').className=(m==='study')?'on':'';
+    $('mTest').className=(m==='test')?'on':'';
+    $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
+    $('modeHint').textContent=(m==='study')
+      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
+    if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
+    else { stopTimer(); submitted=false; }
+  }
+  function doSubmit(){ gradeAll(); }
+  function doReveal(){ document.body.classList.add('revealed'); }
+
+  /* =========================================================
+     SỰ KIỆN
+     ========================================================= */
+  /* Chuyển tab */
+  [].forEach.call(document.querySelectorAll('.tab'),function(t){
+    t.addEventListener('click',function(){
+      [].forEach.call(document.querySelectorAll('.tab'),function(x){x.classList.remove('active');});
+      t.classList.add('active');
+      ['theory','tips','practice'].forEach(function(k){
+        $('tab-'+k).hidden = (k!==t.getAttribute('data-tab'));
+      });
+    });
+  });
+
+  /* Tương tác trong khu vực câu hỏi */
+  $('quiz').addEventListener('click',function(e){
+    var t=e.target;
+    function up(el,sel){while(el&&el!==document){if(el.classList&&el.classList.contains(sel))return el;el=el.parentNode;}return null;}
+    var card=up(t,'qcard');
+    if(!card) return;
+    if(t.classList.contains('tok')){
+      if(t.parentNode.classList.contains('pool')) t.parentNode.previousElementSibling.appendChild(t);
+      else t.parentNode.nextElementSibling.appendChild(t);
+      return;
+    }
+    if(t.classList.contains('clr')){
+      var line=card.querySelector('.line'),pool=card.querySelector('.pool');
+      [].forEach.call(line.querySelectorAll('.tok'),function(x){pool.appendChild(x);});
+      return;
+    }
+    if(t.classList.contains('check-one')){
+      var id=card.getAttribute('data-card');
+      var q=current.filter(function(x){return x.id===id;})[0];
+      if(q) gradeOne(q);
+      return;
+    }
+    if(t.classList.contains('sk')||t.classList.contains('sb')){
+      var v=t.getAttribute('data-v');
+      var cur=card.getAttribute('data-self')||'';
+      if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
+      syncSelf(card);
+      var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q2) gradeOne(q2);
+      return;
+    }
+  });
+  /* Enter để soát nhanh ô điền từ */
+  $('quiz').addEventListener('keydown',function(e){
+    if(e.key!=='Enter') return;
+    var card=e.target.parentNode;
+    while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
+    if(card&&e.target.classList.contains('ans-input')){
+      e.preventDefault();
+      var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q) gradeOne(q);
+    }
+  });
+
+  /* Nút chế độ */
+  $('mStudy').addEventListener('click',function(){setMode('study');});
+  $('mTest').addEventListener('click',function(){setMode('test');});
+  /* Nút thao tác */
+  $('btnSubmit').addEventListener('click',doSubmit);
+  $('btnSubmit2').addEventListener('click',doSubmit);
+  $('btnReveal').addEventListener('click',doReveal);
+  $('btnReveal2').addEventListener('click',doReveal);
+  $('rReveal').addEventListener('click',doReveal);
+  $('btnAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode==='test'?'test':'study');});
+  $('rAgain').addEventListener('click',function(){stopTimer();render(false);setMode(mode);});
+  $('btnWrong').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('rWrongBtn').addEventListener('click',function(){stopTimer();if(render(true))setMode(mode);});
+  $('btnReset').addEventListener('click',function(){
+    if(!confirm('Xóa toàn bộ tiến độ đã lưu (điểm, câu sai) trên máy này?')) return;
+    progress=defProgress(); save(); updateStats(); stopTimer(); render(false); setMode('study');
+  });
+  $('btnPrint').addEventListener('click',function(){window.print();});
+  $('btnSave').addEventListener('click',function(){
+    var html='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
+    var blob=new Blob([html],{type:'text/html;charset=utf-8'});
+    var a=document.createElement('a');
+    a.href=URL.createObjectURL(blob); a.download=FILENAME;
+    document.body.appendChild(a); a.click();
+    setTimeout(function(){URL.revokeObjectURL(a.href);a.parentNode.removeChild(a);},600);
+  });
+
+  /* =========================================================
+     KHỞI TẠO
+     ========================================================= */
+  updateStats();
+  render(false);
+  setMode('study');
+})();
+</script>
+</body>
+</html>
