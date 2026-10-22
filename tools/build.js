@@ -46,7 +46,7 @@ prefix = prefix.replace(/<title>[\s\S]*?<\/title>/, '<title>' + meta.title + '</
 
 // --- 2. engine với banner/FILENAME/KEY/data được thay ---
 const scriptStart = tpl.indexOf('<script>');
-const scriptEnd = tpl.indexOf('</script>') + '</script>'.length;
+const scriptEnd = tpl.indexOf('</script>', scriptStart) + '</script>'.length;
 const suffix = tpl.slice(scriptEnd);
 let engine = tpl.slice(scriptStart, scriptEnd);
 
