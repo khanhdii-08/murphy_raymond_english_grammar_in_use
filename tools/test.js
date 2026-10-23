@@ -176,6 +176,9 @@ function runOne(rel) {
       // 11. Chế độ học
       doc.getElementById('mStudy').click();
       assert(doc.body.getAttribute('data-mode') === 'study', 'back to study mode');
+      doc.getElementById('btnAgain').click();
+      const box0 = doc.querySelector('.qcard .answer-box');
+      assert(box0 && window.getComputedStyle(box0).display === 'none', 'study mode hides answers before checking');
       if (mcqQ) {
         const card = doc.querySelector('[data-card="' + mcqQ.id + '"]');
         const labels = card.querySelectorAll('.opt');
@@ -183,6 +186,7 @@ function runOne(rel) {
         labels[wrongIdx].querySelector('input').checked = true;
         card.querySelector('.check-one').click();
         assert(card.classList.contains('bad'), 'study mode check works');
+        assert(window.getComputedStyle(card.querySelector('.answer-box')).display === 'block', 'study mode shows answer after checking');
         assert(card.querySelector('.vtag').textContent.indexOf('Sai') > -1, 'vtag shows Sai');
       }
 

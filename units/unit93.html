@@ -123,7 +123,7 @@ mark{background:#fef08a;padding:0 3px;border-radius:4px}
   border-radius:0 10px 10px 0;padding:10px 12px;font-size:.93rem}
 .answer-box .ab-title{color:#14532d}
 .answer-box .ab-exp{color:#166534;margin-top:4px}
-body[data-mode="study"] .answer-box{display:block}
+body[data-mode="study"] .qcard.checked .answer-box{display:block}
 body.revealed .answer-box{display:block}
 body[data-mode="test"] .check-one{display:none}
 .qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
@@ -941,7 +941,7 @@ You can rely on somebody.    → somebody (who) you can rely on</div>
     $('result').hidden=true;
     current.forEach(function(q){
       var card=findCard(q.id); if(!card) return;
-      card.classList.remove('ok','bad');
+      card.classList.remove('ok','bad','checked');
       var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
       if(q.type==='mcq'){
         [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
@@ -976,7 +976,7 @@ You can rely on somebody.    → somebody (who) you can rely on</div>
     $('mTest').className=(m==='test')?'on':'';
     $('modeName').textContent=(m==='study')?'Học':'Kiểm tra';
     $('modeHint').textContent=(m==='study')
-      ? '📘 Chế độ HỌC — đáp án & giải thích hiện ngay dưới mỗi câu; bấm "Soát câu này" để biết đúng/sai.'
+      ? '📘 Chế độ HỌC — làm từng câu rồi bấm "Soát câu này" để biết đúng/sai và xem đáp án & giải thích.'
       : '⏱️ Chế độ KIỂM TRA — đáp án bị ẩn, đồng hồ chạy; làm xong bấm "Nộp bài" để chấm điểm.';
     if(m==='test'){ stopTimer(); clearAnswers(); submitted=false; startTimer(); }
     else { stopTimer(); submitted=false; }
@@ -1017,7 +1017,7 @@ You can rely on somebody.    → somebody (who) you can rely on</div>
     if(t.classList.contains('check-one')){
       var id=card.getAttribute('data-card');
       var q=current.filter(function(x){return x.id===id;})[0];
-      if(q) gradeOne(q);
+      if(q){ gradeOne(q); card.classList.add('checked'); }
       return;
     }
     if(t.classList.contains('sk')||t.classList.contains('sb')){
@@ -1026,7 +1026,7 @@ You can rely on somebody.    → somebody (who) you can rely on</div>
       if(cur===v) card.removeAttribute('data-self'); else card.setAttribute('data-self',v);
       syncSelf(card);
       var q2=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
-      if(q2) gradeOne(q2);
+      if(q2){ gradeOne(q2); card.classList.add('checked'); }
       return;
     }
   });
