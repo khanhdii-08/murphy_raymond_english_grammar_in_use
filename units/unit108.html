@@ -165,9 +165,14 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px
 }
 
 /* ===== Dark mode ===== */
-.theme-toggle{position:fixed;right:14px;bottom:14px;z-index:50;width:44px;height:44px;border-radius:50%;
-  border:1px solid var(--line);background:var(--card);font-size:1.25rem;line-height:1;cursor:pointer;
+.theme-toggle{position:fixed;z-index:50;
+  right:calc(14px + env(safe-area-inset-right,0px));bottom:calc(14px + env(safe-area-inset-bottom,0px));
+  width:44px;height:44px;padding:0;margin:0;border-radius:50%;
+  -webkit-appearance:none;appearance:none;display:flex;align-items:center;justify-content:center;
+  border:1px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer;
+  -webkit-tap-highlight-color:transparent;touch-action:manipulation;
   box-shadow:0 6px 18px rgba(0,0,0,.18)}
+.theme-toggle svg{width:22px;height:22px;display:block;flex:none;pointer-events:none}
 @media print{.theme-toggle{display:none!important}}
 @media screen{
 :root[data-theme="dark"]{color-scheme:dark;
@@ -220,12 +225,15 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:16px 0 30px
 }
 </style>
 <script data-theme-init>
-/* Dark mode: theo cài đặt máy, nút ☀️/🌙 để đổi, nhớ lựa chọn cho mọi trang */
+/* Dark mode: theo cài đặt máy, nút mặt trời/mặt trăng để đổi, nhớ lựa chọn cho mọi trang */
 (function(){
-  var K='egu4_theme', root=document.documentElement, mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
+  var K='egu4_theme', root=document.documentElement,
+    SV='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">',
+    SUN=SV+'<circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>',
+    MOON=SV+'<path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>', mq=window.matchMedia&&matchMedia('(prefers-color-scheme: dark)');
   function saved(){try{return localStorage.getItem(K)}catch(e){return null}}
   function apply(t){root.setAttribute('data-theme',t);var b=document.getElementById('themeToggle');
-    if(b){b.textContent=t==='dark'?'☀️':'🌙';b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
+    if(b){b.innerHTML=t==='dark'?SUN:MOON;b.title=t==='dark'?'Chuyển sang giao diện sáng':'Chuyển sang giao diện tối';}}
   apply(saved()||(mq&&mq.matches?'dark':'light'));
   if(mq&&mq.addEventListener)mq.addEventListener('change',function(e){if(!saved())apply(e.matches?'dark':'light')});
   document.addEventListener('DOMContentLoaded',function(){
