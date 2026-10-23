@@ -187,7 +187,7 @@
       exp:'Đang trong trạng thái mong chờ → must be looking forward.' },
     { id:'h12', sec:'G', type:'fill', sub:'Bài 28.2 – Complete with a verb (one or two words)',
       q:'Everyone is singing along. You must ______ this song before.',
-      acc:['have heard','know'], ans:'have heard',
+      acc:['have heard','have known'], ans:'have heard',
       exp:'Kinh nghiệm quá khứ → must have heard.' },
 
     { id:'h13', sec:'G', type:'fill', sub:'Bài 28.3 – Write sentences with must have / can\'t have',

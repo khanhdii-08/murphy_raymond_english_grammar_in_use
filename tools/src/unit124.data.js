@@ -123,7 +123,7 @@
       opts:['My office is in the second floor.','My office is on the second floor.','My office is at the second floor.'], a:1,
       exp:'Tầng → on the second floor.' },
     { id:'f4', sec:'F', type:'fill', q:'Dịch: "Tôi thích ngồi ở hàng ghế sau." (I like sitting ...)',
-      acc:['i like sitting in the back row'], ans:'I like sitting in the back row.',
+      acc:['i like sitting in the back row','i like sitting at the back','i like sitting in the back seat','i like sitting in the back seats'], ans:'I like sitting in the back row.',
       exp:'in a row → in the back row.' },
     { id:'f5', sec:'F', type:'mcq', q:'Is your name ______ the guest list?',
       opts:['in','on','at'], a:1,

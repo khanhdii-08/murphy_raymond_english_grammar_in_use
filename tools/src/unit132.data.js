@@ -235,7 +235,7 @@
       exp:'stare AT.' },
     { id:'h24', sec:'G', type:'fill', sub:'Bài 132.3 – Điền to hoặc at',
       q:'Can I speak ______ you for a second? I\'ve got a question.',
-      acc:['to'], ans:'to',
-      exp:'speak TO somebody.' }
+      acc:['to','with'], ans:'to',
+      exp:'speak TO somebody (with cũng được).' }
   ];
 

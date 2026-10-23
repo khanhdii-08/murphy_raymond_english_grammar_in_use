@@ -68,7 +68,7 @@
     /* ===== C. Sắp xếp ===== */
     { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (most / the / time / of / we / get on well)',
       tokens:['We','get','on','well','most','of','the','time'],
-      acc:['we get on well most of the time'], ans:'We get on well most of the time.',
+      acc:['we get on well most of the time','most of the time we get on well'], ans:'We get on well most of the time.',
       exp:'Cụm cố định: most of the time.' },
     { id:'c2', sec:'C', type:'order', q:'Sắp xếp: (none / money / this / of / is / mine)',
       tokens:['None','of','this','money','is','mine'],

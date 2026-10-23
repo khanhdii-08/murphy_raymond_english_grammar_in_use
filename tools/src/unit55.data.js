@@ -149,7 +149,7 @@
       exp:'would like + me + to V.' },
     { id:'h3', sec:'G', type:'fill', sub:'Bài 55.1 – Do you want me to ... ? / Would you like me to ... ?',
       q:'Do you know how to use the printer, or would you like ______? (show)',
-      acc:['me to show you','me to show you how'], ans:'me to show you',
+      acc:['me to show you','me to show you how','me to show you how to use it','me to show you how to use the printer'], ans:'me to show you',
       exp:'would like + me + to show you (how).' },
     { id:'h4', sec:'G', type:'fill', sub:'Bài 55.1 – Do you want me to ... ? / Would you like me to ... ?',
       q:'Did you catch what I said, or do you want ______? (repeat)',

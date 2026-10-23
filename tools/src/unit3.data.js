@@ -36,12 +36,12 @@
       opts:["'m taking",'take','takes','took'], a:0,
       exp:'"this week" + khác với thường lệ → tạm thời → I\'m taking.' },
     { id:'a8', sec:'A', type:'mcq', q:'The number of people who shop online ______ every year.',
-      opts:['is increasing','increase','increases','are increasing'], a:2,
-      exp:'"every year" → lặp lại theo chu kỳ → hiện tại đơn; the number = it → increases. (Nếu không có "every year" mà nói xu hướng hiện nay thì dùng is increasing.)' },
+      opts:['increasing','increase','increases','are increasing'], a:2,
+      exp:'"every year" → lặp lại theo chu kỳ → hiện tại đơn; the number = it → increases.' },
 
     /* ===== B. Điền từ ===== */
     { id:'b1', sec:'B', type:'fill', q:'Be quiet! The baby ______ (sleep).',
-      acc:["'s sleeping",'is sleeping',"the baby's sleeping"], ans:'is sleeping',
+      acc:["'s sleeping",'is sleeping'], ans:'is sleeping',
       exp:'"Be quiet!" → em bé đang ngủ lúc nói → is sleeping.' },
     { id:'b2', sec:'B', type:'fill', q:'The baby usually ______ (sleep) for two hours after lunch.',
       acc:['sleeps'], ans:'sleeps',
@@ -89,7 +89,7 @@
 
     /* ===== D. Hội thoại ===== */
     { id:'d1', sec:'D', type:'fill', q:'A: Can you turn the TV off?  B: Wait — I ______ (watch) the news.',
-      acc:["'m watching",'am watching',"i'm watching",'i am watching'], ans:"'m watching",
+      acc:["'m watching",'am watching'], ans:"'m watching",
       exp:'Đang xem ngay lúc nói → tiếp diễn: I\'m watching.' },
     { id:'d2', sec:'D', type:'fill', q:'A: ______ (you / watch) the news every evening?  B: Not every evening, just sometimes.',
       acc:['do you watch'], ans:'Do you watch',

@@ -25,7 +25,7 @@
       exp:'Tên địa danh/người + Palace/Station/Airport… → không the: Buckingham Palace.' },
     { id:'a4', sec:'A', type:'mcq', q:'She got her degree at ______.',
       opts:['the Harvard University','the University Harvard','Harvard University'], a:2,
-      exp:'Tên riêng + University → không the. Nhưng: the University of Harvard (có of).' },
+      exp:'Tên riêng + University → không the. Nhưng nếu có of thì dùng the: Cambridge University / the University of Cambridge.' },
     { id:'a5', sec:'A', type:'mcq', q:'Let\'s meet outside ______ at six.',
       opts:['McDonald\'s','the McDonald\'s'], a:0,
       exp:'Cửa hàng/nhà hàng mang tên người, tận cùng -\'s → không the.' },

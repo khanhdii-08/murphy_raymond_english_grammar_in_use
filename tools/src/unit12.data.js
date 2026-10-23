@@ -198,11 +198,11 @@
 
     { id:'h15', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
       q:'Linh is ill. She became ill on Tuesday. → She ______ Tuesday.',
-      acc:['has been ill since'], ans:'has been ill since',
+      acc:['has been ill since',"'s been ill since"], ans:'has been ill since',
       exp:'Tuesday là mốc → She has been ill since Tuesday.' },
     { id:'h16', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
       q:'Linh is ill. She became ill three days ago. → She ______ three days.',
-      acc:['has been ill for'], ans:'has been ill for',
+      acc:['has been ill for',"'s been ill for"], ans:'has been ill for',
       exp:'three days là độ dài → She has been ill for three days.' },
     { id:'h17', sec:'G', type:'fill', sub:'Bài 12.3 – Read the situations and complete the sentences',
       q:'Quang is married. He\'s been married for two years. → He got ______.',

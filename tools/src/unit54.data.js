@@ -237,7 +237,7 @@
       exp:'what + to do.' },
     { id:'h24', sec:'G', type:'fill', sub:'Bài 54.5 – what/how/where/whether + to ...',
       q:'Once you\'ve learnt ______, you never forget. (swim)',
-      acc:['how to swim'], ans:'how to swim',
+      acc:['how to swim','to swim'], ans:'how to swim',
       exp:'how + to V = cách làm.' },
     { id:'h25', sec:'G', type:'fill', sub:'Bài 54.5 – what/how/where/whether + to ...',
       q:'I\'ve been offered a job in Hanoi, but I haven\'t decided ______ or not. (accept it)',

@@ -218,6 +218,6 @@
       exp:'"I don\'t have a driving licence" → she didn\'t have.' },
     { id:'h20', sec:'G', type:'fill', sub:'Bài 47.2 – Somebody says something you didn\'t expect',
       q:'10. A: The museum is free on Sundays.  B: Is it? The guide said it ______ (cost) 50,000 dong.',
-      acc:['cost','costs'], ans:'cost',
-      exp:'"It costs 50,000 dong" → it cost (quá khứ của cost vẫn là cost). Nếu thông tin vẫn đúng ở hiện tại cũng có thể giữ costs (xem Unit 48).' }
+      acc:['cost'], ans:'cost',
+      exp:'Lời cũ trái với điều A vừa nói → phải dùng quá khứ: cost (V2 của cost vẫn là cost). Xem Unit 48.' }
   ];

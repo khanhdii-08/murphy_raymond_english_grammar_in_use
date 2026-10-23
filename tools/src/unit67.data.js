@@ -145,7 +145,7 @@
       exp:'hear him + V nguyên mẫu: arrive (hành động đã xảy ra).' },
     { id:'h2', sec:'G', type:'fill', sub:'Bài 67.1 – Complete the answers',
       q:'"How do you know I took the cake?" — "I know because I saw you ______."',
-      acc:['take it','do it'], ans:'take it',
+      acc:['take it','do it','take the cake'], ans:'take it',
       exp:'see you + V nguyên mẫu + it: I saw you take it.' },
     { id:'h3', sec:'G', type:'fill', sub:'Bài 67.1 – Complete the answers',
       q:'"Did the alarm go off?" — "I don\'t think so. I didn\'t hear ______."',

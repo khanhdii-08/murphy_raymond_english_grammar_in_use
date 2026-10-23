@@ -76,7 +76,7 @@
       exp:'Hỏi giá: How much + did + S + V?' },
     { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (only / I / a few / know / words)',
       tokens:['I','know','only','a','few','words'],
-      acc:['i know only a few words'], ans:'I know only a few words.',
+      acc:['i know only a few words','i only know a few words'], ans:'I know only a few words.',
       exp:'only + a few + danh từ số nhiều.' },
     { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (there / much / wasn\'t / traffic / today)',
       tokens:['There',"wasn't",'much','traffic','today'],

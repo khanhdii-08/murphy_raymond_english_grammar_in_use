@@ -15,7 +15,7 @@
 
     /* ===== A. MCQ ===== */
     { id:'a1', sec:'A', type:'mcq', q:'Can I pay ______ credit card?',
-      opts:['with a','by','by a','in'], a:1,
+      opts:['on','by','by a','in'], a:1,
       exp:'by + danh từ KHÔNG mạo từ để nói cách thức: by credit card, by phone, by email.' },
     { id:'a2', sec:'A', type:'mcq', q:'We hadn\'t planned it. We met ______.',
       opts:['by chance','by the chance','on chance','in chance'], a:0,
@@ -29,7 +29,7 @@
     { id:'a5', sec:'A', type:'mcq', q:'They came ______ their car.',
       opts:['by','on','in','with'], a:2,
       exp:'Có my/their/the... → không dùng by; ô tô, taxi → in their car.' },
-    { id:'a6', sec:'A', type:'mcq', q:'The window was broken ______ a stone.',
+    { id:'a6', sec:'A', type:'mcq', q:'Somebody broke the window ______ a stone.',
       opts:['by','with','from','of'], a:1,
       exp:'with + dụng cụ/vật mà ai đó dùng. Nếu nói người làm: broken by some children.' },
     { id:'a7', sec:'A', type:'mcq', q:'"Hamlet" is a play ______ Shakespeare.',

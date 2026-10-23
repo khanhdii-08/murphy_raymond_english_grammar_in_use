@@ -216,7 +216,7 @@
       exp:'Trải nghiệm trong đời (chưa từng) → I haven\'t been.' },
     { id:'h19', sec:'G', type:'fill', sub:'Bài 14.3 – Present perfect or past simple',
       q:'When ______ at the hotel last night, I was exhausted. (I / arrive)',
-      acc:['i arrived','i got'], ans:'I arrived',
+      acc:['i arrived'], ans:'I arrived',
       exp:'last night → I arrived.' },
     { id:'h20', sec:'G', type:'fill', sub:'Bài 14.3 – Present perfect or past simple',
       q:'A: ______ to Nam recently? (you / speak)',

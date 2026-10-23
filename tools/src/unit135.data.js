@@ -126,7 +126,7 @@
       acc:['it depends on you','that depends on you'], ans:'It depends on you.',
       exp:'depend ON somebody.' },
     { id:'f5', sec:'F', type:'mcq', q:'Sunscreen protects your skin ______ UV rays.',
-      opts:['of','against','for','from'], a:3,
+      opts:['of','with','for','from'], a:3,
       exp:'protect sb/sth FROM something (sách học from).' },
     { id:'f6', sec:'F', type:'fill', q:'Everyone said he was to blame ______ the failure of the project.',
       acc:['for'], ans:'for',

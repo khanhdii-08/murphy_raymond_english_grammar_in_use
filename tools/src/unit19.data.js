@@ -219,7 +219,7 @@
       exp:'Kế hoạch cá nhân → I\'m not using.' },
     { id:'h19', sec:'G', type:'fill', sub:'Bài 19.4 – Present continuous or present simple',
       q:'Tuan ______ (come) to see us tomorrow. ______ (he / travel) by plane and his plane ______ (arrive) at 9.40. (3 đáp án cách nhau bằng " / ")',
-      acc:["is coming / he's travelling / arrives","is coming / he is travelling / arrives","'s coming / he's travelling / arrives","is coming / he's traveling / arrives","is coming he's travelling arrives"],
+      acc:["is coming / he's travelling / arrives","is coming / he's traveling / arrives","is coming / he is travelling / arrives","is coming / he is traveling / arrives","'s coming / he's travelling / arrives","'s coming / he's traveling / arrives","'s coming / he is travelling / arrives","'s coming / he is traveling / arrives"],
       ans:'is coming / He\'s travelling / arrives',
       exp:'Kế hoạch của người → is coming, is travelling; giờ máy bay → arrives.' }
   ];

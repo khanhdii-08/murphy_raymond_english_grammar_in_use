@@ -62,8 +62,8 @@
       acc:['had been looking','had looked',"'d been looking","'d looked"], ans:'had been looking',
       exp:'Vế if loại 3 có thể ở dạng tiếp diễn: had been looking (hoặc had looked).' },
     { id:'b8', sec:'B', type:'fill', q:'If we had left home at 7, we ______ (be) at the airport by now.',
-      acc:["would be","'d be"], ans:'would be',
-      exp:'Hỗn hợp: if + had V3 (quá khứ), kết quả hiện tại (by now) → would be.' },
+      acc:["would be","'d be","would have been","'d have been"], ans:'would be',
+      exp:'Hỗn hợp: if + had V3 (quá khứ), kết quả hiện tại (by now) → would be. (would have been cũng chấp nhận được.)' },
 
     /* ===== C. Sắp xếp ===== */
     { id:'c1', sec:'C', type:'order', q:'Sắp xếp: (if / I\'d / known / I / would / have / called)',

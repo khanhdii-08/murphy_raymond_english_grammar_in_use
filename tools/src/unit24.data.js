@@ -59,7 +59,7 @@
       acc:['will have cooked','\'ll have cooked','will have made','\'ll have made'], ans:'will have cooked',
       exp:'by the time… → nấu xong trước khi bạn về → will have cooked.' },
     { id:'b7', sec:'B', type:'fill', q:'In 2030 this company ______ (exist) for 100 years.',
-      acc:['will have existed','\'ll have existed','will have been existing'], ans:'will have existed',
+      acc:['will have existed','\'ll have existed'], ans:'will have existed',
       exp:'Khoảng thời gian tính tới mốc tương lai → will have existed.' },
     { id:'b8', sec:'B', type:'fill', q:'I can\'t meet you at 6. I ______ (still / work) then.',
       acc:['will still be working','\'ll still be working'], ans:'will still be working',

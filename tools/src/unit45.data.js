@@ -30,7 +30,7 @@
       opts:['suppose','supposing','said that','supposed'], a:3,
       exp:'be supposed to = be said to (nghe nói). Luôn là supposed (có -ed).' },
     { id:'a6', sec:'A', type:'mcq', q:'The train ______ at 7.15, but it didn\'t leave until 8.',
-      opts:['is supposed to leave','supposed to leave','was supposed to leave','was supposed to have left'], a:2,
+      opts:['is supposed to leave','supposed to leave','was supposed to leave','was supposing to leave'], a:2,
       exp:'Theo kế hoạch (trong quá khứ) nhưng thực tế khác → was supposed to + V.' },
     { id:'a7', sec:'A', type:'mcq', q:'You ______ use your phone in the exam room. It\'s against the rules.',
       opts:['are supposed to','aren\'t supposed to','didn\'t suppose to','are not suppose to'], a:1,

@@ -166,11 +166,11 @@
 
     { id:'h7', sec:'G', type:'fill', sub:'Bài 61.2 – What do you say? Use I\'m (not) used to …',
       q:'You have always eaten very spicy food. Friend: "Isn\'t this too spicy for you?" You: "No, ______."',
-      acc:["i'm used to eating spicy food",'i am used to eating spicy food',"i'm used to it","i'm used to spicy food"], ans:'I\'m used to eating spicy food',
+      acc:["i'm used to eating spicy food",'i am used to eating spicy food',"i'm used to it",'i am used to it',"i'm used to spicy food",'i am used to spicy food'], ans:'I\'m used to eating spicy food',
       exp:'Việc quen thuộc từ lâu → I\'m used to + V-ing/N.' },
     { id:'h8', sec:'G', type:'fill', sub:'Bài 61.2 – What do you say? Use I\'m (not) used to …',
       q:'You have always walked to work. Friend: "Isn\'t it a long way to walk every day?" You: "Yes, but ______."',
-      acc:["i'm used to walking to work",'i am used to walking to work',"i'm used to walking","i'm used to it"], ans:'I\'m used to walking to work',
+      acc:["i'm used to walking to work",'i am used to walking to work',"i'm used to walking",'i am used to walking',"i'm used to it",'i am used to it'], ans:'I\'m used to walking to work',
       exp:'I\'m used to + V-ing.' },
     { id:'h9', sec:'G', type:'fill', sub:'Bài 61.2 – What do you say? Use I\'m (not) used to …',
       q:'You usually sleep a lot, but last night you slept only four hours. Friend: "You look tired." You: "Yes, ______ so little."',

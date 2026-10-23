@@ -36,7 +36,7 @@
       opts:['should be','should have been','should being','ought be'], a:1,
       exp:'Lẽ ra đã phải có mặt từ 1 tiếng trước (nhưng chưa) → should have been.' },
     { id:'a8', sec:'A', type:'mcq', q:'That child is riding a bike without a helmet. He ______ one.',
-      opts:['should wear','should be wearing','should have worn','should wearing'], a:1,
+      opts:['should to wear','should be wearing','should have worn','should wearing'], a:1,
       exp:'Lẽ ra ngay lúc này phải đang đội → should be + V-ing.' },
 
     /* ===== B. Điền từ ===== */

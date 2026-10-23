@@ -41,7 +41,7 @@
 
     /* ===== B. Điền từ ===== */
     { id:'b1', sec:'B', type:'fill', q:'I ______ (never / see) snow.',
-      acc:["'ve never seen",'have never seen',"i've never seen",'i have never seen'], ans:'have never seen',
+      acc:["'ve never seen",'have never seen'], ans:'have never seen',
       exp:'Kinh nghiệm trong đời, phủ định → have never seen.' },
     { id:'b2', sec:'B', type:'fill', q:'______ (you / ever / try) bun cha?',
       acc:['have you ever tried'], ans:'Have you ever tried',

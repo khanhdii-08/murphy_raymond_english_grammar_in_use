@@ -38,6 +38,12 @@ h2{font-size:1.15rem;color:var(--primary-2);margin:26px 0 12px}
 .unit h3{margin:10px 0 6px;font-size:1.05rem;line-height:1.35}
 .unit p{margin:0;color:var(--muted);font-size:.88rem}
 .unit .meta{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.unit .meta b.done{background:#ecfdf5;color:#15803d}
+.unit .meta b.due{background:#fef3c7;color:#92400e}
+.prog{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin:0 0 12px;font-size:.9rem;color:var(--muted)}
+.prog #progText b{color:var(--ink)}
+[data-theme="dark"] .unit .meta b.done{background:#0f2a1c;color:#86efac}
+[data-theme="dark"] .unit .meta b.due{background:#3a2a07;color:#fcd34d}
 .unit .meta b{background:#eef2ff;color:var(--primary-2);font-weight:600;font-size:.75rem;
   padding:3px 9px;border-radius:999px}
 .unit.soon{opacity:.62;pointer-events:none}
@@ -128,6 +134,10 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px
 
   <h2>📚 Danh sách unit</h2>
   <input id="q" class="search no-print" type="search" placeholder="🔎 Tìm unit: số, tên chủ đề (vd: 25, passive, wish)…" autocomplete="off">
+  <div id="prog" class="prog no-print" hidden>
+    <span id="progText"></span>
+    <label><input type="checkbox" id="onlyDue"> Chỉ hiện unit đến hạn ôn</label>
+  </div>
   <!-- UNITS:START -->
   <h3 class="group">Present and past <small>Unit 1–6</small></h3>
   <div class="grid">
@@ -1071,22 +1081,48 @@ footer{text-align:center;color:var(--muted);font-size:.82rem;padding:22px 0 34px
   </footer>
 </div>
 <script>
+/* Tiến độ từng unit (đọc từ localStorage của các trang unit) + lịch ôn tập 3 / 7 / 14 / 30 ngày */
+(function(){
+  var DAY=864e5, GAP=[3,7,14,30], now=Date.now(), done=0, due=0;
+  document.querySelectorAll('a.unit').forEach(function(a){
+    var n=(a.getAttribute('href').match(/unit(\d+)\.html/)||[])[1], p=null;
+    try{ p=JSON.parse(localStorage.getItem('egu4_unit'+n+'_progress')); }catch(e){}
+    if(!p||!p.attempts) return;
+    done++;
+    var meta=a.querySelector('.meta'), b=document.createElement('b');
+    b.className='done'; b.textContent='✓ Cao nhất '+(p.best||0)+'%'; meta.appendChild(b);
+    if(p.last){
+      var next=p.last+GAP[Math.min(p.attempts,GAP.length)-1]*DAY, d=document.createElement('b');
+      if(now>=next){ d.className='due'; d.textContent='🔁 Đến hạn ôn'; a.setAttribute('data-due','1'); due++; }
+      else{ d.textContent='Ôn lại sau '+Math.ceil((next-now)/DAY)+' ngày'; }
+      meta.appendChild(d);
+    }
+  });
+  if(!done) return;
+  document.getElementById('prog').hidden=false;
+  document.getElementById('progText').innerHTML='Đã học <b>'+done+'</b> / '+
+    document.querySelectorAll('a.unit').length+' unit · <b>'+due+'</b> unit đến hạn ôn';
+})();
 /* Lọc unit theo số hoặc từ khoá */
 (function(){
   var q=document.getElementById('q'); if(!q) return;
-  q.addEventListener('input',function(){
+  var onlyDue=document.getElementById('onlyDue');
+  function filter(){
     var v=q.value.trim().toLowerCase(), hits=0;
     document.querySelectorAll('.grid').forEach(function(g){
       var any=0;
       g.querySelectorAll('.unit').forEach(function(u){
         var num=(u.querySelector('.num')||{}).textContent||'';
         var ok=!v||(/^\d+$/.test(v)?num.replace(/\D/g,'')===v:u.textContent.toLowerCase().indexOf(v)>-1);
+        if(onlyDue&&onlyDue.checked&&!u.hasAttribute('data-due')) ok=false;
         u.hidden=!ok; if(ok){any++;hits++;}
       });
       g.hidden=!any; var h=g.previousElementSibling; if(h&&h.classList.contains('group')) h.hidden=!any;
     });
     document.getElementById('noHit').hidden=hits>0;
-  });
+  }
+  q.addEventListener('input',filter);
+  if(onlyDue) onlyDue.addEventListener('change',filter);
 })();
 </script>
 </body>

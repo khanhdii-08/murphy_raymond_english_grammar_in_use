@@ -122,7 +122,7 @@
     { id:'f3', sec:'F', type:'mcq', q:'She plays the guitar very ______.',
       opts:['well','good'], a:0,
       exp:'Cách chơi → trạng từ well.' },
-    { id:'f4', sec:'F', type:'fill', q:'Viết lại: "tuần này và tuần sau nữa" (next week and the week after) → the ______ two weeks',
+    { id:'f4', sec:'F', type:'fill', q:'Viết lại: "tuần sau và tuần sau nữa" (next week and the week after) → the ______ two weeks',
       acc:['next'], ans:'next',
       exp:'the next two weeks.' },
     { id:'f5', sec:'F', type:'mcq', q:'Chọn cụm ĐÚNG:',

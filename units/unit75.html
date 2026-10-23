@@ -126,6 +126,8 @@ mark{background:#fef08a;padding:0 3px;border-radius:4px}
 body[data-mode="study"] .qcard.checked .answer-box{display:block}
 body.revealed .answer-box{display:block}
 body[data-mode="test"] .check-one{display:none}
+body[data-mode="test"] .ovr{display:none}
+.ovr[hidden]{display:none}
 .qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
 .vtag{font-weight:700;font-size:.85rem}
 .vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
@@ -356,7 +358,7 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
     <div class="card">
       <h2>2.1 · 8 ví dụ thực tế (đời sống · công việc · thi cử)</h2>
       <div class="ex">🐕 <b class="en">I've always been afraid of <mark>dogs</mark>.</b> <span class="note">(đời sống — nói về nỗi sợ chung)</span></div>
-      <div class="ex">🎵 <b class="en">I like the film, but <mark>the music</mark> was a bit loud.</b> <span class="note">(giải trí — nhận xét bộ phim cụ thể)</span></div>
+      <div class="ex">🎵 <b class="en">I liked the film, but <mark>the music</mark> was a bit loud.</b> <span class="note">(giải trí — nhận xét bộ phim cụ thể)</span></div>
       <div class="ex">🏙️ <b class="en"><mark>Crime</mark> and <mark>pollution</mark> are big problems in modern cities.</b> <span class="note">(IELTS Writing — vấn đề xã hội)</span></div>
       <div class="ex">💳 <b class="en"><mark>Most shops</mark> here accept card payments.</b> <span class="note">(du lịch — hỏi cách thanh toán)</span></div>
       <div class="ex">🧂 <b class="en">Could you pass <mark>the salt</mark>, please?</b> <span class="note">(bữa ăn — vật cụ thể trên bàn)</span></div>
@@ -704,8 +706,9 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
      ========================================================= */
   function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  /* "/", "\u2026", "..." gi\u1eefa c\u00e1c ph\u1ea7n (c\u00e2u nhi\u1ec1u ch\u1ed7 tr\u1ed1ng) \u0111\u01b0\u1ee3c coi nh\u01b0 d\u1ea5u c\u00e1ch */
   function norm(s){return String(s==null?'':s).toLowerCase()
-    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+    .replace(/[\u2018\u2019]/g,"'").replace(/\s*(\.{2,}|\u2026|\/)\s*/g,' ').replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
   function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
     var t=a[i];a[i]=a[j];a[j]=t;}return a;}
   function $(id){return document.getElementById(id);}
@@ -752,13 +755,31 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
   }
   function answerBox(q){
     var right;
-    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    if(q.type==='mcq') right=q.opts[q.a];
     else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
     else if(q.type==='self') right=q.sample;
     else right=q.ans;
     var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
     return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
       '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  /* Câu điền "tự do" (dịch, viết lại cả câu): không có chỗ trống ______ */
+  function isFree(q){ return q.type==='fill' && !/_{3,}/.test(q.q); }
+  function fillOk(q,v){
+    var nv=norm(v);
+    if(q.acc.some(function(a){return norm(a)===nv;})) return true;
+    /* Câu tường thuật có "(that)": chấp nhận khi người học gõ thêm "that" */
+    if(/\(that\)/i.test(q.q) && nv.indexOf('that ')===0 &&
+       q.acc.some(function(a){return norm(a)===nv.slice(5);})) return true;
+    /* Gõ cả câu (hoặc một đoạn dài hơn chỗ trống): đúng nếu đoạn đó nằm trong câu hoàn chỉnh */
+    var blanks=q.q.match(/_{3,}/g);
+    if(!blanks||blanks.length!==1) return false;
+    var base=q.q.replace(/\([^)]*\)/g,' ');
+    return q.acc.some(function(a){
+      var na=norm(a); if(!na) return false;
+      var full=' '+norm(base.replace(/_{3,}/,' '+a+' '))+' ';
+      return (' '+nv+' ').indexOf(' '+na+' ')>-1 && full.indexOf(' '+nv+' ')>-1;
+    });
   }
   function renderQ(q,n){
     var body='';
@@ -788,12 +809,23 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
       (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
       '<p class="qtext">'+esc(q.q)+'</p>'+body+
       '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
-      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+      '<span class="vtag"></span>'+(isFree(q)?'<button type="button" class="btn-mini ovr" hidden>'+
+      '✓ Tôi viết đúng (khác đáp án mẫu)</button>':'')+'</div>'+answerBox(q)+'</div>';
+  }
+  /* Trộn câu trong từng nhóm (cùng phần + cùng bài của sách), giữ nguyên thứ tự các bài */
+  function orderPool(pool){
+    var groups=[],idx={};
+    pool.forEach(function(q){
+      var k=q.sec+'|'+(q.sub||'');
+      if(!(k in idx)){idx[k]=groups.length;groups.push([]);}
+      groups[idx[k]].push(q);
+    });
+    return [].concat.apply([],groups.map(shuffle));
   }
   function render(wrongOnly){
     var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
     if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
-    current=shuffle(pool).map(prep);
+    current=orderPool(pool).map(prep);
     document.body.classList.remove('revealed');
     $('result').hidden=true;
     var html='',sub='';
@@ -825,7 +857,8 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
     if(q.type==='fill'){
       var inp=card.querySelector('.ans-input'),v=inp.value;
       if(!norm(v)) return {v:'',ok:false,empty:true};
-      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+      var ovr=card.getAttribute('data-ovr');
+      return {v:v,ok:fillOk(q,v)||(ovr!==null&&ovr===norm(v)),empty:false};
     }
     if(q.type==='order'){
       var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
@@ -861,6 +894,13 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
       }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
       return res;
     }
+    var ob=card.querySelector('.ovr');
+    if(ob) ob.hidden=res.ok||!!res.empty;
+    /* Chế độ Học: câu bỏ trống không bị tô đỏ */
+    if(res.empty&&mode==='study'){
+      tag.className='vtag'; tag.textContent='○ Chưa trả lời';
+      return res;
+    }
     if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
     if(q.type==='mcq'){
       var labels=card.querySelectorAll('.opt');
@@ -875,11 +915,14 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
     tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
     return res;
   }
-  function gradeAll(){
-    stopTimer(); submitted=true;
-    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+  /* update=true: chấm lại sau khi người học bấm "Tôi viết đúng" (không tính thêm lần làm) */
+  function gradeAll(update){
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0,skipped=0;
     current.forEach(function(q){
       var res=gradeOne(q); if(!res) return;
+      /* Chế độ Học: câu bỏ trống không tính điểm, không đưa vào danh sách câu sai */
+      if(res.empty&&mode==='study'){ skipped++; return; }
+      if(res.self&&!res.graded&&mode==='study') return;
       attempted.push(q.id);
       if(res.self){
         selfAll++;
@@ -891,25 +934,35 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
       total+=w; score+=res.ok?w:0;
       if(!res.ok) wrongIds.push(q.id);
     });
+    if(!update&&mode==='study'&&!total&&!selfAll){
+      alert('Bạn chưa trả lời câu nào. Hãy làm ít nhất một câu rồi nộp bài.');
+      return;
+    }
+    stopTimer(); submitted=true;
     document.body.classList.add('revealed');
     /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
     var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
     progress.wrong=remain.concat(wrongIds);
-    progress.attempts++;
+    if(!update) progress.attempts++;
     var pct=total?Math.round(score/total*100):0;
     if(pct>progress.best) progress.best=pct;
-    var secs=t0?Math.round((Date.now()-t0)/1000):0;
-    progress.hist.push({pct:pct,sec:secs});
+    var secs=update&&progress.hist.length?progress.hist[progress.hist.length-1].sec:
+      (t0?Math.round((Date.now()-t0)/1000):0);
+    var entry={pct:pct,sec:secs,at:Date.now(),n:total};
+    if(update&&progress.hist.length) progress.hist[progress.hist.length-1]=entry;
+    else progress.hist.push(entry);
     if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    progress.last=entry.at; progress.lastPct=pct;
     save(); updateStats();
-    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds,skipped);
   }
-  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds,skipped){
     var big=$('rPct');
     big.textContent=pct+'%';
     big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
     var m=Math.floor(secs/60),s=secs%60;
-    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+    $('rMeta').textContent='Đúng '+score+'/'+total+' · Sai '+(total-score)+
+      (skipped?' · Bỏ qua '+skipped+' câu (không tính điểm)':'')+
       ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
       ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
     $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
@@ -935,6 +988,8 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
     current.forEach(function(q){
       var card=findCard(q.id); if(!card) return;
       card.classList.remove('ok','bad','checked');
+      card.removeAttribute('data-ovr');
+      var ob=card.querySelector('.ovr'); if(ob) ob.hidden=true;
       var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
       if(q.type==='mcq'){
         [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
@@ -1013,6 +1068,15 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
       if(q){ gradeOne(q); card.classList.add('checked'); }
       return;
     }
+    if(t.classList.contains('ovr')){
+      var q3=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q3){
+        card.setAttribute('data-ovr',norm(card.querySelector('.ans-input').value));
+        gradeOne(q3); card.classList.add('checked');
+        if(submitted) gradeAll(true);
+      }
+      return;
+    }
     if(t.classList.contains('sk')||t.classList.contains('sb')){
       var v=t.getAttribute('data-v');
       var cur=card.getAttribute('data-self')||'';
@@ -1030,8 +1094,10 @@ I'm reading about the history of Rome.          (lịch sử CỦA Rome → cụ
     while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
     if(card&&e.target.classList.contains('ans-input')){
       e.preventDefault();
+      /* Chế độ Kiểm tra: Enter không chấm, để không lộ đúng/sai trước khi nộp */
+      if(mode==='test') return;
       var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
-      if(q) gradeOne(q);
+      if(q){ gradeOne(q); card.classList.add('checked'); }
     }
   });
 

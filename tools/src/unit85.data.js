@@ -76,7 +76,7 @@
       exp:'Phủ định với didn\'t → anyone.' },
     { id:'c3', sec:'C', type:'order', q:'Sắp xếp: (if / any / you / have / questions / ask me)',
       tokens:['If','you','have','any','questions','ask','me'],
-      acc:['if you have any questions ask me'], ans:'If you have any questions, ask me.',
+      acc:['if you have any questions ask me','ask me if you have any questions'], ans:'If you have any questions, ask me.',
       exp:'Sau if → any questions.' },
     { id:'c4', sec:'C', type:'order', q:'Sắp xếp: (someone / their / has / forgotten / umbrella)',
       tokens:['Someone','has','forgotten','their','umbrella'],

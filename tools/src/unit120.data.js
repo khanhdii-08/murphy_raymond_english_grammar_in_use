@@ -221,7 +221,7 @@
 
     { id:'h20', sec:'G', type:'fill', sub:'Bài 120.4 – By the time ...',
       q:'I planned to catch the 8 o\'clock bus, but I left home late. → ______ (I / get) to the bus stop, the bus had already gone.',
-      acc:['by the time i got','by the time i had got',"by the time i'd got",'by the time i reached'], ans:'By the time I got',
+      acc:['by the time i got','by the time i had got',"by the time i'd got"], ans:'By the time I got',
       exp:'By the time + quá khứ đơn (hoặc quá khứ hoàn thành) → mệnh đề chính had already gone.' },
     { id:'h21', sec:'G', type:'fill', sub:'Bài 120.4 – By the time ...',
       q:'I wanted to watch the news after dinner, but dinner took ages. → ______ (we / finish) dinner, the news was over.',
@@ -233,7 +233,7 @@
       exp:'By the time + chủ ngữ + V2 → mệnh đề chính quá khứ hoàn thành (had gone).' },
     { id:'h23', sec:'G', type:'fill', sub:'Bài 120.4 – By the time ...',
       q:'The walk to the waterfall was very long. We only had a few minutes there. → ______ (we / get) to the waterfall, we had to turn back.',
-      acc:['by the time we got','by the time we had got',"by the time we'd got",'by the time we reached'], ans:'By the time we got',
+      acc:['by the time we got','by the time we had got',"by the time we'd got"], ans:'By the time we got',
       exp:'By the time we got to... = vào lúc chúng tôi đến được thác thì đã phải quay về.' }
   ];
 

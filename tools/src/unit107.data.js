@@ -122,7 +122,7 @@
     { id:'f3', sec:'F', type:'fill', q:'Viết lại: "The test was easier than I thought." → The test wasn\'t ______ I thought.',
       acc:['as difficult as','so difficult as','as hard as','so hard as'], ans:'as difficult as',
       exp:'easier than ⇄ not as difficult as.' },
-    { id:'f4', sec:'F', type:'mcq', q:'He\'s not as clever as ______.',
+    { id:'f4', sec:'F', type:'mcq', q:'He\'s not as clever as ______. (cách nói tự nhiên nhất)',
       opts:['she','her','hers is'], a:1,
       exp:'as her (thông dụng) hoặc as she is. "as she" đơn lẻ không tự nhiên.' },
     { id:'f5', sec:'F', type:'fill', q:'Dịch: "Tôi đến nhanh nhất có thể." → I came as quickly ______ I could.',

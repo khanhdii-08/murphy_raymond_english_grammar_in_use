@@ -89,8 +89,8 @@
 
     /* ===== D. Hội thoại ===== */
     { id:'d1', sec:'D', type:'fill', q:'A: Did you do ______ shopping today?  B: No, not much. Just some bread.',
-      acc:['much'], ans:'much',
-      exp:'shopping không đếm được, câu phủ định/nghi vấn → much.' },
+      acc:['much','any'], ans:'much',
+      exp:'shopping không đếm được, câu phủ định/nghi vấn → much (any cũng đúng).' },
     { id:'d2', sec:'D', type:'fill', q:'A: How ______ cups do we need?  B: Six, I think.',
       acc:['many'], ans:'many',
       exp:'cups đếm được → How many.' },

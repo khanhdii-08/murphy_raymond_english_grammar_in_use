@@ -158,7 +158,7 @@
       q:'2. (Mua căn nhà cũ, sửa lại, giờ rất đẹp.) They bought an old house and ______. It looks great now. (3 từ)', acc:['did it up'], ans:'did it up',
       exp:'do up a building = sửa sang; đại từ kẹp giữa.' },
     { id:'h4', sec:'G', type:'fill', sub:'Bài 144.2 – Complete (two or three words)',
-      q:'3. (Bạn đang buồn, cả nhóm rủ đi ăn.) Kim was depressed, so we took her to the cinema to ______. (3 từ)', acc:['cheer her up'], ans:'cheer her up',
+      q:'3. (Bạn đang buồn, cả nhóm rủ đi xem phim.) Kim was depressed, so we took her to the cinema to ______. (3 từ)', acc:['cheer her up'], ans:'cheer her up',
       exp:'cheer somebody up = làm ai vui lên.' },
 
     { id:'h5', sec:'G', type:'fill', sub:'Bài 144.3 – Complete using a verb + up',

@@ -84,7 +84,7 @@
       exp:'neither + N + nor + N; động từ have để khẳng định.' },
     { id:'c5', sec:'C', type:'order', q:'Sắp xếp: (my / both / parents / from / are / Hue)',
       tokens:['Both','my','parents','are','from','Hue'],
-      acc:['both my parents are from hue'], ans:'Both my parents are from Hue.',
+      acc:['both my parents are from hue','my parents are both from hue'], ans:'Both my parents are from Hue.',
       exp:'Both + my + N: không cần of.' },
 
     /* ===== D. Hội thoại ===== */
@@ -129,7 +129,7 @@
       opts:['neither','none','either'], a:1,
       exp:'Năm công ty (nhiều hơn hai) → none.' },
     { id:'f6', sec:'F', type:'fill', q:'Dịch: "Cả hai chúng tôi đều mệt."',
-      acc:['both of us were tired','we were both tired','both of us are tired','we are both tired'],
+      acc:['both of us were tired','we were both tired','both of us are tired','we are both tired','we\'re both tired'],
       ans:'Both of us were tired. / We were both tired.',
       exp:'Both of us (bắt buộc of) hoặc We were both ... (both đứng sau be).' },
     { id:'f7', sec:'F', type:'mcq', q:'We can leave ______ today or tomorrow — whichever you prefer.',
@@ -189,7 +189,7 @@
       q:'Hoa doesn\'t have a bike. Tuan doesn\'t have one either. → ______ has a bike.', acc:['neither hoa nor tuan'], ans:'Neither Hoa nor Tuan',
       exp:'Neither X nor Y + động từ khẳng định (has).' },
     { id:'h16', sec:'G', type:'fill', sub:'Bài 89.4 – both ... and / neither ... nor / either ... or',
-      q:'Peter doesn\'t eat meat and he doesn\'t eat fish. → Peter ______.', acc:['neither eats meat nor fish','eats neither meat nor fish'], ans:'Peter eats neither meat nor fish.',
+      q:'Peter doesn\'t eat meat and he doesn\'t eat fish. → Peter ______.', acc:['eats neither meat nor fish'], ans:'Peter eats neither meat nor fish.',
       exp:'neither ... nor với động từ khẳng định: eats neither meat nor fish.' },
     { id:'h17', sec:'G', type:'fill', sub:'Bài 89.4 – both ... and / neither ... nor / either ... or',
       q:'The trip was tiring. It was expensive too. → The trip was ______.', acc:['both tiring and expensive','both expensive and tiring'], ans:'both tiring and expensive',
@@ -198,7 +198,7 @@
       q:'Is her name Linh? Or is it Lan? It\'s one of the two. → Her name is ______.', acc:['either linh or lan','either lan or linh'], ans:'either Linh or Lan',
       exp:'Một trong hai → either ... or ...' },
     { id:'h19', sec:'G', type:'fill', sub:'Bài 89.4 – both ... and / neither ... nor / either ... or',
-      q:'We can go by train or we can drive — whichever you like. → We can ______.', acc:['either go by train or drive','go either by train or drive'], ans:'either go by train or drive',
+      q:'We can go by train or we can drive — whichever you like. → We can ______.', acc:['either go by train or drive','go either by train or by car'], ans:'either go by train or drive',
       exp:'either ... or ... đặt trước hai lựa chọn song song.' },
 
     { id:'h20', sec:'G', type:'fill', sub:'Bài 89.5 – neither / either / none / any',

@@ -158,7 +158,7 @@
       exp:'Sau chỗ trống là động từ "were" → cần that/which làm chủ ngữ.' },
     { id:'h5', sec:'G', type:'fill', sub:'Bài 93.1 – Correct the sentences where necessary',
       q:'Sửa câu: "What\'s the strangest thing it has ever happened to you?" → What\'s the strangest thing ______ ever happened to you?',
-      acc:['that has','which has'], ans:'that has',
+      acc:['that has','which has',"that's"], ans:'that has',
       exp:'"it" sai — cần that làm chủ ngữ của "has happened": the strangest thing that has ever happened.' },
     { id:'h6', sec:'G', type:'mcq', sub:'Bài 93.1 – Correct the sentences where necessary',
       q:'"What\'s the best meal you\'ve ever eaten?" Câu này:',

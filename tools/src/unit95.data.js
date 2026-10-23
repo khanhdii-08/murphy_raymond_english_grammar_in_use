@@ -175,7 +175,7 @@
       exp:'Mr Hai là tên riêng → mệnh đề bổ sung: phẩy + who + động từ.' },
     { id:'h19', sec:'G', type:'fill', sub:'Bài 95.1 – Make one sentence from two (Type 2)',
       q:'The new bridge will open in May. (It is two kilometres long.) → The new bridge, ______ two kilometres long, will open in May.',
-      acc:['which is',"which's"], ans:'which is',
+      acc:['which is'], ans:'which is',
       exp:'"The new bridge" đã xác định → which + động từ, đặt giữa 2 dấu phẩy.' },
 
     { id:'h8', sec:'G', type:'mcq', sub:'Bài 95.2 – Type 1 or Type 2? (commas where necessary)',

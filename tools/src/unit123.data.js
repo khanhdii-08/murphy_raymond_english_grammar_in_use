@@ -162,8 +162,8 @@
       exp:'Người đứng tại cổng → at the gate; chim đậu trên cổng → on the gate.' },
     { id:'h6', sec:'G', type:'mcq', sub:'Bài 123.1 – Trả lời câu hỏi về tranh (in/at/on)',
       q:'Tranh: bọn trẻ chơi trên bãi cát cạnh biển. Where are the children playing?',
-      opts:['In the beach.','At the beach.','On the beach.'], a:2,
-      exp:'Key: On the beach (trên bãi biển, như một bề mặt).' },
+      opts:['In the beach.','Into the beach.','On the beach.'], a:2,
+      exp:'On the beach (trên bãi biển, như một bề mặt).' },
 
     { id:'h7', sec:'G', type:'fill', sub:'Bài 123.2 – Complete with in/at/on + cụm cho sẵn',
       q:'One of the keys ______ is stuck. (my piano)',

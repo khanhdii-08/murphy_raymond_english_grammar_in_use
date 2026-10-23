@@ -224,6 +224,6 @@
       exp:'This was... → , which was...' },
     { id:'h19', sec:'G', type:'fill', sub:'Bài 96.3 – Join the sentences using which',
       q:'Viết lại thành 1 câu: "Kim passed all her exams. This is great news." → Kim passed all her exams, ______ great news.',
-      acc:['which is',"which's"], ans:'which is',
+      acc:['which is'], ans:'which is',
       exp:'This is... → , which is... (which = việc Kim đỗ hết các môn).' }
   ];

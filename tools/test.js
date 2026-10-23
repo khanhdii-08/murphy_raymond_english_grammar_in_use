@@ -74,11 +74,22 @@ function runOne(rel) {
       assert(doc.querySelectorAll('.qcard').length === N, 'rendered ' + N + ' questions (got ' + doc.querySelectorAll('.qcard').length + ')');
       assert(doc.querySelectorAll('.sec').length === SECTIONS.length, 'rendered ' + SECTIONS.length + ' sections');
       assert(doc.body.getAttribute('data-mode') === 'study', 'default mode = study');
+      const subKeys = new Set(QUESTIONS.filter(q => q.sub).map(q => q.sec + '|' + q.sub));
+      assert(doc.querySelectorAll('#quiz .sub').length === subKeys.size,
+        'each exercise heading shown once (' + doc.querySelectorAll('#quiz .sub').length + '/' + subKeys.size + ')');
 
       // 2. Chế độ kiểm tra
       doc.getElementById('mTest').click();
       assert(doc.body.getAttribute('data-mode') === 'test', 'switched to test mode');
       assert(!doc.body.classList.contains('revealed'), 'answers hidden after entering test mode');
+      const fq = findFirst(QUESTIONS, 'fill');
+      if (fq) {
+        const c = doc.querySelector('[data-card="' + fq.id + '"]'), inp = c.querySelector('.ans-input');
+        inp.value = 'zzz';
+        inp.dispatchEvent(new window.KeyboardEvent('keydown', { key: 'Enter', bubbles: true }));
+        assert(c.querySelector('.vtag').textContent === '', 'Enter does not reveal verdict in test mode');
+        inp.value = '';
+      }
 
       // 3. Trả lời: 1 câu fill ĐÚNG, 1 câu order ĐÚNG, 1 câu mcq SAI
       let correctDone = 0;

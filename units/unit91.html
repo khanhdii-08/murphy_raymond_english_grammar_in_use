@@ -126,6 +126,8 @@ mark{background:#fef08a;padding:0 3px;border-radius:4px}
 body[data-mode="study"] .qcard.checked .answer-box{display:block}
 body.revealed .answer-box{display:block}
 body[data-mode="test"] .check-one{display:none}
+body[data-mode="test"] .ovr{display:none}
+.ovr[hidden]{display:none}
 .qfoot{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}
 .vtag{font-weight:700;font-size:.85rem}
 .vtag.ok{color:var(--ok)} .vtag.bad{color:var(--bad)}
@@ -556,8 +558,8 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
       acc:['each'], ans:'each',
       exp:'Giá mỗi quả → each (cuối câu).' },
     { id:'d3', sec:'D', type:'fill', q:'A: Have you watched all the Harry Potter films?  B: Yes, ______ one of them.',
-      acc:['every'], ans:'every',
-      exp:'every one of them = tất cả, từng phim một.' },
+      acc:['every','each'], ans:'every',
+      exp:'every one of them = tất cả, từng phim một (each one of them cũng đúng).' },
     { id:'d4', sec:'D', type:'fill', q:'A: Did the twins get presents?  B: Yes, I gave ______ of them a book.',
       acc:['each'], ans:'each',
       exp:'Hai người (twins) → each of them.' },
@@ -608,8 +610,8 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
       q:'(A full stadium) ______ seat in the stadium was taken.', acc:['every'], ans:'Every',
       exp:'Nhóm lớn, nghĩa "tất cả" → Every seat.' },
     { id:'h3', sec:'G', type:'fill', sub:'Bài 91.1 – each hay every (theo tình huống)',
-      q:'There are four houses in the street. ______ one has a garage.', acc:['each'], ans:'Each',
-      exp:'Nhóm nhỏ, từng nhà → Each one.' },
+      q:'There are four houses in the street. ______ one has a garage.', acc:['each','every'], ans:'Each',
+      exp:'Nhóm nhỏ, từng nhà → Each one (Every one cũng chấp nhận được).' },
     { id:'h4', sec:'G', type:'fill', sub:'Bài 91.1 – each hay every (theo tình huống)',
       q:'(Timetable) There\'s a bus to the airport ______ hour.', acc:['every'], ans:'every',
       exp:'Tần suất → every hour.' },
@@ -652,8 +654,8 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
       q:'I had five books and so did Nam. → Nam and I had five books ______.', acc:['each'], ans:'each',
       exp:'had five books each = mỗi người có năm cuốn (hoặc Nam and I each had ...).' },
     { id:'h17', sec:'G', type:'fill', sub:'Bài 91.3 – Viết câu dùng each',
-      q:'The tour was expensive. I paid $200 and so did you. → We ______ $200.', acc:['each paid','paid each'], ans:'We each paid $200. / We paid $200 each.',
-      exp:'each đứng trước động từ (We each paid) hoặc cuối câu (We paid $200 each).' },
+      q:'The tour was expensive. I paid $200 and so did you. → We ______ $200.', acc:['each paid'], ans:'each paid',
+      exp:'each đứng trước động từ (We each paid $200) hoặc cuối câu (We paid $200 each). Chỗ trống nằm ngay trước $200 → chỉ "each paid" hợp; "We paid each $200" sai.' },
 
     { id:'h18', sec:'G', type:'fill', sub:'Bài 91.4 – everyone (1 từ) hay every one (2 từ)',
       q:'The meeting started once ______ had arrived.', acc:['everyone'], ans:'everyone',
@@ -674,8 +676,9 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
      ========================================================= */
   function esc(s){return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;')
     .replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+  /* "/", "\u2026", "..." gi\u1eefa c\u00e1c ph\u1ea7n (c\u00e2u nhi\u1ec1u ch\u1ed7 tr\u1ed1ng) \u0111\u01b0\u1ee3c coi nh\u01b0 d\u1ea5u c\u00e1ch */
   function norm(s){return String(s==null?'':s).toLowerCase()
-    .replace(/[\u2018\u2019]/g,"'").replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
+    .replace(/[\u2018\u2019]/g,"'").replace(/\s*(\.{2,}|\u2026|\/)\s*/g,' ').replace(/[.,!?;:"“”()\[\]]/g,'').replace(/\s+/g,' ').trim();}
   function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));
     var t=a[i];a[i]=a[j];a[j]=t;}return a;}
   function $(id){return document.getElementById(id);}
@@ -722,13 +725,31 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
   }
   function answerBox(q){
     var right;
-    if(q.type==='mcq') right='ABCD'[q.a]+'. '+q.opts[q.a];
+    if(q.type==='mcq') right=q.opts[q.a];
     else if(q.type==='match') right=q.items.map(function(it,i){return (i+1)+' → '+it.letter;}).join(' · ');
     else if(q.type==='self') right=q.sample;
     else right=q.ans;
     var title=(q.type==='self')?'📝 Gợi ý đáp án mẫu':'✓ Đáp án đúng';
     return '<div class="answer-box"><div class="ab-title"><b>'+title+':</b> '+esc(right)+
       '</div><div class="ab-exp">💡 '+esc(q.exp)+'</div></div>';
+  }
+  /* Câu điền "tự do" (dịch, viết lại cả câu): không có chỗ trống ______ */
+  function isFree(q){ return q.type==='fill' && !/_{3,}/.test(q.q); }
+  function fillOk(q,v){
+    var nv=norm(v);
+    if(q.acc.some(function(a){return norm(a)===nv;})) return true;
+    /* Câu tường thuật có "(that)": chấp nhận khi người học gõ thêm "that" */
+    if(/\(that\)/i.test(q.q) && nv.indexOf('that ')===0 &&
+       q.acc.some(function(a){return norm(a)===nv.slice(5);})) return true;
+    /* Gõ cả câu (hoặc một đoạn dài hơn chỗ trống): đúng nếu đoạn đó nằm trong câu hoàn chỉnh */
+    var blanks=q.q.match(/_{3,}/g);
+    if(!blanks||blanks.length!==1) return false;
+    var base=q.q.replace(/\([^)]*\)/g,' ');
+    return q.acc.some(function(a){
+      var na=norm(a); if(!na) return false;
+      var full=' '+norm(base.replace(/_{3,}/,' '+a+' '))+' ';
+      return (' '+nv+' ').indexOf(' '+na+' ')>-1 && full.indexOf(' '+nv+' ')>-1;
+    });
   }
   function renderQ(q,n){
     var body='';
@@ -758,12 +779,23 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
       (TYPE_LABEL[q.type]||q.type)+'</span></div>'+
       '<p class="qtext">'+esc(q.q)+'</p>'+body+
       '<div class="qfoot"><button type="button" class="btn-mini check-one">Soát câu này</button>'+
-      '<span class="vtag"></span></div>'+answerBox(q)+'</div>';
+      '<span class="vtag"></span>'+(isFree(q)?'<button type="button" class="btn-mini ovr" hidden>'+
+      '✓ Tôi viết đúng (khác đáp án mẫu)</button>':'')+'</div>'+answerBox(q)+'</div>';
+  }
+  /* Trộn câu trong từng nhóm (cùng phần + cùng bài của sách), giữ nguyên thứ tự các bài */
+  function orderPool(pool){
+    var groups=[],idx={};
+    pool.forEach(function(q){
+      var k=q.sec+'|'+(q.sub||'');
+      if(!(k in idx)){idx[k]=groups.length;groups.push([]);}
+      groups[idx[k]].push(q);
+    });
+    return [].concat.apply([],groups.map(shuffle));
   }
   function render(wrongOnly){
     var pool = wrongOnly ? QUESTIONS.filter(function(q){return progress.wrong.indexOf(q.id)>-1;}) : QUESTIONS;
     if(!pool.length){ alert('Không có câu nào để làm lại (chưa có câu sai).'); return false; }
-    current=shuffle(pool).map(prep);
+    current=orderPool(pool).map(prep);
     document.body.classList.remove('revealed');
     $('result').hidden=true;
     var html='',sub='';
@@ -795,7 +827,8 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
     if(q.type==='fill'){
       var inp=card.querySelector('.ans-input'),v=inp.value;
       if(!norm(v)) return {v:'',ok:false,empty:true};
-      return {v:v,ok:q.acc.some(function(a){return norm(a)===norm(v);}),empty:false};
+      var ovr=card.getAttribute('data-ovr');
+      return {v:v,ok:fillOk(q,v)||(ovr!==null&&ovr===norm(v)),empty:false};
     }
     if(q.type==='order'){
       var toks=[].map.call(card.querySelectorAll('.line .tok'),function(t){return t.getAttribute('data-w');});
@@ -831,6 +864,13 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
       }else{ tag.className='vtag'; tag.textContent='Chưa tự chấm'; }
       return res;
     }
+    var ob=card.querySelector('.ovr');
+    if(ob) ob.hidden=res.ok||!!res.empty;
+    /* Chế độ Học: câu bỏ trống không bị tô đỏ */
+    if(res.empty&&mode==='study'){
+      tag.className='vtag'; tag.textContent='○ Chưa trả lời';
+      return res;
+    }
     if(res.ok) card.classList.add('ok'); else card.classList.add('bad');
     if(q.type==='mcq'){
       var labels=card.querySelectorAll('.opt');
@@ -845,11 +885,14 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
     tag.textContent=res.empty?'✕ Chưa trả lời':(res.ok?'✓ Đúng':'✕ Sai');
     return res;
   }
-  function gradeAll(){
-    stopTimer(); submitted=true;
-    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0;
+  /* update=true: chấm lại sau khi người học bấm "Tôi viết đúng" (không tính thêm lần làm) */
+  function gradeAll(update){
+    var score=0,total=0,wrongIds=[],attempted=[],selfOk=0,selfAll=0,skipped=0;
     current.forEach(function(q){
       var res=gradeOne(q); if(!res) return;
+      /* Chế độ Học: câu bỏ trống không tính điểm, không đưa vào danh sách câu sai */
+      if(res.empty&&mode==='study'){ skipped++; return; }
+      if(res.self&&!res.graded&&mode==='study') return;
       attempted.push(q.id);
       if(res.self){
         selfAll++;
@@ -861,25 +904,35 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
       total+=w; score+=res.ok?w:0;
       if(!res.ok) wrongIds.push(q.id);
     });
+    if(!update&&mode==='study'&&!total&&!selfAll){
+      alert('Bạn chưa trả lời câu nào. Hãy làm ít nhất một câu rồi nộp bài.');
+      return;
+    }
+    stopTimer(); submitted=true;
     document.body.classList.add('revealed');
     /* Cập nhật danh sách câu sai: giữ các câu chưa được làm lại lần này */
     var remain=progress.wrong.filter(function(id){return attempted.indexOf(id)===-1;});
     progress.wrong=remain.concat(wrongIds);
-    progress.attempts++;
+    if(!update) progress.attempts++;
     var pct=total?Math.round(score/total*100):0;
     if(pct>progress.best) progress.best=pct;
-    var secs=t0?Math.round((Date.now()-t0)/1000):0;
-    progress.hist.push({pct:pct,sec:secs});
+    var secs=update&&progress.hist.length?progress.hist[progress.hist.length-1].sec:
+      (t0?Math.round((Date.now()-t0)/1000):0);
+    var entry={pct:pct,sec:secs,at:Date.now(),n:total};
+    if(update&&progress.hist.length) progress.hist[progress.hist.length-1]=entry;
+    else progress.hist.push(entry);
     if(progress.hist.length>10) progress.hist=progress.hist.slice(-10);
+    progress.last=entry.at; progress.lastPct=pct;
     save(); updateStats();
-    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds);
+    showResult(score,total,pct,secs,selfOk,selfAll,wrongIds,skipped);
   }
-  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds){
+  function showResult(score,total,pct,secs,selfOk,selfAll,wrongIds,skipped){
     var big=$('rPct');
     big.textContent=pct+'%';
     big.className='big '+(pct>=80?'ok':(pct>=50?'mid':'bad'));
     var m=Math.floor(secs/60),s=secs%60;
-    $('rMeta').textContent='Đúng '+score+'/'+total+' câu · Sai '+(total-score)+
+    $('rMeta').textContent='Đúng '+score+'/'+total+' · Sai '+(total-score)+
+      (skipped?' · Bỏ qua '+skipped+' câu (không tính điểm)':'')+
       ' · Thời gian '+(m<10?'0':'')+m+':'+(s<10?'0':'')+s+
       ' · Lần làm '+progress.attempts+' · Kỷ lục '+progress.best+'%';
     $('rSelf').textContent = selfAll? ('Tự viết (tự chấm): '+selfOk+'/'+selfAll) : '';
@@ -905,6 +958,8 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
     current.forEach(function(q){
       var card=findCard(q.id); if(!card) return;
       card.classList.remove('ok','bad','checked');
+      card.removeAttribute('data-ovr');
+      var ob=card.querySelector('.ovr'); if(ob) ob.hidden=true;
       var tag=card.querySelector('.vtag'); tag.className='vtag'; tag.textContent='';
       if(q.type==='mcq'){
         [].forEach.call(card.querySelectorAll('input[type=radio]'),function(r){r.checked=false;});
@@ -983,6 +1038,15 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
       if(q){ gradeOne(q); card.classList.add('checked'); }
       return;
     }
+    if(t.classList.contains('ovr')){
+      var q3=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
+      if(q3){
+        card.setAttribute('data-ovr',norm(card.querySelector('.ans-input').value));
+        gradeOne(q3); card.classList.add('checked');
+        if(submitted) gradeAll(true);
+      }
+      return;
+    }
     if(t.classList.contains('sk')||t.classList.contains('sb')){
       var v=t.getAttribute('data-v');
       var cur=card.getAttribute('data-self')||'';
@@ -1000,8 +1064,10 @@ every + thời gian (tần suất)           every day, every ten minutes   (kh�
     while(card&&!(card.classList&&card.classList.contains('qcard'))) card=card.parentNode;
     if(card&&e.target.classList.contains('ans-input')){
       e.preventDefault();
+      /* Chế độ Kiểm tra: Enter không chấm, để không lộ đúng/sai trước khi nộp */
+      if(mode==='test') return;
       var q=current.filter(function(x){return x.id===card.getAttribute('data-card');})[0];
-      if(q) gradeOne(q);
+      if(q){ gradeOne(q); card.classList.add('checked'); }
     }
   });
 
